@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import workshopImage from "@/assets/workshop-atelier.jpg";
 import { Users, Building2, Network, CheckCircle } from "lucide-react";
 
 const offerings = [
@@ -51,12 +52,21 @@ export const Atelier = () => {
   return (
     <section id="atelier" className="py-24 bg-gradient-soft">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+        <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">L'Ate.lier</h2>
           <p className="text-xl text-muted-foreground">
             Le programme de transformation de Climate House pour donner aux individus 
             et aux organisations les moyens d'agir pour un avenir durable.
           </p>
+        </div>
+
+        {/* Image workshop */}
+        <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
+          <img
+            src={workshopImage}
+            alt="Atelier transformant à Climate House avec participation active"
+            className="w-full h-[300px] md:h-[450px] object-cover rounded-3xl shadow-strong"
+          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">

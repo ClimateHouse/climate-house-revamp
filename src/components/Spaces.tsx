@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import coworkingImage from "@/assets/coworking-space.jpg";
+import coworkingImage from "@/assets/inauguration-ruban.jpg";
 import { Briefcase, Presentation, Coffee, Users2 } from "lucide-react";
 
 const spaces = [
@@ -47,7 +47,7 @@ export const Spaces = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-strong">
             <img
               src={coworkingImage}
-              alt="Espace de coworking moderne Climate House"
+              alt="Inauguration Climate House - Célébration de la communauté"
               className="w-full h-[400px] md:h-[600px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />

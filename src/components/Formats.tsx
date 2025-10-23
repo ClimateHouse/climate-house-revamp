@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import eventImage from "@/assets/event-candles.jpg";
 
 const formats = [
   { name: "Masterminds", description: "1 thématique, 1 journée, des visions plurielles" },
@@ -28,6 +29,15 @@ export const Formats = () => {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Image principale */}
+          <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
+            <img
+              src={eventImage}
+              alt="Événement inspirant à Climate House"
+              className="w-full h-[300px] md:h-[450px] object-cover rounded-3xl shadow-strong"
+            />
+          </div>
+
           {/* Formats */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-center mb-4">10 Formats Innovants</h2>

@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import communityImage from "@/assets/community.jpg";
+import communityImage from "@/assets/cofondateurs-wall.jpg";
 import { Quote } from "lucide-react";
 
 const testimonials = [
@@ -41,7 +41,7 @@ export const Community = () => {
         <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
           <img
             src={communityImage}
-            alt="Membres de la communauté Climate House en réunion"
+            alt="Mur des cofondateurs Climate House - 80 portraits"
             className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-strong"
           />
         </div>
