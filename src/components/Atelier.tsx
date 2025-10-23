@@ -4,7 +4,7 @@ import workshopImage from "@/assets/workshop-atelier.jpg";
 import { Users, Building2, Network, CheckCircle } from "lucide-react";
 const offerings = [{
   icon: Users,
-  title: "Feuille de route RSE",
+  title: "Adhésion individuelle",
   subtitle: "Exploration des collaborateurs",
   description: "Acculturer & engager : Participez à plus de 200 événements par an, accessibles à tous les membres de la communauté. Une programmation annuelle riche autour de 6 thématiques et 10 formats innovants pour explorer, comprendre et agir.",
   features: ["700+ événements par an ouverts à la communauté", "Intégration complète à l'écosystème Climate House", "Approche pédagogique par les 3H : Head, Heart, Hands", "6 axes thématiques : Biodiversité & Océans, Agriculture & Alimentation, Infrastructures & Habitat, Énergies, Finance responsable, Culture & Modèles économiques", "10 formats innovants pour tous les profils"],
