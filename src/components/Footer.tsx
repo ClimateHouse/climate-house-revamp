@@ -1,43 +1,58 @@
 import { Leaf, Linkedin, Twitter, Instagram, Mail, MapPin, Phone } from "lucide-react";
-
 const footerLinks = {
-  "La Maison": [
-    { label: "Notre Mission", href: "#mission" },
-    { label: "Nos Espaces", href: "#espaces" },
-    { label: "La Communauté", href: "#communaute" },
-    { label: "L'Ate•lier", href: "#atelier" },
-  ],
-  "Rejoindre": [
-    { label: "Devenir colocataire", href: "#" },
-    { label: "Organiser un événement", href: "#" },
-    { label: "Visiter Climate House", href: "#" },
-    { label: "Partenariats", href: "#" },
-  ],
-  "Ressources": [
-    { label: "Calendrier des événements", href: "#calendrier" },
-    { label: "Blog", href: "#" },
-    { label: "Presse", href: "#" },
-    { label: "FAQ", href: "#" },
-  ],
+  "La Maison": [{
+    label: "Notre Mission",
+    href: "#mission"
+  }, {
+    label: "Nos Espaces",
+    href: "#espaces"
+  }, {
+    label: "La Communauté",
+    href: "#communaute"
+  }, {
+    label: "L'Ate•lier",
+    href: "#atelier"
+  }],
+  "Rejoindre": [{
+    label: "Devenir colocataire",
+    href: "#"
+  }, {
+    label: "Organiser un événement",
+    href: "#"
+  }, {
+    label: "Visiter Climate House",
+    href: "#"
+  }, {
+    label: "Partenariats",
+    href: "#"
+  }],
+  "Ressources": [{
+    label: "Calendrier des événements",
+    href: "#calendrier"
+  }, {
+    label: "Blog",
+    href: "#"
+  }, {
+    label: "Presse",
+    href: "#"
+  }, {
+    label: "FAQ",
+    href: "#"
+  }]
 };
-
 export const Footer = () => {
-  return (
-    <footer className="bg-foreground text-background py-16">
+  return <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 px-0 py-0">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center">
                 <Leaf className="h-6 w-6 text-primary-foreground" />
               </div>
               <span className="text-2xl font-bold">Climate House</span>
             </div>
-            <p className="text-background/70 mb-6 leading-relaxed">
-              2000 m² dédiés à la transition écologique et sociale. Un espace unique où se
-              rencontrent les architectes du changement.
-            </p>
+            
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-background/70">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
@@ -57,23 +72,16 @@ export const Footer = () => {
           </div>
 
           {/* Links */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
+          {Object.entries(footerLinks).map(([title, links]) => <div key={title}>
               <h3 className="font-bold mb-4">{title}</h3>
               <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-background/70 hover:text-background transition-colors"
-                    >
+                {links.map(link => <li key={link.label}>
+                    <a href={link.href} className="text-sm text-background/70 hover:text-background transition-colors">
                       {link.label}
                     </a>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Bottom */}
@@ -83,25 +91,13 @@ export const Footer = () => {
               © 2024 Climate House. Tous droits réservés.
             </p>
             <div className="flex items-center gap-6">
-              <a
-                href="#"
-                className="text-background/60 hover:text-background transition-colors"
-                aria-label="LinkedIn"
-              >
+              <a href="#" className="text-background/60 hover:text-background transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a
-                href="#"
-                className="text-background/60 hover:text-background transition-colors"
-                aria-label="Twitter"
-              >
+              <a href="#" className="text-background/60 hover:text-background transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a
-                href="#"
-                className="text-background/60 hover:text-background transition-colors"
-                aria-label="Instagram"
-              >
+              <a href="#" className="text-background/60 hover:text-background transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -116,6 +112,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };

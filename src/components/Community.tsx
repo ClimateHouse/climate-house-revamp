@@ -2,34 +2,24 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import communityImage from "@/assets/cofondateurs-wall.jpg";
 import { Quote } from "lucide-react";
-
-const testimonials = [
-  {
-    quote:
-      "Climate House nous a permis de rencontrer des partenaires clés et d'accélérer notre croissance. L'écosystème est exceptionnel.",
-    author: "Marie Dubois",
-    role: "CEO, GreenTech Startup",
-  },
-  {
-    quote:
-      "Un lieu inspirant où la collaboration prime. Nous avons co-créé plusieurs projets innovants avec d'autres membres.",
-    author: "Thomas Martin",
-    role: "Directeur Innovation, ONG Environnement",
-  },
-  {
-    quote:
-      "La communauté Climate House est unique. Chaque jour apporte de nouvelles opportunités et connexions précieuses.",
-    author: "Sophie Bernard",
-    role: "Fondatrice, Impact Social",
-  },
-];
-
+const testimonials = [{
+  quote: "Climate House nous a permis de rencontrer des partenaires clés et d'accélérer notre croissance. L'écosystème est exceptionnel.",
+  author: "Marie Dubois",
+  role: "CEO, GreenTech Startup"
+}, {
+  quote: "Un lieu inspirant où la collaboration prime. Nous avons co-créé plusieurs projets innovants avec d'autres membres.",
+  author: "Thomas Martin",
+  role: "Directeur Innovation, ONG Environnement"
+}, {
+  quote: "La communauté Climate House est unique. Chaque jour apporte de nouvelles opportunités et connexions précieuses.",
+  author: "Sophie Bernard",
+  role: "Fondatrice, Impact Social"
+}];
 export const Community = () => {
-  return (
-    <section id="communaute" className="py-24 bg-background">
+  return <section id="communaute" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">La Communauté</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 py-0">La Communauté</h2>
           <p className="text-xl text-muted-foreground">
             Une communauté de 400 entrepreneurs passionnés, unis par la volonté de
             construire une économie durable. 80 cofondateurs à parité femmes-hommes ont
@@ -39,11 +29,7 @@ export const Community = () => {
 
         {/* Image communauté */}
         <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
-          <img
-            src={communityImage}
-            alt="Mur des cofondateurs Climate House - 80 portraits"
-            className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-strong"
-          />
+          <img src={communityImage} alt="Mur des cofondateurs Climate House - 80 portraits" className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-strong" />
         </div>
 
         {/* Chiffres clés */}
@@ -83,12 +69,9 @@ export const Community = () => {
             Ce que disent nos colocataires
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={testimonial.author}
-                className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {testimonials.map((testimonial, index) => <Card key={testimonial.author} className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <Quote className="h-8 w-8 text-primary mb-4" />
                 <p className="text-muted-foreground mb-6 leading-relaxed italic">
                   "{testimonial.quote}"
@@ -97,8 +80,7 @@ export const Community = () => {
                   <div className="font-bold">{testimonial.author}</div>
                   <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
@@ -108,6 +90,5 @@ export const Community = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
