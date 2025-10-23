@@ -9,6 +9,7 @@ import { Formats } from "@/components/Formats";
 import { Spaces } from "@/components/Spaces";
 import { Community } from "@/components/Community";
 import { Bibliotheque } from "@/components/Bibliotheque";
+import { Calendrier } from "@/components/Calendrier";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
         <Formats />
         <Spaces />
         <Community />
+        <Calendrier />
         <Bibliotheque />
         <CTA />
       </main>
