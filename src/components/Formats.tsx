@@ -65,16 +65,16 @@ export const Formats = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {[{
                   title: "HEAD",
-                  subtitle: "Se former et s'informer",
-                  description: "Acquérir les connaissances essentielles"
+                  subtitle: "Tête",
+                  description: "Le partage de connaissances et de théorie"
                 }, {
                   title: "HEART",
-                  subtitle: "Créer du lien",
-                  description: "Tisser des relations authentiques"
+                  subtitle: "Cœur",
+                  description: "L'expression de nos émotions et le rapport à soi, aux autres et au vivant"
                 }, {
                   title: "HANDS",
-                  subtitle: "Faire ensemble",
-                  description: "Passer à l'action collective"
+                  subtitle: "Corps",
+                  description: "L'expérimentation et la mise en mouvement"
                 }, {
                   title: "HOUSE",
                   subtitle: "Prendre soin de son réseau",
