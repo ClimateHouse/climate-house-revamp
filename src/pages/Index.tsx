@@ -11,16 +11,14 @@ import { Community } from "@/components/Community";
 import { Bibliotheque } from "@/components/Bibliotheque";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       <main>
         <Hero />
         <TrustedBy />
         <Stats />
-        <Mission />
+        <Mission className="mx-0 px-0 py-[40px]" />
         <Atelier />
         <Parcours />
         <Formats />
@@ -30,8 +28,6 @@ const Index = () => {
         <CTA />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
