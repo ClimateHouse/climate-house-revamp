@@ -54,7 +54,7 @@ export const Community = () => {
           </div>
           <div className="text-center p-6 rounded-2xl bg-gradient-soft">
             <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              400
+              460
             </div>
             <div className="text-lg font-semibold mb-1">Colocataires</div>
             <p className="text-sm text-muted-foreground">
