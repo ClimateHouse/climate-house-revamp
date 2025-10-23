@@ -7,44 +7,47 @@ const offerings = [
   {
     icon: Users,
     title: "L'Ate.lier Individuel",
-    subtitle: "Se transformer",
-    description: "Accès illimité à plus de 150 événements par an : Masterminds, Boostcamps, Conversations, Tables d'hôtes et bien plus.",
+    subtitle: "Exploration des collaborateurs",
+    description: "Acculturer & engager : Participez à plus de 200 événements par an, accessibles à tous les membres de la communauté. Une programmation annuelle riche autour de 6 thématiques et 10 formats innovants pour explorer, comprendre et agir.",
     features: [
-      "Accès à la programmation complète",
-      "Participation aux groupes de travail thématiques",
-      "Accès à l'écosystème et à la communauté",
-      "Networking avec 700+ membres"
+      "700+ événements par an ouverts à la communauté",
+      "Intégration complète à l'écosystème Climate House",
+      "Approche pédagogique par les 3H : Head, Heart, Hands",
+      "6 axes thématiques : Biodiversité & Océans, Agriculture & Alimentation, Infrastructures & Habitat, Énergies, Finance responsable, Culture & Modèles économiques",
+      "10 formats innovants pour tous les profils"
     ],
-    cta: "Devenir adhérent"
+    cta: "Découvrir la programmation"
   },
   {
     icon: Building2,
     title: "L'Ate.lier Entreprise",
-    subtitle: "Transformer son organisation",
-    description: "Programmes sur-mesure pour accompagner la transformation de votre organisation avec l'expertise de notre communauté.",
+    subtitle: "Immersion des projets par équipe",
+    description: "Aligner les enjeux et les leviers d'action : Des programmes d'accompagnement sur-mesure adaptés aux besoins de votre équipe RSE/Transformation, avec l'intervention des meilleurs experts de notre communauté pour accélérer votre transition.",
     features: [
-      "Ingénierie pédagogique personnalisée",
-      "Intervention d'experts de la communauté",
-      "Formats adaptés à vos enjeux",
-      "Référent Climate House dédié",
-      "Pack communication inclus"
+      "Programmes sur-mesure co-construits avec vos équipes",
+      "Intervention d'experts reconnus de la communauté",
+      "Alignement stratégique équipes RSE/Transformation",
+      "Méthodologie 4H éprouvée (Head, Heart, Hands, House)",
+      "Mesure d'impact et livrables concrets",
+      "Accès privilégié à l'écosystème Climate House"
     ],
-    cta: "Découvrir l'offre",
+    cta: "Découvrir nos offres entreprises",
     highlight: true
   },
   {
     icon: Network,
     title: "L'Ate.lier Inter-Entreprises",
     subtitle: "Coopérer pour transformer son secteur",
-    description: "Alliances stratégiques et groupes de travail collaboratifs entre organisations pour relever les défis collectifs.",
+    description: "Co-créer des projets structurants : Rejoignez des groupes de travail et alliances entre entreprises pour relever les défis d'une filière ou d'une verticale métier. Ensemble, co-construisez les bonnes pratiques jusqu'à en faire la nouvelle norme de votre secteur.",
     features: [
-      "Co-construction de bonnes pratiques",
-      "Création d'alliances sectorielles",
-      "Mobilisation de ressources clés",
-      "Temps forts collectifs à la CH",
-      "Impact à l'échelle de votre industrie"
+      "Alliances stratégiques inter-entreprises",
+      "Co-construction de standards sectoriels",
+      "Transformation systémique à grande échelle",
+      "Projets structurants à fort impact",
+      "Partage d'expériences et de ressources",
+      "Influence collective sur les normes du marché"
     ],
-    cta: "Créer une alliance"
+    cta: "Rejoindre une alliance"
   }
 ];
 

@@ -17,17 +17,20 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#mission" className="text-foreground hover:text-primary transition-colors">
-              Les 3 Piliers
+            <a href="#espaces" className="text-foreground hover:text-primary transition-colors">
+              La Maison
             </a>
             <a href="#atelier" className="text-foreground hover:text-primary transition-colors">
               L'Ate.lier
             </a>
-            <a href="#espaces" className="text-foreground hover:text-primary transition-colors">
-              La Maison
-            </a>
             <a href="#communaute" className="text-foreground hover:text-primary transition-colors">
-              La Communauté
+              Qui sommes-nous?
+            </a>
+            <a href="#calendrier" className="text-foreground hover:text-primary transition-colors">
+              Calendrier
+            </a>
+            <a href="#bibliotheque" className="text-foreground hover:text-primary transition-colors">
+              Bibliothèque
             </a>
           </div>
 
@@ -50,17 +53,20 @@ export const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in border-t border-border pt-4">
-            <a href="#mission" className="text-foreground hover:text-primary transition-colors py-2">
-              Les 3 Piliers
+            <a href="#espaces" className="text-foreground hover:text-primary transition-colors py-2">
+              La Maison
             </a>
             <a href="#atelier" className="text-foreground hover:text-primary transition-colors py-2">
               L'Ate.lier
             </a>
-            <a href="#espaces" className="text-foreground hover:text-primary transition-colors py-2">
-              La Maison
-            </a>
             <a href="#communaute" className="text-foreground hover:text-primary transition-colors py-2">
-              La Communauté
+              Qui sommes-nous?
+            </a>
+            <a href="#calendrier" className="text-foreground hover:text-primary transition-colors py-2">
+              Calendrier
+            </a>
+            <a href="#bibliotheque" className="text-foreground hover:text-primary transition-colors py-2">
+              Bibliothèque
             </a>
             <Button className="w-full mt-2">Nous contacter</Button>
           </div>
