@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import coworkingImage from "@/assets/inauguration-ruban.jpg";
-import { Briefcase, Presentation, CheckCircle2, Users2 } from "lucide-react";
+import { Briefcase, Presentation, ChevronDown, ChevronUp } from "lucide-react";
 
 const spaces = [
   {
@@ -42,6 +43,60 @@ const spaces = [
   },
 ];
 
+const SpaceCard = ({ space, index }: { space: typeof spaces[0]; index: number }) => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  return (
+    <Card
+      className="p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in flex flex-col"
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      <div className="flex items-start gap-4 mb-6">
+        <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+          <space.icon className="h-7 w-7 text-primary" />
+        </div>
+        <div className="flex-1">
+          <h3 className="text-2xl font-bold mb-2">{space.title}</h3>
+          <p className="text-muted-foreground">{space.description}</p>
+        </div>
+      </div>
+
+      {showDetails && (
+        <ul className="space-y-2 mb-6 animate-fade-in">
+          {space.features.map((feature) => (
+            <li key={feature} className="flex items-start gap-2 text-sm">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+              <span className="text-muted-foreground">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+        <Button size="lg" className="flex-1 bg-gradient-hero hover:opacity-90" asChild>
+          <a href={space.ctaLink}>{space.ctaText}</a>
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          onClick={() => setShowDetails(!showDetails)}
+          className="sm:w-auto"
+        >
+          {showDetails ? (
+            <>
+              Masquer <ChevronUp className="ml-2 h-4 w-4" />
+            </>
+          ) : (
+            <>
+              Voir détails <ChevronDown className="ml-2 h-4 w-4" />
+            </>
+          )}
+        </Button>
+      </div>
+    </Card>
+  );
+};
+
 export const Spaces = () => {
   return (
     <section id="espaces" className="py-20 bg-background">
@@ -81,32 +136,7 @@ export const Spaces = () => {
         {/* Grille des espaces */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {spaces.map((space, index) => (
-            <Card
-              key={space.title}
-              className="p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in flex flex-col"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                  <space.icon className="h-7 w-7 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">{space.title}</h3>
-                  <p className="text-muted-foreground mb-4">{space.description}</p>
-                </div>
-              </div>
-              <ul className="space-y-2 mb-6 flex-grow">
-                {space.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button size="lg" className="w-full bg-gradient-hero hover:opacity-90" asChild>
-                <a href={space.ctaLink}>{space.ctaText}</a>
-              </Button>
-            </Card>
+            <SpaceCard key={space.title} space={space} index={index} />
           ))}
         </div>
 
