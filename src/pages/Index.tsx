@@ -20,10 +20,10 @@ const Index = () => {
         <TrustedBy />
         <Stats />
         <Mission className="mx-0 px-0 py-[40px]" />
+        <Spaces />
         <Atelier />
         <Parcours />
         <Formats />
-        <Spaces />
         <Calendrier />
         <Community />
         <Bibliotheque />
