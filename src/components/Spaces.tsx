@@ -47,7 +47,7 @@ export const Spaces = () => {
     <section id="espaces" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Nos Espaces</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">La Climate House</h2>
           <p className="text-xl text-muted-foreground mb-4">
             2000 m² pensés pour inspirer, connecter et transformer. Des espaces modulables
             qui s'adaptent à tous vos besoins.
