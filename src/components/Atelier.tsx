@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import workshopImage from "@/assets/workshop-atelier.jpg";
-import { Users, Building2, Network, CheckCircle } from "lucide-react";
+import { Users, Building2, Network, CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
 const offerings = [{
   icon: Users,
   title: "Adhésion individuelle",
@@ -25,6 +26,62 @@ const offerings = [{
   features: ["Alliances stratégiques inter-entreprises", "Co-construction de standards sectoriels", "Transformation systémique à grande échelle", "Projets structurants à fort impact", "Partage d'expériences et de ressources", "Influence collective sur les normes du marché"],
   cta: "Rejoindre une alliance"
 }];
+
+const OfferingCard = ({ offering, index }: { offering: typeof offerings[0]; index: number }) => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  return (
+    <Card
+      className={`p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in flex flex-col ${offering.highlight ? 'border-2 border-primary' : ''}`}
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      <div className="mb-6 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+        <offering.icon className="h-7 w-7 text-primary" />
+      </div>
+      
+      <h3 className="text-2xl font-bold mb-2 text-left">{offering.title}</h3>
+      <p className="text-sm text-primary font-semibold mb-4">{offering.subtitle}</p>
+      <p className="text-muted-foreground mb-6">{offering.description}</p>
+      
+      {showDetails && (
+        <ul className="space-y-3 mb-6 animate-fade-in">
+          {offering.features.map(feature => (
+            <li key={feature} className="flex items-start gap-2">
+              <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="text-sm">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      
+      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+        <Button 
+          className={offering.highlight ? "flex-1 bg-gradient-hero" : "flex-1"} 
+          variant={offering.highlight ? "default" : "outline"}
+        >
+          {offering.cta}
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          onClick={() => setShowDetails(!showDetails)}
+          className="sm:w-auto"
+        >
+          {showDetails ? (
+            <>
+              Masquer <ChevronUp className="ml-2 h-4 w-4" />
+            </>
+          ) : (
+            <>
+              Voir détails <ChevronDown className="ml-2 h-4 w-4" />
+            </>
+          )}
+        </Button>
+      </div>
+    </Card>
+  );
+};
+
 export const Atelier = () => {
   return <section id="atelier" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
@@ -41,28 +98,9 @@ export const Atelier = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
-          {offerings.map((offering, index) => <Card key={offering.title} className={`p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in ${offering.highlight ? 'border-2 border-primary' : ''}`} style={{
-          animationDelay: `${index * 100}ms`
-        }}>
-              <div className="mb-6 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <offering.icon className="h-7 w-7 text-primary" />
-              </div>
-              
-              <h3 className="text-2xl font-bold mb-2 text-left">{offering.title}</h3>
-              <p className="text-sm text-primary font-semibold mb-4">{offering.subtitle}</p>
-              <p className="text-muted-foreground mb-6">{offering.description}</p>
-              
-              <ul className="space-y-3 mb-8">
-                {offering.features.map(feature => <li key={feature} className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{feature}</span>
-                  </li>)}
-              </ul>
-              
-              <Button className={offering.highlight ? "w-full bg-gradient-hero" : "w-full"} variant={offering.highlight ? "default" : "outline"}>
-                {offering.cta}
-              </Button>
-            </Card>)}
+          {offerings.map((offering, index) => (
+            <OfferingCard key={offering.title} offering={offering} index={index} />
+          ))}
         </div>
       </div>
     </section>;
