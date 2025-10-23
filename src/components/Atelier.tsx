@@ -11,7 +11,7 @@ const offerings = [{
   cta: "Découvrir la programmation"
 }, {
   icon: Building2,
-  title: "L'Ate.lier Entreprise",
+  title: "Adhésion projet",
   subtitle: "Immersion des projets par équipe",
   description: "Aligner les enjeux et les leviers d'action : Des programmes d'accompagnement sur-mesure adaptés aux besoins de votre équipe RSE/Transformation, avec l'intervention des meilleurs experts de notre communauté pour accélérer votre transition.",
   features: ["Programmes sur-mesure co-construits avec vos équipes", "Intervention d'experts reconnus de la communauté", "Alignement stratégique équipes RSE/Transformation", "Méthodologie 4H éprouvée (Head, Heart, Hands, House)", "Mesure d'impact et livrables concrets", "Accès privilégié à l'écosystème Climate House"],
