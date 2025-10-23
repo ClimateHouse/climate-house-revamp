@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight, MapPin, RefreshCw } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -7,22 +7,26 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
-              <MapPin className="h-4 w-4 text-white" />
-              <span className="text-sm font-medium text-white">Rue du Caire, Paris</span>
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full">
+              <MapPin className="h-3.5 w-3.5 text-white" />
+              <span className="text-xs font-medium text-white">Rue du Caire, Paris</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
-              <MapPin className="h-4 w-4 text-white" />
-              <span className="text-sm font-medium text-white">Rue Dussoubs, Paris</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full">
+              <MapPin className="h-3.5 w-3.5 text-white" />
+              <span className="text-xs font-medium text-white">Rue Dussoubs, Paris</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
-              <MapPin className="h-4 w-4 text-white" />
-              <span className="text-sm font-medium text-white">Plantation, Paris</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full">
+              <MapPin className="h-3.5 w-3.5 text-white" />
+              <span className="text-xs font-medium text-white">Plantation, Paris</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/30">
-              <MapPin className="h-4 w-4 text-white/70" />
-              <span className="text-sm font-medium text-white/70">Prochainement : Bordeaux, Lyon, Marseille</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full">
+              <MapPin className="h-3.5 w-3.5 text-white" />
+              <span className="text-xs font-medium text-white">The Conduit, Londres</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/30">
+              <RefreshCw className="h-3.5 w-3.5 text-white/70" />
+              <span className="text-xs font-medium text-white/70">Bordeaux, Lyon, Marseille</span>
             </div>
           </div>
 
