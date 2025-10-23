@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import coworkingImage from "@/assets/inauguration-ruban.jpg";
-import { Briefcase, Presentation, ChevronDown, ChevronUp } from "lucide-react";
+import { Briefcase, Presentation, Plus, Minus } from "lucide-react";
 
 const spaces = [
   {
@@ -72,24 +72,19 @@ const SpaceCard = ({ space, index }: { space: typeof spaces[0]; index: number })
         </ul>
       )}
 
-      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+      <div className="flex gap-3 mt-auto">
         <Button size="lg" className="flex-1 bg-gradient-hero hover:opacity-90" asChild>
           <a href={space.ctaLink}>{space.ctaText}</a>
         </Button>
         <Button
-          size="lg"
+          size="icon"
           variant="outline"
           onClick={() => setShowDetails(!showDetails)}
-          className="sm:w-auto"
         >
           {showDetails ? (
-            <>
-              Masquer <ChevronUp className="ml-2 h-4 w-4" />
-            </>
+            <Minus className="h-4 w-4" />
           ) : (
-            <>
-              Voir détails <ChevronDown className="ml-2 h-4 w-4" />
-            </>
+            <Plus className="h-4 w-4" />
           )}
         </Button>
       </div>

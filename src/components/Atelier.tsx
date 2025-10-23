@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import workshopImage from "@/assets/workshop-atelier.jpg";
-import { Users, Building2, Network, CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { Users, Building2, Network, CheckCircle, Plus, Minus } from "lucide-react";
 const offerings = [{
   icon: Users,
   title: "Adhésion individuelle",
@@ -54,7 +54,7 @@ const OfferingCard = ({ offering, index }: { offering: typeof offerings[0]; inde
         </ul>
       )}
       
-      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+      <div className="flex gap-3 mt-auto">
         <Button 
           className={offering.highlight ? "flex-1 bg-gradient-hero" : "flex-1"} 
           variant={offering.highlight ? "default" : "outline"}
@@ -62,19 +62,14 @@ const OfferingCard = ({ offering, index }: { offering: typeof offerings[0]; inde
           {offering.cta}
         </Button>
         <Button
-          size="lg"
+          size="icon"
           variant="outline"
           onClick={() => setShowDetails(!showDetails)}
-          className="sm:w-auto"
         >
           {showDetails ? (
-            <>
-              Masquer <ChevronUp className="ml-2 h-4 w-4" />
-            </>
+            <Minus className="h-4 w-4" />
           ) : (
-            <>
-              Voir détails <ChevronDown className="ml-2 h-4 w-4" />
-            </>
+            <Plus className="h-4 w-4" />
           )}
         </Button>
       </div>
