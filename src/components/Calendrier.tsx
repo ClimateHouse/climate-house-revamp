@@ -39,7 +39,7 @@ export const Calendrier = () => {
             <div className="relative bg-background" style={{ minHeight: "600px" }}>
               {/* Lu.ma Calendar Iframe */}
               <iframe
-                src="https://lu.ma/embed/calendar/cal-kNNvMvhAG4G4Qs1/events"
+                src="https://luma.com/embed/calendar/cal-x45uxomxwmUEX63/events"
                 width="100%"
                 height="600"
                 frameBorder="0"
