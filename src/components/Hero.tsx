@@ -31,11 +31,16 @@ export const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
-            Restez informé
+            Réconcilier
+            <span className="block text-secondary">
+              Économie et Écologie
+            </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Recevez nos actualités, événements et opportunités de collaboration
+            Plus qu'un lieu, un espace de liens. Accélérez la transformation de votre 
+            organisation avec un écosystème unique de 70+ structures engagées, des programmes 
+            sur-mesure et une méthodologie éprouvée.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -44,8 +49,15 @@ export const Hero = () => {
               variant="secondary"
               className="text-lg px-8 group shadow-lg hover:shadow-xl"
             >
-              S'inscrire
+              Découvrir nos offres entreprises
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+            >
+              Organiser un événement
             </Button>
           </div>
 
