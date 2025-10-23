@@ -98,29 +98,43 @@ export const Formats = () => {
               </div>
             </Card>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {formats.map((format, index) => <Card key={format.name} className="p-6 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{
-              animationDelay: `${index * 50}ms`
-            }}>
-                  <h3 className="font-bold text-lg mb-2">{format.name}</h3>
-                  <p className="text-sm text-muted-foreground">{format.description}</p>
-                </Card>)}
-            </div>
-          </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Thématiques - Colonne de gauche */}
+              <div>
+                <h3 className="text-2xl font-bold mb-3">6 Thématiques</h3>
+                <p className="text-muted-foreground mb-6">
+                  Autour des enjeux majeurs de la transition
+                </p>
+                
+                <div className="space-y-3">
+                  {themes.map((theme, index) => (
+                    <Card key={theme.name} className="p-4 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{
+                      animationDelay: `${index * 50}ms`
+                    }}>
+                      <h4 className="font-bold text-base">{theme.name}</h4>
+                    </Card>
+                  ))}
+                </div>
+              </div>
 
-          {/* Thématiques */}
-          <div>
-            <h2 className="text-4xl font-bold text-center mb-4">6 Thématiques</h2>
-            <p className="text-center text-muted-foreground mb-12 text-lg">
-              Autour des enjeux majeurs de la transition
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              {themes.map((theme, index) => <Badge key={theme.name} className="px-6 py-3 text-base font-medium bg-card hover:shadow-soft transition-all border-2 border-primary text-foreground animate-fade-in" style={{
-              animationDelay: `${index * 100}ms`
-            }}>
-                  {theme.name}
-                </Badge>)}
+              {/* Formats - Colonne de droite */}
+              <div>
+                <h3 className="text-2xl font-bold mb-3">10 Formats</h3>
+                <p className="text-muted-foreground mb-6">
+                  Pensés par et pour notre communauté d'entrepreneurs
+                </p>
+                
+                <div className="space-y-3">
+                  {formats.map((format, index) => (
+                    <Card key={format.name} className="p-4 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{
+                      animationDelay: `${index * 50}ms`
+                    }}>
+                      <h4 className="font-bold text-base mb-1">{format.name}</h4>
+                      <p className="text-sm text-muted-foreground">{format.description}</p>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
