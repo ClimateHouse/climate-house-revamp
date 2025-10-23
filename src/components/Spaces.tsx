@@ -1,12 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import coworkingImage from "@/assets/inauguration-ruban.jpg";
-import { Briefcase, Presentation, Coffee, Users2 } from "lucide-react";
+import { Briefcase, Presentation, CheckCircle2, Users2 } from "lucide-react";
 
 const spaces = [
   {
     icon: Briefcase,
-    title: "Espaces de Coworking",
+    title: "Espaces de Travail",
     description: "300 postes de travail flexibles dans un environnement inspirant",
     features: ["Bureaux privés", "Espaces partagés", "Salles de réunion"],
   },
@@ -17,10 +17,24 @@ const spaces = [
     features: ["Jusqu'à 200 personnes", "Équipement professionnel", "Catering disponible"],
   },
   {
-    icon: Coffee,
-    title: "L'Ate•lier",
-    description: "Un espace de convivialité pour les moments d'échange informels",
-    features: ["Cuisine équipée", "Zone détente", "Terrasse extérieure"],
+    icon: CheckCircle2,
+    title: "Services Embarqués",
+    description: "Tout ce dont vous avez besoin pour travailler sereinement",
+    features: [
+      "L'accès aux 2 bâtiments Climate House (rue Caire & Dussoubs)",
+      "L'accès au réseau des 24 bâtiments Morning dans Paris (espaces nomades)",
+      "Un écosystème bouillonnant où vous êtes entourés des personnes qui veulent transformer le monde de demain",
+      "L'accès gratuit à la programmation (>500 conférences, formations,...)",
+      "Des salles de réunions (14) équipées et réservables via l'app en illimité",
+      "Des phone box (23)",
+      "Discount pour la privatisation des espaces événements (dont le studio Podcast) à la journée ou 1/2 journée",
+      "Un office manager pour répondre à toutes vos questions",
+      "Une facturation unique pour vous simplifier la vie",
+      "Internet & service IT à l'installation",
+      "Café en illimité",
+      "Accès à l'espace 7/7",
+      "Accueil & sécurité de l'espace géré par morning",
+    ],
   },
   {
     icon: Users2,
@@ -36,9 +50,13 @@ export const Spaces = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Nos Espaces</h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground mb-4">
             2000 m² pensés pour inspirer, connecter et transformer. Des espaces modulables
             qui s'adaptent à tous vos besoins.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            Deux types de résidents : <span className="font-semibold text-primary">permanents</span> avec leur bureau dédié, 
+            et <span className="font-semibold text-primary">nomades</span> qui profitent de la flexibilité du réseau Morning.
           </p>
         </div>
 
@@ -92,9 +110,16 @@ export const Spaces = () => {
         </div>
 
         <div className="text-center mt-12 animate-fade-in">
-          <Button size="lg" className="bg-gradient-hero hover:opacity-90">
-            Visiter nos espaces
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-hero hover:opacity-90" asChild>
+              <a href="#contact">Nous contacter</a>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <a href="https://visite-virtuelle-climate-house.com" target="_blank" rel="noopener noreferrer">
+                Visite virtuelle
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
