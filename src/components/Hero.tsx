@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin, RefreshCw } from "lucide-react";
+import { MapPin, RefreshCw } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -47,10 +47,9 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="secondary"
-              className="text-lg px-8 group shadow-lg hover:shadow-xl"
+              className="text-lg px-8 shadow-lg hover:shadow-xl"
             >
-              Découvrir nos offres entreprises
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              Devenir résident
             </Button>
             <Button 
               size="lg" 
@@ -58,6 +57,13 @@ export const Hero = () => {
               className="text-lg px-8 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
             >
               Organiser un événement
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+            >
+              Découvrir l'atel.ier
             </Button>
           </div>
 
