@@ -5,11 +5,10 @@ import { Mission } from "@/components/Mission";
 import { TrustedBy } from "@/components/TrustedBy";
 import { Atelier } from "@/components/Atelier";
 import { Parcours } from "@/components/Parcours";
-import { Formats } from "@/components/Formats";
 import { Spaces } from "@/components/Spaces";
 import { Community } from "@/components/Community";
+import { Programmation } from "@/components/Programmation";
 import { Bibliotheque } from "@/components/Bibliotheque";
-import { Calendrier } from "@/components/Calendrier";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 const Index = () => {
@@ -22,10 +21,9 @@ const Index = () => {
         <Mission className="mx-0 px-0 py-[40px]" />
         <Atelier />
         <Parcours />
-        <Formats />
         <Spaces />
         <Community />
-        <Calendrier />
+        <Programmation />
         <Bibliotheque />
         <CTA />
       </main>
