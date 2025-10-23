@@ -12,7 +12,7 @@ export const Calendrier = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
-            Calendrier des Événements
+            Calendrier de la programmation
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
