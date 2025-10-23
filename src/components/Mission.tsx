@@ -3,11 +3,11 @@ import { Leaf, Handshake, Rocket, Heart } from "lucide-react";
 const pillars = [{
   icon: Leaf,
   title: "La Maison",
-  description: "2200 m² au cœur de Paris conçus pour inspirer et coopérer. Un espace vivant d'hospitalité et de liens informels avec 300 postes de travail, 15 salles de réunion et 6 espaces événementiels privatisables."
+  description: "2000 m² au cœur de Paris conçus pour inspirer et coopérer. Un espace vivant d'hospitalité et de liens informels avec 300 postes de travail, 15 salles de réunion et 6 espaces événementiels privatisables."
 }, {
   icon: Handshake,
   title: "La Communauté",
-  description: "400 colocataires de 70 structures, 80 cofondateurs entrepreneurs et 200 organisations adhérentes. Un réseau unique d'expertise et d'engagement au service de la transition."
+  description: "430 colocataires de 70 structures, 80 cofondateurs entrepreneurs et 200 organisations adhérentes. Un réseau unique d'expertise et d'engagement au service de la transition."
 }, {
   icon: Rocket,
   title: "L'Ate.lier",

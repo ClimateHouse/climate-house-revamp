@@ -68,8 +68,8 @@ export const Hero = () => {
               <div>Cofondateurs</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white">300</div>
-              <div>Adhérents</div>
+              <div className="text-3xl font-bold text-white">200</div>
+              <div>Organisations</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-white">430</div>

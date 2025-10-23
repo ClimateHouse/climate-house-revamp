@@ -136,7 +136,7 @@ export const Community = () => {
           </div>
           <div className="text-center p-6 rounded-2xl bg-card border border-border">
             <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              460
+              430
             </div>
             <div className="text-lg font-semibold mb-1">Colocataires</div>
             <p className="text-sm text-muted-foreground">
