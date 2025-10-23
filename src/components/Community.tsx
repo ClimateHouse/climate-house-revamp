@@ -2,12 +2,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import communityImage from "@/assets/cofondateurs-wall.jpg";
+import henriFrancoisPhoto from "@/assets/team/henri-francois-martin.jpg";
 import { Linkedin } from "lucide-react";
 const teamMembers = [
   {
     name: "Henri-François MARTIN",
     role: "CO-directeur général",
-    image: "",
+    image: henriFrancoisPhoto,
     linkedin: "https://www.linkedin.com/in/henri-françoismartin/",
     initials: "HM"
   },
