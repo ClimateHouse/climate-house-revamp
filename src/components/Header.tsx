@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/climate-house-logo-transparent.png";
+import logo from "@/assets/climate-house-logo.png";
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <header className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-border shadow-sm">
