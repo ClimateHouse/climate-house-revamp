@@ -17,20 +17,8 @@ const formats = [{
   name: "Groupes de Travail",
   description: "Projets thématiques avec livrables concrets"
 }, {
-  name: "Meet Up",
-  description: "Rencontres informelles de l'écosystème"
-}, {
-  name: "Explos",
-  description: "Explorations de nouveaux territoires"
-}, {
   name: "Tables d'Hôtes",
   description: "Dîners intimistes entre leaders"
-}, {
-  name: "Soirées Festives",
-  description: "Moments de convivialité et célébration"
-}, {
-  name: "Visites Immersives",
-  description: "Découvertes terrain inspirantes"
 }];
 const themes = [{
   name: "Biodiversité & Océans",
@@ -119,7 +107,7 @@ export const Formats = () => {
 
               {/* Formats - Colonne de droite */}
               <div>
-                <h3 className="text-2xl font-bold mb-3">10 Formats</h3>
+                <h3 className="text-2xl font-bold mb-3">6 Formats</h3>
                 <p className="text-muted-foreground mb-6">
                   Pensés par et pour notre communauté d'entrepreneurs
                 </p>
