@@ -26,8 +26,8 @@ const teamMembers = [
     initials: "VB"
   },
   {
-    name: "Sistine VAN DEN BROEK",
-    role: "Programmation",
+    name: "Sixtine VAN DEN BROEK",
+    role: "Support Programmation",
     image: "",
     linkedin: "#",
     initials: "SV"
@@ -68,13 +68,6 @@ const teamMembers = [
     initials: "VC"
   },
   {
-    name: "Morgane KERBIRIOU",
-    role: "Lead Accueil",
-    image: "",
-    linkedin: "#",
-    initials: "MK"
-  },
-  {
     name: "Luna RAIX",
     role: "Support event",
     image: "",
@@ -101,13 +94,6 @@ const teamMembers = [
     image: "",
     linkedin: "#",
     initials: "SO"
-  },
-  {
-    name: "Rémi SABOURAUD",
-    role: "Chief of Partner",
-    image: "",
-    linkedin: "#",
-    initials: "RS"
   }
 ];
 
@@ -170,7 +156,7 @@ export const Community = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">L'Équipe</h3>
             <p className="text-lg text-muted-foreground">
-              15 personnes Climate House qui mettent quotidiennement leur énergie au service du projet
+              13 personnes Climate House qui mettent quotidiennement leur énergie au service du projet
             </p>
           </div>
 
