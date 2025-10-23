@@ -1,7 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import communityImage from "@/assets/cofondateurs-wall.jpg";
-import { Quote } from "lucide-react";
+import { Quote, Linkedin } from "lucide-react";
 const testimonials = [{
   quote: "Climate House nous a permis de rencontrer des partenaires clés et d'accélérer notre croissance. L'écosystème est exceptionnel.",
   author: "Marie Dubois",
@@ -15,6 +16,115 @@ const testimonials = [{
   author: "Sophie Bernard",
   role: "Fondatrice, Impact Social"
 }];
+
+const teamMembers = [
+  {
+    name: "Henri-François MARTIN",
+    role: "CO-directeur général",
+    image: "",
+    linkedin: "#",
+    initials: "HM"
+  },
+  {
+    name: "Maika NUTI",
+    role: "CO-directrice générale",
+    image: "",
+    linkedin: "#",
+    initials: "MN"
+  },
+  {
+    name: "Valère BRUNET",
+    role: "Lead Dynamique Collective",
+    image: "",
+    linkedin: "#",
+    initials: "VB"
+  },
+  {
+    name: "Sistine VAN DEN BROEK",
+    role: "Programmation",
+    image: "",
+    linkedin: "#",
+    initials: "SV"
+  },
+  {
+    name: "Manon FAVEROLLE",
+    role: "Lead Event",
+    image: "",
+    linkedin: "#",
+    initials: "MF"
+  },
+  {
+    name: "Ulysse PUGNET",
+    role: "Support Administratif & Financier",
+    image: "",
+    linkedin: "#",
+    initials: "UP"
+  },
+  {
+    name: "Stéphanie AMPART",
+    role: "Lead Programmation",
+    image: "",
+    linkedin: "#",
+    initials: "SA"
+  },
+  {
+    name: "Charlotte OLAGNE",
+    role: "Lead Maison",
+    image: "",
+    linkedin: "#",
+    initials: "CO"
+  },
+  {
+    name: "Vincent DE COIGNAC",
+    role: "Key Account Manager",
+    image: "",
+    linkedin: "#",
+    initials: "VC"
+  },
+  {
+    name: "Morgane KERBIRIOU",
+    role: "Lead Accueil",
+    image: "",
+    linkedin: "#",
+    initials: "MK"
+  },
+  {
+    name: "Luna RAIX",
+    role: "Support event",
+    image: "",
+    linkedin: "#",
+    initials: "LR"
+  },
+  {
+    name: "Elisabeth GUITINE",
+    role: "Lead Administratif et Financier",
+    image: "",
+    linkedin: "#",
+    initials: "EG"
+  },
+  {
+    name: "Sarah BANDERLY",
+    role: "Lead Communication",
+    image: "",
+    linkedin: "#",
+    initials: "SB"
+  },
+  {
+    name: "Simon OUAKI",
+    role: "Support Communication",
+    image: "",
+    linkedin: "#",
+    initials: "SO"
+  },
+  {
+    name: "Rémi SABOURAUD",
+    role: "Chief of Partner",
+    image: "",
+    linkedin: "#",
+    initials: "RS"
+  }
+];
+
 export const Community = () => {
   return <section id="communaute" className="py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -88,6 +198,46 @@ export const Community = () => {
           <Button size="lg" variant="outline">
             Découvrir tous nos membres
           </Button>
+        </div>
+
+        {/* Section Équipe */}
+        <div className="max-w-6xl mx-auto mt-24">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">L'Équipe</h3>
+            <p className="text-lg text-muted-foreground">
+              15 personnes Climate House qui mettent quotidiennement leur énergie au service du projet
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {teamMembers.map((member, index) => (
+              <div
+                key={member.name}
+                className="flex flex-col items-center text-center group animate-fade-in"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                <div className="relative mb-4">
+                  <Avatar className="h-24 w-24 border-2 border-border group-hover:border-primary transition-colors duration-300">
+                    <AvatarImage src={member.image} alt={member.name} />
+                    <AvatarFallback className="text-lg font-semibold bg-gradient-soft">
+                      {member.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                    aria-label={`LinkedIn de ${member.name}`}
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </div>
+                <h4 className="font-semibold text-sm mb-1">{member.name}</h4>
+                <p className="text-xs text-muted-foreground">{member.role}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>;
