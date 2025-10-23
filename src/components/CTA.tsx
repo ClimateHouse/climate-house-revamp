@@ -1,29 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Calendar, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 export const CTA = () => {
   return <section className="py-24 bg-gradient-soft">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          {/* CTA Principal */}
-          <Card className="p-12 bg-gradient-hero text-primary-foreground mb-8 animate-scale-in shadow-strong">
-            <div className="text-center max-w-2xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Accélérez la transition</h2>
-              <p className="text-xl mb-8 text-primary-foreground/90">Transformez votre organisation avec la Climate House. Rejoignez 200+ organisations engagées dans la construction de l'économie de demain.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-background text-foreground hover:bg-background/90 group">
-                  Découvrir nos offres entreprises
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Réserver une visite
-                </Button>
-              </div>
-            </div>
-          </Card>
-
           {/* Newsletter */}
           <Card className="p-8 animate-fade-in" style={{
           animationDelay: "200ms"
