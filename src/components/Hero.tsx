@@ -7,9 +7,23 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-            <MapPin className="h-4 w-4 text-white" />
-            <span className="text-sm font-medium text-white">Paris, France</span>
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
+              <MapPin className="h-4 w-4 text-white" />
+              <span className="text-sm font-medium text-white">Rue du Caire, Paris</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
+              <MapPin className="h-4 w-4 text-white" />
+              <span className="text-sm font-medium text-white">Rue Dussoubs, Paris</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
+              <MapPin className="h-4 w-4 text-white" />
+              <span className="text-sm font-medium text-white">Plantation, Paris</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/30">
+              <MapPin className="h-4 w-4 text-white/70" />
+              <span className="text-sm font-medium text-white/70">Prochainement : Bordeaux, Lyon, Marseille</span>
+            </div>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
