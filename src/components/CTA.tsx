@@ -12,18 +12,18 @@ export const CTA = () => {
           <Card className="p-12 bg-gradient-hero text-primary-foreground mb-8 animate-scale-in shadow-strong">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Rejoignez Climate House
+                Accélérez Votre Transition
               </h2>
               <p className="text-xl mb-8 text-primary-foreground/90">
-                Faites partie d'une communauté unique d'entrepreneurs engagés pour la
-                transition écologique et sociale. Des places limitées sont disponibles.
+                Transformez votre organisation avec l'accompagnement de Climate House. 
+                Rejoignez 200+ organisations engagées dans la construction de l'économie de demain.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
                   className="bg-background text-foreground hover:bg-background/90 group"
                 >
-                  Devenir colocataire
+                  Découvrir nos offres entreprises
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button

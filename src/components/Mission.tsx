@@ -1,30 +1,24 @@
 import { Card } from "@/components/ui/card";
 import { Leaf, Handshake, Rocket, Heart } from "lucide-react";
 
-const values = [
+const pillars = [
   {
     icon: Leaf,
-    title: "Transition Écologique",
+    title: "La Maison",
     description:
-      "Nous rassemblons les acteurs du changement pour accélérer la transition vers une économie durable et respectueuse de la planète.",
+      "2200 m² au cœur de Paris conçus pour inspirer et coopérer. Un espace vivant d'hospitalité et de liens informels avec 300 postes de travail, 15 salles de réunion et 6 espaces événementiels privatisables.",
   },
   {
     icon: Handshake,
-    title: "Collaboration",
+    title: "La Communauté",
     description:
-      "Un écosystème où entreprises, ONG, startups et collectifs échangent, innovent et co-créent les solutions de demain.",
+      "400 colocataires de 70 structures, 80 cofondateurs entrepreneurs et 200 organisations adhérentes. Un réseau unique d'expertise et d'engagement au service de la transition.",
   },
   {
     icon: Rocket,
-    title: "Innovation",
+    title: "L'Ate.lier",
     description:
-      "Un espace propice à l'expérimentation et à l'innovation, où les idées prennent vie et se transforment en projets concrets.",
-  },
-  {
-    icon: Heart,
-    title: "Impact Social",
-    description:
-      "Au-delà de l'environnement, nous œuvrons pour une économie plus juste et inclusive qui bénéficie à toute la société.",
+      "Le programme de transformation de Climate House. Des rencontres transformantes, une ingénierie pédagogique sur-mesure et une curation de communauté pour accélérer votre transition.",
   },
 ];
 
@@ -34,34 +28,29 @@ export const Mission = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Notre Mission
+            3 Piliers pour Transformer
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Climate House est né de la conviction que la transition écologique et sociale
-            nécessite une transformation profonde de notre économie. Nous créons un espace
-            où les architectes du changement se rencontrent pour construire ensemble
-            l'économie de demain.
+            Climate House réunit un lieu d'exception, une communauté entreprenante et un 
+            programme de transformation unique pour accompagner les organisations vers un 
+            modèle économique durable et régénératif.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {values.map((value, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pillars.map((pillar, index) => (
             <Card
-              key={value.title}
+              key={pillar.title}
               className="p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in border-border bg-card"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-hero flex items-center justify-center">
-                  <value.icon className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
+              <div className="mb-6 w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center">
+                <pillar.icon className="h-8 w-8 text-primary-foreground" />
               </div>
+              <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {pillar.description}
+              </p>
             </Card>
           ))}
         </div>

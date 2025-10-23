@@ -24,16 +24,16 @@ export const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Réinventer l'économie
+            Réconcilier
             <span className="block bg-gradient-hero bg-clip-text text-transparent">
-              au service du climat
+              Économie et Écologie
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            2000 m² dédiés à la transition écologique et sociale. Un espace unique où
-            70+ structures engagées se retrouvent chaque jour pour innover et façonner
-            l'économie de demain.
+            Plus qu'un lieu, un espace de liens. Accélérez la transformation de votre 
+            organisation avec un écosystème unique de 70+ structures engagées, des programmes 
+            sur-mesure et une méthodologie éprouvée.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -41,7 +41,7 @@ export const Hero = () => {
               size="lg"
               className="bg-gradient-hero hover:opacity-90 transition-opacity text-lg px-8 group"
             >
-              Devenir colocataire
+              Découvrir nos offres entreprises
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8">

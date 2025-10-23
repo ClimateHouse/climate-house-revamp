@@ -16,23 +16,22 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#mission" className="text-foreground hover:text-primary transition-colors">
-              Notre Mission
+              Les 3 Piliers
+            </a>
+            <a href="#atelier" className="text-foreground hover:text-primary transition-colors">
+              L'Ate.lier
             </a>
             <a href="#espaces" className="text-foreground hover:text-primary transition-colors">
-              Nos Espaces
+              La Maison
             </a>
             <a href="#communaute" className="text-foreground hover:text-primary transition-colors">
               La Communauté
             </a>
-            <a href="#calendrier" className="text-foreground hover:text-primary transition-colors">
-              Calendrier
-            </a>
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost">Se connecter</Button>
             <Button className="bg-gradient-hero hover:opacity-90 transition-opacity">
-              Devenir colocataire
+              Nous contacter
             </Button>
           </div>
 

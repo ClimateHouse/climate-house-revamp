@@ -2,6 +2,10 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Stats } from "@/components/Stats";
 import { Mission } from "@/components/Mission";
+import { TrustedBy } from "@/components/TrustedBy";
+import { Atelier } from "@/components/Atelier";
+import { Parcours } from "@/components/Parcours";
+import { Formats } from "@/components/Formats";
 import { Spaces } from "@/components/Spaces";
 import { Community } from "@/components/Community";
 import { CTA } from "@/components/CTA";
@@ -13,8 +17,12 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TrustedBy />
         <Stats />
         <Mission />
+        <Atelier />
+        <Parcours />
+        <Formats />
         <Spaces />
         <Community />
         <CTA />
