@@ -22,21 +22,27 @@ const formats = [{
 }];
 const themes = [{
   name: "Biodiversité & Océans",
+  description: "Préserver les écosystèmes marins et terrestres essentiels",
   color: "bg-blue-500"
 }, {
   name: "Agriculture & Alimentation",
+  description: "Transformer nos systèmes alimentaires vers la durabilité",
   color: "bg-green-500"
 }, {
   name: "Infrastructures & Habitat",
+  description: "Construire des espaces de vie résilients et bas-carbone",
   color: "bg-amber-500"
 }, {
   name: "Énergies",
+  description: "Accélérer la transition vers les énergies renouvelables",
   color: "bg-yellow-500"
 }, {
   name: "Finance Responsable",
+  description: "Orienter les capitaux vers l'économie durable",
   color: "bg-purple-500"
 }, {
   name: "Modèles & Culture",
+  description: "Réinventer nos paradigmes économiques et sociétaux",
   color: "bg-pink-500"
 }];
 export const Formats = () => {
@@ -99,7 +105,8 @@ export const Formats = () => {
                     <Card key={theme.name} className="p-4 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{
                       animationDelay: `${index * 50}ms`
                     }}>
-                      <h4 className="font-bold text-base">{theme.name}</h4>
+                      <h4 className="font-bold text-base mb-1">{theme.name}</h4>
+                      <p className="text-sm text-muted-foreground">{theme.description}</p>
                     </Card>
                   ))}
                 </div>
