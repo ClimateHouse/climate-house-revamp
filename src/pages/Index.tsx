@@ -24,8 +24,8 @@ const Index = () => {
         <Parcours />
         <Formats />
         <Spaces />
-        <Community />
         <Calendrier />
+        <Community />
         <Bibliotheque />
         <CTA />
       </main>
