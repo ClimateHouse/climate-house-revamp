@@ -19,7 +19,7 @@ const offerings = [{
   highlight: true
 }, {
   icon: Network,
-  title: "L'Ate.lier Inter-Entreprises",
+  title: "Adhésion thématique",
   subtitle: "Coopérer pour transformer son secteur",
   description: "Co-créer des projets structurants : Rejoignez des groupes de travail et alliances entre entreprises pour relever les défis d'une filière ou d'une verticale métier. Ensemble, co-construisez les bonnes pratiques jusqu'à en faire la nouvelle norme de votre secteur.",
   features: ["Alliances stratégiques inter-entreprises", "Co-construction de standards sectoriels", "Transformation systémique à grande échelle", "Projets structurants à fort impact", "Partage d'expériences et de ressources", "Influence collective sur les normes du marché"],
