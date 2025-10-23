@@ -1,16 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/climate-house-logo.jpg";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-            Climate House
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
+      <nav className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Brand Logo */}
+          <a href="/" className="flex items-center">
+            <img src={logo} alt="Climate House - Accélérons la transition" className="h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -30,7 +32,7 @@ export const Header = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-gradient-hero hover:opacity-90 transition-opacity">
+            <Button size="lg" className="shadow-md">
               Nous contacter
             </Button>
           </div>
@@ -41,29 +43,26 @@ export const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            <Menu className="h-6 w-6" />
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in">
-            <a href="#mission" className="text-foreground hover:text-primary transition-colors">
-              Notre Mission
+          <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in border-t border-border pt-4">
+            <a href="#mission" className="text-foreground hover:text-primary transition-colors py-2">
+              Les 3 Piliers
             </a>
-            <a href="#espaces" className="text-foreground hover:text-primary transition-colors">
-              Nos Espaces
+            <a href="#atelier" className="text-foreground hover:text-primary transition-colors py-2">
+              L'Ate.lier
             </a>
-            <a href="#communaute" className="text-foreground hover:text-primary transition-colors">
+            <a href="#espaces" className="text-foreground hover:text-primary transition-colors py-2">
+              La Maison
+            </a>
+            <a href="#communaute" className="text-foreground hover:text-primary transition-colors py-2">
               La Communauté
             </a>
-            <a href="#calendrier" className="text-foreground hover:text-primary transition-colors">
-              Calendrier
-            </a>
-            <Button variant="ghost" className="w-full justify-start">
-              Se connecter
-            </Button>
-            <Button className="bg-gradient-hero w-full">Devenir colocataire</Button>
+            <Button className="w-full mt-2">Nous contacter</Button>
           </div>
         )}
       </nav>
