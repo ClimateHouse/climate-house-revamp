@@ -13,8 +13,8 @@ const pillars = [{
   title: "L'Ate.lier",
   description: "Le programme de transformation de Climate House. Des rencontres transformantes, une ingénierie pédagogique sur-mesure et une curation de communauté pour accélérer votre transition."
 }];
-export const Mission = () => {
-  return <section id="mission" className="py-24 bg-background">
+export const Mission = ({ className }: { className?: string }) => {
+  return <section id="mission" className={`py-24 bg-background ${className || ''}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">3 piliers pour transformer</h2>

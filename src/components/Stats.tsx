@@ -8,7 +8,7 @@ const stats = [
   },
   {
     icon: Users,
-    value: "400",
+    value: "430",
     label: "colocataires entrepreneurs",
   },
   {
