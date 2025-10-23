@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Henri-François MARTIN",
     role: "CO-directeur général",
     image: "",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/henri-françoismartin/",
     initials: "HM"
   },
   {
