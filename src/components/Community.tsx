@@ -21,7 +21,7 @@ export const Community = () => {
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 py-0">La Communauté</h2>
           <p className="text-xl text-muted-foreground">
-            Une communauté de 400 entrepreneurs passionnés, unis par la volonté de
+            Une communauté de plus de 800 entrepreneurs passionnés, unis par la volonté de
             construire une économie durable. 80 cofondateurs à parité femmes-hommes ont
             mis leurs ressources au service de cette vision collective.
           </p>
