@@ -7,6 +7,7 @@ import { Atelier } from "@/components/Atelier";
 import { Parcours } from "@/components/Parcours";
 import { Formats } from "@/components/Formats";
 import { Spaces } from "@/components/Spaces";
+import { Testimonials } from "@/components/Testimonials";
 import { Community } from "@/components/Community";
 import { Bibliotheque } from "@/components/Bibliotheque";
 import { Calendrier } from "@/components/Calendrier";
@@ -21,6 +22,7 @@ const Index = () => {
         <Stats />
         <Mission className="mx-0 px-0 py-[40px]" />
         <Spaces />
+        <Testimonials />
         <Atelier />
         <Parcours />
         <Formats />
