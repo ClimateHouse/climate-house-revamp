@@ -22,8 +22,8 @@ const Index = () => {
         <Atelier />
         <Parcours />
         <Formats />
-        
-        
+        <Spaces />
+        <Community />
         <Bibliotheque />
         <CTA />
       </main>
