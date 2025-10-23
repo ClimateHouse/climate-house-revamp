@@ -15,16 +15,16 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#espaces" className="text-foreground hover:text-primary transition-colors">
-              La Climate House
+              Climate House
             </a>
             <a href="#atelier" className="text-foreground hover:text-primary transition-colors">
-              L'Ate.lier
+              Ate.lier
             </a>
             <a href="#espaces" className="text-foreground hover:text-primary transition-colors">
-              Organiser un événement
+              Organiser événement
             </a>
             <a href="#communaute" className="text-foreground hover:text-primary transition-colors">
-              La communauté
+              Communauté
             </a>
             <a href="#calendrier" className="text-foreground hover:text-primary transition-colors">
               Calendrier
@@ -46,16 +46,16 @@ export const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in border-t border-border pt-4">
             <a href="#espaces" className="text-foreground hover:text-primary transition-colors py-2">
-              La Climate House
+              Climate House
             </a>
             <a href="#atelier" className="text-foreground hover:text-primary transition-colors py-2">
-              L'Ate.lier
+              Ate.lier
             </a>
             <a href="#espaces" className="text-foreground hover:text-primary transition-colors py-2">
-              Organiser un événement
+              Organiser événement
             </a>
             <a href="#communaute" className="text-foreground hover:text-primary transition-colors py-2">
-              La communauté
+              Communauté
             </a>
             <a href="#calendrier" className="text-foreground hover:text-primary transition-colors py-2">
               Calendrier
