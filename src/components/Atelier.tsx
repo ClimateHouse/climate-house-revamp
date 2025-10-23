@@ -64,39 +64,6 @@ export const Atelier = () => {
               </Button>
             </Card>)}
         </div>
-
-        {/* 4H Framework */}
-        <div className="max-w-5xl mx-auto">
-          <Card className="p-8 md:p-12 bg-card">
-            <h3 className="text-3xl font-bold text-center mb-12">Notre Approche : Les 4H</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {[{
-              title: "HEAD",
-              subtitle: "Se former et s'informer",
-              description: "Acquérir les connaissances essentielles"
-            }, {
-              title: "HEART",
-              subtitle: "Créer du lien",
-              description: "Tisser des relations authentiques"
-            }, {
-              title: "HANDS",
-              subtitle: "Faire ensemble",
-              description: "Passer à l'action collective"
-            }, {
-              title: "HOUSE",
-              subtitle: "Prendre soin de son réseau",
-              description: "Cultiver son écosystème"
-            }].map((h, index) => <div key={h.title} className="text-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-4">
-                    H
-                  </div>
-                  <h4 className="font-bold text-lg mb-2">{h.title}</h4>
-                  <p className="text-sm text-primary font-medium mb-2">{h.subtitle}</p>
-                  <p className="text-sm text-muted-foreground">{h.description}</p>
-                </div>)}
-            </div>
-          </Card>
-        </div>
       </div>
     </section>;
 };

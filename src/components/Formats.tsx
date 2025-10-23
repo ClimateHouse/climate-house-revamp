@@ -62,8 +62,41 @@ export const Formats = () => {
 
           {/* Formats */}
           <div className="mb-16">
-            <h2 className="text-4xl font-bold text-center mb-4">10 formats de la programmation</h2>
+            <h2 className="text-4xl font-bold text-center mb-4">Notre programmation</h2>
             <p className="text-center text-muted-foreground mb-12 text-lg">Pensés par et pour notre communauté d'entrepreneur</p>
+            
+            {/* 4H Framework */}
+            <Card className="p-8 md:p-12 bg-card mb-12">
+              <h3 className="text-3xl font-bold text-center mb-12">Notre Approche : Les 4H</h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                {[{
+                  title: "HEAD",
+                  subtitle: "Se former et s'informer",
+                  description: "Acquérir les connaissances essentielles"
+                }, {
+                  title: "HEART",
+                  subtitle: "Créer du lien",
+                  description: "Tisser des relations authentiques"
+                }, {
+                  title: "HANDS",
+                  subtitle: "Faire ensemble",
+                  description: "Passer à l'action collective"
+                }, {
+                  title: "HOUSE",
+                  subtitle: "Prendre soin de son réseau",
+                  description: "Cultiver son écosystème"
+                }].map((h, index) => (
+                  <div key={h.title} className="text-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-hero flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-4">
+                      H
+                    </div>
+                    <h4 className="font-bold text-lg mb-2">{h.title}</h4>
+                    <p className="text-sm text-primary font-medium mb-2">{h.subtitle}</p>
+                    <p className="text-sm text-muted-foreground">{h.description}</p>
+                  </div>
+                ))}
+              </div>
+            </Card>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {formats.map((format, index) => <Card key={format.name} className="p-6 hover:shadow-soft transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{
