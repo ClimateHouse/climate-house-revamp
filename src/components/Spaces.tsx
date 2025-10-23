@@ -6,21 +6,10 @@ import { Briefcase, Presentation, CheckCircle2, Users2 } from "lucide-react";
 const spaces = [
   {
     icon: Briefcase,
-    title: "Espaces de Travail",
-    description: "300 postes de travail flexibles dans un environnement inspirant",
-    features: ["Bureaux privés", "Espaces partagés", "Salles de réunion"],
-  },
-  {
-    icon: Presentation,
-    title: "Salles d'Événements",
-    description: "5 espaces modulables pour vos conférences et ateliers",
-    features: ["Jusqu'à 200 personnes", "Équipement professionnel", "Catering disponible"],
-  },
-  {
-    icon: CheckCircle2,
-    title: "Services Embarqués",
-    description: "Tout ce dont vous avez besoin pour travailler sereinement",
+    title: "ESPACE DE TRAVAIL",
+    description: "300 postes de travail flexibles dans un environnement inspirant avec tous les services embarqués",
     features: [
+      "Bureaux privés et espaces partagés",
       "L'accès aux 2 bâtiments Climate House (rue Caire & Dussoubs)",
       "L'accès au réseau des 24 bâtiments Morning dans Paris (espaces nomades)",
       "Un écosystème bouillonnant où vous êtes entourés des personnes qui veulent transformer le monde de demain",
@@ -35,12 +24,25 @@ const spaces = [
       "Accès à l'espace 7/7",
       "Accueil & sécurité de l'espace géré par morning",
     ],
+    ctaText: "Candidater pour devenir résident",
+    ctaLink: "#contact",
   },
   {
-    icon: Users2,
-    title: "Espaces Collaboratifs",
-    description: "Des lieux pensés pour favoriser les rencontres et la collaboration",
-    features: ["Salons thématiques", "Zones de créativité", "Espaces confidentiels"],
+    icon: Presentation,
+    title: "Espace événementiel et collaboratif",
+    description: "5 espaces modulables pour vos conférences, ateliers et collaboration créative",
+    features: [
+      "Jusqu'à 200 personnes",
+      "Équipement professionnel complet",
+      "Catering disponible",
+      "Salons thématiques pour les rencontres",
+      "Zones de créativité et brainstorming",
+      "Espaces confidentiels pour réunions privées",
+      "Configuration modulable selon vos besoins",
+      "Support technique dédié",
+    ],
+    ctaText: "Organiser un événement",
+    ctaLink: "#contact",
   },
 ];
 
@@ -81,11 +83,11 @@ export const Spaces = () => {
         </div>
 
         {/* Grille des espaces */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {spaces.map((space, index) => (
             <Card
               key={space.title}
-              className="p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+              className="p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in flex flex-col"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start gap-4 mb-4">
@@ -97,14 +99,17 @@ export const Spaces = () => {
                   <p className="text-muted-foreground mb-4">{space.description}</p>
                 </div>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-6 flex-grow">
                 {space.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  <li key={feature} className="flex items-start gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
                     <span className="text-muted-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
+              <Button size="lg" className="w-full bg-gradient-hero hover:opacity-90" asChild>
+                <a href={space.ctaLink}>{space.ctaText}</a>
+              </Button>
             </Card>
           ))}
         </div>
