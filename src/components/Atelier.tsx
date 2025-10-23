@@ -26,7 +26,7 @@ const offerings = [{
   cta: "Rejoindre une alliance"
 }];
 export const Atelier = () => {
-  return <section id="atelier" className="py-24 bg-gradient-soft">
+  return <section id="atelier" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">L'Ate.lier</h2>

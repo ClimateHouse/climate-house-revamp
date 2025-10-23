@@ -32,7 +32,7 @@ const parcours = [{
   example: "Alliance sur la mobilité de demain"
 }];
 export const Parcours = () => {
-  return <section className="py-24 bg-gradient-soft">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">

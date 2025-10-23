@@ -44,7 +44,7 @@ const spaces = [
 
 export const Spaces = () => {
   return (
-    <section id="espaces" className="py-24 bg-gradient-soft">
+    <section id="espaces" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Nos Espaces</h2>

@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, FileText, Download, Search } from "lucide-react";
 export const Bibliotheque = () => {
-  return <section id="bibliotheque" className="py-24 bg-background">
+  return <section id="bibliotheque" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Bibliothèque</h2>

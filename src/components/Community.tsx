@@ -112,7 +112,7 @@ const teamMembers = [
 ];
 
 export const Community = () => {
-  return <section id="communaute" className="py-24 bg-background">
+  return <section id="communaute" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 py-0">La Communauté</h2>
@@ -130,7 +130,7 @@ export const Community = () => {
 
         {/* Chiffres clés */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-          <div className="text-center p-6 rounded-2xl bg-gradient-soft">
+          <div className="text-center p-6 rounded-2xl bg-card border border-border">
             <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
               80
             </div>
@@ -139,7 +139,7 @@ export const Community = () => {
               À parité femmes-hommes, issus de secteurs variés
             </p>
           </div>
-          <div className="text-center p-6 rounded-2xl bg-gradient-soft">
+          <div className="text-center p-6 rounded-2xl bg-card border border-border">
             <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
               70+
             </div>
@@ -148,7 +148,7 @@ export const Community = () => {
               Entreprises, ONG, startups et collectifs
             </p>
           </div>
-          <div className="text-center p-6 rounded-2xl bg-gradient-soft">
+          <div className="text-center p-6 rounded-2xl bg-card border border-border">
             <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
               460
             </div>
@@ -182,9 +182,9 @@ export const Community = () => {
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <div className="relative mb-4">
-                  <Avatar className="h-24 w-24 border-2 border-border group-hover:border-primary transition-colors duration-300">
+                  <Avatar className="h-24 w-24 border-2 border-border group-hover:border-primary transition-colors duration-300 shadow-soft">
                     <AvatarImage src={member.image} alt={member.name} />
-                    <AvatarFallback className="text-lg font-semibold bg-gradient-soft">
+                    <AvatarFallback className="text-lg font-semibold bg-card">
                       {member.initials}
                     </AvatarFallback>
                   </Avatar>

@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/climate-house-logo.jpg";
+import logo from "@/assets/climate-house-logo-transparent.png";
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
-      <nav className="container mx-auto px-4 bg-orange-50">
-        <div className="flex items-center justify-between h-20 bg-orange-50 px-0 mx-0">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-border shadow-sm">
+      <nav className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
           {/* Brand Logo */}
           <a href="/" className="flex items-center">
             <img src={logo} alt="Climate House - Accélérons la transition" className="h-10 w-auto" />

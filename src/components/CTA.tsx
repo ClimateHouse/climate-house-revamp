@@ -3,11 +3,11 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Mail } from "lucide-react";
 export const CTA = () => {
-  return <section className="py-24 bg-gradient-soft">
+  return <section className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Newsletter */}
-          <Card className="p-8 animate-fade-in" style={{
+          <Card className="p-10 animate-fade-in shadow-strong" style={{
           animationDelay: "200ms"
         }}>
             <div className="flex flex-col md:flex-row items-center gap-6">
