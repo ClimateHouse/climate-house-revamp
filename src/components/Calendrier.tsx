@@ -1,17 +1,11 @@
-import { Calendar as CalendarIcon, Sparkles } from "lucide-react";
-
 export const Calendrier = () => {
   return (
     <section id="calendrier" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-            <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Les moments forts à venir</span>
-          </div>
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <p className="text-sm font-medium text-primary mb-4">Les moments forts à venir</p>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Calendrier de la programmation
           </h2>
           
@@ -21,23 +15,14 @@ export const Calendrier = () => {
           </p>
         </div>
 
-        {/* Lu.ma Calendar Embed */}
-        <div className="max-w-6xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+        <div className="max-w-6xl mx-auto">
           <div className="bg-card rounded-2xl shadow-xl border border-border overflow-hidden">
-            <div className="p-6 bg-gradient-to-r from-primary/5 to-primary/10 border-b border-border">
-              <div className="flex items-center gap-3">
-                <div className="p-3 bg-primary/10 rounded-xl">
-                  <CalendarIcon className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Nos prochains événements</h3>
-                  <p className="text-sm text-muted-foreground">Cliquez sur un événement pour réserver votre place</p>
-                </div>
-              </div>
+            <div className="p-6 border-b border-border">
+              <h3 className="text-xl font-semibold mb-2">Nos prochains événements</h3>
+              <p className="text-sm text-muted-foreground">Cliquez sur un événement pour réserver votre place</p>
             </div>
             
             <div className="relative bg-background" style={{ minHeight: "600px" }}>
-              {/* Lu.ma Calendar Iframe */}
               <iframe
                 src="https://luma.com/embed/calendar/cal-x45uxomxwmUEX63/events"
                 width="100%"
@@ -55,7 +40,6 @@ export const Calendrier = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
           <div className="mt-8 text-center">
             <p className="text-sm text-muted-foreground mb-4">
               Vous souhaitez organiser un événement à la Climate House ?
