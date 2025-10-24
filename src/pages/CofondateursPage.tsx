@@ -113,22 +113,55 @@ const CofondateursPage = () => {
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-soft overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <div className="max-w-4xl mx-auto text-center animate-fade-in mb-12">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
                 <Users className="h-5 w-5 text-primary" />
                 <span className="text-sm font-semibold text-primary">80 Cofondateurs</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Les Cofondateurs de Climate House
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-muted-foreground">
                 80 entrepreneurs visionnaires à parité femmes-hommes, qui ont uni leurs forces
                 pour créer le premier lieu dédié à l'action climatique en France
               </p>
             </div>
 
+            {/* Filtres et Recherche */}
+            <div className="max-w-6xl mx-auto mb-12">
+              {/* Barre de recherche */}
+              <div className="relative mb-6">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Rechercher un cofondateur ou une entreprise..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-12 h-14 text-lg"
+                />
+              </div>
+
+              {/* Filtres par secteur */}
+              <div className="flex flex-wrap gap-2 justify-center mb-6">
+                {sectors.map((sector) => (
+                  <Button
+                    key={sector}
+                    variant={selectedSector === sector ? "default" : "outline"}
+                    onClick={() => setSelectedSector(sector)}
+                    className="rounded-full"
+                  >
+                    {sector}
+                  </Button>
+                ))}
+              </div>
+
+              {/* Compteur */}
+              <div className="text-center">
+                <p className="text-sm text-muted-foreground">
+                  {filteredCofondateurs.length} cofondateur{filteredCofondateurs.length > 1 ? 's' : ''} affiché{filteredCofondateurs.length > 1 ? 's' : ''}
+                </p>
+              </div>
+            </div>
+
             {/* Image du mur */}
-            <div className="max-w-5xl mx-auto mb-12 animate-scale-in">
+            <div className="max-w-5xl mx-auto animate-scale-in">
               <div className="relative rounded-3xl overflow-hidden shadow-strong">
                 <img
                   src={wallImage}
@@ -144,46 +177,6 @@ const CofondateursPage = () => {
                     Ensemble pour transformer l'économie
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Filtres et Recherche */}
-        <section className="py-12 bg-background border-b border-border">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              {/* Barre de recherche */}
-              <div className="relative mb-6">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                <Input
-                  type="text"
-                  placeholder="Rechercher un cofondateur ou une entreprise..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 h-14 text-lg"
-                />
-              </div>
-
-              {/* Filtres par secteur */}
-              <div className="flex flex-wrap gap-2 justify-center">
-                {sectors.map((sector) => (
-                  <Button
-                    key={sector}
-                    variant={selectedSector === sector ? "default" : "outline"}
-                    onClick={() => setSelectedSector(sector)}
-                    className="rounded-full"
-                  >
-                    {sector}
-                  </Button>
-                ))}
-              </div>
-
-              {/* Compteur */}
-              <div className="text-center mt-6">
-                <p className="text-sm text-muted-foreground">
-                  {filteredCofondateurs.length} cofondateur{filteredCofondateurs.length > 1 ? 's' : ''} affiché{filteredCofondateurs.length > 1 ? 's' : ''}
-                </p>
               </div>
             </div>
           </div>
