@@ -146,8 +146,8 @@ export const Community = () => {
         </div>
 
         <div className="text-center mt-12 animate-fade-in">
-          <Button size="lg" variant="outline">
-            Découvrir tous nos membres
+          <Button size="lg" variant="outline" asChild>
+            <a href="/cofondateurs">Découvrir tous les cofondateurs</a>
           </Button>
         </div>
 
