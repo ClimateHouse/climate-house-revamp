@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import coworkingImage from "@/assets/inauguration-ruban.jpg";
-import { Briefcase, Presentation, Plus, Minus, Users, Calendar, Lightbulb, MapPin } from "lucide-react";
+import { Briefcase, Presentation, Plus, Minus, Users, Calendar, Lightbulb, MapPin, Building2 } from "lucide-react";
 
 // Données des espaces de travail pour les résidents
 const workspaceFeatures = [
@@ -42,6 +42,30 @@ const eventSpaces = [
       "Des offres modulables, pensées pour répondre à vos attentes",
     ],
   },
+];
+
+// Données des espaces spécifiques
+const specificSpaces = [
+  {
+    name: "La BAL-ROOM",
+    description: "Salle de réception pour jusqu'à 90 personnes, idéale pour des conférences ou des cocktails."
+  },
+  {
+    name: "Le JARDIN Divers",
+    description: "Espace modulable pour 40 personnes, parfait pour des ateliers ou des événements publics."
+  },
+  {
+    name: "Les COMMUNS",
+    description: "Accueille jusqu'à 150 personnes, idéal pour des séminaires collaboratifs."
+  },
+  {
+    name: "La WAVE ROOM",
+    description: "Salle de créativité unique avec vue panoramique, favorisant l'innovation."
+  },
+  {
+    name: "PLANTATION",
+    description: "Une toute nouvelle extension"
+  }
 ];
 
 // Composant pour les cartes d'espaces événementiels
@@ -173,6 +197,7 @@ const ResidenceCard = ({
 
 export const Spaces = () => {
   const [showWorkspaceDetails, setShowWorkspaceDetails] = useState(false);
+  const [showSpaceDetails, setShowSpaceDetails] = useState(false);
 
   return (
     <section id="espaces" className="py-20 bg-background">
@@ -302,6 +327,53 @@ export const Spaces = () => {
               <EventSpaceCard key={space.title} space={space} index={index} />
             ))}
           </div>
+
+          {/* Bloc des espaces spécifiques */}
+          <Card className="p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-2 border-accent/20 mb-8">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
+                <Building2 className="h-7 w-7 text-accent" />
+              </div>
+              <div className="flex-1">
+                <h4 className="text-2xl font-bold mb-2">Nos espaces</h4>
+                <p className="text-muted-foreground">
+                  Découvrez nos espaces modulables pour tous types d'événements
+                </p>
+              </div>
+            </div>
+
+            {showSpaceDetails && (
+              <ul className="space-y-3 mb-6 animate-fade-in">
+                {specificSpaces.map((space) => (
+                  <li key={space.name} className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                    <div>
+                      <span className="font-semibold text-accent">{space.name}</span>
+                      <span className="text-muted-foreground"> - {space.description}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            <Button
+              variant="outline"
+              onClick={() => setShowSpaceDetails(!showSpaceDetails)}
+              className="w-full"
+            >
+              {showSpaceDetails ? (
+                <>
+                  <Minus className="h-4 w-4 mr-2" />
+                  Voir moins de détails
+                </>
+              ) : (
+                <>
+                  <Plus className="h-4 w-4 mr-2" />
+                  Découvrir nos espaces
+                </>
+              )}
+            </Button>
+          </Card>
 
           <div className="text-center">
             <Button size="lg" variant="default" className="bg-accent hover:bg-accent/90" asChild>
