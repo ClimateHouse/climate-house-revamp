@@ -55,16 +55,16 @@ export const Hero = () => {
             <Button 
               asChild
               size="lg" 
-              variant="outline" 
-              className="text-lg px-8 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+              variant="secondary" 
+              className="text-lg px-8 shadow-lg hover:shadow-xl"
             >
               <a href="/climate-house">Organiser un événement</a>
             </Button>
             <Button 
               asChild
               size="lg" 
-              variant="outline" 
-              className="text-lg px-8 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+              variant="secondary" 
+              className="text-lg px-8 shadow-lg hover:shadow-xl"
             >
               <a href="/atelier">Découvrir l'atel.ier</a>
             </Button>
