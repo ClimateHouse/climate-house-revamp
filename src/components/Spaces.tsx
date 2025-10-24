@@ -311,6 +311,11 @@ export const Spaces = () => {
                   Visite virtuelle
                 </a>
               </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="/colocataires">
+                  Découvrir les Colocataires
+                </a>
+              </Button>
             </div>
           </div>
         </div>
