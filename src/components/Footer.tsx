@@ -10,7 +10,7 @@ const footerLinks = {
     label: "La Communauté",
     href: "#communaute"
   }, {
-    label: "L'Ate•lier",
+    label: "L'Ate.lier",
     href: "#atelier"
   }],
   "Rejoindre": [{

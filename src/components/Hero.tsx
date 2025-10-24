@@ -66,7 +66,7 @@ export const Hero = () => {
               variant="secondary" 
               className="text-lg px-8 shadow-lg hover:shadow-xl"
             >
-              <a href="/atelier">Découvrir l'atel.ier</a>
+              <a href="/atelier">Découvrir l'Ate.lier</a>
             </Button>
           </div>
 

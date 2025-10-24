@@ -18,7 +18,7 @@ const pillars = [{
   icon: Rocket,
   title: "L'Ate.lier",
   description: "Le programme de transformation de Climate House. Des rencontres transformantes, une ingénierie pédagogique sur-mesure et une curation de communauté pour accélérer votre transition.",
-  ctaText: "Explorer l'ate.lier",
+  ctaText: "Explorer l'Ate.lier",
   ctaLink: "/atelier"
 }];
 export const Mission = ({ className }: { className?: string }) => {

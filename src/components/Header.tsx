@@ -15,7 +15,7 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
             <a href="/climate-house" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
-              La maison
+              La Maison
             </a>
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Ate.lier
@@ -46,7 +46,7 @@ export const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in border-t border-border pt-4">
             <a href="/climate-house" className="text-foreground hover:text-primary transition-colors py-2">
-              La maison
+              La Maison
             </a>
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors py-2">
               Ate.lier
