@@ -125,7 +125,7 @@ const CofondateursPage = () => {
             </div>
 
             {/* Filtres et Recherche */}
-            <div className="max-w-6xl mx-auto mb-12">
+            <div className="max-w-6xl mx-auto">
               {/* Barre de recherche */}
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
@@ -157,26 +157,6 @@ const CofondateursPage = () => {
                 <p className="text-sm text-muted-foreground">
                   {filteredCofondateurs.length} cofondateur{filteredCofondateurs.length > 1 ? 's' : ''} affiché{filteredCofondateurs.length > 1 ? 's' : ''}
                 </p>
-              </div>
-            </div>
-
-            {/* Image du mur */}
-            <div className="max-w-5xl mx-auto animate-scale-in">
-              <div className="relative rounded-3xl overflow-hidden shadow-strong">
-                <img
-                  src={wallImage}
-                  alt="Mur des 80 cofondateurs Climate House"
-                  className="w-full h-[400px] md:h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8">
-                  <h3 className="text-3xl font-bold text-primary-foreground mb-2">
-                    Une vision collective
-                  </h3>
-                  <p className="text-lg text-primary-foreground/90">
-                    Ensemble pour transformer l'économie
-                  </p>
-                </div>
               </div>
             </div>
           </div>
