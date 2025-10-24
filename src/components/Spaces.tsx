@@ -202,13 +202,6 @@ export const Spaces = () => {
   return (
     <section id="espaces" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
-        {/* En-tête principal */}
-        <div className="max-w-3xl mx-auto text-center mb-20 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">La Climate House</h2>
-          <p className="text-xl text-muted-foreground">
-            2000 m² pensés pour inspirer, connecter et transformer. Un lieu unique qui s'adapte à tous vos besoins.
-          </p>
-        </div>
 
         {/* ============= SECTION 1 : LA RÉSIDENCE ============= */}
         <div className="max-w-7xl mx-auto mb-32">
@@ -217,6 +210,9 @@ export const Spaces = () => {
               <Briefcase className="h-8 w-8 text-primary" />
             </div>
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Devenir Résident</h3>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-3">
+              2000 m² pensés pour inspirer, connecter et transformer. Un lieu unique qui s'adapte à tous vos besoins.
+            </p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Rejoignez notre communauté d'entrepreneurs engagés et bénéficiez d'un écosystème complet pour développer votre activité
             </p>
