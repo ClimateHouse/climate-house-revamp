@@ -38,8 +38,8 @@ export const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Plus qu'un lieu, un espace de liens. Accélérez la transformation de votre 
-            organisation avec un écosystème unique de 70+ structures engagées, des programmes 
+            Plus qu'un lieu, La Climate House est un espace de liens. Accélérez la transformation de votre 
+            organisation avec un écosystème unique d'entrepreneurs engagés, des programmes 
             sur-mesure et une méthodologie éprouvée.
           </p>
 
