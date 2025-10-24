@@ -200,7 +200,7 @@ export const Spaces = () => {
   const [showSpaceDetails, setShowSpaceDetails] = useState(false);
 
   return (
-    <section id="espaces" className="py-20 bg-background">
+    <section id="espaces" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
         {/* En-tête principal */}
         <div className="max-w-3xl mx-auto text-center mb-20 animate-fade-in">

@@ -46,7 +46,7 @@ const themes = [{
   color: "bg-pink-500"
 }];
 export const Formats = () => {
-  return <section className="py-20 bg-gradient-soft">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Image principale */}

@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Mail } from "lucide-react";
 export const CTA = () => {
-  return <section className="py-20 bg-gradient-soft">
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Newsletter */}

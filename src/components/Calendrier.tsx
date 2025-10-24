@@ -1,6 +1,6 @@
 export const Calendrier = () => {
   return (
-    <section id="calendrier" className="py-20 bg-background">
+    <section id="calendrier" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <p className="text-sm font-medium text-primary mb-4">Les moments forts à venir</p>
