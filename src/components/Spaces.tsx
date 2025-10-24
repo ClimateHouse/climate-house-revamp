@@ -96,33 +96,37 @@ const EventSpaceCard = ({ space, index, colorScheme }: {
       </div>
 
       {showDetails && (
-        <ul className="space-y-2 mb-6 animate-fade-in">
-          {space.features.map((feature) => (
-            <li key={feature} className="flex items-start gap-2 text-sm">
-              <div className={`w-1.5 h-1.5 rounded-full ${dotColorClass} mt-1.5 flex-shrink-0`} />
-              <span className="text-muted-foreground">{feature}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="space-y-4 mb-6 animate-fade-in">
+          <div className="bg-secondary/30 rounded-lg p-4">
+            <h5 className="font-semibold mb-2">✨ Ce qui est inclus</h5>
+            <ul className="space-y-2 text-sm">
+              {space.features.map((feature) => (
+                <li key={feature} className="flex items-start gap-2">
+                  <div className={`w-1.5 h-1.5 rounded-full ${dotColorClass} mt-1.5 flex-shrink-0`} />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       )}
 
-      <Button
-        variant="outline"
-        onClick={() => setShowDetails(!showDetails)}
-        className="w-full"
-      >
-        {showDetails ? (
-          <>
-            <Minus className="h-4 w-4 mr-2" />
-            Voir moins
-          </>
-        ) : (
-          <>
-            <Plus className="h-4 w-4 mr-2" />
-            Voir les détails
-          </>
-        )}
-      </Button>
+      <div className="flex gap-3">
+        <Button size="lg" variant="default" className="flex-1" asChild>
+          <a href="#contact">Organiser un événement</a>
+        </Button>
+        <Button
+          size="icon"
+          variant="outline"
+          onClick={() => setShowDetails(!showDetails)}
+        >
+          {showDetails ? (
+            <Minus className="h-4 w-4" />
+          ) : (
+            <Plus className="h-4 w-4" />
+          )}
+        </Button>
+      </div>
     </Card>
   );
 };
@@ -438,12 +442,6 @@ export const Spaces = () => {
               )}
             </Button>
           </Card>
-
-          <div className="text-center">
-            <Button size="lg" variant="default" className="bg-accent hover:bg-accent/90" asChild>
-              <a href="#contact">Organiser un événement</a>
-            </Button>
-          </div>
 
           {/* Partenaires Traiteurs */}
           <div className="mt-20 animate-fade-in">
