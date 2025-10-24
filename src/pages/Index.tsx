@@ -13,11 +13,11 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <TrustedBy />
         <Stats />
         <Mission className="mx-0 px-0 py-[40px]" />
         <Community />
         <Bibliotheque />
+        <TrustedBy />
         <CTA />
       </main>
       <Footer />
