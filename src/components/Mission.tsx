@@ -1,17 +1,25 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Leaf, Handshake, Rocket, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 const pillars = [{
   icon: Leaf,
   title: "La Maison",
-  description: "2000 m² au cœur de Paris conçus pour inspirer et coopérer. Un espace vivant d'hospitalité et de liens informels avec 300 postes de travail, 15 salles de réunion et 6 espaces événementiels privatisables."
+  description: "2000 m² au cœur de Paris conçus pour inspirer et coopérer. Un espace vivant d'hospitalité et de liens informels avec 300 postes de travail, 15 salles de réunion et 6 espaces événementiels privatisables.",
+  ctaText: "Découvrir les espaces",
+  ctaLink: "/climate-house"
 }, {
   icon: Handshake,
   title: "La Communauté",
-  description: "430 colocataires de 70 structures, 80 cofondateurs entrepreneurs et 200 organisations adhérentes. Un réseau unique d'expertise et d'engagement au service de la transition."
+  description: "430 colocataires de 70 structures, 80 cofondateurs entrepreneurs et 200 organisations adhérentes. Un réseau unique d'expertise et d'engagement au service de la transition.",
+  ctaText: "Rejoindre la communauté",
+  ctaLink: "#communaute"
 }, {
   icon: Rocket,
   title: "L'Ate.lier",
-  description: "Le programme de transformation de Climate House. Des rencontres transformantes, une ingénierie pédagogique sur-mesure et une curation de communauté pour accélérer votre transition."
+  description: "Le programme de transformation de Climate House. Des rencontres transformantes, une ingénierie pédagogique sur-mesure et une curation de communauté pour accélérer votre transition.",
+  ctaText: "Explorer l'ate.lier",
+  ctaLink: "/atelier"
 }];
 export const Mission = ({ className }: { className?: string }) => {
   return <section id="mission" className={`py-20 bg-gradient-soft ${className || ''}`}>
@@ -33,9 +41,22 @@ export const Mission = ({ className }: { className?: string }) => {
                 <pillar.icon className="h-8 w-8 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed mb-6">
                 {pillar.description}
               </p>
+              {pillar.ctaLink.startsWith('#') ? (
+                <a href={pillar.ctaLink}>
+                  <Button variant="outline" className="w-full">
+                    {pillar.ctaText}
+                  </Button>
+                </a>
+              ) : (
+                <Link to={pillar.ctaLink}>
+                  <Button variant="outline" className="w-full">
+                    {pillar.ctaText}
+                  </Button>
+                </Link>
+              )}
             </Card>)}
         </div>
       </div>
