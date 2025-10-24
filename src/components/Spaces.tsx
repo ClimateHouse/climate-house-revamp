@@ -33,7 +33,7 @@ const eventSpaces = [
   },
   {
     icon: Users,
-    title: "Ateliers transformatifs",
+    title: "Ateliers transformants",
     capacity: "Formats sur-mesure",
     features: [
       "Des ateliers qui éveillent la tête, touchent le cœur et engagent le corps",
@@ -69,8 +69,16 @@ const specificSpaces = [
 ];
 
 // Composant pour les cartes d'espaces événementiels
-const EventSpaceCard = ({ space, index }: { space: typeof eventSpaces[0]; index: number }) => {
+const EventSpaceCard = ({ space, index, colorScheme }: { 
+  space: typeof eventSpaces[0]; 
+  index: number;
+  colorScheme: 'accent' | 'accent-light';
+}) => {
   const [showDetails, setShowDetails] = useState(false);
+
+  const bgColorClass = colorScheme === 'accent' ? 'bg-accent/10' : 'bg-accent-light/10';
+  const textColorClass = colorScheme === 'accent' ? 'text-accent' : 'text-accent-light';
+  const dotColorClass = colorScheme === 'accent' ? 'bg-accent' : 'bg-accent-light';
 
   return (
     <Card
@@ -78,12 +86,12 @@ const EventSpaceCard = ({ space, index }: { space: typeof eventSpaces[0]; index:
       style={{ animationDelay: `${index * 100}ms` }}
     >
       <div className="flex items-start gap-4 mb-6">
-        <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
-          <space.icon className="h-7 w-7 text-accent" />
+        <div className={`flex-shrink-0 w-14 h-14 rounded-2xl ${bgColorClass} flex items-center justify-center`}>
+          <space.icon className={`h-7 w-7 ${textColorClass}`} />
         </div>
         <div className="flex-1">
           <h3 className="text-2xl font-bold mb-2">{space.title}</h3>
-          <p className="text-lg text-accent font-semibold mb-2">{space.capacity}</p>
+          <p className={`text-lg ${textColorClass} font-semibold mb-2`}>{space.capacity}</p>
         </div>
       </div>
 
@@ -91,7 +99,7 @@ const EventSpaceCard = ({ space, index }: { space: typeof eventSpaces[0]; index:
         <ul className="space-y-2 mb-6 animate-fade-in">
           {space.features.map((feature) => (
             <li key={feature} className="flex items-start gap-2 text-sm">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+              <div className={`w-1.5 h-1.5 rounded-full ${dotColorClass} mt-1.5 flex-shrink-0`} />
               <span className="text-muted-foreground">{feature}</span>
             </li>
           ))}
@@ -127,8 +135,8 @@ const ResidenceCard = ({
   advantages, 
   ctaText, 
   ctaVariant = "default",
-  accentColor = "primary"
-}: { 
+  colorScheme = "primary-dark"
+}: {
   title: string;
   description: string;
   icon: any;
@@ -136,17 +144,22 @@ const ResidenceCard = ({
   advantages: string[];
   ctaText: string;
   ctaVariant?: "default" | "secondary";
-  accentColor?: "primary" | "accent";
+  colorScheme?: "primary-dark" | "primary-light";
 }) => {
   const [showDetails, setShowDetails] = useState(false);
 
+  const borderColorClass = colorScheme === 'primary-dark' ? 'border-primary-dark/20 hover:border-primary-dark/40' : 'border-primary-light/20 hover:border-primary-light/40';
+  const bgColorClass = colorScheme === 'primary-dark' ? 'bg-primary-dark/10' : 'bg-primary-light/10';
+  const textColorClass = colorScheme === 'primary-dark' ? 'text-primary-dark' : 'text-primary-light';
+  const dotColorClass = colorScheme === 'primary-dark' ? 'bg-primary-dark' : 'bg-primary-light';
+
   return (
-    <Card className={`p-8 border-2 border-${accentColor}/20 hover:border-${accentColor}/40 transition-all duration-300 hover:shadow-strong`}>
+    <Card className={`p-8 border-2 ${borderColorClass} transition-all duration-300 hover:shadow-strong`}>
       <div className="mb-6">
-        <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-${accentColor}/10 mb-4`}>
-          <Icon className={`h-8 w-8 text-${accentColor}`} />
+        <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${bgColorClass} mb-4`}>
+          <Icon className={`h-8 w-8 ${textColorClass}`} />
         </div>
-        <h4 className={`text-2xl font-bold mb-2 text-${accentColor}`}>{title}</h4>
+        <h4 className={`text-2xl font-bold mb-2 ${textColorClass}`}>{title}</h4>
         <p className="text-lg font-semibold text-muted-foreground mb-4">
           {description}
         </p>
@@ -166,7 +179,7 @@ const ResidenceCard = ({
             <ul className="space-y-2 text-sm">
               {advantages.map((advantage, index) => (
                 <li key={index} className="flex items-start gap-2">
-                  <div className={`w-1.5 h-1.5 rounded-full bg-${accentColor} mt-1.5 flex-shrink-0`} />
+                  <div className={`w-1.5 h-1.5 rounded-full ${dotColorClass} mt-1.5 flex-shrink-0`} />
                   <span>{advantage}</span>
                 </li>
               ))}
@@ -233,7 +246,7 @@ export const Spaces = () => {
                 "Domiciliation d'entreprise possible"
               ]}
               ctaText="Devenir résident permanent"
-              accentColor="primary"
+              colorScheme="primary-dark"
             />
 
             <ResidenceCard
@@ -250,7 +263,7 @@ export const Spaces = () => {
               ]}
               ctaText="Devenir résident nomade"
               ctaVariant="secondary"
-              accentColor="accent"
+              colorScheme="primary-light"
             />
           </div>
 
@@ -375,9 +388,8 @@ export const Spaces = () => {
 
           {/* Grille des espaces événementiels */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            {eventSpaces.map((space, index) => (
-              <EventSpaceCard key={space.title} space={space} index={index} />
-            ))}
+            <EventSpaceCard space={eventSpaces[0]} index={0} colorScheme="accent" />
+            <EventSpaceCard space={eventSpaces[1]} index={1} colorScheme="accent-light" />
           </div>
 
           {/* Bloc des espaces spécifiques */}
