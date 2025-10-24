@@ -20,7 +20,7 @@ export const Header = () => {
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Ate.lier
             </a>
-            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors text-sm font-medium text-center leading-tight">
+            <a href="/climate-house#organiser-evenement" className="text-foreground hover:text-primary transition-colors text-sm font-medium text-center leading-tight">
               Organiser<br />un événement
             </a>
             <a href="/#communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
@@ -51,7 +51,7 @@ export const Header = () => {
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors py-2">
               Ate.lier
             </a>
-            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors py-2">
+            <a href="/climate-house#organiser-evenement" className="text-foreground hover:text-primary transition-colors py-2">
               Organiser un événement
             </a>
             <a href="/#communaute" className="text-foreground hover:text-primary transition-colors py-2">

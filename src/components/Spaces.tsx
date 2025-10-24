@@ -361,7 +361,7 @@ export const Spaces = () => {
         </div>
 
         {/* ============= SECTION 2 : ÉVÉNEMENTS ============= */}
-        <div className="max-w-7xl mx-auto mb-32">
+        <div id="organiser-evenement" className="max-w-7xl mx-auto mb-32">
           <div className="text-center mb-12 animate-fade-in">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/10 mb-4">
               <Calendar className="h-8 w-8 text-accent" />
