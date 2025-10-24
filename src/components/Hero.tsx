@@ -70,28 +70,11 @@ export const Hero = () => {
             </Button>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="mt-12 flex flex-wrap gap-6 justify-center text-sm text-white/80">
-            <div>
-              <div className="text-3xl font-bold text-white">80</div>
-              <div>Cofondateurs</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white">200</div>
-              <div>Organisations</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white">430</div>
-              <div>Colocataires</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white">700</div>
-              <div>Événements</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white">18 000</div>
-              <div>Visiteurs en 2025</div>
-            </div>
+          {/* Claim */}
+          <div className="mt-12 text-center">
+            <p className="text-2xl md:text-3xl font-light text-white/90 italic tracking-wide">
+              Bienvenue à La Maison
+            </p>
           </div>
         </div>
       </div>
