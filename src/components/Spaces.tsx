@@ -108,8 +108,28 @@ export const Spaces = () => {
           </p>
         </div>
 
+        {/* Grille des espaces */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-12">
+          {spaces.map((space, index) => (
+            <SpaceCard key={space.title} space={space} index={index} />
+          ))}
+        </div>
+
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-hero hover:opacity-90" asChild>
+              <a href="#contact">Nous contacter</a>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <a href="https://visite-virtuelle-climate-house.com" target="_blank" rel="noopener noreferrer">
+                Visite virtuelle
+              </a>
+            </Button>
+          </div>
+        </div>
+
         {/* Image principale */}
-        <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
+        <div className="max-w-5xl mx-auto animate-scale-in">
           <div className="relative rounded-3xl overflow-hidden shadow-strong">
             <img
               src={coworkingImage}
@@ -125,26 +145,6 @@ export const Spaces = () => {
                 Où l'innovation rencontre la durabilité
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Grille des espaces */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          {spaces.map((space, index) => (
-            <SpaceCard key={space.title} space={space} index={index} />
-          ))}
-        </div>
-
-        <div className="text-center mt-12 animate-fade-in">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-hero hover:opacity-90" asChild>
-              <a href="#contact">Nous contacter</a>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <a href="https://visite-virtuelle-climate-house.com" target="_blank" rel="noopener noreferrer">
-                Visite virtuelle
-              </a>
-            </Button>
           </div>
         </div>
       </div>
