@@ -102,10 +102,6 @@ export const Spaces = () => {
             2000 m² pensés pour inspirer, connecter et transformer. Des espaces modulables
             qui s'adaptent à tous vos besoins.
           </p>
-          <p className="text-lg text-muted-foreground">
-            Deux types de résidents : <span className="font-semibold text-primary">permanents</span> avec leur bureau dédié, 
-            et <span className="font-semibold text-primary">nomades</span> qui profitent de la flexibilité du réseau Morning.
-          </p>
         </div>
 
         {/* Grille des espaces */}
@@ -129,7 +125,7 @@ export const Spaces = () => {
         </div>
 
         {/* Image principale */}
-        <div className="max-w-5xl mx-auto animate-scale-in">
+        <div className="max-w-5xl mx-auto mb-20 animate-scale-in">
           <div className="relative rounded-3xl overflow-hidden shadow-strong">
             <img
               src={coworkingImage}
@@ -145,6 +141,142 @@ export const Spaces = () => {
                 Où l'innovation rencontre la durabilité
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Section Deux types de résidence */}
+        <div className="max-w-7xl mx-auto mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Choisissez votre formule</h3>
+            <p className="text-lg text-muted-foreground">
+              Deux types de résidence adaptés à vos besoins et à votre façon de travailler
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Résident Permanent */}
+            <Card className="p-8 border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-strong">
+              <div className="mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-4">
+                  <Briefcase className="h-8 w-8 text-primary" />
+                </div>
+                <h4 className="text-2xl font-bold mb-2 text-primary">Résident Permanent</h4>
+                <p className="text-lg font-semibold text-muted-foreground mb-4">
+                  Votre bureau dédié au cœur de l'écosystème
+                </p>
+              </div>
+
+              <div className="space-y-4 mb-6">
+                <div className="bg-secondary/30 rounded-lg p-4">
+                  <h5 className="font-semibold mb-2">🎯 Pour qui ?</h5>
+                  <p className="text-sm text-muted-foreground">
+                    Les équipes qui cherchent stabilité et ancrage dans un lieu inspirant. Parfait pour les entreprises de 1 à 15 personnes souhaitant un espace fixe tout en bénéficiant d'un réseau dynamique.
+                  </p>
+                </div>
+
+                <div className="bg-secondary/30 rounded-lg p-4">
+                  <h5 className="font-semibold mb-2">✨ Les avantages</h5>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span>Bureau dédié avec votre nom sur la porte</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span>Personnalisation de votre espace de travail</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span>Accès 24/7 à votre bureau</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span>Stockage sécurisé pour vos équipements</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                      <span>Domiciliation d'entreprise possible</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-secondary/30 rounded-lg p-4">
+                  <h5 className="font-semibold mb-2">🌟 Inclus</h5>
+                  <p className="text-sm text-muted-foreground">
+                    Accès réseau Morning (24 lieux), salles de réunion illimitées, programmation gratuite, café à volonté, services IT
+                  </p>
+                </div>
+              </div>
+
+              <Button size="lg" className="w-full" asChild>
+                <a href="#contact">Devenir résident permanent</a>
+              </Button>
+            </Card>
+
+            {/* Résident Nomade */}
+            <Card className="p-8 border-2 border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-strong">
+              <div className="mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/10 mb-4">
+                  <Presentation className="h-8 w-8 text-accent" />
+                </div>
+                <h4 className="text-2xl font-bold mb-2 text-accent">Résident Nomade</h4>
+                <p className="text-lg font-semibold text-muted-foreground mb-4">
+                  La flexibilité totale dans 24 lieux à Paris
+                </p>
+              </div>
+
+              <div className="space-y-4 mb-6">
+                <div className="bg-secondary/30 rounded-lg p-4">
+                  <h5 className="font-semibold mb-2">🎯 Pour qui ?</h5>
+                  <p className="text-sm text-muted-foreground">
+                    Les indépendants, consultants et petites équipes qui privilégient la mobilité et la variété. Idéal pour ceux qui veulent diversifier leurs environnements de travail et élargir leur réseau.
+                  </p>
+                </div>
+
+                <div className="bg-secondary/30 rounded-lg p-4">
+                  <h5 className="font-semibold mb-2">✨ Les avantages</h5>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                      <span>Accès à 24 espaces Morning dans tout Paris</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                      <span>Choisissez votre bureau chaque jour selon vos envies</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                      <span>Multipliez vos opportunités de networking</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                      <span>Adaptez votre lieu à votre agenda du jour</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                      <span>Flexibilité géographique totale</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-secondary/30 rounded-lg p-4">
+                  <h5 className="font-semibold mb-2">🌟 Inclus</h5>
+                  <p className="text-sm text-muted-foreground">
+                    Accès aux 24 lieux Morning, salles de réunion illimitées, programmation gratuite, café à volonté, services IT dans tous les espaces
+                  </p>
+                </div>
+              </div>
+
+              <Button size="lg" variant="secondary" className="w-full" asChild>
+                <a href="#contact">Devenir résident nomade</a>
+              </Button>
+            </Card>
+          </div>
+
+          <div className="text-center mt-8 p-6 bg-secondary/20 rounded-xl">
+            <p className="text-sm text-muted-foreground">
+              💡 <span className="font-semibold">Besoin d'aide pour choisir ?</span> Nos équipes sont là pour vous conseiller et trouver la formule qui correspond le mieux à vos besoins.
+            </p>
           </div>
         </div>
       </div>
