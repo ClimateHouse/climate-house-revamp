@@ -9,7 +9,7 @@ const stats = [
   {
     icon: Building2,
     value: "200",
-    label: "Organisations",
+    label: "Adhérents",
   },
   {
     icon: UsersRound,
