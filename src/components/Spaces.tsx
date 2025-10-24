@@ -18,88 +18,79 @@ const workspaceFeatures = [
   "Accès à l'espace 7/7",
 ];
 
-// Données des espaces spécifiques
-const specificSpaces = [
-  {
-    name: "LA BAL-ROOM",
-    capacity: "Jusqu'à 90 personnes",
-    description: "Salle de réception idéale pour des conférences ou des cocktails.",
-  },
-  {
-    name: "Le JARDIN Divers",
-    capacity: "40 personnes",
-    description: "Espace modulable parfait pour des ateliers ou des événements publics.",
-  },
-  {
-    name: "Les COMMUNS",
-    capacity: "Jusqu'à 150 personnes",
-    description: "Idéal pour des séminaires collaboratifs.",
-  },
-  {
-    name: "La WAVE ROOM",
-    capacity: "Salle de créativité",
-    description: "Espace unique avec vue panoramique, favorisant l'innovation.",
-  },
-  {
-    name: "PLANTATION",
-    capacity: "Jusqu'à 400 personnes",
-    description: "Une toute nouvelle extension pour vos événements d'ampleur.",
-  },
-];
-
-// Données des atouts événementiels
-const eventHighlights = [
+// Données des espaces événementiels
+const eventSpaces = [
   {
     icon: Presentation,
-    title: "Des formats adaptés à vos besoins",
-    subtitle: "Un lieu qui s'adapte à vos envies",
-    description: "Cinq espaces, de 30 à 100 personnes, pour donner vie à vos conférences, séminaires et ateliers. Extension jusqu'à 400 personnes à Plantation Paris.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Un accompagnement à votre image",
-    subtitle: "À l'écoute de vos attentes",
-    description: "Des offres modulables, pensées pour répondre à vos attentes.",
+    title: "Espaces événementiels modulables",
+    capacity: "De 30 à 400 personnes",
+    features: [
+      "Cinq espaces, de 30 à 100 personnes, pour vos conférences, séminaires et ateliers",
+      "Extension jusqu'à 400 personnes à Plantation Paris",
+      "Équipement professionnel complet et support technique dédié",
+      "Configuration modulable selon vos besoins",
+    ],
   },
   {
     icon: Users,
-    title: "Des ateliers transformatifs",
-    subtitle: "Prêt à tenter l'expérience ?",
-    description: "Plongez dans des ateliers qui éveillent la tête, touchent le cœur et engagent le corps.",
+    title: "Ateliers transformatifs",
+    capacity: "Formats sur-mesure",
+    features: [
+      "Des ateliers qui éveillent la tête, touchent le cœur et engagent le corps",
+      "Salons thématiques pour les rencontres et zones de créativité",
+      "Des partenaires engagés dans une démarche pour une alimentation responsable",
+      "Des offres modulables, pensées pour répondre à vos attentes",
+    ],
   },
 ];
 
-// Composant pour les atouts événementiels
-const EventHighlightCard = ({ highlight, index }: { highlight: typeof eventHighlights[0]; index: number }) => {
+// Composant pour les cartes d'espaces événementiels
+const EventSpaceCard = ({ space, index }: { space: typeof eventSpaces[0]; index: number }) => {
+  const [showDetails, setShowDetails] = useState(false);
+
   return (
     <Card
-      className="p-6 hover:shadow-strong transition-all duration-300 animate-fade-in"
+      className="p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in"
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <div className="flex items-start gap-4 mb-4">
-        <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center">
-          <highlight.icon className="h-6 w-6 text-accent" />
+      <div className="flex items-start gap-4 mb-6">
+        <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
+          <space.icon className="h-7 w-7 text-accent" />
         </div>
         <div className="flex-1">
-          <h4 className="text-xl font-bold mb-1">{highlight.title}</h4>
-          <p className="text-sm text-accent font-semibold mb-2">{highlight.subtitle}</p>
-          <p className="text-sm text-muted-foreground">{highlight.description}</p>
+          <h3 className="text-2xl font-bold mb-2">{space.title}</h3>
+          <p className="text-lg text-accent font-semibold mb-2">{space.capacity}</p>
         </div>
       </div>
-    </Card>
-  );
-};
 
-// Composant pour les espaces spécifiques
-const SpecificSpaceCard = ({ space, index }: { space: typeof specificSpaces[0]; index: number }) => {
-  return (
-    <Card
-      className="p-6 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in"
-      style={{ animationDelay: `${index * 100}ms` }}
-    >
-      <h4 className="text-xl font-bold mb-2 text-accent">{space.name}</h4>
-      <p className="text-sm font-semibold text-primary mb-2">{space.capacity}</p>
-      <p className="text-sm text-muted-foreground">{space.description}</p>
+      {showDetails && (
+        <ul className="space-y-2 mb-6 animate-fade-in">
+          {space.features.map((feature) => (
+            <li key={feature} className="flex items-start gap-2 text-sm">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+              <span className="text-muted-foreground">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <Button
+        variant="outline"
+        onClick={() => setShowDetails(!showDetails)}
+        className="w-full"
+      >
+        {showDetails ? (
+          <>
+            <Minus className="h-4 w-4 mr-2" />
+            Voir moins
+          </>
+        ) : (
+          <>
+            <Plus className="h-4 w-4 mr-2" />
+            Voir les détails
+          </>
+        )}
+      </Button>
     </Card>
   );
 };
@@ -305,50 +296,16 @@ export const Spaces = () => {
             </p>
           </div>
 
-          {/* Atouts événementiels */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {eventHighlights.map((highlight, index) => (
-              <EventHighlightCard key={highlight.title} highlight={highlight} index={index} />
+          {/* Grille des espaces événementiels */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            {eventSpaces.map((space, index) => (
+              <EventSpaceCard key={space.title} space={space} index={index} />
             ))}
           </div>
 
-          {/* Nos espaces */}
-          <div className="mb-12">
-            <div className="text-center mb-8">
-              <h4 className="text-2xl font-bold mb-2">Nos Espaces</h4>
-              <p className="text-muted-foreground">
-                Découvrez nos espaces modulables pour tous types d'événements
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {specificSpaces.map((space, index) => (
-                <SpecificSpaceCard key={space.name} space={space} index={index} />
-              ))}
-            </div>
-          </div>
-
-          {/* Partenaires engagés */}
-          <Card className="p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-2 border-accent/20 mb-8">
-            <div className="text-center">
-              <h4 className="text-2xl font-bold mb-3">Des partenaires engagés</h4>
-              <p className="text-muted-foreground mb-6">
-                Nos prestataires sont engagés dans une démarche pour une alimentation responsable, bonne pour vous et la planète
-              </p>
-              <Button size="lg" variant="outline" asChild>
-                <a href="#partenaires-traiteurs">Découvrir nos partenaires traiteurs</a>
-              </Button>
-            </div>
-          </Card>
-
-          {/* CTAs */}
-          <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-center">
             <Button size="lg" variant="default" className="bg-accent hover:bg-accent/90" asChild>
               <a href="#contact">Organiser un événement</a>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <a href="https://visite-virtuelle-climate-house.com" target="_blank" rel="noopener noreferrer">
-                Visite virtuelle
-              </a>
             </Button>
           </div>
         </div>
