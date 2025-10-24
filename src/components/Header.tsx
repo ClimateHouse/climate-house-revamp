@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/climate-house-logo-green.png";
 export const Header = () => {
@@ -9,19 +9,19 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <a href="/" className="flex items-center">
-            <img src={logo} alt="Climate House - Accélérons la transition" className="h-8 w-auto" />
+            <img src={logo} alt="Climate House - Accélérons la transition" className="h-6 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
-            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors flex items-center gap-1">
-              <Home className="h-4 w-4" />
+            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+              La maison
             </a>
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Ate.lier
             </a>
-            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
-              Organiser événement
+            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors text-sm font-medium text-center leading-tight">
+              Organiser<br />un événement
             </a>
             <a href="/#communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Communauté
@@ -45,15 +45,14 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && <div className="md:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in border-t border-border pt-4">
-            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors py-2 flex items-center gap-2">
-              <Home className="h-4 w-4" />
-              Climate House
+            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors py-2">
+              La maison
             </a>
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors py-2">
               Ate.lier
             </a>
             <a href="/climate-house" className="text-foreground hover:text-primary transition-colors py-2">
-              Organiser événement
+              Organiser un événement
             </a>
             <a href="/#communaute" className="text-foreground hover:text-primary transition-colors py-2">
               Communauté
