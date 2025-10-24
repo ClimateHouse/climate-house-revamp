@@ -282,12 +282,6 @@ export const Spaces = () => {
               💡 <span className="font-semibold">Besoin d'aide pour choisir ?</span> Nos équipes sont là pour vous conseiller et trouver la formule qui correspond le mieux à vos besoins.
             </p>
           </div>
-
-          <div className="text-center mt-8">
-            <Button size="lg" className="bg-gradient-hero hover:opacity-90" asChild>
-              <a href="#contact">Candidater pour devenir résident</a>
-            </Button>
-          </div>
         </div>
 
         {/* ============= SECTION 2 : ÉVÉNEMENTS ============= */}
