@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import coworkingImage from "@/assets/inauguration-ruban.jpg";
-import { Briefcase, Presentation, Plus, Minus, Users, Calendar, Lightbulb, MapPin, Building2 } from "lucide-react";
+import { Briefcase, Presentation, Plus, Minus, Users, Calendar, Lightbulb, MapPin, Building2, Quote } from "lucide-react";
 
 // Données des espaces de travail pour les résidents
 const workspaceFeatures = [
@@ -389,6 +389,66 @@ export const Spaces = () => {
             <Button size="lg" variant="default" className="bg-accent hover:bg-accent/90" asChild>
               <a href="#contact">Organiser un événement</a>
             </Button>
+          </div>
+
+          {/* Partenaires Traiteurs */}
+          <div className="mt-20 animate-fade-in">
+            <p className="text-center text-sm font-semibold text-muted-foreground mb-8 uppercase tracking-wider">
+              Nos Partenaires Traiteurs engagés
+            </p>
+            
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+              {[
+                "LE RECHO",
+                "necense",
+                "Les Marmites Volantes",
+                "Bimbamboum Traiteur",
+                "Meet My Mama",
+                "La Balle",
+                "PERDUE",
+                "APPIE",
+                "müre",
+                "CAUSSES"
+              ].map((partner, index) => (
+                <div
+                  key={partner}
+                  className="text-lg font-bold text-muted-foreground/60 hover:text-accent transition-colors animate-fade-in"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  {partner}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Témoignages événements */}
+          <div className="mt-20 animate-fade-in">
+            <h4 className="text-3xl font-bold text-center mb-12">
+              Ce que disent nos clients
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <Card className="p-8 hover:shadow-strong transition-all duration-300">
+                <Quote className="h-8 w-8 text-accent mb-4" />
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "Tout était très doux, efficace et fluide, je n'attends qu'une chose : recommencer une collaboration avec vous !"
+                </p>
+                <div>
+                  <div className="font-bold">Fleur DOUET</div>
+                  <div className="text-sm text-muted-foreground">Field Marketing Manager SWEEP</div>
+                </div>
+              </Card>
+
+              <Card className="p-8 hover:shadow-strong transition-all duration-300">
+                <Quote className="h-8 w-8 text-accent mb-4" />
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "Merci pour votre dispo : Manon était top dans l'accompagnement, Anthony hyper pro et efficace le jour J et le traiteur très bon. Hâte de revenir :)"
+                </p>
+                <div>
+                  <div className="font-bold">Ingrid Vanhée</div>
+                  <div className="text-sm text-muted-foreground">Fondatrice Envolées Sauvages</div>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
 
