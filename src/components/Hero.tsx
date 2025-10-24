@@ -45,25 +45,28 @@ export const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
+              asChild
               size="lg"
               variant="secondary"
               className="text-lg px-8 shadow-lg hover:shadow-xl"
             >
-              Devenir résident
+              <a href="/climate-house">Devenir résident</a>
             </Button>
             <Button 
+              asChild
               size="lg" 
               variant="outline" 
               className="text-lg px-8 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
             >
-              Organiser un événement
+              <a href="/climate-house">Organiser un événement</a>
             </Button>
             <Button 
+              asChild
               size="lg" 
               variant="outline" 
               className="text-lg px-8 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
             >
-              Découvrir l'atel.ier
+              <a href="/atelier">Découvrir l'atel.ier</a>
             </Button>
           </div>
 
