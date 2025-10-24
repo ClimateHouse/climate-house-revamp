@@ -3,19 +3,39 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Climate House nous a permis de rencontrer des partenaires clés et d'accélérer notre croissance. L'écosystème est exceptionnel.",
-    author: "Marie Dubois",
-    role: "CEO, GreenTech Startup"
+    quote: "En à peine 2 mois ½ on se sent accueilli.e.s, pris.e.s en charge, boosté.e.s. Et en plus, on crée du lien, merci la Maison !",
+    author: "Davor SIMAC",
+    role: "Cofondateur Aurea Prima"
   },
   {
-    quote: "Un lieu inspirant où la collaboration prime. Nous avons co-créé plusieurs projets innovants avec d'autres membres.",
-    author: "Thomas Martin",
-    role: "Directeur Innovation, ONG Environnement"
+    quote: "Quel top écosystème effervescent que celui que vous avez créé [...] les rencontres spontanées sont riches et belles",
+    author: "Stéphane BOURBIER",
+    role: "Founding Partner Asterion Ventures"
   },
   {
-    quote: "La communauté Climate House est unique. Chaque jour apporte de nouvelles opportunités et connexions précieuses.",
-    author: "Sophie Bernard",
-    role: "Fondatrice, Impact Social"
+    quote: "Merci de nous montrer que la transition peut être sérieuse & joyeuse, scientifique & humaine.",
+    author: "Aïna QUEIROZ",
+    role: "Conférencière, Autrice et Animatrice du Podcast \"Bioinspi\""
+  },
+  {
+    quote: "[...] C'est un plaisir. Equipe au top. Projets avec du sens qui bourdonnent partout. Encore mieux que ce qu'on imaginait. :)",
+    author: "Christian JORGE",
+    role: "Founder & CEO, Omie"
+  },
+  {
+    quote: "Vous avez de véritables pépites [...] Nous sommes très heureux de faire partie de ce bel écosystème et sommes impatients de poursuivre des pistes de collaboration",
+    author: "Nicolas DESSUS",
+    role: "Co-founder - Next"
+  },
+  {
+    quote: "Merci pour votre aide dans le succès de l'événement et plus largement dans le soutien que vous nous apportez depuis le départ.",
+    author: "Nicolas DESSUS",
+    role: "Cofondateur Join Next"
+  },
+  {
+    quote: "Merci pour les good vibes générales ! On sent que votre team est impliquée et fait des extra miles pour le confort des colocs, ça fait plaisir ! Keep rocking team :)",
+    author: "Une Colocataire anonyme",
+    role: "Membre de la communauté"
   }
 ];
 
