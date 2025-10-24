@@ -1,25 +1,30 @@
-import { Building2, Users, Target, Lightbulb } from "lucide-react";
+import { Users, Building2, UsersRound, Calendar, TrendingUp } from "lucide-react";
 
 const stats = [
   {
-    icon: Building2,
-    value: "2000 m²",
-    label: "d'espace de travail et d'innovation",
-  },
-  {
     icon: Users,
+    value: "80",
+    label: "Cofondateurs",
+  },
+  {
+    icon: Building2,
+    value: "200",
+    label: "Organisations",
+  },
+  {
+    icon: UsersRound,
     value: "430",
-    label: "colocataires entrepreneurs",
+    label: "Colocataires",
   },
   {
-    icon: Target,
-    value: "70+",
-    label: "structures engagées",
+    icon: Calendar,
+    value: "700",
+    label: "Événements",
   },
   {
-    icon: Lightbulb,
-    value: "5",
-    label: "espaces modulables",
+    icon: TrendingUp,
+    value: "18 000",
+    label: "Visiteurs en 2025",
   },
 ];
 
@@ -27,7 +32,7 @@ export const Stats = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
