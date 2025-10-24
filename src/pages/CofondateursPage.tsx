@@ -9,39 +9,90 @@ import { Badge } from "@/components/ui/badge";
 import { Linkedin, Search, Users } from "lucide-react";
 import wallImage from "@/assets/cofondateurs-wall.jpg";
 
-// Liste des cofondateurs - structure extensible
+// Liste des cofondateurs
 const cofondateurs = [
-  { 
-    name: "Henri-François MARTIN", 
-    company: "Climate House", 
-    sector: "Impact",
-    image: "", 
-    linkedin: "https://www.linkedin.com/in/henri-françoismartin/",
-    initials: "HM"
-  },
-  { 
-    name: "Maika NUTI", 
-    company: "Climate House", 
-    sector: "Impact",
-    image: "", 
-    linkedin: "#",
-    initials: "MN"
-  },
-  // Ajoutez ici les autres cofondateurs
-  // Structure répétable pour faciliter l'ajout de nouveaux membres
-].concat(
-  // Génération de cofondateurs exemples pour démonstration
-  Array.from({ length: 78 }, (_, i) => ({
-    name: `Cofondateur ${i + 3}`,
-    company: `Entreprise ${i + 3}`,
-    sector: ["Impact", "Finance", "Tech", "Conseil", "Industrie"][i % 5],
-    image: "",
-    linkedin: "#",
-    initials: `C${i + 3}`
-  }))
-);
+  { name: "Céline RÉMY", company: "Angel Investor & Co-Founder @ Neoness & Episod", sector: "Impact", image: "", linkedin: "#", initials: "CR" },
+  { name: "Olivier RENAUD", company: "Co-Founder & Investor @ Tech for Climate", sector: "Tech", image: "", linkedin: "#", initials: "OR" },
+  { name: "Charlotte CHENEVIER", company: "Co-Founder @ The Fat Broccoli & Agence Alignée", sector: "Impact", image: "", linkedin: "#", initials: "CC" },
+  { name: "Renaud VISAGE", company: "Co-Founder @ Slate VC + Eventbrite", sector: "Finance", image: "", linkedin: "#", initials: "RV" },
+  { name: "Sarah HUET", company: "Co-Founder @ AFemaleAgency & Leia Capital", sector: "Finance", image: "", linkedin: "#", initials: "SH" },
+  { name: "Maxime BLONDEAU", company: "Founder @ Cosmorama & AlmaMater", sector: "Impact", image: "", linkedin: "#", initials: "MB" },
+  { name: "Olivier CUEILLE", company: "Co-Founder @ microDON", sector: "Impact", image: "", linkedin: "#", initials: "OC" },
+  { name: "Lucie BASCH", company: "Co-Founder @ Too Good To Go @ Poppins", sector: "Impact", image: "", linkedin: "#", initials: "LB" },
+  { name: "Nabil HMAMA", company: "VC investor & Founder @ QLAY", sector: "Finance", image: "", linkedin: "#", initials: "NH" },
+  { name: "Laurence GRANDCOLAS", company: "Founder @ MySezame", sector: "Tech", image: "", linkedin: "#", initials: "LG" },
+  { name: "Mamadou DEMBELE", company: "Founder @ The Impact Story", sector: "Impact", image: "", linkedin: "#", initials: "MD" },
+  { name: "Julia BIJAOUI", company: "Co-Founder @ Frichti & Selar", sector: "Tech", image: "", linkedin: "#", initials: "JB" },
+  { name: "Alexandra PALT", company: "Présidente @ WWF France", sector: "Impact", image: "", linkedin: "#", initials: "AP" },
+  { name: "Thierry PETIT", company: "CEO & business angel @ Made For All", sector: "Finance", image: "", linkedin: "#", initials: "TP" },
+  { name: "Souad BOUTEGRABET", company: "Founder @ DesCodeuses", sector: "Tech", image: "", linkedin: "#", initials: "SB" },
+  { name: "Thibault LAMARQUE", company: "Founder @ Castalie", sector: "Impact", image: "", linkedin: "#", initials: "TL" },
+  { name: "Solenne OJEA-DEVYS", company: "General Director @ OKKO HOTELS", sector: "Hospitality", image: "", linkedin: "#", initials: "SO" },
+  { name: "Vincent STUHLEN", company: "Investor & Founder @ IMPACT LABS.earth", sector: "Finance", image: "", linkedin: "#", initials: "VS" },
+  { name: "Galo DIALLO", company: "Founder & CEO @ Smile Conseil", sector: "Conseil", image: "", linkedin: "#", initials: "GD" },
+  { name: "Khadija NEMRI", company: "General Director @ L'École de la 2e Chance", sector: "Impact", image: "", linkedin: "#", initials: "KN" },
+  { name: "Quentin BORDET", company: "Creator @ L'Œuvre & Co-founder @ Les Collectifs", sector: "Impact", image: "", linkedin: "#", initials: "QB" },
+  { name: "Maud CAILLAUX", company: "Co-Founder @ Green Got", sector: "Finance", image: "", linkedin: "#", initials: "MC" },
+  { name: "Mohamed EL IDRISSI", company: "Founder @ SPARK Club & PANIER!", sector: "Impact", image: "", linkedin: "#", initials: "ME" },
+  { name: "Olivia BLANCHARD", company: "Présidente @ Association des acteurs de la finance durable", sector: "Finance", image: "", linkedin: "#", initials: "OB" },
+  { name: "Juliette DELANOË", company: "Co-Founder @ Ubble", sector: "Tech", image: "", linkedin: "#", initials: "JD" },
+  { name: "Ano KUHANATHAN", company: "Head of Corporate Research @ Allianz", sector: "Finance", image: "", linkedin: "#", initials: "AK" },
+  { name: "Delphine DE CANECAUDE", company: "Founder @ Etoile Rouge", sector: "Impact", image: "", linkedin: "#", initials: "DC" },
+  { name: "Xavier DURAND", company: "Co-Founder @ Chilli", sector: "Tech", image: "", linkedin: "#", initials: "XD" },
+  { name: "Charlotte RIVATON", company: "Co-CEO @ Exhibitgroup", sector: "Événementiel", image: "", linkedin: "#", initials: "CR" },
+  { name: "Rodolphe LANDEMAINE", company: "Fondateur @ Maison Landemaine Land & Monkeys", sector: "Food", image: "", linkedin: "#", initials: "RL" },
+  { name: "Josef BOVET", company: "Angel investor & Co-founder @ Tiller", sector: "Finance", image: "", linkedin: "#", initials: "JB" },
+  { name: "Julie GOSALVEZ", company: "Board Chairwoman @ AFEN", sector: "Finance", image: "", linkedin: "#", initials: "JG" },
+  { name: "Clement ALTERESCO", company: "Founder & CEO de Morning", sector: "Impact", image: "", linkedin: "#", initials: "CA" },
+  { name: "Sophie DARRIERE", company: "Co-founder @ Label Experience", sector: "Événementiel", image: "", linkedin: "#", initials: "SD" },
+  { name: "Jack HABRA", company: "Investor & Founder @ Context", sector: "Finance", image: "", linkedin: "#", initials: "JH" },
+  { name: "Claire BRETTON", company: "Co-Founder & CEO @ Underdog", sector: "Tech", image: "", linkedin: "#", initials: "CB" },
+  { name: "Maud MIELVAQUE", company: "Co-Fondatrice @ adaptation/s", sector: "Impact", image: "", linkedin: "#", initials: "MM" },
+  { name: "Abdelaali EL BADAOUI", company: "Founder @ Banlieues Santé & Banlieues Climat", sector: "Impact", image: "", linkedin: "#", initials: "AE" },
+  { name: "Béatrice EASTHAM", company: "Founder @ Green Evénements & Climeet", sector: "Événementiel", image: "", linkedin: "#", initials: "BE" },
+  { name: "Cedric SELLIN", company: "Investor & Co-Founder @ Auxilium Foundation", sector: "Finance", image: "", linkedin: "#", initials: "CS" },
+  { name: "Marie DEWAVRIN", company: "Venture Partner @ Peakbridge", sector: "Finance", image: "", linkedin: "#", initials: "MD" },
+  { name: "Dimitri FARBER GARCIA CAMINATI", company: "Impact investor & Co-Founder @ Tiller", sector: "Finance", image: "", linkedin: "#", initials: "DF" },
+  { name: "Dimitri CAUDRELIER", company: "Co-Founder @ Reboat & Shape Transition", sector: "Impact", image: "", linkedin: "#", initials: "DC" },
+  { name: "Kako DUBS", company: "Founder @ WAAAS", sector: "Tech", image: "", linkedin: "#", initials: "KD" },
+  { name: "Moussa CAMARA", company: "Founder @ Les Déterminés", sector: "Impact", image: "", linkedin: "#", initials: "MC" },
+  { name: "Kelly MERRAN", company: "Founder @ MIRAA & Orgaanic", sector: "Impact", image: "", linkedin: "#", initials: "KM" },
+  { name: "Yamina AÎSSA ABDI", company: "Co-Founder @ Au Coeur de ma Cantine", sector: "Food", image: "", linkedin: "#", initials: "YA" },
+  { name: "Fanny BERNARD", company: "General Director @ BuyYourWay", sector: "Tech", image: "", linkedin: "#", initials: "FB" },
+  { name: "Nathalie BALLA", company: "Investor & Board Member @ Criteo", sector: "Finance", image: "", linkedin: "#", initials: "NB" },
+  { name: "Nicolas MORBY", company: "CEO @ Cozétik (ESUS)", sector: "Impact", image: "", linkedin: "#", initials: "NM" },
+  { name: "Bérengère LEHEMBRE", company: "Co-Founder @ Asterion Ventures", sector: "Finance", image: "", linkedin: "#", initials: "BL" },
+  { name: "Quentin VACHER", company: "CEO & Co-Founder @ Frichti", sector: "Tech", image: "", linkedin: "#", initials: "QV" },
+  { name: "Lara PAGNIER", company: "Co-Founder @ Standard Deviation", sector: "Finance", image: "", linkedin: "#", initials: "LP" },
+  { name: "Bruno MENU", company: "Co-Founder @ Granular Energy", sector: "Impact", image: "", linkedin: "#", initials: "BM" },
+  { name: "Paul CHAUMONT", company: "Senior Director of PM @ Integral Ad Science", sector: "Tech", image: "", linkedin: "#", initials: "PC" },
+  { name: "Eva SADOUN", company: "Founder @ Rift & Co-Founder @ LITA.co", sector: "Finance", image: "", linkedin: "#", initials: "ES" },
+  { name: "Marc BATTY", company: "Co-Founder & Chairman @ Fermes En ViE", sector: "Impact", image: "", linkedin: "#", initials: "MB" },
+  { name: "Loubna KSIBI", company: "Co-Founder @ Meet my Mama", sector: "Food", image: "", linkedin: "#", initials: "LK" },
+  { name: "Nicolas BENSIGNOR", company: "Entrepreneur & Investor", sector: "Finance", image: "", linkedin: "#", initials: "NB" },
+  { name: "Christine KOLB", company: "Co-Founder @ Sycomore Asset Management", sector: "Finance", image: "", linkedin: "#", initials: "CK" },
+  { name: "Inès SEDDIKI", company: "Co-Founder @ GHETTUP", sector: "Impact", image: "", linkedin: "#", initials: "IS" },
+  { name: "Bertrand JELENSPERGER", company: "Co-Founder @ The Fork & CEO Mure", sector: "Tech", image: "", linkedin: "#", initials: "BJ" },
+  { name: "Alizée LOZAC'HMEUR", company: "Co-Founder @ Makesense", sector: "Impact", image: "", linkedin: "#", initials: "AL" },
+  { name: "Feris BARKAT", company: "Co-founder @ Banlieues Climat", sector: "Impact", image: "", linkedin: "#", initials: "FB" },
+  { name: "Pascale GUIFFANT", company: "Co-Founder & GM @ Open Lande", sector: "Impact", image: "", linkedin: "#", initials: "PG" },
+  { name: "Pierre-Yves SANCHIS", company: "Cofounder @ Youmatter", sector: "Impact", image: "", linkedin: "#", initials: "PS" },
+  { name: "Nicolas CRESTIN", company: "Co-Founder @ Sami", sector: "Tech", image: "", linkedin: "#", initials: "NC" },
+  { name: "Roxanne VARZA", company: "Director @ STATION F", sector: "Tech", image: "", linkedin: "#", initials: "RV" },
+  { name: "Serge MAGDALEINE", company: "CEO @ LCL", sector: "Finance", image: "", linkedin: "#", initials: "SM" },
+  { name: "Sanaa SAITOULI-TARAORE", company: "Co-Founder @ Banlieues Climat", sector: "Impact", image: "", linkedin: "#", initials: "SS" },
+  { name: "Olivier COTINAT", company: "Co-CEO @ MoHo & Schoolab", sector: "Impact", image: "", linkedin: "#", initials: "OC" },
+  { name: "Clara DELÉTRAZ", company: "Founder @ ENSEMBLE(S)", sector: "Impact", image: "", linkedin: "#", initials: "CD" },
+  { name: "Anne-Sophie PASTEL DUBANTON", company: "Co-Founder @ Life Flowing & EcoXtract", sector: "Impact", image: "", linkedin: "#", initials: "AP" },
+  { name: "Taoufik VALLIPURAM", company: "Board Member @ BCorp France & Connector @ Ouishare", sector: "Impact", image: "", linkedin: "#", initials: "TV" },
+  { name: "Camille DELAMAR", company: "Co-Founder @ EcoTable", sector: "Food", image: "", linkedin: "#", initials: "CD" },
+  { name: "Tristan LECOMTE", company: "Founder @ PUR Projet & Second Life", sector: "Impact", image: "", linkedin: "#", initials: "TL" },
+  { name: "Laura BEAULIER", company: "CEO @ Climate Dividends", sector: "Finance", image: "", linkedin: "#", initials: "LB" },
+  { name: "Souba BRUNEL", company: "Founder @ Les Impactrices", sector: "Impact", image: "", linkedin: "#", initials: "SB" },
+  { name: "Violaine TARDIEU", company: "Chief of Staff to Lucie BASCH", sector: "Impact", image: "", linkedin: "#", initials: "VT" }
+];
 
-const sectors = ["Tous", "Impact", "Finance", "Tech", "Conseil", "Industrie"];
+const sectors = ["Tous", "Impact", "Finance", "Tech", "Food", "Conseil", "Événementiel", "Hospitality"];
 
 const CofondateursPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
