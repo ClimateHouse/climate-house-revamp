@@ -4,7 +4,7 @@ import { useState } from "react";
 import logo from "@/assets/climate-house-logo-green.png";
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-border shadow-sm">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-secondary backdrop-blur-sm border-b border-border shadow-sm">
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
