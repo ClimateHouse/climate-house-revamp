@@ -6,33 +6,33 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <header className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-border shadow-sm">
       <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <a href="/" className="flex items-center">
-            <img src={logo} alt="Climate House - Accélérons la transition" className="h-12 w-auto" />
+            <img src={logo} alt="Climate House - Accélérons la transition" className="h-8 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
             <a href="/climate-house" className="text-foreground hover:text-primary transition-colors flex items-center gap-1">
               <Home className="h-4 w-4" />
             </a>
-            <a href="/atelier" className="text-foreground hover:text-primary transition-colors">
+            <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Ate.lier
             </a>
-            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors">
+            <a href="/climate-house" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Organiser événement
             </a>
-            <a href="/#communaute" className="text-foreground hover:text-primary transition-colors">
+            <a href="/#communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Communauté
             </a>
-            <a href="/atelier#calendrier" className="text-foreground hover:text-primary transition-colors">
+            <a href="/atelier#calendrier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Calendrier
             </a>
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
-            <Button size="lg" className="shadow-md">
+          <div className="hidden md:flex items-center">
+            <Button size="default" className="shadow-md">
               Nous contacter
             </Button>
           </div>

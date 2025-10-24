@@ -12,7 +12,7 @@ export const TrustedBy = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <p className="text-center text-sm font-semibold text-muted-foreground mb-8 uppercase tracking-wider">
