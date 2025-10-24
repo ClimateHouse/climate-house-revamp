@@ -34,24 +34,24 @@ export const Mission = ({ className }: { className?: string }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pillars.map((pillar, index) => <Card key={pillar.title} className="p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in border-border bg-card" style={{
+          {pillars.map((pillar, index) => <Card key={pillar.title} className="p-8 hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in border-border bg-card flex flex-col h-full" style={{
           animationDelay: `${index * 100}ms`
         }}>
               <div className="mb-6 w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center">
                 <pillar.icon className="h-8 w-8 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                 {pillar.description}
               </p>
               {pillar.ctaLink.startsWith('#') ? (
-                <a href={pillar.ctaLink}>
+                <a href={pillar.ctaLink} className="mt-auto">
                   <Button variant="outline" className="w-full">
                     {pillar.ctaText}
                   </Button>
                 </a>
               ) : (
-                <Link to={pillar.ctaLink}>
+                <Link to={pillar.ctaLink} className="mt-auto">
                   <Button variant="outline" className="w-full">
                     {pillar.ctaText}
                   </Button>
