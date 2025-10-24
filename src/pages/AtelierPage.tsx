@@ -13,9 +13,9 @@ const AtelierPage = () => {
       <main>
         <Atelier />
         <Parcours />
-        <CTA />
         <PedagogicalPartners />
         <Calendrier />
+        <CTA />
       </main>
       <Footer />
     </div>
