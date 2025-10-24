@@ -799,25 +799,27 @@ export const ColocatairesPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSector, setSelectedSector] = useState("Tous les secteurs");
 
-  const filteredColocataires = colocataires.filter((coloc) => {
-    const matchesSearch =
-      coloc.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      coloc.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      coloc.description.toLowerCase().includes(searchQuery.toLowerCase());
+  const filteredColocataires = colocataires
+    .filter((coloc) => {
+      const matchesSearch =
+        coloc.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        coloc.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        coloc.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesSector =
-      selectedSector === "Tous les secteurs" ||
-      coloc.sector === selectedSector;
+      const matchesSector =
+        selectedSector === "Tous les secteurs" ||
+        coloc.sector === selectedSector;
 
-    return matchesSearch && matchesSector;
-  });
+      return matchesSearch && matchesSector;
+    })
+    .sort((a, b) => a.company.localeCompare(b.company));
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
       <main>
-        {/* Hero Section */}
+        {/* Hero Section with Search */}
         <section className="py-20 bg-gradient-hero">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
@@ -828,38 +830,46 @@ export const ColocatairesPage = () => {
                 Découvrez les entreprises et organisations qui font vivre la Climate House au quotidien. 
                 Une communauté diversifiée et engagée pour la transition écologique.
               </p>
+              
+              {/* Search Bar */}
+              <div className="relative max-w-xl mx-auto">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary-foreground/60 h-5 w-5" />
+                <Input
+                  type="text"
+                  placeholder="Rechercher un colocataire..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-12 bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60 focus:bg-white/20 transition-colors"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Search and Filter Section */}
+        {/* Filter Section */}
+        <section className="py-8 bg-background border-b">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex gap-2 flex-wrap justify-center">
+                {sectors.map((sector) => (
+                  <Button
+                    key={sector}
+                    variant={selectedSector === sector ? "default" : "outline"}
+                    onClick={() => setSelectedSector(sector)}
+                    size="sm"
+                  >
+                    {sector}
+                  </Button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Results Section */}
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="flex flex-col md:flex-row gap-4 mb-8">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-                  <Input
-                    type="text"
-                    placeholder="Rechercher un colocataire..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-10"
-                  />
-                </div>
-                <div className="flex gap-2 flex-wrap">
-                  {sectors.map((sector) => (
-                    <Button
-                      key={sector}
-                      variant={selectedSector === sector ? "default" : "outline"}
-                      onClick={() => setSelectedSector(sector)}
-                      size="sm"
-                    >
-                      {sector}
-                    </Button>
-                  ))}
-                </div>
-              </div>
 
               <div className="text-sm text-muted-foreground mb-6">
                 {filteredColocataires.length} colocataire{filteredColocataires.length > 1 ? 's' : ''} trouvé{filteredColocataires.length > 1 ? 's' : ''}
@@ -870,35 +880,36 @@ export const ColocatairesPage = () => {
                   {filteredColocataires.map((coloc, index) => (
                     <Card
                       key={`${coloc.company}-${index}`}
-                      className="p-6 hover:shadow-strong transition-all duration-300 animate-fade-in flex flex-col"
+                      className="p-6 hover:shadow-strong transition-all duration-300 animate-fade-in flex flex-col h-full"
                       style={{ animationDelay: `${(index % 12) * 50}ms` }}
                     >
-                      <div className="flex-1">
-                        <div className="flex items-start justify-between mb-4">
-                          <div>
-                            <h3 className="text-xl font-bold mb-1">{coloc.company}</h3>
-                            <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                              {coloc.sector}
-                            </span>
-                          </div>
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h3 className="text-xl font-bold mb-1">{coloc.company}</h3>
+                          <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                            {coloc.sector}
+                          </span>
                         </div>
-                        <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                          {coloc.description}
-                        </p>
-                        {coloc.product && (
-                          <div className="mb-4 p-3 bg-accent/50 rounded-lg">
-                            <p className="text-sm font-medium text-foreground">
-                              <span className="font-bold">Produit phare:</span> {coloc.product}
-                            </p>
-                          </div>
-                        )}
                       </div>
+                      
+                      <p className="text-muted-foreground mb-4 text-sm leading-relaxed flex-1">
+                        {coloc.description}
+                      </p>
+                      
+                      {coloc.product && (
+                        <div className="mb-4 p-3 bg-accent/50 rounded-lg">
+                          <p className="text-sm font-medium text-foreground">
+                            <span className="font-bold">Produit phare:</span> {coloc.product}
+                          </p>
+                        </div>
+                      )}
+                      
                       {coloc.website && (
                         <a
                           href={coloc.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors mt-4"
+                          className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors"
                         >
                           <ExternalLink className="h-4 w-4" />
                           <span className="text-sm font-medium">Visiter le site</span>
