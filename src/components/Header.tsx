@@ -26,7 +26,18 @@ export const Header = () => {
             <a href="/#communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Communauté
             </a>
-            <a href="/atelier#calendrier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+            <a 
+              href="/atelier#calendrier" 
+              className="text-foreground hover:text-primary transition-colors text-sm font-medium"
+              onClick={(e) => {
+                const path = window.location.pathname;
+                if (path === '/atelier') {
+                  e.preventDefault();
+                  const element = document.getElementById('calendrier');
+                  element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+            >
               Calendrier
             </a>
           </div>
@@ -57,7 +68,18 @@ export const Header = () => {
             <a href="/#communaute" className="text-foreground hover:text-primary transition-colors py-2">
               Communauté
             </a>
-            <a href="/atelier#calendrier" className="text-foreground hover:text-primary transition-colors py-2">
+            <a 
+              href="/atelier#calendrier" 
+              className="text-foreground hover:text-primary transition-colors py-2"
+              onClick={(e) => {
+                const path = window.location.pathname;
+                if (path === '/atelier') {
+                  e.preventDefault();
+                  const element = document.getElementById('calendrier');
+                  element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+            >
               Calendrier
             </a>
             <Button className="w-full mt-2">Nous contacter</Button>
