@@ -43,7 +43,7 @@ adaptés à vos besoins et à votre niveau d'engagement
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {parcours.map((p, index) => <Card key={p.name} className={`p-6 hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in ${p.highlight ? 'border-2 border-primary' : ''}`} style={{
+            {parcours.map((p, index) => <Card key={p.name} className="p-6 flex flex-col border-2 border-transparent hover:border-primary hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
                 {p.highlight && <Badge className="mb-4 bg-gradient-hero">Recommandé</Badge>}
@@ -63,12 +63,12 @@ adaptés à vos besoins et à votre niveau d'engagement
                     </div>)}
                 </div>
                 
-                <div className="pt-4 border-t border-border">
+                <div className="pt-4 border-t border-border mb-6">
                   <p className="text-xs text-muted-foreground mb-1">Exemple :</p>
                   <p className="text-xs font-medium">{p.example}</p>
                 </div>
                 
-                <Button className={`w-full mt-6 ${p.highlight ? 'bg-gradient-hero' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
+                <Button className={`w-full mt-auto ${p.highlight ? 'bg-gradient-hero' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
                   En savoir plus
                 </Button>
               </Card>)}
