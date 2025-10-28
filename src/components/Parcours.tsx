@@ -43,14 +43,16 @@ adaptés à vos besoins et à votre niveau d'engagement
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {parcours.map((p, index) => <Card key={p.name} className="p-6 flex flex-col border-2 border-transparent hover:border-primary hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
+            {parcours.map((p, index) => <Card key={p.name} className="p-6 flex flex-col border-2 border-border hover:border-primary hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                {p.highlight && <Badge className="mb-4 bg-gradient-hero">Recommandé</Badge>}
+                <div className="min-h-[32px] mb-4">
+                  {p.highlight && <Badge className="bg-gradient-hero">Recommandé</Badge>}
+                </div>
                 
-                <h3 className="text-2xl font-bold mb-2">{p.name}</h3>
-                <p className="text-sm text-primary font-semibold mb-3">{p.target}</p>
-                <p className="text-muted-foreground text-sm mb-6">{p.description}</p>
+                <h3 className="text-2xl font-bold mb-2 min-h-[32px]">{p.name}</h3>
+                <p className="text-sm text-primary font-semibold mb-3 min-h-[40px]">{p.target}</p>
+                <p className="text-muted-foreground text-sm mb-6 min-h-[42px]">{p.description}</p>
                 
                 <div className="space-y-3 mb-6">
                   {p.included.map(item => <div key={item} className="flex items-start gap-2">
