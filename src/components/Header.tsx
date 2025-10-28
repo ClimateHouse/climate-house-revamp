@@ -26,8 +26,11 @@ export const Header = () => {
             <a href="/#communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Communauté
             </a>
+            <a href="/bibliotheque" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+              Bibliothèque
+            </a>
             <a 
-              href="/atelier#calendrier" 
+              href="/atelier#calendrier"
               className="text-foreground hover:text-primary transition-colors text-sm font-medium"
               onClick={(e) => {
                 const path = window.location.pathname;
@@ -68,8 +71,11 @@ export const Header = () => {
             <a href="/#communaute" className="text-foreground hover:text-primary transition-colors py-2">
               Communauté
             </a>
+            <a href="/bibliotheque" className="text-foreground hover:text-primary transition-colors py-2">
+              Bibliothèque
+            </a>
             <a 
-              href="/atelier#calendrier" 
+              href="/atelier#calendrier"
               className="text-foreground hover:text-primary transition-colors py-2"
               onClick={(e) => {
                 const path = window.location.pathname;
