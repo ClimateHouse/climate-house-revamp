@@ -54,7 +54,7 @@ adaptés à vos besoins et à votre niveau d'engagement
                 <p className="text-sm text-primary font-semibold mb-3 min-h-[40px]">{p.target}</p>
                 <p className="text-muted-foreground text-sm mb-6 min-h-[42px]">{p.description}</p>
                 
-                <div className="space-y-3 mb-6">
+                <div className="space-y-3 mb-6 flex-grow">
                   {p.included.map(item => <div key={item} className="flex items-start gap-2">
                       <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-xs">{item}</span>
@@ -70,7 +70,7 @@ adaptés à vos besoins et à votre niveau d'engagement
                   <p className="text-xs font-medium">{p.example}</p>
                 </div>
                 
-                <Button className={`w-full mt-auto ${p.highlight ? 'bg-gradient-hero' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
+                <Button className={`w-full mt-auto ${p.highlight ? 'bg-gradient-hero hover:bg-accent' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
                   En savoir plus
                 </Button>
               </Card>)}
