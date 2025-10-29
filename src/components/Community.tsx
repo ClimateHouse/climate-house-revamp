@@ -15,7 +15,7 @@ import communityEvent3 from "@/assets/community-event-3.jpg";
 import communityEvent4 from "@/assets/community-event-4.jpg";
 import communityEvent5 from "@/assets/community-event-5.jpg";
 import communityEvent6 from "@/assets/community-event-6.jpg";
-import climateHouseInterior from "@/assets/climate-house-interior.jpg";
+import communityOutdoor from "@/assets/community-outdoor.jpg";
 import { Linkedin, BookOpen, Users as UsersIcon, Zap, CheckCircle, Plus, Minus } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useState } from "react";
@@ -314,33 +314,13 @@ export const Community = () => {
             />
           </div>
 
-          {/* Impact Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16 animate-fade-in">
-            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
-              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">82%</div>
-              <p className="text-sm text-muted-foreground">ont rencontré de nouvelles personnes à Climate House</p>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
-              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">45%</div>
-              <p className="text-sm text-muted-foreground">n'auraient pas pu les rencontrer autrement</p>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
-              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">73%</div>
-              <p className="text-sm text-muted-foreground">ont agrandi leur réseau professionnel</p>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
-              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">57%</div>
-              <p className="text-sm text-muted-foreground">ont collaboré sur un projet professionnel</p>
-            </div>
-          </div>
-
           {/* Pricing and CTA with Image */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto animate-fade-in">
             {/* Image Section */}
             <div className="relative rounded-3xl overflow-hidden shadow-strong h-full min-h-[400px] lg:min-h-[500px]">
               <img
-                src={climateHouseInterior}
-                alt="Espace Climate House - Un lieu chaleureux pour la communauté"
+                src={communityOutdoor}
+                alt="Communauté Climate House - Entrepreneurs engagés"
                 className="w-full h-full object-cover object-[center_35%] hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
@@ -379,6 +359,26 @@ export const Community = () => {
               <Button size="lg" className="bg-gradient-hero w-full lg:w-auto">
                 Devenir Membre
               </Button>
+            </div>
+          </div>
+
+          {/* Impact Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-16 animate-fade-in">
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">82%</div>
+              <p className="text-sm text-muted-foreground">ont rencontré de nouvelles personnes à Climate House</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">45%</div>
+              <p className="text-sm text-muted-foreground">n'auraient pas pu les rencontrer autrement</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">73%</div>
+              <p className="text-sm text-muted-foreground">ont agrandi leur réseau professionnel</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">57%</div>
+              <p className="text-sm text-muted-foreground">ont collaboré sur un projet professionnel</p>
             </div>
           </div>
         </div>
