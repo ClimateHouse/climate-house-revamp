@@ -385,12 +385,12 @@ export const Spaces = () => {
             <div className="md:col-span-2 lg:row-span-2 group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in">
               <img
                 src={coworkingImage}
-                alt="Un lieu unique au cœur de Paris"
+                alt="Plus qu'un espace de travail, un écosystème vivant"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-white font-semibold text-lg">Un lieu unique au cœur de Paris</p>
+                <p className="text-white font-semibold text-lg">Plus qu'un espace de travail, un écosystème vivant</p>
               </div>
             </div>
 
