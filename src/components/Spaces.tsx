@@ -334,46 +334,43 @@ export const Spaces = () => {
               </Button>
             </div>
           </div>
-        </div>
 
-        {/* ============= TÉMOIGNAGES COLOCATAIRES ============= */}
-        <div className="max-w-7xl mx-auto mb-32">
-          <h3 className="text-3xl font-bold text-center mb-12">
-            Ce que disent nos colocataires
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in">
-              <Quote className="h-8 w-8 text-primary mb-4" />
-              <p className="text-muted-foreground mb-6 leading-relaxed italic">
-                "Climate House nous a permis de rencontrer des partenaires clés et d'accélérer notre croissance. L'écosystème est exceptionnel."
-              </p>
-              <div>
-                <div className="font-bold">Marie Dubois</div>
-                <div className="text-sm text-muted-foreground">CEO, GreenTech Startup</div>
-              </div>
-            </Card>
+          {/* TÉMOIGNAGES COLOCATAIRES - Remontés plus près des CTA */}
+          <div className="mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in">
+                <Quote className="h-8 w-8 text-primary mb-4" />
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "Climate House nous a permis de rencontrer des partenaires clés et d'accélérer notre croissance. L'écosystème est exceptionnel."
+                </p>
+                <div>
+                  <div className="font-bold">Marie Dubois</div>
+                  <div className="text-sm text-muted-foreground">CEO, GreenTech Startup</div>
+                </div>
+              </Card>
 
-            <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <Quote className="h-8 w-8 text-primary mb-4" />
-              <p className="text-muted-foreground mb-6 leading-relaxed italic">
-                "Un lieu inspirant où la collaboration prime. Nous avons co-créé plusieurs projets innovants avec d'autres membres."
-              </p>
-              <div>
-                <div className="font-bold">Thomas Martin</div>
-                <div className="text-sm text-muted-foreground">Directeur Innovation, ONG Environnement</div>
-              </div>
-            </Card>
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
+                <Quote className="h-8 w-8 text-primary mb-4" />
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "Un lieu inspirant où la collaboration prime. Nous avons co-créé plusieurs projets innovants avec d'autres membres."
+                </p>
+                <div>
+                  <div className="font-bold">Thomas Martin</div>
+                  <div className="text-sm text-muted-foreground">Directeur Innovation, ONG Environnement</div>
+                </div>
+              </Card>
 
-            <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '200ms' }}>
-              <Quote className="h-8 w-8 text-primary mb-4" />
-              <p className="text-muted-foreground mb-6 leading-relaxed italic">
-                "La communauté Climate House est unique. Chaque jour apporte de nouvelles opportunités et connexions précieuses."
-              </p>
-              <div>
-                <div className="font-bold">Sophie Bernard</div>
-                <div className="text-sm text-muted-foreground">Fondatrice, Impact Social</div>
-              </div>
-            </Card>
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '200ms' }}>
+                <Quote className="h-8 w-8 text-primary mb-4" />
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "La communauté Climate House est unique. Chaque jour apporte de nouvelles opportunités et connexions précieuses."
+                </p>
+                <div>
+                  <div className="font-bold">Sophie Bernard</div>
+                  <div className="text-sm text-muted-foreground">Fondatrice, Impact Social</div>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
 
@@ -494,11 +491,8 @@ export const Spaces = () => {
             </div>
           </div>
 
-          {/* Témoignages événements */}
+          {/* Témoignages événements - Remontés sans titre */}
           <div className="mt-20 animate-fade-in">
-            <h4 className="text-3xl font-bold text-center mb-12">
-              Ce que disent nos clients
-            </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <Card className="p-8 hover:shadow-strong transition-all duration-300">
                 <Quote className="h-8 w-8 text-accent mb-4" />
