@@ -1,6 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import eventImage from "@/assets/event-candles.jpg";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import eventPresentation1 from "@/assets/event-presentation-1.jpg";
+import eventPresentation2 from "@/assets/event-presentation-2.jpg";
+import eventPresentation3 from "@/assets/event-presentation-3.jpg";
+import eventPresentation4 from "@/assets/event-presentation-4.jpg";
+import eventPresentation5 from "@/assets/event-presentation-5.jpg";
+import eventPresentation6 from "@/assets/event-presentation-6.jpg";
+
+const programmationImages = [
+  { src: eventPresentation1, alt: "Présentation et discussion à Climate House" },
+  { src: eventPresentation2, alt: "Événement communautaire à Climate House" },
+  { src: eventPresentation3, alt: "Atelier collaboratif" },
+  { src: eventPresentation4, alt: "Espace de coworking Climate House" },
+  { src: eventPresentation5, alt: "Conférence et partage d'expérience" },
+  { src: eventPresentation6, alt: "Espace de travail collaboratif" },
+];
 const formats = [{
   name: "Masterminds",
   description: "1 thématique, 1 journée, des visions plurielles"
@@ -49,9 +65,36 @@ export const Formats = () => {
   return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Image principale */}
-          <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
-            <img src={eventImage} alt="Événement inspirant à Climate House" className="w-full h-[300px] md:h-[450px] object-cover rounded-3xl shadow-strong" />
+          {/* Carrousel d'images */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {programmationImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative h-[300px] md:h-[450px] w-full overflow-hidden rounded-3xl shadow-strong">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
 
           {/* Formats */}
