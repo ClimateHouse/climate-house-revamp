@@ -46,6 +46,16 @@ const documents: Document[] = [
     fileSize: "2.3 MB",
     tags: ["Décarbonation", "Services", "Achats 2030"],
     downloadUrl: "/documents/protocole-decarbonation-prestations-intellectuelles.pdf"
+  },
+  {
+    id: "4",
+    title: "Protocole de décarbonation - Moyens de Paiements",
+    description: "Synthèse du protocole de décarbonation élaboré par le collectif Achats 2030 pour le secteur des moyens de paiements.",
+    category: "Alliance",
+    date: "7 octobre 2025",
+    fileSize: "2.2 MB",
+    tags: ["Décarbonation", "Finance", "Achats 2030"],
+    downloadUrl: "/documents/protocole-decarbonation-moyens-paiements.pdf"
   }
 ];
 
@@ -97,8 +107,7 @@ export const Bibliotheque = () => {
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Bibliothèque</h1>
           <p className="text-xl text-muted-foreground">
-            Retrouvez les livrables des missions réalisées avec nos différents adhérents. 
-            Un espace de partage et de capitalisation des connaissances pour accélérer votre transformation.
+            Retrouvez les livrables des missions réalisées avec nos différents adhérents
           </p>
         </div>
 
