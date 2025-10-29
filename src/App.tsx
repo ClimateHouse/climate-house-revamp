@@ -10,6 +10,7 @@ import BibliothequePage from "./pages/BibliothequePage";
 import CofondateursPage from "./pages/CofondateursPage";
 import ColocatairesPage from "./pages/ColocatairesPage";
 import CommunautePage from "./pages/CommunautePage";
+import CGU from "./pages/CGU";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/cofondateurs" element={<CofondateursPage />} />
           <Route path="/colocataires" element={<ColocatairesPage />} />
           <Route path="/communaute" element={<CommunautePage />} />
+          <Route path="/cgu" element={<CGU />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -80,11 +80,8 @@ export const Footer = () => {
               </a>
             </div>
             <div className="flex gap-6 text-sm text-primary-foreground/60">
-              <a href="#" className="hover:text-primary-foreground transition-colors">
-                Mentions légales
-              </a>
-              <a href="#" className="hover:text-primary-foreground transition-colors">
-                Confidentialité
+              <a href="/cgu" className="hover:text-primary-foreground transition-colors">
+                Conditions générales
               </a>
             </div>
           </div>
