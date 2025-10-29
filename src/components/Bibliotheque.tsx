@@ -66,6 +66,26 @@ const documents: Document[] = [
     fileSize: "3.5 MB",
     tags: ["Impact", "Mesure", "RSE", "Environnement"],
     downloadUrl: "/documents/climate-house-mesure-impact-2025.pdf"
+  },
+  {
+    id: "6",
+    title: "Mastermind #Argent - Femme et Argent",
+    description: "Document de la Mastermind sur le thème Femme et Argent, avec des visions plurielles scientifiques, économiques, sociologiques, artistiques et écologiques.",
+    category: "Groupes de travail",
+    date: "Novembre 2025",
+    fileSize: "2.8 MB",
+    tags: ["Mastermind", "Finance", "Femmes", "Égalité"],
+    downloadUrl: "/documents/mastermind-femme-argent-11-25.pdf"
+  },
+  {
+    id: "7",
+    title: "Boost-Camp #7 - Coopérer",
+    description: "Support du Boost-Camp #7 sur la coopération, partie du Parcours Collecta pour entreprendre et apprendre ensemble.",
+    category: "Groupes de travail",
+    date: "Novembre 2025",
+    fileSize: "1.9 MB",
+    tags: ["Boost-Camp", "Coopération", "Formation", "Parcours Collecta"],
+    downloadUrl: "/documents/boostcamp-cooperer-11-25.pdf"
   }
 ];
 
