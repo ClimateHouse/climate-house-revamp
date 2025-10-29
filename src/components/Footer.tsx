@@ -38,7 +38,7 @@ const footerLinks = {
   }],
   "Suivez-nous": [{
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/climate-house",
+    href: "https://www.linkedin.com/company/climate-house-ch/?viewAsMember=true",
     icon: "linkedin"
   }, {
     label: "Instagram",
