@@ -314,6 +314,26 @@ export const Community = () => {
             />
           </div>
 
+          {/* Impact Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16 animate-fade-in">
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">82%</div>
+              <p className="text-sm text-muted-foreground">ont rencontré de nouvelles personnes à Climate House</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">45%</div>
+              <p className="text-sm text-muted-foreground">n'auraient pas pu les rencontrer autrement</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">73%</div>
+              <p className="text-sm text-muted-foreground">ont agrandi leur réseau professionnel</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">57%</div>
+              <p className="text-sm text-muted-foreground">ont collaboré sur un projet professionnel</p>
+            </div>
+          </div>
+
           {/* Pricing and CTA with Image */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto animate-fade-in">
             {/* Image Section */}
@@ -321,13 +341,13 @@ export const Community = () => {
               <img
                 src={climateHouseInterior}
                 alt="Espace Climate House - Un lieu chaleureux pour la communauté"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover object-[center_35%] hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-foreground">
-                <h4 className="text-2xl font-bold mb-2">Rejoignez notre espace</h4>
+                <h4 className="text-2xl font-bold mb-2">Rejoignez la communauté</h4>
                 <p className="text-sm text-foreground/80">
-                  Un lieu unique dédié à la transition climatique au cœur de Paris
+                  800+ entrepreneurs engagés qui construisent ensemble une économie durable
                 </p>
               </div>
             </div>
@@ -336,9 +356,9 @@ export const Community = () => {
             <div className="flex flex-col justify-center p-8 lg:p-12 rounded-3xl bg-card border-2 border-primary/20 shadow-soft h-full">
               <div className="mb-8 text-center lg:text-left">
                 <div className="text-5xl lg:text-6xl font-bold mb-3 bg-gradient-hero bg-clip-text text-transparent">
-                  480 €
+                  192 €
                 </div>
-                <div className="text-lg text-muted-foreground">par an (soit 40 € / mois)</div>
+                <div className="text-lg text-muted-foreground">HT / an (soit 16 € / mois)</div>
               </div>
               
               <ul className="space-y-4 mb-8">
