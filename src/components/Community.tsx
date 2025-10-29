@@ -15,8 +15,9 @@ import communityEvent3 from "@/assets/community-event-3.jpg";
 import communityEvent4 from "@/assets/community-event-4.jpg";
 import communityEvent5 from "@/assets/community-event-5.jpg";
 import communityEvent6 from "@/assets/community-event-6.jpg";
-import { Linkedin } from "lucide-react";
+import { Linkedin, BookOpen, Users as UsersIcon, Zap, CheckCircle, Plus, Minus } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useState } from "react";
 const teamMembers = [
   {
     name: "Henri-François MARTIN",
@@ -121,6 +122,66 @@ const communityImages = [
   { src: communityEvent6, alt: "Événement Climate House - Conférence innovation" },
 ];
 
+const MembershipCard = ({ 
+  icon: Icon, 
+  title, 
+  description, 
+  features, 
+  index 
+}: { 
+  icon: any; 
+  title: string; 
+  description: string; 
+  features: string[]; 
+  index: number;
+}) => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  return (
+    <Card 
+      className="p-6 hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in flex flex-col"
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      <div className="mb-4 w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+        <Icon className="h-6 w-6 text-primary" />
+      </div>
+      
+      <h4 className="text-xl font-bold mb-3">{title}</h4>
+      <p className="text-muted-foreground mb-4 text-sm">{description}</p>
+      
+      {showDetails && (
+        <ul className="space-y-2 mb-4 animate-fade-in">
+          {features.map((feature, idx) => (
+            <li key={idx} className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+              <span className="text-xs">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => setShowDetails(!showDetails)}
+        className="mt-auto"
+      >
+        {showDetails ? (
+          <>
+            <Minus className="h-4 w-4 mr-2" />
+            Voir moins
+          </>
+        ) : (
+          <>
+            <Plus className="h-4 w-4 mr-2" />
+            En savoir plus
+          </>
+        )}
+      </Button>
+    </Card>
+  );
+};
+
 export const Community = () => {
   return <section id="communaute" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -203,6 +264,81 @@ export const Community = () => {
           <Button size="lg" variant="outline" asChild>
             <a href="/colocataires">Découvrir les Colocataires</a>
           </Button>
+        </div>
+
+        {/* Section Adhésion Individuelle */}
+        <div className="max-w-6xl mx-auto mt-24 mb-16">
+          <div className="text-center mb-12 animate-fade-in">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Adhésion Individuelle</h3>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Un passeport pour comprendre, rencontrer et agir
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <MembershipCard
+              icon={BookOpen}
+              title="Explorer & apprendre"
+              description="Accès illimité à +700 événements par an : conférences, débats, masterclasses, immersions..."
+              features={[
+                "6 grandes thématiques (Énergie, Alimentation, Habitat, Biodiversité, Finance, Culture)",
+                "10 formats d'apprentissage expérientiel",
+                "Conférences exclusives avec chercheurs et dirigeants"
+              ]}
+              index={0}
+            />
+            <MembershipCard
+              icon={UsersIcon}
+              title="Rencontrer & appartenir"
+              description="Rejoignez une communauté active de 700 membres engagés pour le climat"
+              features={[
+                "Événements de convivialité (apéros, petits déj, tables d'hôtes)",
+                "Plateforme communautaire (Slack, entraide, forum)",
+                "Événements co-construits entre membres",
+                "Accès privilégié aux espaces Climate House"
+              ]}
+              index={1}
+            />
+            <MembershipCard
+              icon={Zap}
+              title="Agir & s'impliquer"
+              description="Participez activement à la transformation de notre économie"
+              features={[
+                "Groupes de travail inter-entreprises",
+                "Explorations hors les murs et learning expeditions",
+                "Proposition de formats à la communauté",
+                "Voix consultative dans les orientations"
+              ]}
+              index={2}
+            />
+          </div>
+
+          {/* Pricing and CTA */}
+          <div className="max-w-2xl mx-auto text-center p-8 rounded-3xl bg-card border-2 border-primary/20 animate-fade-in">
+            <div className="mb-6">
+              <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                480 €
+              </div>
+              <div className="text-muted-foreground">par an (soit 40 € / mois)</div>
+            </div>
+            <ul className="text-left space-y-3 mb-8 max-w-md mx-auto">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm">Accès à toute la programmation de l'ATE.LIER</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm">Accès à la plateforme et à la communauté Climate House</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-sm">Participation aux événements membres</span>
+              </li>
+            </ul>
+            <Button size="lg" className="bg-gradient-hero">
+              Devenir Membre
+            </Button>
+          </div>
         </div>
 
         {/* Section Équipe */}
