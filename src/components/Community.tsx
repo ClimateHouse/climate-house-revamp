@@ -1,9 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import communityImage from "@/assets/cofondateurs-wall.jpg";
-import henriFrancoisPhoto from "@/assets/henri-francois-martin-cropped.jpg";
+import communityEvent1 from "@/assets/community-event-1.jpg";
+import communityEvent2 from "@/assets/community-event-2.jpg";
+import communityEvent3 from "@/assets/community-event-3.jpg";
+import communityEvent4 from "@/assets/community-event-4.jpg";
+import communityEvent5 from "@/assets/community-event-5.jpg";
+import communityEvent6 from "@/assets/community-event-6.jpg";
 import { Linkedin } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 const teamMembers = [
   {
     name: "Henri-François MARTIN",
@@ -98,6 +111,16 @@ const teamMembers = [
   }
 ];
 
+const communityImages = [
+  { src: communityImage, alt: "Mur des cofondateurs Climate House - 80 portraits" },
+  { src: communityEvent1, alt: "Événement Climate House - Conférence communauté" },
+  { src: communityEvent2, alt: "Programme Climate House - Festival Atmosphères" },
+  { src: communityEvent3, alt: "Intervention Climate House - Jean-Marc Jancovici et Henri Pellion" },
+  { src: communityEvent4, alt: "Présentation Climate House - Atelier collaboratif" },
+  { src: communityEvent5, alt: "Équipe Climate House - Rencontre cofondateurs" },
+  { src: communityEvent6, alt: "Événement Climate House - Conférence innovation" },
+];
+
 export const Community = () => {
   return <section id="communaute" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -110,9 +133,36 @@ export const Community = () => {
           </p>
         </div>
 
-        {/* Image communauté */}
+        {/* Carrousel communauté */}
         <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
-          <img src={communityImage} alt="Mur des cofondateurs Climate House - 80 portraits" className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-strong" />
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent>
+              {communityImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-strong"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4 bg-background/80 backdrop-blur-sm hover:bg-background border-border" />
+            <CarouselNext className="right-4 bg-background/80 backdrop-blur-sm hover:bg-background border-border" />
+          </Carousel>
         </div>
 
         {/* Chiffres clés */}
