@@ -25,6 +25,26 @@ const documents: Document[] = [
     fileSize: "2.4 MB",
     tags: ["Décarbonation", "Transport", "Achats 2030"],
     downloadUrl: "/documents/protocole-decarbonation-fret-transport.pdf"
+  },
+  {
+    id: "2",
+    title: "Protocole de décarbonation - Réseaux et Téléphonie",
+    description: "Synthèse du protocole de décarbonation élaboré par le collectif Achats 2030 pour le secteur des réseaux et téléphonie.",
+    category: "Alliance",
+    date: "7 octobre 2025",
+    fileSize: "2.1 MB",
+    tags: ["Décarbonation", "Téléphonie", "Achats 2030"],
+    downloadUrl: "/documents/protocole-decarbonation-reseaux-telephonie.pdf"
+  },
+  {
+    id: "3",
+    title: "Protocole de décarbonation - Prestations Intellectuelles",
+    description: "Synthèse du protocole de décarbonation élaboré par le collectif Achats 2030 pour le secteur des prestations intellectuelles.",
+    category: "Alliance",
+    date: "7 octobre 2025",
+    fileSize: "2.3 MB",
+    tags: ["Décarbonation", "Services", "Achats 2030"],
+    downloadUrl: "/documents/protocole-decarbonation-prestations-intellectuelles.pdf"
   }
 ];
 
