@@ -8,7 +8,7 @@ const footerLinks = {
     href: "#"
   }, {
     label: "Visite virtuelle",
-    href: "#"
+    href: "https://discover.matterport.com/space/UxagxBR7SZk"
   }],
   "L'Ate.lier": [{
     label: "Découvrir nos parcours",

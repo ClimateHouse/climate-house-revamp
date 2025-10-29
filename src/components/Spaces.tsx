@@ -322,7 +322,7 @@ export const Spaces = () => {
                 <a href="#contact">Nous contacter</a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://visite-virtuelle-climate-house.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://discover.matterport.com/space/UxagxBR7SZk" target="_blank" rel="noopener noreferrer">
                   Visite virtuelle
                 </a>
               </Button>
