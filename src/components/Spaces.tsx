@@ -279,18 +279,18 @@ export const Spaces = () => {
               </div>
               <div className="flex-1">
                 <h4 className="text-2xl font-bold mb-2">300 postes de travail & services premium</h4>
-                <p className="text-muted-foreground">
+                <p className="text-lg text-muted-foreground">
                   Un environnement de travail complet et inspirant avec tous les services embarqués
                 </p>
               </div>
             </div>
 
             {showWorkspaceDetails && (
-              <ul className="space-y-3 mb-6 animate-fade-in">
+              <ul className="space-y-2 mb-6 animate-fade-in">
                 {workspaceFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    <span className="text-muted-foreground">{feature}</span>
+                  <li key={feature} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
