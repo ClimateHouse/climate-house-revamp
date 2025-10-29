@@ -6,12 +6,11 @@ import { Briefcase, Presentation, Plus, Minus, Users, Calendar, Lightbulb, MapPi
 
 // Données des espaces de travail pour les résidents
 const workspaceFeatures = [
-  "L'accès au réseau des 24 bâtiments Morning dans Paris (espaces nomades)",
   "Un écosystème bouillonnant où vous êtes entourés des personnes qui veulent transformer le monde de demain",
   "L'accès gratuit à la programmation (>500 conférences, formations,...)",
-  "Des salles de réunions (14) équipées et réservables via l'app en illimité",
+  "Des salles de réunions (14) équipées et réservables via l'app",
   "Des phone box (23)",
-  "Discount pour la privatisation des espaces événements (dont le studio Podcast) à la journée ou 1/2 journée",
+  "Discount pour la privatisation des espaces événements à la journée ou 1/2 journée",
   "Un office manager pour répondre à toutes vos questions",
   "Internet & service IT à l'installation",
   "Café en illimité",
@@ -243,11 +242,11 @@ export const Spaces = () => {
               icon={MapPin}
               forWhom="Les équipes qui cherchent stabilité et ancrage dans un lieu inspirant. Parfait pour les entreprises de 1 à 15 personnes souhaitant un espace fixe tout en bénéficiant d'un réseau dynamique."
               advantages={[
-                "Bureau dédié avec votre nom sur la porte",
+                "Bureau dédié à votre entreprise",
                 "Personnalisation de votre espace de travail",
                 "Accès 24/7 à votre bureau",
                 "Stockage sécurisé pour vos équipements",
-                "Domiciliation d'entreprise possible"
+                "Travaillez au sein de l'écosystème impact français"
               ]}
               ctaText="Devenir résident permanent"
               colorScheme="primary-dark"
