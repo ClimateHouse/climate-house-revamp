@@ -228,6 +228,7 @@ export const Spaces = () => {
             <h3 className="text-3xl md:text-4xl font-bold mb-4">Devenir Résident</h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               2000 m² pour inspirer, connecter et transformer.
+              <br />
               Rejoignez notre communauté d'entrepreneurs engagés et bénéficiez de l'écosystème pour développer votre activité
             </p>
           </div>
