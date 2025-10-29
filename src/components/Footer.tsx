@@ -32,6 +32,13 @@ const footerLinks = {
   }, {
     label: "Paris, France",
     href: "#"
+  }],
+  "Suivez-nous": [{
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/climate-house"
+  }, {
+    label: "Instagram",
+    href: "https://www.instagram.com/climatehouse"
   }]
 };
 export const Footer = () => {
