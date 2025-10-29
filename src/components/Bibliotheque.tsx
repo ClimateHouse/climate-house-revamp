@@ -56,6 +56,16 @@ const documents: Document[] = [
     fileSize: "2.2 MB",
     tags: ["Décarbonation", "Finance", "Achats 2030"],
     downloadUrl: "/documents/protocole-decarbonation-moyens-paiements.pdf"
+  },
+  {
+    id: "5",
+    title: "Mesure d'Impact Sociale et Environnementale 2025",
+    description: "Document de référence sur la méthodologie et les résultats de la mesure d'impact sociale et environnementale de Climate House.",
+    category: "Groupes de travail",
+    date: "2025",
+    fileSize: "3.5 MB",
+    tags: ["Impact", "Mesure", "RSE", "Environnement"],
+    downloadUrl: "/documents/climate-house-mesure-impact-2025.pdf"
   }
 ];
 
