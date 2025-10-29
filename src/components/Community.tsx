@@ -321,7 +321,7 @@ export const Community = () => {
               <img
                 src={communityOutdoor}
                 alt="Communauté Climate House - Entrepreneurs engagés"
-                className="w-full h-full object-cover object-[center_35%] hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover object-[60%_center] hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-foreground">
