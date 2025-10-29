@@ -229,7 +229,7 @@ export const Spaces = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               2000 m² pour inspirer, connecter et transformer.
               <br />
-              Rejoignez notre communauté d'entrepreneurs engagés et bénéficiez de l'écosystème pour développer votre activité
+              Rejoignez notre communauté d'entrepreneurs engagés
             </p>
           </div>
 
