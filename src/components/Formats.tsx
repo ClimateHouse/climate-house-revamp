@@ -65,38 +65,6 @@ export const Formats = () => {
   return <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Carrousel d'images */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 4000,
-                }),
-              ]}
-              className="w-full"
-            >
-              <CarouselContent>
-                {programmationImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative h-[300px] md:h-[450px] w-full overflow-hidden rounded-3xl shadow-strong">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className={`w-full h-full ${index === 0 ? 'object-cover object-top' : 'object-cover'}`}
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-4" />
-              <CarouselNext className="right-4" />
-            </Carousel>
-          </div>
-
           {/* Formats */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-center mb-4">Notre programmation</h2>
@@ -134,6 +102,38 @@ export const Formats = () => {
                 ))}
               </div>
             </Card>
+
+            {/* Carrousel d'images */}
+            <div className="max-w-5xl mx-auto mb-12">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 4000,
+                  }),
+                ]}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {programmationImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative h-[300px] md:h-[450px] w-full overflow-hidden rounded-3xl shadow-strong">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className={`w-full h-full ${index === 0 ? 'object-cover object-top' : 'object-cover'}`}
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
+            </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Thématiques - Colonne de gauche */}
