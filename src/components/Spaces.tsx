@@ -377,49 +377,20 @@ export const Spaces = () => {
           </div>
         </div>
 
-        {/* ============= VISUEL UNIQUE ============= */}
-        <div className="max-w-7xl mx-auto mb-32">
-          <div className="max-w-5xl mx-auto animate-scale-in">
-            <div className="relative rounded-3xl overflow-hidden shadow-strong">
-              <img
-                src={coworkingImage}
-                alt="Inauguration Climate House - Célébration de la communauté"
-                className="w-full h-[400px] md:h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-3xl font-bold text-primary-foreground mb-2">
-                  Un lieu unique au cœur de Paris
-                </h3>
-                <p className="text-lg text-primary-foreground/90">
-                  Où l'innovation rencontre la durabilité
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* ============= GALERIE MODERNE ============= */}
         <div className="max-w-7xl mx-auto mb-32">
-          <div className="text-center mb-12 animate-fade-in">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">Découvrez nos espaces</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Un lieu inspirant de 2000 m² pensé pour favoriser la collaboration et l'innovation
-            </p>
-          </div>
-
           {/* Grille Bento moderne et asymétrique */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[280px]">
-            {/* Image 1 - Grande, 2 colonnes */}
+            {/* Image 1 - Grande, 2 colonnes - Inauguration */}
             <div className="md:col-span-2 lg:row-span-2 group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in">
               <img
-                src={gallerySpace1}
-                alt="Espace de coworking Climate House"
+                src={coworkingImage}
+                alt="Un lieu unique au cœur de Paris"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-white font-semibold text-lg">Espaces de travail collaboratifs</p>
+                <p className="text-white font-semibold text-lg">Un lieu unique au cœur de Paris</p>
               </div>
             </div>
 
@@ -427,12 +398,12 @@ export const Spaces = () => {
             <div className="group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in" style={{ animationDelay: '100ms' }}>
               <img
                 src={gallerySpace2}
-                alt="Salle de réunion Climate House"
+                alt="Un cadre parfait au coeur de Paris"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-white font-semibold">Salles de réunion équipées</p>
+                <p className="text-white font-semibold">Un cadre parfait au coeur de Paris</p>
               </div>
             </div>
 
@@ -449,16 +420,29 @@ export const Spaces = () => {
               </div>
             </div>
 
-            {/* Image 4 - Petite */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in" style={{ animationDelay: '300ms' }}>
+            {/* Image 4 - Grande - Espaces de travail */}
+            <div className="md:col-span-2 group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in" style={{ animationDelay: '300ms' }}>
               <img
-                src={gallerySpace3}
-                alt="Espace événementiel Climate House"
+                src={gallerySpace1}
+                alt="Espaces de travail collaboratifs"
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-white font-semibold">Espaces événementiels</p>
+                <p className="text-white font-semibold text-lg">Espaces de travail collaboratifs</p>
+              </div>
+            </div>
+
+            {/* Image 5 - Petite */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in" style={{ animationDelay: '400ms' }}>
+              <img
+                src={gallerySpace3}
+                alt="Bienvenue à la Maison"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold">Bienvenue à la Maison</p>
               </div>
             </div>
           </div>
