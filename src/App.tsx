@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import ClimateHouse from "./pages/ClimateHouse";
 import AtelierPage from "./pages/AtelierPage";
 import BibliothequePage from "./pages/BibliothequePage";
+import EvenementPage from "./pages/EvenementPage";
 import CofondateursPage from "./pages/CofondateursPage";
 import ColocatairesPage from "./pages/ColocatairesPage";
 import CommunautePage from "./pages/CommunautePage";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/climate-house" element={<ClimateHouse />} />
           <Route path="/atelier" element={<AtelierPage />} />
           <Route path="/bibliotheque" element={<BibliothequePage />} />
+          <Route path="/evenement" element={<EvenementPage />} />
           <Route path="/cofondateurs" element={<CofondateursPage />} />
           <Route path="/colocataires" element={<ColocatairesPage />} />
           <Route path="/communaute" element={<CommunautePage />} />
