@@ -86,7 +86,7 @@ export const Formats = () => {
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover"
+                        className={`w-full h-full ${index === 0 ? 'object-cover object-top' : 'object-cover'}`}
                       />
                     </div>
                   </CarouselItem>
