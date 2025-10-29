@@ -9,6 +9,7 @@ import AtelierPage from "./pages/AtelierPage";
 import BibliothequePage from "./pages/BibliothequePage";
 import CofondateursPage from "./pages/CofondateursPage";
 import ColocatairesPage from "./pages/ColocatairesPage";
+import CommunautePage from "./pages/CommunautePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/bibliotheque" element={<BibliothequePage />} />
           <Route path="/cofondateurs" element={<CofondateursPage />} />
           <Route path="/colocataires" element={<ColocatairesPage />} />
+          <Route path="/communaute" element={<CommunautePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
