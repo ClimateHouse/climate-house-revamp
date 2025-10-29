@@ -1,8 +1,24 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import workshopImage from "@/assets/workshop-atelier.jpg";
+import speakerOutdoor from "@/assets/speaker-outdoor.jpg";
+import eventIndoorSpeaker from "@/assets/event-indoor-speaker.jpg";
 import { Users, Building2, Network, CheckCircle, Plus, Minus } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
+
+const atelierImages = [
+  { src: workshopImage, alt: "Atelier transformant à Climate House avec participation active" },
+  { src: speakerOutdoor, alt: "Intervenante lors d'une conférence Climate House en extérieur" },
+  { src: eventIndoorSpeaker, alt: "Conférence Climate House - Intervenant devant la communauté" },
+];
 const offerings = [{
   icon: Users,
   title: "Adhésion individuelle",
@@ -87,9 +103,36 @@ export const Atelier = () => {
         </p>
         </div>
 
-        {/* Image workshop */}
+        {/* Carrousel Atelier */}
         <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
-          <img src={workshopImage} alt="Atelier transformant à Climate House avec participation active" className="w-full h-[300px] md:h-[450px] object-cover rounded-3xl shadow-strong" />
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent>
+              {atelierImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-[300px] md:h-[450px] object-cover rounded-3xl shadow-strong"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4 bg-background/80 backdrop-blur-sm hover:bg-background border-border" />
+            <CarouselNext className="right-4 bg-background/80 backdrop-blur-sm hover:bg-background border-border" />
+          </Carousel>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
