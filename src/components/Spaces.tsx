@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import coworkingImage from "@/assets/inauguration-ruban.jpg";
+import gallerySpace1 from "@/assets/gallery-space-1.jpg";
+import gallerySpace2 from "@/assets/gallery-space-2.jpg";
+import gallerySpace3 from "@/assets/gallery-space-3.jpg";
+import galleryWallFame from "@/assets/gallery-wall-fame.jpg";
 import { Briefcase, Presentation, Plus, Minus, Users, Calendar, Lightbulb, MapPin, Building2, Quote } from "lucide-react";
 
 // Données des espaces de travail pour les résidents
@@ -390,6 +394,71 @@ export const Spaces = () => {
                 <p className="text-lg text-primary-foreground/90">
                   Où l'innovation rencontre la durabilité
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ============= GALERIE MODERNE ============= */}
+        <div className="max-w-7xl mx-auto mb-32">
+          <div className="text-center mb-12 animate-fade-in">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Découvrez nos espaces</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Un lieu inspirant de 2000 m² pensé pour favoriser la collaboration et l'innovation
+            </p>
+          </div>
+
+          {/* Grille Bento moderne et asymétrique */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[280px]">
+            {/* Image 1 - Grande, 2 colonnes */}
+            <div className="md:col-span-2 lg:row-span-2 group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in">
+              <img
+                src={gallerySpace1}
+                alt="Espace de coworking Climate House"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold text-lg">Espaces de travail collaboratifs</p>
+              </div>
+            </div>
+
+            {/* Image 2 - Petite */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <img
+                src={gallerySpace2}
+                alt="Salle de réunion Climate House"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold">Salles de réunion équipées</p>
+              </div>
+            </div>
+
+            {/* Image 3 - Moyenne, 2 lignes */}
+            <div className="lg:row-span-2 group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <img
+                src={galleryWallFame}
+                alt="Wall of Fame - Communauté Climate House"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold">Notre communauté</p>
+              </div>
+            </div>
+
+            {/* Image 4 - Petite */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-500 animate-fade-in" style={{ animationDelay: '300ms' }}>
+              <img
+                src={gallerySpace3}
+                alt="Espace événementiel Climate House"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold">Espaces événementiels</p>
               </div>
             </div>
           </div>
