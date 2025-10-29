@@ -1,4 +1,5 @@
-import { Leaf, Linkedin, Instagram, Mail, MapPin } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
+import footerLogo from "@/assets/climate-house-footer-logo.png";
 const footerLinks = {
   "La maison": [{
     label: "Devenir résident",
@@ -37,32 +38,25 @@ const footerLinks = {
 export const Footer = () => {
   return <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
-          <div className="lg:col-span-1 px-0 py-0">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center">
-                <Leaf className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <span className="text-2xl font-bold">Climate House</span>
-            </div>
-            
-            <p className="text-sm text-primary-foreground/70 mt-4">
-              Accélérons la transition écologique et sociale ensemble
-            </p>
+        <div className="flex flex-col md:flex-row items-start justify-end gap-8 md:gap-12 mb-12">
+          {/* Logo */}
+          <div className="flex items-center justify-center md:justify-start w-full md:w-auto">
+            <img src={footerLogo} alt="Climate House" className="h-32 w-auto" />
           </div>
 
           {/* Links */}
-          {Object.entries(footerLinks).map(([title, links]) => <div key={title}>
-              <h3 className="font-bold mb-4">{title}</h3>
-              <ul className="space-y-3">
-                {links.map(link => <li key={link.label}>
-                    <a href={link.href} className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                      {link.label}
-                    </a>
-                  </li>)}
-              </ul>
-            </div>)}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            {Object.entries(footerLinks).map(([title, links]) => <div key={title}>
+                <h3 className="font-bold mb-4">{title}</h3>
+                <ul className="space-y-3">
+                  {links.map(link => <li key={link.label}>
+                      <a href={link.href} className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                        {link.label}
+                      </a>
+                    </li>)}
+                </ul>
+              </div>)}
+          </div>
         </div>
 
         {/* Bottom */}
