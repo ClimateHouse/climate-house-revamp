@@ -124,7 +124,7 @@ export const Atelier = () => {
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-[300px] md:h-[450px] object-cover rounded-3xl shadow-strong"
+                      className="w-full h-[300px] md:h-[450px] object-cover object-top rounded-3xl shadow-strong"
                     />
                   </div>
                 </CarouselItem>
