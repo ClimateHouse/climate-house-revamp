@@ -22,21 +22,21 @@ import { useState } from "react";
 const teamMembers = [
   {
     name: "Henri-François MARTIN",
-    role: "CO-directeur général",
+    role: "Direction Générale",
     image: "",
     linkedin: "https://www.linkedin.com/in/henri-françoismartin/",
     initials: "HM"
   },
   {
     name: "Maika NUTI",
-    role: "CO-directrice générale",
+    role: "Direction Générale",
     image: "",
     linkedin: "#",
     initials: "MN"
   },
   {
     name: "Valère BRUNET",
-    role: "Lead Dynamique Collective",
+    role: "Dynamique Collective",
     image: "",
     linkedin: "#",
     initials: "VB"
@@ -50,21 +50,21 @@ const teamMembers = [
   },
   {
     name: "Manon FAVEROLLE",
-    role: "Lead Event",
+    role: "Lead Evénement",
     image: "",
     linkedin: "#",
     initials: "MF"
   },
   {
     name: "Ulysse PUGNET",
-    role: "Support Administratif & Financier",
+    role: "Support Admin & Financier",
     image: "",
     linkedin: "#",
     initials: "UP"
   },
   {
     name: "Stéphanie AMPART",
-    role: "Lead Programmation",
+    role: "Ate.lier & Programmation",
     image: "",
     linkedin: "#",
     initials: "SA"
@@ -78,35 +78,35 @@ const teamMembers = [
   },
   {
     name: "Vincent DE COIGNAC",
-    role: "Key Account Manager",
+    role: "Lead Ate.lier",
     image: "",
     linkedin: "#",
     initials: "VC"
   },
   {
     name: "Luna RAIX",
-    role: "Support event",
+    role: "Evénements",
     image: "",
     linkedin: "#",
     initials: "LR"
   },
   {
     name: "Elisabeth GUITINE",
-    role: "Lead Administratif et Financier",
+    role: "Administratif et Financier",
     image: "",
     linkedin: "#",
     initials: "EG"
   },
   {
     name: "Sarah BANDERLY",
-    role: "Lead Communication",
+    role: "Communication",
     image: "",
     linkedin: "#",
     initials: "SB"
   },
   {
     name: "Simon OUAKI",
-    role: "Support Communication",
+    role: "Communication",
     image: "",
     linkedin: "#",
     initials: "SO"
@@ -386,7 +386,7 @@ export const Community = () => {
         {/* Section Équipe */}
         <div className="max-w-6xl mx-auto mt-24">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">L'Équipe</h3>
+            <h3 className="text-3xl font-bold mb-4">L'équipe</h3>
             <p className="text-lg text-muted-foreground">
               13 personnes Climate House qui mettent quotidiennement leur énergie au service du projet
             </p>
