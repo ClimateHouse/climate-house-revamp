@@ -1,8 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FileText, Download, Calendar, FileType } from "lucide-react";
-import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { FileText, Download, Calendar, FileType, Search, X } from "lucide-react";
+import { useState, useMemo } from "react";
 
 interface Document {
   id: string;
@@ -50,21 +51,50 @@ const documents: Document[] = [
 
 export const Bibliotheque = () => {
   const [selectedCategory, setSelectedCategory] = useState<"Toutes" | "Alliance" | "Groupes de travail">("Toutes");
+  const [selectedTheme, setSelectedTheme] = useState<string>("Tous");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const categories = ["Toutes", "Alliance", "Groupes de travail"] as const;
   
-  const filteredDocuments = selectedCategory === "Toutes" 
-    ? documents 
-    : documents.filter(doc => doc.category === selectedCategory);
+  // Extract all unique themes from tags
+  const allThemes = useMemo(() => {
+    const themesSet = new Set<string>();
+    documents.forEach(doc => {
+      doc.tags.forEach(tag => themesSet.add(tag));
+    });
+    return ["Tous", ...Array.from(themesSet).sort()];
+  }, []);
+
+  // Filter documents by category, theme and search query
+  const filteredDocuments = useMemo(() => {
+    return documents.filter(doc => {
+      const matchesCategory = selectedCategory === "Toutes" || doc.category === selectedCategory;
+      const matchesTheme = selectedTheme === "Tous" || doc.tags.includes(selectedTheme);
+      const matchesSearch = searchQuery === "" || 
+        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        doc.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      
+      return matchesCategory && matchesTheme && matchesSearch;
+    });
+  }, [selectedCategory, selectedTheme, searchQuery]);
 
   const allianceCount = documents.filter(doc => doc.category === "Alliance").length;
   const groupesCount = documents.filter(doc => doc.category === "Groupes de travail").length;
+
+  const hasActiveFilters = selectedCategory !== "Toutes" || selectedTheme !== "Tous" || searchQuery !== "";
+
+  const clearAllFilters = () => {
+    setSelectedCategory("Toutes");
+    setSelectedTheme("Tous");
+    setSearchQuery("");
+  };
 
   return (
     <section id="bibliotheque" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+        <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Bibliothèque</h1>
           <p className="text-xl text-muted-foreground">
             Retrouvez les livrables des missions réalisées avec nos différents adhérents. 
@@ -72,33 +102,104 @@ export const Bibliotheque = () => {
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="max-w-5xl mx-auto mb-12">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
+        {/* Search Bar */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <div className="relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+            <Input
+              type="text"
+              placeholder="Rechercher par titre, description ou thème..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-12 pr-12 py-6 text-lg"
+            />
+            {searchQuery && (
               <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
-                className="min-w-[140px]"
+                variant="ghost"
+                size="sm"
+                onClick={() => setSearchQuery("")}
+                className="absolute right-2 top-1/2 -translate-y-1/2"
               >
-                {category}
-                {category === "Alliance" && allianceCount > 0 && (
-                  <Badge variant="secondary" className="ml-2">{allianceCount}</Badge>
-                )}
-                {category === "Groupes de travail" && groupesCount > 0 && (
-                  <Badge variant="secondary" className="ml-2">{groupesCount}</Badge>
-                )}
-                {category === "Toutes" && (
-                  <Badge variant="secondary" className="ml-2">{documents.length}</Badge>
-                )}
+                <X className="h-4 w-4" />
               </Button>
-            ))}
+            )}
           </div>
+        </div>
+
+        {/* Filters Section */}
+        <div className="max-w-5xl mx-auto mb-12 space-y-6">
+          {/* Format Filter */}
+          <div>
+            <h3 className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wider">
+              Filtrer par format
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={selectedCategory === category ? "default" : "outline"}
+                  onClick={() => setSelectedCategory(category)}
+                  className="min-w-[120px]"
+                  size="sm"
+                >
+                  {category}
+                  {category === "Alliance" && allianceCount > 0 && (
+                    <Badge variant="secondary" className="ml-2">{allianceCount}</Badge>
+                  )}
+                  {category === "Groupes de travail" && groupesCount > 0 && (
+                    <Badge variant="secondary" className="ml-2">{groupesCount}</Badge>
+                  )}
+                  {category === "Toutes" && (
+                    <Badge variant="secondary" className="ml-2">{documents.length}</Badge>
+                  )}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          {/* Theme Filter */}
+          <div>
+            <h3 className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wider">
+              Filtrer par thème
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {allThemes.map((theme) => (
+                <Button
+                  key={theme}
+                  variant={selectedTheme === theme ? "default" : "outline"}
+                  onClick={() => setSelectedTheme(theme)}
+                  size="sm"
+                >
+                  {theme}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          {/* Clear filters button */}
+          {hasActiveFilters && (
+            <div className="flex justify-center pt-2">
+              <Button
+                variant="ghost"
+                onClick={clearAllFilters}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <X className="h-4 w-4 mr-2" />
+                Réinitialiser tous les filtres
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Documents Grid */}
         <div className="max-w-6xl mx-auto">
+          {/* Results count */}
+          <div className="mb-6">
+            <p className="text-sm text-muted-foreground">
+              {filteredDocuments.length} {filteredDocuments.length === 1 ? "document trouvé" : "documents trouvés"}
+            </p>
+          </div>
+
           {filteredDocuments.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {filteredDocuments.map((doc) => (
@@ -151,10 +252,15 @@ export const Bibliotheque = () => {
           ) : (
             <Card className="p-12 text-center">
               <FileText className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Aucun document dans cette catégorie</h3>
-              <p className="text-muted-foreground">
-                Les documents seront ajoutés prochainement.
+              <h3 className="text-xl font-semibold mb-2">Aucun document trouvé</h3>
+              <p className="text-muted-foreground mb-6">
+                Aucun document ne correspond à vos critères de recherche.
               </p>
+              {hasActiveFilters && (
+                <Button onClick={clearAllFilters} variant="outline">
+                  Réinitialiser les filtres
+                </Button>
+              )}
             </Card>
           )}
         </div>
