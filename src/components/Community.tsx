@@ -15,6 +15,7 @@ import communityEvent3 from "@/assets/community-event-3.jpg";
 import communityEvent4 from "@/assets/community-event-4.jpg";
 import communityEvent5 from "@/assets/community-event-5.jpg";
 import communityEvent6 from "@/assets/community-event-6.jpg";
+import climateHouseInterior from "@/assets/climate-house-interior.jpg";
 import { Linkedin, BookOpen, Users as UsersIcon, Zap, CheckCircle, Plus, Minus } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useState } from "react";
@@ -313,31 +314,52 @@ export const Community = () => {
             />
           </div>
 
-          {/* Pricing and CTA */}
-          <div className="max-w-2xl mx-auto text-center p-8 rounded-3xl bg-card border-2 border-primary/20 animate-fade-in">
-            <div className="mb-6">
-              <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-                480 €
+          {/* Pricing and CTA with Image */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto animate-fade-in">
+            {/* Image Section */}
+            <div className="relative rounded-3xl overflow-hidden shadow-strong h-full min-h-[400px] lg:min-h-[500px]">
+              <img
+                src={climateHouseInterior}
+                alt="Espace Climate House - Un lieu chaleureux pour la communauté"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 text-foreground">
+                <h4 className="text-2xl font-bold mb-2">Rejoignez notre espace</h4>
+                <p className="text-sm text-foreground/80">
+                  Un lieu unique dédié à la transition climatique au cœur de Paris
+                </p>
               </div>
-              <div className="text-muted-foreground">par an (soit 40 € / mois)</div>
             </div>
-            <ul className="text-left space-y-3 mb-8 max-w-md mx-auto">
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Accès à toute la programmation de l'ATE.LIER</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Accès à la plateforme et à la communauté Climate House</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Participation aux événements membres</span>
-              </li>
-            </ul>
-            <Button size="lg" className="bg-gradient-hero">
-              Devenir Membre
-            </Button>
+
+            {/* Pricing Section */}
+            <div className="flex flex-col justify-center p-8 lg:p-12 rounded-3xl bg-card border-2 border-primary/20 shadow-soft h-full">
+              <div className="mb-8 text-center lg:text-left">
+                <div className="text-5xl lg:text-6xl font-bold mb-3 bg-gradient-hero bg-clip-text text-transparent">
+                  480 €
+                </div>
+                <div className="text-lg text-muted-foreground">par an (soit 40 € / mois)</div>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm leading-relaxed">Accès à toute la programmation de l'ATE.LIER</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm leading-relaxed">Accès à la plateforme et à la communauté Climate House</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm leading-relaxed">Participation aux événements membres</span>
+                </li>
+              </ul>
+              
+              <Button size="lg" className="bg-gradient-hero w-full lg:w-auto">
+                Devenir Membre
+              </Button>
+            </div>
           </div>
         </div>
 
