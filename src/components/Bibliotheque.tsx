@@ -212,21 +212,30 @@ export const Bibliotheque = () => {
           {filteredDocuments.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {filteredDocuments.map((doc) => (
-                <Card key={doc.id} className="hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
+                <Card key={doc.id} className="hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+                  <CardHeader className="flex-grow-0">
                     <div className="flex items-start justify-between mb-2">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <FileText className="h-6 w-6 text-primary" />
                       </div>
-                      <Badge variant="outline">{doc.category}</Badge>
+                      <Badge 
+                        variant="outline"
+                        className={
+                          doc.category === "Alliance" 
+                            ? "bg-primary/10 text-primary border-primary/30" 
+                            : "bg-accent/10 text-accent border-accent/30"
+                        }
+                      >
+                        {doc.category}
+                      </Badge>
                     </div>
                     <CardTitle className="text-xl">{doc.title}</CardTitle>
                     <CardDescription className="text-sm mt-2">
                       {doc.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                  <CardContent className="flex flex-col flex-grow">
+                    <div className="flex flex-wrap gap-2 mb-4 min-h-[32px]">
                       {doc.tags.map((tag) => (
                         <Badge key={tag} variant="secondary" className="text-xs">
                           {tag}
@@ -246,7 +255,7 @@ export const Bibliotheque = () => {
                     </div>
 
                     <Button 
-                      className="w-full" 
+                      className="w-full mt-auto" 
                       asChild
                     >
                       <a href={doc.downloadUrl} download>
