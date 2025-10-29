@@ -378,6 +378,28 @@ export const Spaces = () => {
           </div>
         </div>
 
+        {/* ============= VISUEL UNIQUE ============= */}
+        <div className="max-w-7xl mx-auto mb-32">
+          <div className="max-w-5xl mx-auto animate-scale-in">
+            <div className="relative rounded-3xl overflow-hidden shadow-strong">
+              <img
+                src={coworkingImage}
+                alt="Inauguration Climate House - Célébration de la communauté"
+                className="w-full h-[400px] md:h-[600px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <h3 className="text-3xl font-bold text-primary-foreground mb-2">
+                  Un lieu unique au cœur de Paris
+                </h3>
+                <p className="text-lg text-primary-foreground/90">
+                  Où l'innovation rencontre la durabilité
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* ============= SECTION 2 : ÉVÉNEMENTS ============= */}
         <div id="organiser-evenement" className="max-w-7xl mx-auto mb-32">
           <div className="text-center mb-12 animate-fade-in">
@@ -502,30 +524,6 @@ export const Spaces = () => {
               </Card>
             </div>
           </div>
-        </div>
-
-        {/* ============= SECTION COMMUNE ============= */}
-        <div className="max-w-7xl mx-auto">
-          {/* Image principale */}
-          <div className="max-w-5xl mx-auto mb-12 animate-scale-in">
-            <div className="relative rounded-3xl overflow-hidden shadow-strong">
-              <img
-                src={coworkingImage}
-                alt="Inauguration Climate House - Célébration de la communauté"
-                className="w-full h-[400px] md:h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <h3 className="text-3xl font-bold text-primary-foreground mb-2">
-                  Un lieu unique au cœur de Paris
-                </h3>
-                <p className="text-lg text-primary-foreground/90">
-                  Où l'innovation rencontre la durabilité
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
