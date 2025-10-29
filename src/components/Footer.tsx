@@ -1,45 +1,45 @@
 import { Leaf, Linkedin, Instagram, Mail, MapPin } from "lucide-react";
 const footerLinks = {
-  "La Maison": [{
-    label: "Notre Mission",
-    href: "#mission"
-  }, {
-    label: "Nos Espaces",
-    href: "#espaces"
-  }, {
-    label: "La Communauté",
-    href: "#communaute"
-  }, {
-    label: "L'Ate.lier",
-    href: "#atelier"
-  }],
-  "Rejoindre": [{
-    label: "Devenir colocataire",
+  "La maison": [{
+    label: "Devenir résident",
     href: "#"
   }, {
     label: "Organiser un événement",
     href: "#"
   }, {
-    label: "Visiter Climate House",
+    label: "Visite virtuelle",
     href: "#"
+  }],
+  "L'Ate.lier": [{
+    label: "Découvrir nos parcours",
+    href: "/atelier"
   }, {
-    label: "Partenariats",
+    label: "Consulter nos livrables",
+    href: "/bibliotheque"
+  }, {
+    label: "Prochains événements",
+    href: "/atelier#calendrier"
+  }, {
+    label: "Devenez adhérents",
     href: "#"
   }],
   "Ressources": [{
-    label: "Calendrier des événements",
-    href: "#calendrier"
-  }, {
     label: "FAQ",
+    href: "#"
+  }, {
+    label: "contact@climate.house",
+    href: "mailto:contact@climate.house"
+  }, {
+    label: "Paris, France",
     href: "#"
   }]
 };
 export const Footer = () => {
   return <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2 px-0 py-0">
+          <div className="lg:col-span-1 px-0 py-0">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center">
                 <Leaf className="h-6 w-6 text-primary-foreground" />
@@ -47,18 +47,9 @@ export const Footer = () => {
               <span className="text-2xl font-bold">Climate House</span>
             </div>
             
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
-                <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span>Paris, France</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
-                <Mail className="h-4 w-4 flex-shrink-0" />
-                <a href="mailto:contact@climate.house" className="hover:text-primary-foreground">
-                  contact@climate.house
-                </a>
-              </div>
-            </div>
+            <p className="text-sm text-primary-foreground/70 mt-4">
+              Accélérons la transition écologique et sociale ensemble
+            </p>
           </div>
 
           {/* Links */}
