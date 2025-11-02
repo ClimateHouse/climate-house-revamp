@@ -61,13 +61,6 @@ export const EcosystemPillars = () => {
               </Card>
             ))}
           </div>
-
-          <div className="text-center bg-gradient-soft p-8 rounded-2xl animate-fade-in" style={{ animationDelay: '400ms' }}>
-            <p className="text-lg leading-relaxed">
-              <span className="font-semibold text-primary">Chaque semaine,</span> des fondateurs, intrapreneurs, chercheurs, élus ou artistes s'y retrouvent pour{" "}
-              <span className="font-semibold">imaginer ensemble de nouvelles manières de faire société.</span>
-            </p>
-          </div>
         </div>
       </div>
     </section>
