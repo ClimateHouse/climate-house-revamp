@@ -376,7 +376,7 @@ export const Spaces = () => {
         </div>
 
         {/* ============= GALERIE MODERNE ============= */}
-        <div className="max-w-7xl mx-auto mb-32">
+        <div className="max-w-7xl mx-auto mb-12">
           {/* Grille Bento moderne et asymétrique */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[280px]">
             {/* Image 1 - Grande, 2 colonnes - Inauguration */}
