@@ -16,9 +16,9 @@ const AtelierPage = () => {
         <Atelier />
         <TrustedBy />
         <Parcours />
-        <PedagogicalPartners />
         <Formats />
         <Calendrier />
+        <PedagogicalPartners />
         <CTA />
       </main>
       <Footer />
