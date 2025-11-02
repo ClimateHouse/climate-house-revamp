@@ -12,8 +12,8 @@ const ClimateHouse = () => {
       <Header />
       <main>
         <ClimateHouseHero />
-        <EcosystemPillars />
         <Spaces />
+        <EcosystemPillars />
         <ImpactStats />
         <CTA />
       </main>
