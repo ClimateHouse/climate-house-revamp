@@ -30,35 +30,30 @@ const pillars = [
 
 export const EcosystemPillars = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Un laboratoire d'interdépendance
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Entreprises, ONG, chercheurs, artistes, institutions... tous coopèrent chaque jour pour accélérer la transition écologique et sociale
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {pillars.map((pillar, index) => (
-              <Card 
+              <div 
                 key={pillar.title}
-                className="border-2 hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+                className="text-center animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className={`p-8 bg-gradient-to-br ${pillar.color} h-full`}>
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${pillar.iconBg} mb-6`}>
-                    <pillar.icon className={`h-8 w-8 ${pillar.iconColor}`} />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {pillar.description}
-                  </p>
-                </CardContent>
-              </Card>
+                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-3xl ${pillar.iconBg} mb-6 hover:scale-110 transition-transform duration-300`}>
+                  <pillar.icon className={`h-10 w-10 ${pillar.iconColor}`} />
+                </div>
+                <h3 className="text-2xl font-bold mb-3">{pillar.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-base">
+                  {pillar.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
