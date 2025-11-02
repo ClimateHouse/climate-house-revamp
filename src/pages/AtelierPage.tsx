@@ -14,11 +14,11 @@ const AtelierPage = () => {
       <Header />
       <main>
         <Atelier />
+        <TrustedBy />
+        <Parcours />
         <PedagogicalPartners />
         <Formats />
         <Calendrier />
-        <TrustedBy />
-        <Parcours />
         <CTA />
       </main>
       <Footer />
