@@ -1,4 +1,4 @@
-import { TrendingUp, Users, Handshake, Lightbulb, Heart, Trophy } from "lucide-react";
+import { Users, Handshake, Lightbulb, Heart, Trophy } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const impactStats = [
@@ -68,25 +68,6 @@ export const ImpactStats = () => {
                 </div>
               </Card>
             ))}
-          </div>
-
-          <div className="relative">
-            <Card className="p-8 md:p-12 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 overflow-hidden animate-fade-in" style={{ animationDelay: '600ms' }}>
-              {/* Decorative element */}
-              <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-              
-              <div className="relative z-10 text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-primary/10 mb-6">
-                  <TrendingUp className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  La Climate House ne se visite pas, elle se vit
-                </h3>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  Un collectif qui génère ses propres opportunités, se nourrit de ses échanges et fait grandir chacun de ses membres
-                </p>
-              </div>
-            </Card>
           </div>
         </div>
       </div>
