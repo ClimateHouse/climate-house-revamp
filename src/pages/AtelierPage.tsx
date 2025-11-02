@@ -3,6 +3,7 @@ import { Atelier } from "@/components/Atelier";
 import { Parcours } from "@/components/Parcours";
 import { Calendrier } from "@/components/Calendrier";
 import { PedagogicalPartners } from "@/components/PedagogicalPartners";
+import { Formats } from "@/components/Formats";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 
@@ -14,6 +15,7 @@ const AtelierPage = () => {
         <Atelier />
         <Parcours />
         <PedagogicalPartners />
+        <Formats />
         <Calendrier />
         <CTA />
       </main>
