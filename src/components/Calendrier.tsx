@@ -8,11 +8,6 @@ export const Calendrier = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Calendrier de la programmation
           </h2>
-          
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            La Climate House c'est plus de 150 événements par an. 
-            Rejoignez-nous lors d'espaces collaboratifs pour apprendre et contribuer.
-          </p>
         </div>
 
         <div className="max-w-6xl mx-auto">

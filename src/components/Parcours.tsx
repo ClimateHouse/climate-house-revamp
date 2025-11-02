@@ -36,9 +36,8 @@ export const Parcours = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">4 parcours adhérents</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Des parcours complémentaires de rencontres transformantes 
-adaptés à vos besoins et à votre niveau d'engagement
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">4 parcours</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Des formats de rencontres transformantes adaptés à votre feuille de route et à votre niveau d'engagement
           </p>
           </div>
 
