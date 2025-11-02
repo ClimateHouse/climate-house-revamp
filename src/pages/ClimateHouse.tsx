@@ -3,6 +3,7 @@ import { ClimateHouseHero } from "@/components/ClimateHouseHero";
 import { EcosystemPillars } from "@/components/EcosystemPillars";
 import { ImpactStats } from "@/components/ImpactStats";
 import { Spaces } from "@/components/Spaces";
+import { ClimateHouseClosing } from "@/components/ClimateHouseClosing";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 
@@ -15,6 +16,7 @@ const ClimateHouse = () => {
         <Spaces />
         <EcosystemPillars />
         <ImpactStats />
+        <ClimateHouseClosing />
         <CTA />
       </main>
       <Footer />
