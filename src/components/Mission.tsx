@@ -24,9 +24,9 @@ const pillars = [{
 export const Mission = ({ className }: { className?: string }) => {
   return <section id="mission" className={`py-20 bg-gradient-soft ${className || ''}`}>
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">3 piliers pour transformer</h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+        <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">3 piliers pour transformer</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Climate House réunit un lieu d'exception, une communauté entreprenante et un 
             programme de transformation unique pour accompagner les organisations vers un 
             modèle économique durable et régénératif.

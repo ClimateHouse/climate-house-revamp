@@ -39,11 +39,11 @@ export const ImpactStats = () => {
     <section className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Un organisme vivant qui génère ses propres opportunités
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               C'est cette diversité qui fait de la Climate House un véritable collectif qui pense et agit ensemble
             </p>
           </div>

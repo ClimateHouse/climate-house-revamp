@@ -2,10 +2,10 @@ export const Calendrier = () => {
   return (
     <section id="calendrier" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <p className="text-sm font-medium text-primary mb-4">Les moments forts à venir</p>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Calendrier de la programmation
           </h2>
         </div>

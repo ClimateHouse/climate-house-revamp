@@ -88,7 +88,7 @@ export const Formats = () => {
         <div className="max-w-6xl mx-auto">
           {/* Formats */}
           <div className="mb-16">
-            <h2 className="text-4xl font-bold text-center mb-4">Notre programmation</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Notre programmation</h2>
             <p className="text-center text-muted-foreground mb-12 text-lg">Pensés par et pour notre communauté d'entrepreneur</p>
             
             {/* 4H Framework */}
