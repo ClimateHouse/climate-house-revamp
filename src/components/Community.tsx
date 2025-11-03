@@ -287,7 +287,7 @@ export const Community = () => {
         <div className="max-w-6xl mx-auto mt-24 mb-24">
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-3xl md:text-4xl font-bold mb-6">La Gouvernance</h3>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground mx-auto leading-relaxed whitespace-nowrap">
               Un modèle entrepreneurial guidé par l'impact, porté par 80 cofondateurs engagés
             </p>
           </div>
@@ -363,36 +363,36 @@ export const Community = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-                  <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                  <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent h-14 flex items-center justify-center">
                     20 000 €
                   </div>
-                  <p className="text-sm font-semibold mb-1">Investissement</p>
-                  <p className="text-xs text-muted-foreground">Pour 2% du capital</p>
+                  <p className="text-sm font-semibold mb-1 h-5">Investissement</p>
+                  <p className="text-xs text-muted-foreground h-8 flex items-center justify-center">Pour 2% du capital</p>
                 </Card>
 
-                <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-                  <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                  <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent h-14 flex items-center justify-center">
                     20h / an
                   </div>
-                  <p className="text-sm font-semibold mb-1">Engagement temps</p>
-                  <p className="text-xs text-muted-foreground">Pour développer l'écosystème</p>
+                  <p className="text-sm font-semibold mb-1 h-5">Engagement temps</p>
+                  <p className="text-xs text-muted-foreground h-8 flex items-center justify-center">Pour développer l'écosystème</p>
                 </Card>
 
-                <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-                  <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-                    20 contacts
+                <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                  <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent h-14 flex items-center justify-center">
+                    20 Intro
                   </div>
-                  <p className="text-sm font-semibold mb-1">Réseau partagé</p>
-                  <p className="text-xs text-muted-foreground">Pour accélérer les projets</p>
+                  <p className="text-sm font-semibold mb-1 h-5">Réseau partagé</p>
+                  <p className="text-xs text-muted-foreground h-8 flex items-center justify-center">Pour accélérer les projets</p>
                 </Card>
 
-                <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-                  <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                  <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent h-14 flex items-center justify-center">
                     50%
                   </div>
-                  <p className="text-sm font-semibold mb-1">Plus-value reversée</p>
-                  <p className="text-xs text-muted-foreground">À une association climat</p>
+                  <p className="text-sm font-semibold mb-1 h-5">Plus-value reversée</p>
+                  <p className="text-xs text-muted-foreground h-8 flex items-center justify-center">À une association climat</p>
                 </Card>
               </div>
             </div>
