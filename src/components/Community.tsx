@@ -287,7 +287,7 @@ export const Community = () => {
         <div className="max-w-6xl mx-auto mt-24 mb-24">
           <div className="text-center mb-16 animate-fade-in">
             <h3 className="text-3xl md:text-4xl font-bold mb-6">La Gouvernance</h3>
-            <p className="text-xl text-muted-foreground mx-auto leading-relaxed whitespace-nowrap">
+            <p className="text-lg text-muted-foreground mx-auto leading-relaxed whitespace-nowrap">
               Un modèle entrepreneurial guidé par l'impact, porté par 80 cofondateurs engagés
             </p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-4">
