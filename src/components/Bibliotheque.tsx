@@ -86,6 +86,16 @@ const documents: Document[] = [
     fileSize: "1.9 MB",
     tags: ["Boost-Camp", "Coopération", "Formation", "Parcours Collecta"],
     downloadUrl: "/documents/boostcamp-cooperer-11-25.pdf"
+  },
+  {
+    id: "8",
+    title: "Boost-Camp #4 - Créer de la Valeur",
+    description: "Support du Boost-Camp #4 sur la création de valeur, explorant les valeurs personnelles et sociales dans le cadre du Parcours Collecta.",
+    category: "Groupes de travail",
+    date: "Avril 2025",
+    fileSize: "2.1 MB",
+    tags: ["Boost-Camp", "Valeurs", "Formation", "Parcours Collecta"],
+    downloadUrl: "/documents/boostcamp-creer-valeur-04-25.pdf"
   }
 ];
 
