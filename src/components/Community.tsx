@@ -25,6 +25,7 @@ import communityEvent4 from "@/assets/community-event-4.jpg";
 import communityEvent5 from "@/assets/community-event-5.jpg";
 import communityEvent6 from "@/assets/community-event-6.jpg";
 import communityOutdoor from "@/assets/community-outdoor.jpg";
+import henriFrancoisAvatar from "@/assets/henri-francois-martin-avatar.jpg";
 import { Linkedin, BookOpen, Users as UsersIcon, Zap, CheckCircle, Plus, Minus, Info } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useState } from "react";
@@ -32,7 +33,7 @@ const teamMembers = [
   {
     name: "Henri-François MARTIN",
     role: "Direction Générale",
-    image: "",
+    image: henriFrancoisAvatar,
     linkedin: "https://www.linkedin.com/in/henri-françoismartin/",
     initials: "HM"
   },
