@@ -433,179 +433,199 @@ export const Community = () => {
               </div>
             </div>
 
-            {/* Comité Éthique et Stratégique - Section collapsible */}
-            <div className="animate-fade-in" style={{ animationDelay: "300ms" }}>
-              <Collapsible>
-                <div className="text-center mb-8">
-                  <h4 className="text-2xl md:text-3xl font-bold mb-4">Comité Éthique et Stratégique</h4>
-                  <p className="text-lg text-muted-foreground mb-6">
+            {/* Comité et Équipe côte à côte avec Modales */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "300ms" }}>
+              
+              {/* Comité Éthique et Stratégique */}
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
+                    <UsersIcon className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Comité Éthique et Stratégique</h3>
+                  <p className="text-sm text-muted-foreground mb-6">
                     4 représentants des cofondateurs pour guider les orientations du projet
                   </p>
-                  <CollapsibleTrigger asChild>
-                    <Button variant="outline" size="lg" className="gap-2">
-                      <UsersIcon className="h-5 w-5" />
-                      Voir les membres du comité
-                      <ChevronDown className="h-4 w-4 transition-transform duration-200 [[data-state=open]>&]:rotate-180" />
-                    </Button>
-                  </CollapsibleTrigger>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
+                        <UsersIcon className="h-5 w-5" />
+                        Voir les membres du comité
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl">Comité Éthique et Stratégique</DialogTitle>
+                        <DialogDescription>
+                          4 représentants des cofondateurs pour guider les orientations du projet
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                        <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
+                          <div className="relative mb-4">
+                            <Avatar className="h-24 w-24 mx-auto border-2 border-primary">
+                              <AvatarFallback className="text-lg font-semibold bg-primary/10">LB</AvatarFallback>
+                            </Avatar>
+                            <a
+                              href="https://fr.linkedin.com/in/lucie-basch-2b163852"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                              aria-label="LinkedIn de Lucie Basch"
+                            >
+                              <Linkedin className="h-4 w-4" />
+                            </a>
+                          </div>
+                          <h5 className="font-bold mb-1">Lucie BASCH</h5>
+                          <p className="text-xs text-primary font-semibold mb-2">Présidente</p>
+                          <p className="text-xs text-muted-foreground mb-3">Too Good To Go</p>
+                          <div className="flex flex-wrap gap-1 justify-center">
+                            <Badge variant="secondary" className="text-xs">Impact Social</Badge>
+                            <Badge variant="secondary" className="text-xs">Anti-Gaspillage</Badge>
+                            <Badge variant="secondary" className="text-xs">FoodTech</Badge>
+                          </div>
+                        </Card>
+
+                        <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
+                          <div className="relative mb-4">
+                            <Avatar className="h-24 w-24 mx-auto border-2 border-border">
+                              <AvatarFallback className="text-lg font-semibold bg-card">JH</AvatarFallback>
+                            </Avatar>
+                            <a
+                              href="https://www.linkedin.com/in/jack-habra"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                              aria-label="LinkedIn de Jack Habra"
+                            >
+                              <Linkedin className="h-4 w-4" />
+                            </a>
+                          </div>
+                          <h5 className="font-bold mb-1">Jack HABRA</h5>
+                          <p className="text-xs text-muted-foreground mb-2">Co-fondateur</p>
+                          <p className="text-xs text-muted-foreground mb-3">Context</p>
+                          <div className="flex flex-wrap gap-1 justify-center">
+                            <Badge variant="secondary" className="text-xs">Tech</Badge>
+                            <Badge variant="secondary" className="text-xs">Innovation</Badge>
+                            <Badge variant="secondary" className="text-xs">AdTech</Badge>
+                          </div>
+                        </Card>
+
+                        <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
+                          <div className="relative mb-4">
+                            <Avatar className="h-24 w-24 mx-auto border-2 border-border">
+                              <AvatarFallback className="text-lg font-semibold bg-card">CB</AvatarFallback>
+                            </Avatar>
+                            <a
+                              href="https://linkedin.com/in/claire-bretton"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                              aria-label="LinkedIn de Claire Bretton"
+                            >
+                              <Linkedin className="h-4 w-4" />
+                            </a>
+                          </div>
+                          <h5 className="font-bold mb-1">Claire BRETTON</h5>
+                          <p className="text-xs text-muted-foreground mb-2">Co-fondatrice</p>
+                          <p className="text-xs text-muted-foreground mb-3">Underdog</p>
+                          <div className="flex flex-wrap gap-1 justify-center">
+                            <Badge variant="secondary" className="text-xs">Économie Circulaire</Badge>
+                            <Badge variant="secondary" className="text-xs">Reconditionnement</Badge>
+                            <Badge variant="secondary" className="text-xs">Impact</Badge>
+                          </div>
+                        </Card>
+
+                        <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
+                          <div className="relative mb-4">
+                            <Avatar className="h-24 w-24 mx-auto border-2 border-border">
+                              <AvatarFallback className="text-lg font-semibold bg-card">CA</AvatarFallback>
+                            </Avatar>
+                            <a
+                              href="https://www.linkedin.com/in/clementalteresco"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                              aria-label="LinkedIn de Clément Alteresco"
+                            >
+                              <Linkedin className="h-4 w-4" />
+                            </a>
+                          </div>
+                          <h5 className="font-bold mb-1">Clément ALTERESCO</h5>
+                          <p className="text-xs text-muted-foreground mb-2">Co-fondateur</p>
+                          <p className="text-xs text-muted-foreground mb-3">Morning</p>
+                          <div className="flex flex-wrap gap-1 justify-center">
+                            <Badge variant="secondary" className="text-xs">Coworking</Badge>
+                            <Badge variant="secondary" className="text-xs">Immobilier</Badge>
+                            <Badge variant="secondary" className="text-xs">Entrepreneuriat</Badge>
+                          </div>
+                        </Card>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
+              </Card>
 
-                <CollapsibleContent className="animate-fade-in">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                    <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
-                      <div className="relative mb-4">
-                        <Avatar className="h-24 w-24 mx-auto border-2 border-primary">
-                          <AvatarFallback className="text-lg font-semibold bg-primary/10">LB</AvatarFallback>
-                        </Avatar>
-                        <a
-                          href="https://fr.linkedin.com/in/lucie-basch-2b163852"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
-                          aria-label="LinkedIn de Lucie Basch"
-                        >
-                          <Linkedin className="h-4 w-4" />
-                        </a>
-                      </div>
-                      <h5 className="font-bold mb-1">Lucie BASCH</h5>
-                      <p className="text-xs text-primary font-semibold mb-2">Présidente</p>
-                      <p className="text-xs text-muted-foreground mb-3">Too Good To Go</p>
-                      <div className="flex flex-wrap gap-1 justify-center">
-                        <Badge variant="secondary" className="text-xs">Impact Social</Badge>
-                        <Badge variant="secondary" className="text-xs">Anti-Gaspillage</Badge>
-                        <Badge variant="secondary" className="text-xs">FoodTech</Badge>
-                      </div>
-                    </Card>
-
-                    <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
-                      <div className="relative mb-4">
-                        <Avatar className="h-24 w-24 mx-auto border-2 border-border">
-                          <AvatarFallback className="text-lg font-semibold bg-card">JH</AvatarFallback>
-                        </Avatar>
-                        <a
-                          href="https://www.linkedin.com/in/jack-habra"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
-                          aria-label="LinkedIn de Jack Habra"
-                        >
-                          <Linkedin className="h-4 w-4" />
-                        </a>
-                      </div>
-                      <h5 className="font-bold mb-1">Jack HABRA</h5>
-                      <p className="text-xs text-muted-foreground mb-2">Co-fondateur</p>
-                      <p className="text-xs text-muted-foreground mb-3">Context</p>
-                      <div className="flex flex-wrap gap-1 justify-center">
-                        <Badge variant="secondary" className="text-xs">Tech</Badge>
-                        <Badge variant="secondary" className="text-xs">Innovation</Badge>
-                        <Badge variant="secondary" className="text-xs">AdTech</Badge>
-                      </div>
-                    </Card>
-
-                    <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
-                      <div className="relative mb-4">
-                        <Avatar className="h-24 w-24 mx-auto border-2 border-border">
-                          <AvatarFallback className="text-lg font-semibold bg-card">CB</AvatarFallback>
-                        </Avatar>
-                        <a
-                          href="https://linkedin.com/in/claire-bretton"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
-                          aria-label="LinkedIn de Claire Bretton"
-                        >
-                          <Linkedin className="h-4 w-4" />
-                        </a>
-                      </div>
-                      <h5 className="font-bold mb-1">Claire BRETTON</h5>
-                      <p className="text-xs text-muted-foreground mb-2">Co-fondatrice</p>
-                      <p className="text-xs text-muted-foreground mb-3">Underdog</p>
-                      <div className="flex flex-wrap gap-1 justify-center">
-                        <Badge variant="secondary" className="text-xs">Économie Circulaire</Badge>
-                        <Badge variant="secondary" className="text-xs">Reconditionnement</Badge>
-                        <Badge variant="secondary" className="text-xs">Impact</Badge>
-                      </div>
-                    </Card>
-
-                    <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
-                      <div className="relative mb-4">
-                        <Avatar className="h-24 w-24 mx-auto border-2 border-border">
-                          <AvatarFallback className="text-lg font-semibold bg-card">CA</AvatarFallback>
-                        </Avatar>
-                        <a
-                          href="https://www.linkedin.com/in/clementalteresco"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
-                          aria-label="LinkedIn de Clément Alteresco"
-                        >
-                          <Linkedin className="h-4 w-4" />
-                        </a>
-                      </div>
-                      <h5 className="font-bold mb-1">Clément ALTERESCO</h5>
-                      <p className="text-xs text-muted-foreground mb-2">Co-fondateur</p>
-                      <p className="text-xs text-muted-foreground mb-3">Morning</p>
-                      <div className="flex flex-wrap gap-1 justify-center">
-                        <Badge variant="secondary" className="text-xs">Coworking</Badge>
-                        <Badge variant="secondary" className="text-xs">Immobilier</Badge>
-                        <Badge variant="secondary" className="text-xs">Entrepreneuriat</Badge>
-                      </div>
-                    </Card>
+              {/* L'équipe */}
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
+                    <UsersIcon className="h-8 w-8 text-accent-foreground" />
                   </div>
-                </CollapsibleContent>
-              </Collapsible>
+                  <h3 className="text-2xl font-bold mb-3">L'équipe</h3>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    13 personnes Climate House qui mettent quotidiennement leur énergie au service du projet
+                  </p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
+                        <UsersIcon className="h-5 w-5" />
+                        Voir les membres de l'équipe
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl">L'équipe Climate House</DialogTitle>
+                        <DialogDescription>
+                          13 personnes qui mettent quotidiennement leur énergie au service du projet
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+                        {teamMembers.map((member) => (
+                          <div
+                            key={member.name}
+                            className="flex flex-col items-center text-center group"
+                          >
+                            <div className="relative mb-4">
+                              <Avatar className="h-24 w-24 border-2 border-border group-hover:border-primary transition-colors duration-300 shadow-soft">
+                                <AvatarImage src={member.image} alt={member.name} />
+                                <AvatarFallback className="text-lg font-semibold bg-card">
+                                  {member.initials}
+                                </AvatarFallback>
+                              </Avatar>
+                              <a
+                                href={member.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                                aria-label={`LinkedIn de ${member.name}`}
+                              >
+                                <Linkedin className="h-4 w-4" />
+                              </a>
+                            </div>
+                            <h4 className="font-bold text-sm mb-1">{member.name}</h4>
+                            <p className="text-xs text-muted-foreground">{member.role}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+              </Card>
             </div>
           </div>
-        </div>
-
-        {/* Section Équipe - Collapsible */}
-        <div className="max-w-6xl mx-auto mt-24">
-          <Collapsible>
-            <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold mb-4">L'équipe</h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                13 personnes Climate House qui mettent quotidiennement leur énergie au service du projet
-              </p>
-              <CollapsibleTrigger asChild>
-                <Button variant="outline" size="lg" className="gap-2">
-                  <UsersIcon className="h-5 w-5" />
-                  Voir les membres de l'équipe
-                  <ChevronDown className="h-4 w-4 transition-transform duration-200 [[data-state=open]>&]:rotate-180" />
-                </Button>
-              </CollapsibleTrigger>
-            </div>
-
-            <CollapsibleContent className="animate-fade-in">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
-                {teamMembers.map((member) => (
-                  <div
-                    key={member.name}
-                    className="flex flex-col items-center text-center group"
-                  >
-                    <div className="relative mb-4">
-                      <Avatar className="h-24 w-24 border-2 border-border group-hover:border-primary transition-colors duration-300 shadow-soft">
-                        <AvatarImage src={member.image} alt={member.name} />
-                        <AvatarFallback className="text-lg font-semibold bg-card">
-                          {member.initials}
-                        </AvatarFallback>
-                      </Avatar>
-                      <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
-                        aria-label={`LinkedIn de ${member.name}`}
-                      >
-                        <Linkedin className="h-4 w-4" />
-                      </a>
-                    </div>
-                    <h4 className="font-semibold text-sm mb-1">{member.name}</h4>
-                    <p className="text-xs text-muted-foreground">{member.role}</p>
-                  </div>
-                ))}
-              </div>
-            </CollapsibleContent>
-          </Collapsible>
         </div>
 
         {/* Section Adhésion Individuelle */}
