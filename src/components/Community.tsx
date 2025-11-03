@@ -383,6 +383,163 @@ export const Community = () => {
           </div>
         </div>
 
+        {/* Section Gouvernance */}
+        <div className="max-w-6xl mx-auto mt-24 mb-24">
+          <div className="text-center mb-12 animate-fade-in">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">La Gouvernance</h3>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Un modèle entrepreneurial guidé par l'impact, porté par 80 cofondateurs engagés
+            </p>
+          </div>
+
+          {/* Type d'entreprise ESUS */}
+          <div className="bg-gradient-to-br from-primary/5 via-background to-accent/5 rounded-3xl p-8 md:p-12 mb-12 border border-primary/10 animate-fade-in">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <CheckCircle className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-2xl font-bold mb-3">Une Entreprise Solidaire d'Utilité Sociale (ESUS)</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Un modèle entrepreneurial qui vise la rentabilité tout en étant concentré sur ses impacts écologiques et sociaux, 
+                  encadré par un comité éthique et stratégique.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Les 80 Cofondateurs */}
+          <div className="mb-12 animate-fade-in" style={{ animationDelay: "100ms" }}>
+            <div className="text-center mb-8">
+              <h4 className="text-2xl md:text-3xl font-bold mb-3">80 Entrepreneur·e·s Engagé·e·s</h4>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Le cœur vibrant du projet : ils mettent leur temps, leur argent et leur réseau au service du Climat
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                  20 000 €
+                </div>
+                <p className="text-sm font-semibold mb-1">Investissement</p>
+                <p className="text-xs text-muted-foreground">Pour 2% du capital</p>
+              </Card>
+
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                  20h / an
+                </div>
+                <p className="text-sm font-semibold mb-1">Engagement temps</p>
+                <p className="text-xs text-muted-foreground">Pour développer l'écosystème</p>
+              </Card>
+
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                  20 contacts
+                </div>
+                <p className="text-sm font-semibold mb-1">Réseau partagé</p>
+                <p className="text-xs text-muted-foreground">Pour accélérer les projets</p>
+              </Card>
+
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                  50%
+                </div>
+                <p className="text-sm font-semibold mb-1">Plus-value reversée</p>
+                <p className="text-xs text-muted-foreground">À une association climat</p>
+              </Card>
+            </div>
+
+            <div className="mt-8 p-6 bg-card rounded-2xl border border-border">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Chaque Founding member peut utiliser la Climate House pour y travailler, organiser des événements/réunions, 
+                enregistrer un podcast, un dîner, et participer à l'éclosion et au développement d'une entreprise collective. 
+                Ils alimentent continuellement le projet par de nouvelles idées, projets et opportunités.
+              </p>
+            </div>
+          </div>
+
+          {/* Boussole collective 2025 */}
+          <div className="bg-gradient-to-br from-accent/5 via-background to-primary/5 rounded-3xl p-8 md:p-12 mb-12 border border-accent/10 animate-fade-in" style={{ animationDelay: "200ms" }}>
+            <h4 className="text-2xl font-bold mb-6 text-center">Une boussole collective dans un monde fracturé</h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="flex flex-col items-center text-center p-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Dialogue entre science, entreprise et engagement
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center p-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <UsersIcon className="h-6 w-6 text-primary" />
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Tiers de confiance pour coopérations inédites
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center p-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Zap className="h-6 w-6 text-primary" />
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Caisse de résonance pour l'économie de demain
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Comité Éthique et Stratégique */}
+          <div className="animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <div className="text-center mb-8">
+              <h4 className="text-2xl md:text-3xl font-bold mb-3">Comité Éthique et Stratégique</h4>
+              <p className="text-lg text-muted-foreground">
+                4 représentants des cofondateurs pour guider les orientations du projet
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-primary">
+                  <AvatarFallback className="text-lg font-semibold bg-primary/10">LB</AvatarFallback>
+                </Avatar>
+                <h5 className="font-bold mb-1">Lucie BASCH</h5>
+                <p className="text-xs text-primary font-semibold mb-2">Présidente</p>
+                <p className="text-xs text-muted-foreground">Too Good To Go</p>
+              </Card>
+
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-border">
+                  <AvatarFallback className="text-lg font-semibold bg-card">JH</AvatarFallback>
+                </Avatar>
+                <h5 className="font-bold mb-1">Jack HABRA</h5>
+                <p className="text-xs text-muted-foreground mb-2">Co-fondateur</p>
+                <p className="text-xs text-muted-foreground">Context</p>
+              </Card>
+
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-border">
+                  <AvatarFallback className="text-lg font-semibold bg-card">CB</AvatarFallback>
+                </Avatar>
+                <h5 className="font-bold mb-1">Claire BRETTON</h5>
+                <p className="text-xs text-muted-foreground mb-2">Co-fondatrice</p>
+                <p className="text-xs text-muted-foreground">Underdog</p>
+              </Card>
+
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-border">
+                  <AvatarFallback className="text-lg font-semibold bg-card">CA</AvatarFallback>
+                </Avatar>
+                <h5 className="font-bold mb-1">Clément ALTERESCO</h5>
+                <p className="text-xs text-muted-foreground mb-2">Co-fondateur</p>
+                <p className="text-xs text-muted-foreground">Morning</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+
         {/* Section Équipe */}
         <div className="max-w-6xl mx-auto mt-24">
           <div className="text-center mb-12">
