@@ -290,6 +290,9 @@ export const Community = () => {
             <p className="text-xl text-muted-foreground mx-auto leading-relaxed whitespace-nowrap">
               Un modèle entrepreneurial guidé par l'impact, porté par 80 cofondateurs engagés
             </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-4">
+              Le cœur vibrant du projet : ils mettent leur temps, leur argent et leur réseau au service du Climat
+            </p>
           </div>
 
           {/* Flow continu avec espacement progressif */}
@@ -355,11 +358,8 @@ export const Community = () => {
             <div className="animate-fade-in" style={{ animationDelay: "100ms" }}>
               <div className="text-center mb-10">
                 <h4 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-hero bg-clip-text text-transparent">
-                  80 Entrepreneur·e·s Engagé·e·s
+                  Les engagements de nos Cofondateurs
                 </h4>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  Le cœur vibrant du projet : ils mettent leur temps, leur argent et leur réseau au service du Climat
-                </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
