@@ -277,122 +277,6 @@ export const Community = () => {
           </Button>
         </div>
 
-        {/* Section Adhésion Individuelle */}
-        <div className="max-w-6xl mx-auto mt-24 mb-16">
-          <div className="text-center mb-12 animate-fade-in">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">Adhésion Individuelle</h3>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Un passeport pour comprendre, rencontrer et agir
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <MembershipCard
-              icon={BookOpen}
-              title="Explorer & apprendre"
-              description="Accès illimité à +700 événements par an : conférences, débats, masterclasses, immersions..."
-              features={[
-                "6 grandes thématiques (Énergie, Alimentation, Habitat, Biodiversité, Finance, Culture)",
-                "10 formats d'apprentissage expérientiel",
-                "Conférences exclusives avec chercheurs et dirigeants"
-              ]}
-              index={0}
-            />
-            <MembershipCard
-              icon={UsersIcon}
-              title="Rencontrer & appartenir"
-              description="Rejoignez une communauté active de 700 membres engagés pour le climat"
-              features={[
-                "Événements de convivialité (apéros, petits déj, tables d'hôtes)",
-                "Plateforme communautaire (Slack, entraide, forum)",
-                "Événements co-construits entre membres",
-                "Accès privilégié aux espaces Climate House"
-              ]}
-              index={1}
-            />
-            <MembershipCard
-              icon={Zap}
-              title="Agir & s'impliquer"
-              description="Participez activement à la transformation de notre économie"
-              features={[
-                "Groupes de travail inter-entreprises",
-                "Explorations hors les murs et learning expeditions",
-                "Proposition de formats à la communauté",
-                "Voix consultative dans les orientations"
-              ]}
-              index={2}
-            />
-          </div>
-
-          {/* Pricing and CTA with Image */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto animate-fade-in">
-            {/* Image Section */}
-            <div className="relative rounded-3xl overflow-hidden shadow-strong h-full min-h-[400px] lg:min-h-[500px]">
-              <img
-                src={communityOutdoor}
-                alt="Communauté Climate House - Entrepreneurs engagés"
-                className="w-full h-full object-cover object-[85%_center] hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-foreground">
-                <h4 className="text-2xl font-bold mb-2">Rejoignez la communauté</h4>
-                <p className="text-sm text-foreground/80">
-                  800+ entrepreneurs engagés qui construisent ensemble une économie durable
-                </p>
-              </div>
-            </div>
-
-            {/* Pricing Section */}
-            <div className="flex flex-col justify-center p-8 lg:p-12 rounded-3xl bg-card border-2 border-primary/20 shadow-soft h-full">
-              <div className="mb-8 text-center lg:text-left">
-                <div className="text-5xl lg:text-6xl font-bold mb-3 bg-gradient-hero bg-clip-text text-transparent">
-                  192 €
-                </div>
-                <div className="text-lg text-muted-foreground">HT / an (soit 16 € / mois)</div>
-              </div>
-              
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">Accès à toute la programmation de l'ATE.LIER</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">Accès à la plateforme et à la communauté Climate House</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">Participation aux événements membres</span>
-                </li>
-              </ul>
-              
-              <Button size="lg" className="bg-gradient-hero w-full lg:w-auto">
-                Devenir Membre
-              </Button>
-            </div>
-          </div>
-
-          {/* Impact Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-16 animate-fade-in">
-            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
-              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">82%</div>
-              <p className="text-sm text-muted-foreground">ont rencontré de nouvelles personnes à Climate House</p>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
-              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">45%</div>
-              <p className="text-sm text-muted-foreground">n'auraient pas pu les rencontrer autrement</p>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
-              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">73%</div>
-              <p className="text-sm text-muted-foreground">ont agrandi leur réseau professionnel</p>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
-              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">57%</div>
-              <p className="text-sm text-muted-foreground">ont collaboré sur un projet professionnel</p>
-            </div>
-          </div>
-        </div>
-
         {/* Section Gouvernance */}
         <div className="max-w-6xl mx-auto mt-24 mb-24">
           <div className="text-center mb-12 animate-fade-in">
@@ -681,6 +565,122 @@ export const Community = () => {
                 <p className="text-xs text-muted-foreground">{member.role}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Section Adhésion Individuelle */}
+        <div className="max-w-6xl mx-auto mt-24 mb-16">
+          <div className="text-center mb-12 animate-fade-in">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Adhésion Individuelle</h3>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Un passeport pour comprendre, rencontrer et agir
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <MembershipCard
+              icon={BookOpen}
+              title="Explorer & apprendre"
+              description="Accès illimité à +700 événements par an : conférences, débats, masterclasses, immersions..."
+              features={[
+                "6 grandes thématiques (Énergie, Alimentation, Habitat, Biodiversité, Finance, Culture)",
+                "10 formats d'apprentissage expérientiel",
+                "Conférences exclusives avec chercheurs et dirigeants"
+              ]}
+              index={0}
+            />
+            <MembershipCard
+              icon={UsersIcon}
+              title="Rencontrer & appartenir"
+              description="Rejoignez une communauté active de 700 membres engagés pour le climat"
+              features={[
+                "Événements de convivialité (apéros, petits déj, tables d'hôtes)",
+                "Plateforme communautaire (Slack, entraide, forum)",
+                "Événements co-construits entre membres",
+                "Accès privilégié aux espaces Climate House"
+              ]}
+              index={1}
+            />
+            <MembershipCard
+              icon={Zap}
+              title="Agir & s'impliquer"
+              description="Participez activement à la transformation de notre économie"
+              features={[
+                "Groupes de travail inter-entreprises",
+                "Explorations hors les murs et learning expeditions",
+                "Proposition de formats à la communauté",
+                "Voix consultative dans les orientations"
+              ]}
+              index={2}
+            />
+          </div>
+
+          {/* Pricing and CTA with Image */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto animate-fade-in">
+            {/* Image Section */}
+            <div className="relative rounded-3xl overflow-hidden shadow-strong h-full min-h-[400px] lg:min-h-[500px]">
+              <img
+                src={communityOutdoor}
+                alt="Communauté Climate House - Entrepreneurs engagés"
+                className="w-full h-full object-cover object-[85%_center] hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 text-foreground">
+                <h4 className="text-2xl font-bold mb-2">Rejoignez la communauté</h4>
+                <p className="text-sm text-foreground/80">
+                  800+ entrepreneurs engagés qui construisent ensemble une économie durable
+                </p>
+              </div>
+            </div>
+
+            {/* Pricing Section */}
+            <div className="flex flex-col justify-center p-8 lg:p-12 rounded-3xl bg-card border-2 border-primary/20 shadow-soft h-full">
+              <div className="mb-8 text-center lg:text-left">
+                <div className="text-5xl lg:text-6xl font-bold mb-3 bg-gradient-hero bg-clip-text text-transparent">
+                  192 €
+                </div>
+                <div className="text-lg text-muted-foreground">HT / an (soit 16 € / mois)</div>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm leading-relaxed">Accès à toute la programmation de l'ATE.LIER</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm leading-relaxed">Accès à la plateforme et à la communauté Climate House</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm leading-relaxed">Participation aux événements membres</span>
+                </li>
+              </ul>
+              
+              <Button size="lg" className="bg-gradient-hero w-full lg:w-auto">
+                Devenir Membre
+              </Button>
+            </div>
+          </div>
+
+          {/* Impact Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-16 animate-fade-in">
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">82%</div>
+              <p className="text-sm text-muted-foreground">ont rencontré de nouvelles personnes à Climate House</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">45%</div>
+              <p className="text-sm text-muted-foreground">n'auraient pas pu les rencontrer autrement</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">73%</div>
+              <p className="text-sm text-muted-foreground">ont agrandi leur réseau professionnel</p>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-card border border-border hover:shadow-soft transition-shadow">
+              <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">57%</div>
+              <p className="text-sm text-muted-foreground">ont collaboré sur un projet professionnel</p>
+            </div>
           </div>
         </div>
       </div>
