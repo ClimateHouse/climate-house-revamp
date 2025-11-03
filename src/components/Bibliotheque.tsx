@@ -96,6 +96,16 @@ const documents: Document[] = [
     fileSize: "2.1 MB",
     tags: ["Boost-Camp", "Valeurs", "Formation", "Parcours Collecta"],
     downloadUrl: "/documents/boostcamp-creer-valeur-04-25.pdf"
+  },
+  {
+    id: "9",
+    title: "Boost-Camp #6 - Pouvoir d'Agir",
+    description: "Support du Boost-Camp #6 sur le pouvoir d'agir face aux enjeux climatiques, avec Bassi x Imfusio, Hact et Altman.",
+    category: "Groupes de travail",
+    date: "Septembre 2025",
+    fileSize: "2.3 MB",
+    tags: ["Boost-Camp", "Pouvoir d'Agir", "Climat", "Formation", "Parcours Collecta"],
+    downloadUrl: "/documents/boostcamp-pouvoir-agir-09-25.pdf"
   }
 ];
 
