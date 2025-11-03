@@ -39,9 +39,9 @@ const teamMembers = [
   {
     name: "Henri-François MARTIN",
     role: "Direction Générale",
-    image: henriFrancoisAvatar,
+    image: "",
     linkedin: "https://www.linkedin.com/in/henri-françoismartin/",
-    initials: "HM"
+    initials: "HFM"
   },
   {
     name: "Maika NUTI",
