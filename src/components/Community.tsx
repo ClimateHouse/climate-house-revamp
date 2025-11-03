@@ -297,61 +297,169 @@ export const Community = () => {
 
           {/* Flow continu avec espacement progressif */}
           <div className="space-y-12">
-            {/* Type d'entreprise ESUS - Design plus aéré */}
-            <div className="relative animate-fade-in">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 rounded-3xl" />
-              <div className="relative bg-card/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-primary/10">
-                <div className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center flex-shrink-0 shadow-soft">
-                    <CheckCircle className="h-7 w-7 text-primary-foreground" />
+            {/* Type d'entreprise ESUS - Format harmonisé */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
+                    <CheckCircle className="h-8 w-8 text-primary-foreground" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-4 flex-wrap">
-                      <h4 className="text-2xl md:text-3xl font-bold">Entreprise Solidaire d'Utilité Sociale</h4>
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0 rounded-full hover:bg-primary/10">
-                            <Info className="h-5 w-5 text-primary" />
-                          </Button>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-2xl">
-                          <DialogHeader>
-                            <DialogTitle>Qu'est-ce qu'une Entreprise Solidaire d'Utilité Sociale (ESUS) ?</DialogTitle>
-                            <DialogDescription className="text-left space-y-4 pt-4">
-                              <p className="text-foreground">
-                                L'agrément <strong>Entreprise solidaire d'utilité sociale (ESUS)</strong> a été introduit par 
-                                la <strong>loi du 31 juillet 2014 relative à l'économie sociale et solidaire (ESS)</strong>.
-                              </p>
-                              <p>
-                                Cet agrément est délivré aux entreprises qui poursuivent un <strong>objectif d'utilité sociale</strong> comme 
-                                finalité principale de leur activité. Il vise à encourager et à soutenir le développement d'un écosystème 
-                                favorable aux entreprises œuvrant dans ce secteur.
-                              </p>
-                              <div className="bg-accent/10 p-4 rounded-lg">
-                                <p className="font-semibold mb-2">Critères principaux :</p>
-                                <ul className="list-disc list-inside space-y-1 text-sm">
-                                  <li>Poursuivre un objectif d'utilité sociale</li>
-                                  <li>Rechercher une utilité sociale comme objectif principal</li>
-                                  <li>Politique de rémunération encadrée</li>
-                                  <li>Titres de capital non négociables sur un marché financier</li>
-                                </ul>
-                              </div>
-                              <p className="text-xs text-muted-foreground italic">
-                                Source : Loi n° 2014-856 du 31 juillet 2014 relative à l'économie sociale et solidaire - 
-                                Article L. 3332-17-1 du Code du travail
-                              </p>
-                            </DialogDescription>
-                          </DialogHeader>
-                        </DialogContent>
-                      </Dialog>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed text-lg">
-                      Un modèle entrepreneurial qui vise la rentabilité tout en étant concentré sur ses impacts 
-                      écologiques et sociaux, encadré par un comité éthique et stratégique.
-                    </p>
-                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Entreprise Solidaire d'Utilité Sociale</h3>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    Un modèle entrepreneurial qui vise la rentabilité tout en étant concentré sur ses impacts écologiques et sociaux
+                  </p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
+                        <Info className="h-5 w-5" />
+                        En savoir plus sur l'agrément ESUS
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-2xl">
+                      <DialogHeader>
+                        <DialogTitle>Qu'est-ce qu'une Entreprise Solidaire d'Utilité Sociale (ESUS) ?</DialogTitle>
+                        <DialogDescription className="text-left space-y-4 pt-4">
+                          <p className="text-foreground">
+                            L'agrément <strong>Entreprise solidaire d'utilité sociale (ESUS)</strong> a été introduit par 
+                            la <strong>loi du 31 juillet 2014 relative à l'économie sociale et solidaire (ESS)</strong>.
+                          </p>
+                          <p>
+                            Cet agrément est délivré aux entreprises qui poursuivent un <strong>objectif d'utilité sociale</strong> comme 
+                            finalité principale de leur activité. Il vise à encourager et à soutenir le développement d'un écosystème 
+                            favorable aux entreprises œuvrant dans ce secteur.
+                          </p>
+                          <div className="bg-accent/10 p-4 rounded-lg">
+                            <p className="font-semibold mb-2">Critères principaux :</p>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              <li>Poursuivre un objectif d'utilité sociale</li>
+                              <li>Rechercher une utilité sociale comme objectif principal</li>
+                              <li>Politique de rémunération encadrée</li>
+                              <li>Titres de capital non négociables sur un marché financier</li>
+                            </ul>
+                          </div>
+                          <p className="text-xs text-muted-foreground italic">
+                            Source : Loi n° 2014-856 du 31 juillet 2014 relative à l'économie sociale et solidaire - 
+                            Article L. 3332-17-1 du Code du travail
+                          </p>
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
                 </div>
-              </div>
+              </Card>
+
+              {/* Charte éthique Climate House */}
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
+                    <BookOpen className="h-8 w-8 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Charte éthique Climate House</h3>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    20 principes fondateurs qui guident notre action collective pour le climat
+                  </p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
+                        <BookOpen className="h-5 w-5" />
+                        Consulter la charte éthique
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl">Charte éthique Climate House</DialogTitle>
+                        <DialogDescription>
+                          Les principes fondateurs qui guident notre action collective
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="space-y-4 mt-6">
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Reconnaissance scientifique</h4>
+                          <p className="text-sm">Reconnaître les limites planétaires et l'urgence climatique basées sur des preuves scientifiques solides.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Engagement vers la post-croissance</h4>
+                          <p className="text-sm">S'engager à remettre en question et dépasser le modèle de croissance économique, même "verte", au profit d'un modèle soutenable et équitable.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Impact vérifiable</h4>
+                          <p className="text-sm">S'assurer que toutes les activités menées sous l'égide de la Climate House ont un impact positif vérifiable sur l'environnement.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Responsabilité médiatique</h4>
+                          <p className="text-sm">S'engager à créer de nouveaux récits de société pour promouvoir une consommation responsable et éclairée.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Éducation et formation</h4>
+                          <p className="text-sm">S'engager à éduquer et former les membres et le public sur les enjeux écologiques et sociaux de manière approfondie et scientifiquement valide.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Indépendance des médias</h4>
+                          <p className="text-sm">Soutenir et promouvoir l'indépendance des médias pour assurer une information objective et non influencée par des intérêts économiques majeurs.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Transparence publicitaire</h4>
+                          <p className="text-sm">Refuser les pratiques publicitaires qui encouragent une consommation excessive et non durable.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Démocratie distribuée</h4>
+                          <p className="text-sm">Encourager une démocratie plus participative et distribuée pour limiter l'influence des lobbys.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Fiscalité équitable</h4>
+                          <p className="text-sm">Promouvoir une redistribution équitable des richesses pour soutenir les transitions écologiques nécessaires.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Coopération économique</h4>
+                          <p className="text-sm">Privilégier la coopération sur la compétition, essentielle à la résilience et à l'adaptation des systèmes économiques.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Modèles de réussite alternatifs</h4>
+                          <p className="text-sm">Redéfinir les critères de réussite professionnelle et personnelle au-delà de l'argent et du pouvoir.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Innovation pour l'intérêt général</h4>
+                          <p className="text-sm">Innover au service de l'intérêt général, en particulier pour protéger la planète et le vivant.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Intégrité et congruence</h4>
+                          <p className="text-sm">Agir avec intégrité et congruence, en alignant constamment les actions avec les valeurs prônées.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Gouvernance inclusive</h4>
+                          <p className="text-sm">Adopter une gouvernance qui transcende les ego et les intérêts particuliers, ouverte et évolutive pour s'adapter aux besoins du projet.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Optimisme pragmatique</h4>
+                          <p className="text-sm">Cultiver un optimisme pragmatique, en se focalisant sur les solutions plutôt que sur les problèmes.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Humilité</h4>
+                          <p className="text-sm">Reconnaître notre rôle modeste dans le grand système et s'efforcer de contribuer positivement à notre échelle.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Collaboration sans naïveté</h4>
+                          <p className="text-sm">Collaborer avec tous les acteurs de l'écosystème, y compris les grands groupes et les lobbys, tout en restant vigilants et critiques.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Critique constructive</h4>
+                          <p className="text-sm">Encourager la critique constructive et le débat ouvert pour améliorer continuellement nos pratiques et approches.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Résilience communautaire</h4>
+                          <p className="text-sm">Œuvrer à renforcer la résilience des communautés locales et globales face aux changements climatiques.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Partage de valeurs</h4>
+                          <p className="text-sm">S'engager à un partage équitable et solidaire des valeurs créées, en reconnaissant la contribution de chaque membre à la mission collective.</p>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+              </Card>
             </div>
 
             {/* Les 80 Cofondateurs - Design intégré */}
