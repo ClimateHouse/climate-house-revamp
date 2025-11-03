@@ -1,6 +1,15 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import {
   Carousel,
   CarouselContent,
@@ -16,7 +25,7 @@ import communityEvent4 from "@/assets/community-event-4.jpg";
 import communityEvent5 from "@/assets/community-event-5.jpg";
 import communityEvent6 from "@/assets/community-event-6.jpg";
 import communityOutdoor from "@/assets/community-outdoor.jpg";
-import { Linkedin, BookOpen, Users as UsersIcon, Zap, CheckCircle, Plus, Minus } from "lucide-react";
+import { Linkedin, BookOpen, Users as UsersIcon, Zap, CheckCircle, Plus, Minus, Info } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useState } from "react";
 const teamMembers = [
@@ -398,8 +407,46 @@ export const Community = () => {
               <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <CheckCircle className="h-6 w-6 text-primary" />
               </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-3">Une Entreprise Solidaire d'Utilité Sociale (ESUS)</h4>
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <h4 className="text-2xl font-bold">Une Entreprise Solidaire d'Utilité Sociale (ESUS)</h4>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="ghost" size="sm" className="h-8 w-8 p-0 rounded-full">
+                        <Info className="h-5 w-5 text-primary" />
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-2xl">
+                      <DialogHeader>
+                        <DialogTitle>Qu'est-ce qu'une Entreprise Solidaire d'Utilité Sociale (ESUS) ?</DialogTitle>
+                        <DialogDescription className="text-left space-y-4 pt-4">
+                          <p className="text-foreground">
+                            L'agrément <strong>Entreprise solidaire d'utilité sociale (ESUS)</strong> a été introduit par 
+                            la <strong>loi du 31 juillet 2014 relative à l'économie sociale et solidaire (ESS)</strong>.
+                          </p>
+                          <p>
+                            Cet agrément est délivré aux entreprises qui poursuivent un <strong>objectif d'utilité sociale</strong> comme 
+                            finalité principale de leur activité. Il vise à encourager et à soutenir le développement d'un écosystème 
+                            favorable aux entreprises œuvrant dans ce secteur.
+                          </p>
+                          <div className="bg-accent/10 p-4 rounded-lg">
+                            <p className="font-semibold mb-2">Critères principaux :</p>
+                            <ul className="list-disc list-inside space-y-1 text-sm">
+                              <li>Poursuivre un objectif d'utilité sociale</li>
+                              <li>Rechercher une utilité sociale comme objectif principal</li>
+                              <li>Politique de rémunération encadrée</li>
+                              <li>Titres de capital non négociables sur un marché financier</li>
+                            </ul>
+                          </div>
+                          <p className="text-xs text-muted-foreground italic">
+                            Source : Loi n° 2014-856 du 31 juillet 2014 relative à l'économie sociale et solidaire - 
+                            Article L. 3332-17-1 du Code du travail
+                          </p>
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                </div>
                 <p className="text-muted-foreground leading-relaxed">
                   Un modèle entrepreneurial qui vise la rentabilité tout en étant concentré sur ses impacts écologiques et sociaux, 
                   encadré par un comité éthique et stratégique.
@@ -450,14 +497,6 @@ export const Community = () => {
                 <p className="text-xs text-muted-foreground">À une association climat</p>
               </Card>
             </div>
-
-            <div className="mt-8 p-6 bg-card rounded-2xl border border-border">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Chaque Founding member peut utiliser la Climate House pour y travailler, organiser des événements/réunions, 
-                enregistrer un podcast, un dîner, et participer à l'éclosion et au développement d'une entreprise collective. 
-                Ils alimentent continuellement le projet par de nouvelles idées, projets et opportunités.
-              </p>
-            </div>
           </div>
 
           {/* Boussole collective 2025 */}
@@ -501,40 +540,104 @@ export const Community = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
-                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-primary">
-                  <AvatarFallback className="text-lg font-semibold bg-primary/10">LB</AvatarFallback>
-                </Avatar>
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
+                <div className="relative mb-4">
+                  <Avatar className="h-24 w-24 mx-auto border-2 border-primary">
+                    <AvatarFallback className="text-lg font-semibold bg-primary/10">LB</AvatarFallback>
+                  </Avatar>
+                  <a
+                    href="https://fr.linkedin.com/in/lucie-basch-2b163852"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                    aria-label="LinkedIn de Lucie Basch"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </div>
                 <h5 className="font-bold mb-1">Lucie BASCH</h5>
                 <p className="text-xs text-primary font-semibold mb-2">Présidente</p>
-                <p className="text-xs text-muted-foreground">Too Good To Go</p>
+                <p className="text-xs text-muted-foreground mb-3">Too Good To Go</p>
+                <div className="flex flex-wrap gap-1 justify-center">
+                  <Badge variant="secondary" className="text-xs">Impact Social</Badge>
+                  <Badge variant="secondary" className="text-xs">Anti-Gaspillage</Badge>
+                  <Badge variant="secondary" className="text-xs">FoodTech</Badge>
+                </div>
               </Card>
 
-              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
-                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-border">
-                  <AvatarFallback className="text-lg font-semibold bg-card">JH</AvatarFallback>
-                </Avatar>
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
+                <div className="relative mb-4">
+                  <Avatar className="h-24 w-24 mx-auto border-2 border-border">
+                    <AvatarFallback className="text-lg font-semibold bg-card">JH</AvatarFallback>
+                  </Avatar>
+                  <a
+                    href="https://www.linkedin.com/in/jack-habra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                    aria-label="LinkedIn de Jack Habra"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </div>
                 <h5 className="font-bold mb-1">Jack HABRA</h5>
                 <p className="text-xs text-muted-foreground mb-2">Co-fondateur</p>
-                <p className="text-xs text-muted-foreground">Context</p>
+                <p className="text-xs text-muted-foreground mb-3">Context</p>
+                <div className="flex flex-wrap gap-1 justify-center">
+                  <Badge variant="secondary" className="text-xs">Tech</Badge>
+                  <Badge variant="secondary" className="text-xs">Innovation</Badge>
+                  <Badge variant="secondary" className="text-xs">AdTech</Badge>
+                </div>
               </Card>
 
-              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
-                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-border">
-                  <AvatarFallback className="text-lg font-semibold bg-card">CB</AvatarFallback>
-                </Avatar>
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
+                <div className="relative mb-4">
+                  <Avatar className="h-24 w-24 mx-auto border-2 border-border">
+                    <AvatarFallback className="text-lg font-semibold bg-card">CB</AvatarFallback>
+                  </Avatar>
+                  <a
+                    href="https://linkedin.com/in/claire-bretton"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                    aria-label="LinkedIn de Claire Bretton"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </div>
                 <h5 className="font-bold mb-1">Claire BRETTON</h5>
                 <p className="text-xs text-muted-foreground mb-2">Co-fondatrice</p>
-                <p className="text-xs text-muted-foreground">Underdog</p>
+                <p className="text-xs text-muted-foreground mb-3">Underdog</p>
+                <div className="flex flex-wrap gap-1 justify-center">
+                  <Badge variant="secondary" className="text-xs">Économie Circulaire</Badge>
+                  <Badge variant="secondary" className="text-xs">Reconditionnement</Badge>
+                  <Badge variant="secondary" className="text-xs">Impact</Badge>
+                </div>
               </Card>
 
-              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
-                <Avatar className="h-24 w-24 mx-auto mb-4 border-2 border-border">
-                  <AvatarFallback className="text-lg font-semibold bg-card">CA</AvatarFallback>
-                </Avatar>
+              <Card className="p-6 text-center hover:shadow-strong transition-all duration-300 hover:-translate-y-1 group">
+                <div className="relative mb-4">
+                  <Avatar className="h-24 w-24 mx-auto border-2 border-border">
+                    <AvatarFallback className="text-lg font-semibold bg-card">CA</AvatarFallback>
+                  </Avatar>
+                  <a
+                    href="https://www.linkedin.com/in/clementalteresco"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:scale-110 transform"
+                    aria-label="LinkedIn de Clément Alteresco"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </div>
                 <h5 className="font-bold mb-1">Clément ALTERESCO</h5>
                 <p className="text-xs text-muted-foreground mb-2">Co-fondateur</p>
-                <p className="text-xs text-muted-foreground">Morning</p>
+                <p className="text-xs text-muted-foreground mb-3">Morning</p>
+                <div className="flex flex-wrap gap-1 justify-center">
+                  <Badge variant="secondary" className="text-xs">Coworking</Badge>
+                  <Badge variant="secondary" className="text-xs">Immobilier</Badge>
+                  <Badge variant="secondary" className="text-xs">Entrepreneuriat</Badge>
+                </div>
               </Card>
             </div>
           </div>
