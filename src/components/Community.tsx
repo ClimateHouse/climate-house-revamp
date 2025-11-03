@@ -202,15 +202,6 @@ const MembershipCard = ({
 export const Community = () => {
   return <section id="communaute" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 py-0">La Communauté</h2>
-          <p className="text-xl text-muted-foreground">
-            Une communauté de plus de 800 entrepreneurs passionnés, unis par la volonté de
-            construire une économie durable. 80 cofondateurs à parité femmes-hommes ont
-            mis leurs ressources au service de cette vision collective.
-          </p>
-        </div>
-
         {/* Carrousel communauté */}
         <div className="max-w-5xl mx-auto mb-16 animate-scale-in">
           <Carousel
@@ -243,61 +234,11 @@ export const Community = () => {
           </Carousel>
         </div>
 
-        {/* Chiffres clés */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-          <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              80
-            </div>
-            <div className="text-lg font-semibold mb-1">Cofondateurs</div>
-            <p className="text-sm text-muted-foreground">
-              À parité femmes-hommes, issus de secteurs variés
-            </p>
-          </div>
-          <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              70+
-            </div>
-            <div className="text-lg font-semibold mb-1">Structures</div>
-            <p className="text-sm text-muted-foreground">
-              Entreprises, ONG, startups et collectifs
-            </p>
-          </div>
-          <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              430
-            </div>
-            <div className="text-lg font-semibold mb-1">Colocataires</div>
-            <p className="text-sm text-muted-foreground">
-              Entrepreneurs engagés pour le climat
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center mt-12 animate-fade-in flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" variant="outline" asChild>
-            <a href="/cofondateurs">Découvrir les Cofondateurs</a>
-          </Button>
-          <Button size="lg" variant="outline" asChild>
-            <a href="/colocataires">Découvrir les Colocataires</a>
-          </Button>
-        </div>
-
-        {/* Section Gouvernance - Refonte UX fluide */}
+        {/* Section Gouvernance - Structure réorganisée */}
         <div className="max-w-6xl mx-auto mt-24 mb-24">
-          <div className="text-center mb-16 animate-fade-in">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">La Gouvernance</h3>
-            <p className="text-lg text-muted-foreground mx-auto leading-relaxed whitespace-nowrap">
-              Un modèle entrepreneurial guidé par l'impact, porté par 80 cofondateurs engagés
-            </p>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-4">
-              Le cœur vibrant du projet : ils mettent leur temps, leur argent et leur réseau au service du Climat
-            </p>
-          </div>
-
           {/* Flow continu avec espacement progressif */}
-          <div className="space-y-12">
-            {/* Type d'entreprise ESUS - Format harmonisé */}
+          <div className="space-y-8">
+            {/* Première ligne : ESUS et Charte éthique */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
               <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
                 <div className="text-center">
@@ -305,7 +246,7 @@ export const Community = () => {
                     <CheckCircle className="h-8 w-8 text-primary-foreground" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3">Entreprise Solidaire d'Utilité Sociale</h3>
-                  <p className="text-sm text-muted-foreground mb-6">
+                  <p className="text-sm text-muted-foreground mb-6 flex-grow">
                     Un modèle entrepreneurial qui vise la rentabilité tout en étant concentré sur ses impacts écologiques et sociaux
                   </p>
                   
@@ -351,12 +292,12 @@ export const Community = () => {
 
               {/* Charte éthique Climate House */}
               <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
-                <div className="text-center">
+                <div className="text-center flex flex-col h-full">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
                     <BookOpen className="h-8 w-8 text-accent-foreground" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3">Charte éthique Climate House</h3>
-                  <p className="text-sm text-muted-foreground mb-6">
+                  <p className="text-sm text-muted-foreground mb-6 flex-grow">
                     20 principes fondateurs qui guident notre action collective pour le climat
                   </p>
                   
@@ -505,44 +446,8 @@ export const Community = () => {
               </div>
             </div>
 
-            {/* Boussole collective - Intégration fluide */}
-            <div className="relative animate-fade-in" style={{ animationDelay: "200ms" }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 rounded-3xl" />
-              <div className="relative bg-card/30 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-accent/10">
-                <h4 className="text-xl md:text-2xl font-bold mb-8 text-center">
-                  Une boussole collective dans un monde fracturé
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-background/50 border border-border/50">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-soft">
-                      <CheckCircle className="h-7 w-7 text-primary-foreground" />
-                    </div>
-                    <p className="text-sm leading-relaxed">
-                      Dialogue entre science, entreprise et engagement
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-background/50 border border-border/50">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-soft">
-                      <UsersIcon className="h-7 w-7 text-primary-foreground" />
-                    </div>
-                    <p className="text-sm leading-relaxed">
-                      Tiers de confiance pour coopérations inédites
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-background/50 border border-border/50">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-soft">
-                      <Zap className="h-7 w-7 text-primary-foreground" />
-                    </div>
-                    <p className="text-sm leading-relaxed">
-                      Caisse de résonance pour l'économie de demain
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Comité et Équipe côte à côte avec Modales */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
               
               {/* Comité Éthique et Stratégique */}
               <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
