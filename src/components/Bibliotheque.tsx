@@ -315,15 +315,19 @@ export const Bibliotheque = () => {
 
         {/* CTA Section */}
         <div className="max-w-3xl mx-auto text-center mt-16">
-          <Card className="p-8 bg-gradient-soft">
-            <h3 className="text-2xl font-bold mb-4">Besoin d'accompagnement ?</h3>
-            <p className="text-muted-foreground mb-6">
-              Nos experts sont à votre disposition pour vous accompagner dans votre transformation 
-              et créer des livrables adaptés à vos enjeux.
+          <Card className="p-8 md:p-10 bg-gradient-soft border-2 border-primary/10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Faites grandir l'écosystème</h3>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Cette bibliothèque est le fruit de notre intelligence collective. Vous souhaitez contribuer avec vos ressources ou co-créer un nouveau format avec la communauté ?
             </p>
-            <Button size="lg" className="shadow-md">
-              Nous contacter
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="shadow-md w-full sm:w-auto min-w-[200px]">
+                Adhérer à la communauté
+              </Button>
+              <Button size="lg" variant="outline" className="shadow-sm w-full sm:w-auto min-w-[200px]">
+                Nous contacter
+              </Button>
+            </div>
           </Card>
         </div>
       </div>
