@@ -145,7 +145,7 @@ const EvenementPage = () => {
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <a href="https://discover.matterport.com/space/UxagxBR7SZk" target="_blank" rel="noopener noreferrer">
-                    Visite virtuelle 360°
+                    Visite virtuelle
                   </a>
                 </Button>
               </div>
@@ -279,7 +279,7 @@ const EvenementPage = () => {
               <div className="text-center mt-12">
                 <Button size="lg" variant="outline" asChild>
                   <a href="https://discover.matterport.com/space/UxagxBR7SZk" target="_blank" rel="noopener noreferrer">
-                    Visite virtuelle 360°
+                    Visite virtuelle
                   </a>
                 </Button>
               </div>
