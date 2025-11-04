@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles, Coffee } from "lucide-react";
 import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 import eventSeminairesImage from "@/assets/space-plantation.jpg";
-import eventProgrammationImage from "@/assets/event-programmation-sur-mesure.jpg";
+import eventProgrammationImage from "@/assets/event-programmation-sur-mesure-new.jpg";
 import spaceBalroomImage from "@/assets/space-balroom.jpg";
 import spaceJardinDiversImage from "@/assets/space-jardin-divers-new.jpg";
 import spaceCommunsImage from "@/assets/space-jardin-divers.jpg";
