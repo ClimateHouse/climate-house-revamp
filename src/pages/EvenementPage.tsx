@@ -281,22 +281,44 @@ const EvenementPage = () => {
 
               <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center max-w-5xl mx-auto">
                 {/* Liste des partenaires */}
-                <div className="flex flex-wrap gap-x-8 gap-y-5 justify-center md:justify-start">
+                <div className="columns-2 md:columns-3 gap-x-6 gap-y-2">
                   {[
-                    "LE RECHO",
+                    "MEANWHILE BOUTIQUE",
+                    "LA CAVE DES 7 ÎLES",
+                    "LA BALLE",
+                    "JNPR",
                     "NECENSE",
-                    "LES MARMITES VOLANTES",
-                    "BIMBAMBOUM TRAITEUR",
+                    "BAPBAP",
+                    "OÉ",
+                    "SENSATERRA",
+                    "YELLOW TUCAN",
+                    "FOODLES",
+                    "FRIGO NU",
+                    "POP CHEF",
+                    "MAMOSSA",
+                    "LE RECHO",
+                    "LES CUISTOTS MIGRATEURS",
                     "MEET MY MAMA",
-                    "LA BALLE PERDUE",
-                    "APPIE",
-                    "MÜRE",
-                    "CAUSSES"
+                    "CAUSSES",
+                    "LES MARMITES VOLANTES",
+                    "MÛRE",
+                    "ELIOTE",
+                    "OPLATO",
+                    "SOA",
+                    "SOSA PARIS",
+                    "BISCORNU",
+                    "ON MANGE QUOI ?",
+                    "PERDUE",
+                    "BOULANGERIE DU SENTIER",
+                    "PARENTHÈSE MAKIS",
+                    "CAFÉ JOYEUX",
+                    "LUCIE IS THE NEW VEGGIE",
+                    "ODETTE, MA FILLE"
                   ].map((partner, index) => (
                     <div
                       key={partner}
-                      className="text-lg font-bold text-muted-foreground/70 hover:text-accent transition-colors animate-fade-in uppercase"
-                      style={{ animationDelay: `${index * 30}ms` }}
+                      className="text-sm font-semibold text-muted-foreground/70 hover:text-accent transition-colors animate-fade-in uppercase mb-3 break-inside-avoid"
+                      style={{ animationDelay: `${index * 20}ms` }}
                     >
                       {partner}
                     </div>
