@@ -7,6 +7,7 @@ import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 import eventSeminairesImage from "@/assets/event-seminaires.jpg";
 import eventProgrammationImage from "@/assets/event-programmation-sur-mesure.jpg";
 import spaceBalroomImage from "@/assets/space-balroom.jpg";
+import spaceJardinDiversImage from "@/assets/space-jardin-divers.jpg";
 
 // Types d'événements avec cas d'usage
 const eventTypes = [
@@ -61,7 +62,8 @@ const spaces = [
     name: "Le JARDIN Divers",
     capacity: "40 personnes",
     description: "Espace modulable parfait pour ateliers ou événements publics",
-    imagePlaceholder: "space-jardin"
+    imagePlaceholder: "space-jardin",
+    image: spaceJardinDiversImage
   },
   {
     name: "Les COMMUNS",
