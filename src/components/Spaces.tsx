@@ -224,6 +224,158 @@ export const Spaces = () => {
     <section id="espaces" className="py-20 bg-gradient-soft">
       <div className="container mx-auto px-4">
 
+        {/* ============= SECTION 1 : LA RÉSIDENCE ============= */}
+        <div className="max-w-7xl mx-auto mb-32">
+          <div className="text-center mb-12 animate-fade-in">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-4">
+              <Briefcase className="h-8 w-8 text-primary" />
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Devenir Résident</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Rejoignez notre communauté d'entrepreneurs engagés
+            </p>
+          </div>
+
+          {/* Deux types de résidence */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <ResidenceCard
+              title="Résident Permanent"
+              description="Votre bureau dédié au cœur de l'écosystème"
+              icon={MapPin}
+              forWhom="Les équipes qui cherchent stabilité et ancrage dans un lieu inspirant. Parfait pour les entreprises de 1 à 15 personnes souhaitant un espace fixe tout en bénéficiant d'un réseau dynamique."
+              advantages={[
+                "Bureau dédié à votre entreprise",
+                "Personnalisation de votre espace de travail",
+                "Accès 24/7 à votre bureau",
+                "Stockage sécurisé pour vos équipements",
+                "Travaillez au sein de l'écosystème impact français"
+              ]}
+              ctaText="Devenir résident permanent"
+              colorScheme="primary-dark"
+            />
+
+            <ResidenceCard
+              title="Résident Nomade"
+              description="La flexibilité totale dans 24 lieux à Paris"
+              icon={Lightbulb}
+              forWhom="Les indépendants, consultants et petites équipes qui privilégient la mobilité et la variété. Idéal pour ceux qui veulent diversifier leurs environnements de travail et élargir leur réseau."
+              advantages={[
+                "Accès à 24 espaces Morning dans tout Paris",
+                "Choisissez votre bureau chaque jour selon vos envies",
+                "Multipliez vos opportunités de networking",
+                "Adaptez votre lieu à votre agenda du jour",
+                "Flexibilité géographique totale"
+              ]}
+              ctaText="Devenir résident nomade"
+              ctaVariant="secondary"
+              colorScheme="primary-light"
+            />
+          </div>
+
+          {/* Services inclus pour tous les résidents */}
+          <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+                <Briefcase className="h-7 w-7 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h4 className="text-2xl font-bold mb-2">300 postes de travail & services premium</h4>
+                <p className="text-lg text-muted-foreground">
+                  Un environnement de travail complet et inspirant avec tous les services embarqués
+                </p>
+              </div>
+            </div>
+
+            {showWorkspaceDetails && (
+              <ul className="space-y-2 mb-6 animate-fade-in">
+                {workspaceFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            <Button
+              variant="outline"
+              onClick={() => setShowWorkspaceDetails(!showWorkspaceDetails)}
+              className="w-full"
+            >
+              {showWorkspaceDetails ? (
+                <>
+                  <Minus className="h-4 w-4 mr-2" />
+                  Voir moins de détails
+                </>
+              ) : (
+                <>
+                  <Plus className="h-4 w-4 mr-2" />
+                  Voir tous les services inclus
+                </>
+              )}
+            </Button>
+          </Card>
+
+          <div className="text-center mt-8 p-6 bg-secondary/20 rounded-xl">
+            <p className="text-sm text-muted-foreground mb-6">
+              💡 <span className="font-semibold">Besoin d'aide pour choisir ?</span> Nos équipes sont là pour vous conseiller et trouver la formule qui correspond le mieux à vos besoins.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-gradient-hero hover:opacity-90" asChild>
+                <a href="#contact">Nous contacter</a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="https://discover.matterport.com/space/UxagxBR7SZk" target="_blank" rel="noopener noreferrer">
+                  Visite virtuelle
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="/colocataires">
+                  Découvrir les Colocataires
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          {/* TÉMOIGNAGES COLOCATAIRES - Remontés plus près des CTA */}
+          <div className="mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in">
+                <Quote className="h-8 w-8 text-primary mb-4" />
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "Climate House nous a permis de rencontrer des partenaires clés et d'accélérer notre croissance. L'écosystème est exceptionnel."
+                </p>
+                <div>
+                  <div className="font-bold">Marie Dubois</div>
+                  <div className="text-sm text-muted-foreground">CEO, GreenTech Startup</div>
+                </div>
+              </Card>
+
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
+                <Quote className="h-8 w-8 text-primary mb-4" />
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "Un lieu inspirant où la collaboration prime. Nous avons co-créé plusieurs projets innovants avec d'autres membres."
+                </p>
+                <div>
+                  <div className="font-bold">Thomas Martin</div>
+                  <div className="text-sm text-muted-foreground">Directeur Innovation, ONG Environnement</div>
+                </div>
+              </Card>
+
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '200ms' }}>
+                <Quote className="h-8 w-8 text-primary mb-4" />
+                <p className="text-muted-foreground mb-6 leading-relaxed italic">
+                  "La communauté Climate House est unique. Chaque jour apporte de nouvelles opportunités et connexions précieuses."
+                </p>
+                <div>
+                  <div className="font-bold">Sophie Bernard</div>
+                  <div className="text-sm text-muted-foreground">Fondatrice, Impact Social</div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+
         {/* ============= GALERIE MODERNE ============= */}
         <div className="max-w-7xl mx-auto mb-12">
           {/* Grille Bento moderne et asymétrique */}
