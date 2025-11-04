@@ -1,8 +1,6 @@
 import { Header } from "@/components/Header";
 import { CommunityHero } from "@/components/CommunityHero";
 import { Community } from "@/components/Community";
-import { CommunityClosing } from "@/components/CommunityClosing";
-import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 
 const CommunautePage = () => {
@@ -12,8 +10,6 @@ const CommunautePage = () => {
       <main>
         <CommunityHero />
         <Community />
-        <CommunityClosing />
-        <CTA />
       </main>
       <Footer />
     </div>
