@@ -63,7 +63,7 @@ const specificSpaces = [
     description: "Accueille jusqu'à 150 personnes, idéal pour des séminaires collaboratifs."
   },
   {
-    name: "La WAVE ROOM",
+    name: "Le CRAYON",
     description: "Salle de créativité unique avec vue panoramique, favorisant l'innovation."
   },
   {

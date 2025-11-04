@@ -78,7 +78,7 @@ const spaces = [
     image: spaceCommunsImage
   },
   {
-    name: "La WAVE ROOM",
+    name: "Le CRAYON",
     capacity: "30 personnes",
     description: "Salle de créativité unique avec vue panoramique",
     imagePlaceholder: "space-waveroom",
