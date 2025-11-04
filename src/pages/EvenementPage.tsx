@@ -272,14 +272,14 @@ const EvenementPage = () => {
               <div className="text-center mb-12 animate-fade-in">
                 <div className="inline-flex items-center gap-2 mb-3">
                   <Coffee className="h-5 w-5 text-accent" />
-                  <h2 className="text-2xl md:text-3xl font-bold">Nos partenaires traiteurs engagés</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold">Nos partenaires traiteurs engagés</h2>
                 </div>
                 <p className="text-sm text-muted-foreground">
                   Une alimentation responsable pour vos événements
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center max-w-5xl mx-auto">
                 {/* Liste des partenaires */}
                 <div className="flex flex-wrap gap-x-8 gap-y-5 justify-center md:justify-start">
                   {[
