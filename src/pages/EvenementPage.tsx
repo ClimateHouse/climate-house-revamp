@@ -6,6 +6,7 @@ import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles
 import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 import eventSeminairesImage from "@/assets/space-plantation.jpg";
 import eventProgrammationImage from "@/assets/event-programmation-sur-mesure-new.jpg";
+import traiteurFoodImage from "@/assets/traiteur-food.jpg";
 import spaceBalroomImage from "@/assets/space-balroom.jpg";
 import spaceJardinDiversImage from "@/assets/space-jardin-divers-new.jpg";
 import spaceCommunsImage from "@/assets/space-jardin-divers.jpg";
@@ -265,11 +266,21 @@ const EvenementPage = () => {
         </section>
 
         {/* Section Traiteurs */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
+        <section className="relative py-32 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src={traiteurFoodImage} 
+              alt="Cuisine responsable - Nos partenaires traiteurs"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12 animate-fade-in">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-accent/10 mb-4">
+              <div className="text-center mb-16 animate-fade-in">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-accent/10 backdrop-blur-sm mb-4">
                   <Coffee className="h-7 w-7 text-accent" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">Nos partenaires traiteurs engagés</h2>
@@ -278,7 +289,7 @@ const EvenementPage = () => {
                 </p>
               </div>
 
-              <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                 {[
                   "LE RECHO",
                   "necense",
@@ -293,10 +304,14 @@ const EvenementPage = () => {
                 ].map((partner, index) => (
                   <div
                     key={partner}
-                    className="text-lg font-bold text-muted-foreground/60 hover:text-accent transition-colors animate-fade-in"
+                    className="group relative backdrop-blur-sm bg-background/60 border border-border/50 rounded-xl p-6 hover:bg-background/80 hover:border-accent/30 transition-all duration-300 hover:scale-105 hover:shadow-lg animate-fade-in"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    {partner}
+                    <div className="text-center">
+                      <p className="font-bold text-foreground/80 group-hover:text-accent transition-colors">
+                        {partner}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
