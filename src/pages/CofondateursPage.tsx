@@ -92,7 +92,50 @@ const cofondateurs = [
   { name: "Violaine TARDIEU", company: "Chief of Staff to Lucie BASCH", sector: "Impact", batch: "COFO #1", image: "", linkedin: "#", initials: "VT" },
   // COFO #2
   { name: "Alexandre SCHULLER", company: "PUR, Climate Club, Impact Labs, Altea", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/alexandreschouler/", initials: "AS" },
-  { name: "Antoine CADI", company: "Tétras Restore FDB", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/antoine-cadi-2376a857/", initials: "AC" }
+  { name: "Antoine CADI", company: "Tétras Restore FDB", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/antoine-cadi-2376a857/", initials: "AC" },
+  { name: "Arnaud VANPOPERINGHE", company: "tikamoon", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/arnaudvanpoperinghe/", initials: "AV" },
+  { name: "Benoit LECAT", company: "candide x blue", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://linkedin.com/in/benoitlecat", initials: "BL" },
+  { name: "Benoit VARIN", company: "RCUBE", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/benoitentrepreneur/", initials: "BV" },
+  { name: "Christian CLOT", company: "Human Adaptation Institute", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/christian-clot/", initials: "CC" },
+  { name: "Constantin AUGIER", company: "Indépendant", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/constantin-augier-65b374215/", initials: "CA" },
+  { name: "Cosmo VOLLAUSCHEK", company: "Equity", sector: "Finance", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/cosmovollauschek/", initials: "CV" },
+  { name: "Cristian MONTOYA", company: "Ekwateur", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/cristianmontoya/", initials: "CM" },
+  { name: "Eric DUVERGER", company: "CEC", sector: "Conseil", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/eric-duverger-2990421", initials: "ED" },
+  { name: "Francois RANISE", company: "Indépendant", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/francois-ranise-630a705b/", initials: "FR" },
+  { name: "Guillaume DESLOGES", company: "ALMA SAS", sector: "Finance", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/desloges/", initials: "GD" },
+  { name: "Hadrien ORMIERES", company: "FICO Invest", sector: "Finance", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/hadrienormieres", initials: "HO" },
+  { name: "Houssen ISSOUFALY", company: "HODL CONSULTING (SUSTAINCIAL)", sector: "Finance", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/houssen-issouf-aly/", initials: "HI" },
+  { name: "Jean-Christophe CONTICELLO", company: "Avilo Capital", sector: "Finance", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/conticelloj/", initials: "JC" },
+  { name: "Jean-Francois COCHY", company: "Aquiti", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/jean-francois-cochy-09a89318", initials: "JC" },
+  { name: "Jerome SUSSFELD", company: "RAISE Sherpas", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/jerome-sussfeld-63057812/", initials: "JS" },
+  { name: "Johan RICAUT", company: "Shopopop", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/johan-ricaut/", initials: "JR" },
+  { name: "Jonathan SEBBANE", company: "SOGARIS", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/jonathan-sebbane-883361ba/", initials: "JS" },
+  { name: "Julien ARMIJO", company: "The Climate Tech Observatory", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://fr.linkedin.com/in/julien-armijo-1b507824", initials: "JA" },
+  { name: "Julien BELLIATO", company: "ELectra", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/julien-belliato-3a35391b/", initials: "JB" },
+  { name: "Julien VINCKEL", company: "ABTasty", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/julien-vinckel-a119b625/", initials: "JV" },
+  { name: "Julien DUQUENNE", company: "JD Conseils & Formation", sector: "Conseil", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/julien-duquenne-sustainable-finance", initials: "JD" },
+  { name: "Loic BAR", company: "WIPUS / Planet is the Limit", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/loicbar/", initials: "LB" },
+  { name: "Mael SONRIER", company: "Calyce", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/maël-sonrier-7721359/", initials: "MS" },
+  { name: "Matthias NAVARRO", company: "REDMAN", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/matthias-navarro/", initials: "MN" },
+  { name: "Medhi GUELLIL", company: "Orygeen", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/mehdi-guellil/", initials: "MG" },
+  { name: "Nicolas HUNSINGER", company: "SoGoodAgents / EXOTEC", sector: "Tech", batch: "COFO #2", image: "", linkedin: "#", initials: "NH" },
+  { name: "Olivier SIMON", company: "Indépendant", sector: "Impact", batch: "COFO #2", image: "", linkedin: "#", initials: "OS" },
+  { name: "Pascal DECARY", company: "Ex Dir Achat SNCF / Verdensis Conseils", sector: "Conseil", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/pascal-décary-b2130328/", initials: "PD" },
+  { name: "Philippe SCHIESSER", company: "ECOEFF LAB / INTERSCORES", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/ecoeff/", initials: "PS" },
+  { name: "Philippe BAR", company: "DARWIN", sector: "Impact", batch: "COFO #2", image: "", linkedin: "#", initials: "PB" },
+  { name: "Pierre GAUTHEY", company: "Liaw", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/benoitentrepreneur/", initials: "PG" },
+  { name: "Pierre GILBERT", company: "Sator", sector: "Finance", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/pierre-gilbert-2916a5108/", initials: "PG" },
+  { name: "Raffaele COLELLA", company: "Forest en Italie", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/raffaelecolella/", initials: "RC" },
+  { name: "Raphael ROBIL", company: "Lemon Interactive", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://fr.linkedin.com/in/raphaël-robil-1686113", initials: "RR" },
+  { name: "Santiago LEFEVRE", company: "ChangeNOW", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/santiagolefebvre/", initials: "SL" },
+  { name: "Sebastien DELPONT", company: "Ressorts", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://fr.linkedin.com/in/sebastien-delpont-01793323", initials: "SD" },
+  { name: "Simon TAILLARD", company: "Taurus", sector: "Finance", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/simon-t-7853902b9", initials: "ST" },
+  { name: "Sofyan MARTIN", company: "Regen'studio", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/sofyan-martin-59242285", initials: "SM" },
+  { name: "Thibault BASTIN", company: "Alphonse", sector: "Tech", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/thibaultbastin/", initials: "TB" },
+  { name: "Thomas BREUZARD", company: "norsys / B Corp France / Mouvement Impact France", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/thomasbreuzard/", initials: "TB" },
+  { name: "Vincent DAVID", company: "L'agence RUP", sector: "Conseil", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/vincent-david-856a515/", initials: "VD" },
+  { name: "Yann BORGSTEDT", company: "WOMANITY", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/yannborgstedt/", initials: "YB" },
+  { name: "Yannick RABA", company: "Ocube Coworking", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/yannick-raba-7575183", initials: "YR" }
 ];
 
 const sectors = ["Tous", "Impact", "Finance", "Tech", "Food", "Conseil", "Événementiel", "Hospitality"];
@@ -122,10 +165,10 @@ const CofondateursPage = () => {
             <div className="max-w-4xl mx-auto text-center animate-fade-in mb-12">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
                 <Users className="h-5 w-5 text-primary" />
-                <span className="text-sm font-semibold text-primary">82 Cofondateurs</span>
+                <span className="text-sm font-semibold text-primary">125 Cofondateurs</span>
               </div>
               <p className="text-xl text-muted-foreground">
-                82 entrepreneurs visionnaires à parité femmes-hommes, qui ont uni leurs forces
+                125 entrepreneurs visionnaires à parité femmes-hommes, qui ont uni leurs forces
                 pour créer le premier lieu dédié à l'action climatique en France
               </p>
             </div>
