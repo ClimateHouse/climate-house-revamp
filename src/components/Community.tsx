@@ -759,7 +759,7 @@ export const Community = () => {
           {/* CTA Mesure d'impact */}
           <div className="text-center mt-12 animate-fade-in">
             <Button size="lg" variant="outline" asChild>
-              <a href="/documents/climate-house-mesure-impact-2025.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/bibliotheque">
                 Consulter notre mesure d'impact
               </a>
             </Button>
