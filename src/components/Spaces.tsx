@@ -226,15 +226,6 @@ export const Spaces = () => {
 
         {/* ============= SECTION 1 : LA RÉSIDENCE ============= */}
         <div className="max-w-7xl mx-auto mb-32">
-          <div className="text-center mb-12 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-4">
-              <Briefcase className="h-8 w-8 text-primary" />
-            </div>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">Devenir Résident</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Rejoignez notre communauté d'entrepreneurs engagés
-            </p>
-          </div>
 
           {/* Deux types de résidence */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
