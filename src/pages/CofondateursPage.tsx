@@ -6,8 +6,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Linkedin, Search, Users } from "lucide-react";
+import { Linkedin, Search, Users, ArrowUp } from "lucide-react";
 import wallImage from "@/assets/cofondateurs-wall.jpg";
+import { useEffect } from "react";
 
 // Liste des cofondateurs
 const cofondateurs = [
@@ -145,6 +146,24 @@ const CofondateursPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSector, setSelectedSector] = useState("Tous");
   const [selectedBatch, setSelectedBatch] = useState("Tous");
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Gérer l'affichage du bouton scroll to top
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
 
   const filteredCofondateurs = cofondateurs.filter(cofo => {
     const matchesSearch = cofo.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -329,6 +348,18 @@ const CofondateursPage = () => {
           </div>
         </section>
       </main>
+
+      {/* Bouton Scroll to Top */}
+      {showScrollTop && (
+        <Button
+          onClick={scrollToTop}
+          size="icon"
+          className="fixed bottom-8 right-8 h-12 w-12 rounded-full shadow-strong z-50 animate-fade-in"
+          aria-label="Remonter en haut de la page"
+        >
+          <ArrowUp className="h-5 w-5" />
+        </Button>
+      )}
 
       <Footer />
     </div>
