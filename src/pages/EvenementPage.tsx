@@ -7,7 +7,8 @@ import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 import eventSeminairesImage from "@/assets/event-seminaires.jpg";
 import eventProgrammationImage from "@/assets/event-programmation-sur-mesure.jpg";
 import spaceBalroomImage from "@/assets/space-balroom.jpg";
-import spaceJardinDiversImage from "@/assets/space-jardin-divers.jpg";
+import spaceJardinDiversImage from "@/assets/space-jardin-divers-new.jpg";
+import spaceCommunsImage from "@/assets/space-jardin-divers.jpg";
 
 // Types d'événements avec cas d'usage
 const eventTypes = [
@@ -69,7 +70,8 @@ const spaces = [
     name: "Les COMMUNS",
     capacity: "150 personnes",
     description: "Idéal pour des séminaires collaboratifs",
-    imagePlaceholder: "space-communs"
+    imagePlaceholder: "space-communs",
+    image: spaceCommunsImage
   },
   {
     name: "La WAVE ROOM",
