@@ -9,6 +9,7 @@ import eventProgrammationImage from "@/assets/event-programmation-sur-mesure.jpg
 import spaceBalroomImage from "@/assets/space-balroom.jpg";
 import spaceJardinDiversImage from "@/assets/space-jardin-divers-new.jpg";
 import spaceCommunsImage from "@/assets/space-jardin-divers.jpg";
+import spaceWaveroomImage from "@/assets/space-waveroom.jpg";
 
 // Types d'événements avec cas d'usage
 const eventTypes = [
@@ -77,7 +78,8 @@ const spaces = [
     name: "La WAVE ROOM",
     capacity: "30 personnes",
     description: "Salle de créativité unique avec vue panoramique",
-    imagePlaceholder: "space-waveroom"
+    imagePlaceholder: "space-waveroom",
+    image: spaceWaveroomImage
   },
   {
     name: "PLANTATION",
