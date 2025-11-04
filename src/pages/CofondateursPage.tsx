@@ -89,11 +89,14 @@ const cofondateurs = [
   { name: "Tristan LECOMTE", company: "Founder @ PUR Projet & Second Life", sector: "Impact", batch: "COFO #1", image: "", linkedin: "#", initials: "TL" },
   { name: "Laura BEAULIER", company: "CEO @ Climate Dividends", sector: "Finance", batch: "COFO #1", image: "", linkedin: "#", initials: "LB" },
   { name: "Souba BRUNEL", company: "Founder @ Les Impactrices", sector: "Impact", batch: "COFO #1", image: "", linkedin: "#", initials: "SB" },
-  { name: "Violaine TARDIEU", company: "Chief of Staff to Lucie BASCH", sector: "Impact", batch: "COFO #1", image: "", linkedin: "#", initials: "VT" }
+  { name: "Violaine TARDIEU", company: "Chief of Staff to Lucie BASCH", sector: "Impact", batch: "COFO #1", image: "", linkedin: "#", initials: "VT" },
+  // COFO #2
+  { name: "Alexandre SCHULLER", company: "PUR, Climate Club, Impact Labs, Altea", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/alexandreschouler/", initials: "AS" },
+  { name: "Antoine CADI", company: "Tétras Restore FDB", sector: "Impact", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/antoine-cadi-2376a857/", initials: "AC" }
 ];
 
 const sectors = ["Tous", "Impact", "Finance", "Tech", "Food", "Conseil", "Événementiel", "Hospitality"];
-const batches = ["Tous", "COFO #1"];
+const batches = ["Tous", "COFO #1", "COFO #2"];
 
 const CofondateursPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -119,10 +122,10 @@ const CofondateursPage = () => {
             <div className="max-w-4xl mx-auto text-center animate-fade-in mb-12">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
                 <Users className="h-5 w-5 text-primary" />
-                <span className="text-sm font-semibold text-primary">80 Cofondateurs</span>
+                <span className="text-sm font-semibold text-primary">82 Cofondateurs</span>
               </div>
               <p className="text-xl text-muted-foreground">
-                80 entrepreneurs visionnaires à parité femmes-hommes, qui ont uni leurs forces
+                82 entrepreneurs visionnaires à parité femmes-hommes, qui ont uni leurs forces
                 pour créer le premier lieu dédié à l'action climatique en France
               </p>
             </div>
@@ -195,6 +198,13 @@ const CofondateursPage = () => {
                       <div className="absolute top-2 right-2">
                         <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-5 bg-background/80 backdrop-blur-sm">
                           #1
+                        </Badge>
+                      </div>
+                    )}
+                    {cofo.batch === "COFO #2" && (
+                      <div className="absolute top-2 right-2">
+                        <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-5 bg-background/80 backdrop-blur-sm">
+                          #2
                         </Badge>
                       </div>
                     )}
