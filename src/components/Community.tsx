@@ -755,6 +755,15 @@ export const Community = () => {
               <p className="text-sm text-muted-foreground">ont collaboré sur un projet professionnel</p>
             </div>
           </div>
+
+          {/* CTA Mesure d'impact */}
+          <div className="text-center mt-12 animate-fade-in">
+            <Button size="lg" variant="outline" asChild>
+              <a href="/documents/climate-house-mesure-impact-2025.pdf" target="_blank" rel="noopener noreferrer">
+                Consulter notre mesure d'impact
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>;
