@@ -50,7 +50,7 @@ export const Hero = () => {
               variant="secondary"
               className="text-lg px-8 shadow-lg hover:shadow-xl"
             >
-              <a href="/climate-house">Devenir résident</a>
+              <a href="/climate-house">Devenir colocataire</a>
             </Button>
             <Button 
               asChild
