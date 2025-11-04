@@ -129,13 +129,6 @@ const EvenementPage = () => {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16 animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-bold mb-4">Nos formats d'événements</h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Trouvez le format parfait pour votre événement professionnel
-                </p>
-              </div>
-
               <div className="space-y-20">
                 {eventTypes.map((type, index) => (
                   <div 
