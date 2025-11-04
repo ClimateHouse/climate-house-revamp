@@ -281,21 +281,21 @@ const EvenementPage = () => {
 
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Liste des partenaires */}
-                <div className="flex flex-wrap gap-x-8 gap-y-4 justify-center md:justify-start">
+                <div className="flex flex-wrap gap-x-8 gap-y-5 justify-center md:justify-start">
                   {[
                     "LE RECHO",
-                    "necense",
-                    "Les Marmites Volantes",
-                    "Bimbamboum Traiteur",
-                    "Meet My Mama",
-                    "La Balle PERDUE",
+                    "NECENSE",
+                    "LES MARMITES VOLANTES",
+                    "BIMBAMBOUM TRAITEUR",
+                    "MEET MY MAMA",
+                    "LA BALLE PERDUE",
                     "APPIE",
-                    "müre",
+                    "MÜRE",
                     "CAUSSES"
                   ].map((partner, index) => (
                     <div
                       key={partner}
-                      className="text-base font-semibold text-muted-foreground/70 hover:text-accent transition-colors animate-fade-in"
+                      className="text-lg font-bold text-muted-foreground/70 hover:text-accent transition-colors animate-fade-in uppercase"
                       style={{ animationDelay: `${index * 30}ms` }}
                     >
                       {partner}
@@ -304,8 +304,8 @@ const EvenementPage = () => {
                 </div>
 
                 {/* Image */}
-                <div className="animate-fade-in" style={{ animationDelay: '300ms' }}>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-strong">
+                <div className="animate-fade-in flex justify-center md:justify-end" style={{ animationDelay: '300ms' }}>
+                  <div className="relative h-[250px] w-[350px] rounded-xl overflow-hidden shadow-lg">
                     <img 
                       src={traiteurFoodImage} 
                       alt="Cuisine responsable de nos partenaires traiteurs" 
