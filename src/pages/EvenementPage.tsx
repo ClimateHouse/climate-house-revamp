@@ -6,6 +6,7 @@ import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles
 import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 import eventSeminairesImage from "@/assets/event-seminaires.jpg";
 import eventProgrammationImage from "@/assets/event-programmation-sur-mesure.jpg";
+import spaceBalroomImage from "@/assets/space-balroom.jpg";
 
 // Types d'événements avec cas d'usage
 const eventTypes = [
@@ -53,7 +54,8 @@ const spaces = [
     name: "La BAL-ROOM",
     capacity: "90 personnes",
     description: "Salle de réception idéale pour conférences ou cocktails",
-    imagePlaceholder: "space-balroom"
+    imagePlaceholder: "space-balroom",
+    image: spaceBalroomImage
   },
   {
     name: "Le JARDIN Divers",
@@ -215,15 +217,23 @@ const EvenementPage = () => {
                     className="overflow-hidden hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    {/* Image Placeholder */}
+                    {/* Image */}
                     <div className="relative h-[220px] bg-gradient-to-br from-accent/10 to-primary/10">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center p-6">
-                          <Building2 className="h-16 w-16 text-accent/40 mx-auto mb-3" />
-                          <p className="text-sm text-muted-foreground font-semibold">{space.imagePlaceholder}</p>
-                          <p className="text-xs text-muted-foreground/60 mt-1">Photo à ajouter</p>
+                      {space.image ? (
+                        <img 
+                          src={space.image} 
+                          alt={`${space.name} - ${space.description}`}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-center p-6">
+                            <Building2 className="h-16 w-16 text-accent/40 mx-auto mb-3" />
+                            <p className="text-sm text-muted-foreground font-semibold">{space.imagePlaceholder}</p>
+                            <p className="text-xs text-muted-foreground/60 mt-1">Photo à ajouter</p>
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
 
                     <div className="p-6">
