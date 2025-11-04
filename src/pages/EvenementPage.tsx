@@ -4,12 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles, Coffee } from "lucide-react";
 import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
-import eventSeminairesImage from "@/assets/event-seminaires.jpg";
+import eventSeminairesImage from "@/assets/space-plantation.jpg";
 import eventProgrammationImage from "@/assets/event-programmation-sur-mesure.jpg";
 import spaceBalroomImage from "@/assets/space-balroom.jpg";
 import spaceJardinDiversImage from "@/assets/space-jardin-divers-new.jpg";
 import spaceCommunsImage from "@/assets/space-jardin-divers.jpg";
 import spaceWaveroomImage from "@/assets/space-waveroom.jpg";
+import spacePlantationImage from "@/assets/space-plantation.jpg";
 
 // Types d'événements avec cas d'usage
 const eventTypes = [
@@ -85,7 +86,8 @@ const spaces = [
     name: "PLANTATION",
     capacity: "400 personnes",
     description: "Notre nouvelle extension pour vos grands événements",
-    imagePlaceholder: "space-plantation"
+    imagePlaceholder: "space-plantation",
+    image: spacePlantationImage
   }
 ];
 
