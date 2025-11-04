@@ -382,6 +382,28 @@ const EvenementPage = () => {
                     <div className="text-sm text-muted-foreground">Fondatrice Envolées Sauvages</div>
                   </div>
                 </Card>
+
+                <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '200ms' }}>
+                  <Quote className="h-10 w-10 text-accent mb-6" />
+                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                    "Un grand MERCI pour votre accueil. On a beaucoup aimé organiser notre événement dans votre Maison, et les participants aussi !"
+                  </p>
+                  <div>
+                    <div className="font-bold text-lg">Nadège MOÏSE</div>
+                    <div className="text-sm text-muted-foreground">Resp Communication - Réseau Entreprendre</div>
+                  </div>
+                </Card>
+
+                <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '300ms' }}>
+                  <Quote className="h-10 w-10 text-accent mb-6" />
+                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                    "Suite à la journée découverte d'hier, j'ai senti une âme forte, un chemin qui se construit, des valeurs profondes partagées, un esprit positif, de la simplicité dans la relation entre Colibricornes."
+                  </p>
+                  <div>
+                    <div className="font-bold text-lg">Frédéric FABIANI</div>
+                    <div className="text-sm text-muted-foreground">Dir. commercial WALA France</div>
+                  </div>
+                </Card>
               </div>
             </div>
           </div>
