@@ -45,6 +45,11 @@ export const ClimateHouseHero = () => {
                 Visite virtuelle 360°
               </a>
             </Button>
+            <Button size="lg" variant="outline" asChild>
+              <a href="/colocataires">
+                Découvrir les Colocataires
+              </a>
+            </Button>
           </div>
         </div>
       </div>
