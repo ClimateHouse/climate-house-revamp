@@ -141,7 +141,7 @@ const EvenementPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '300ms' }}>
                 <Button size="lg" asChild>
-                  <a href="#contact">Contactez-nous</a>
+                  <a href="#contact">Organisez votre événement</a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <a href="https://discover.matterport.com/space/UxagxBR7SZk" target="_blank" rel="noopener noreferrer">
