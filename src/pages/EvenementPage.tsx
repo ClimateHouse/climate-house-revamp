@@ -10,7 +10,7 @@ import spaceBalroomImage from "@/assets/space-balroom.jpg";
 import spaceJardinDiversImage from "@/assets/space-jardin-divers-new.jpg";
 import spaceCommunsImage from "@/assets/space-jardin-divers.jpg";
 import spaceWaveroomImage from "@/assets/space-waveroom.jpg";
-import spacePlantationImage from "@/assets/space-plantation.jpg";
+import spacePlantationImage from "@/assets/space-plantation-interior.jpg";
 
 // Types d'événements avec cas d'usage
 const eventTypes = [
