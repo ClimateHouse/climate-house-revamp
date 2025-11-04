@@ -84,32 +84,34 @@ const EvenementPage = () => {
       <Header />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative py-24 bg-gradient-to-br from-accent/10 via-background to-primary/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6 animate-fade-in">
-                  <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                    Votre événement au cœur d'un lieu engagé
-                  </h1>
-                  <p className="text-xl text-muted-foreground leading-relaxed">
-                    Organisez vos événements au cœur d'une communauté engagée d'entrepreneurs, scientifiques, ONG et acteurs du changement. Un lieu d'exception pour fédérer, inspirer et agir ensemble pour le climat.
-                  </p>
-                  <Button size="lg" className="mt-6 shadow-strong" asChild>
-                    <a href="#contact">Contactez-nous</a>
-                  </Button>
-                </div>
-                
-                {/* Image Placeholder Hero */}
-                <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-strong animate-fade-in" style={{ animationDelay: '200ms' }}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <Calendar className="h-24 w-24 text-accent/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground font-semibold">Image Hero Événement</p>
-                      <p className="text-sm text-muted-foreground/60 mt-2">Photo d'un événement à ajouter</p>
-                    </div>
-                  </div>
-                </div>
+        <section className="relative py-24 bg-gradient-to-br from-accent/10 via-background to-primary/5 border-b border-border overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 rounded-bl-[100px] -z-0" />
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-6 animate-fade-in">
+                <Calendar className="h-4 w-4 text-accent" />
+                <span className="text-sm font-semibold text-accent">Événements & Conférences</span>
+              </div>
+
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight animate-fade-in" style={{ animationDelay: '100ms' }}>
+                Votre événement au cœur d'un{" "}
+                <span className="text-accent">lieu engagé</span>
+              </h1>
+
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '200ms' }}>
+                Organisez vos événements au cœur d'une communauté engagée d'entrepreneurs, scientifiques, ONG et acteurs du changement. Un lieu d'exception pour fédérer, inspirer et agir ensemble pour le climat.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '300ms' }}>
+                <Button size="lg" asChild>
+                  <a href="#contact">Contactez-nous</a>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <a href="https://discover.matterport.com/space/UxagxBR7SZk" target="_blank" rel="noopener noreferrer">
+                    Visite virtuelle 360°
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
