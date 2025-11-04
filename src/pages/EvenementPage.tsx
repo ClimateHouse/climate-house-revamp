@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles, Coffee } from "lucide-react";
+import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 
 // Types d'événements avec cas d'usage
 const eventTypes = [
@@ -130,16 +131,24 @@ const EvenementPage = () => {
                     }`}
                     style={{ animationDelay: `${index * 150}ms` }}
                   >
-                    {/* Image Placeholder */}
+                    {/* Image */}
                     <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
                       <div className="relative h-[350px] rounded-2xl overflow-hidden shadow-strong">
-                        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
-                          <div className="text-center p-8">
-                            <type.icon className="h-20 w-20 text-accent/40 mx-auto mb-4" />
-                            <p className="text-muted-foreground font-semibold">{type.imagePlaceholder}</p>
-                            <p className="text-sm text-muted-foreground/60 mt-2">Photo à ajouter</p>
+                        {index === 0 ? (
+                          <img 
+                            src={eventAteliersImage} 
+                            alt="Ateliers et Conférences à la Climate House" 
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center">
+                            <div className="text-center p-8">
+                              <type.icon className="h-20 w-20 text-accent/40 mx-auto mb-4" />
+                              <p className="text-muted-foreground font-semibold">{type.imagePlaceholder}</p>
+                              <p className="text-sm text-muted-foreground/60 mt-2">Photo à ajouter</p>
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </div>
                     </div>
 
