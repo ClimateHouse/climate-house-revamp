@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles, Coffee } from "lucide-react";
 import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 import eventSeminairesImage from "@/assets/event-seminaires.jpg";
+import eventProgrammationImage from "@/assets/event-programmation-sur-mesure.jpg";
 
 // Types d'événements avec cas d'usage
 const eventTypes = [
@@ -145,6 +146,12 @@ const EvenementPage = () => {
                           <img 
                             src={eventSeminairesImage} 
                             alt="Séminaires à Plantation Paris" 
+                            className="w-full h-full object-cover"
+                          />
+                        ) : index === 2 ? (
+                          <img 
+                            src={eventProgrammationImage} 
+                            alt="Programmation sur Mesure à la Climate House" 
                             className="w-full h-full object-cover"
                           />
                         ) : (
