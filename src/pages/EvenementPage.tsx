@@ -6,7 +6,7 @@ import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles
 import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 import eventSeminairesImage from "@/assets/space-plantation.jpg";
 import eventProgrammationImage from "@/assets/event-programmation-sur-mesure-new.jpg";
-import traiteurFoodImage from "@/assets/traiteur-food.jpg";
+import traiteurFoodImage from "@/assets/traiteur-food-2.jpg";
 import spaceBalroomImage from "@/assets/space-balroom.jpg";
 import spaceJardinDiversImage from "@/assets/space-jardin-divers-new.jpg";
 import spaceCommunsImage from "@/assets/space-jardin-divers.jpg";
@@ -266,20 +266,10 @@ const EvenementPage = () => {
         </section>
 
         {/* Section Traiteurs */}
-        <section className="relative py-16 overflow-hidden">
-          {/* Background Image with Strong Overlay */}
-          <div className="absolute inset-0 z-0">
-            <img 
-              src={traiteurFoodImage} 
-              alt="Cuisine responsable - Nos partenaires traiteurs"
-              className="w-full h-full object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-background/90" />
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-8 animate-fade-in">
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12 animate-fade-in">
                 <div className="inline-flex items-center gap-2 mb-3">
                   <Coffee className="h-5 w-5 text-accent" />
                   <h2 className="text-2xl md:text-3xl font-bold">Nos partenaires traiteurs engagés</h2>
@@ -289,26 +279,40 @@ const EvenementPage = () => {
                 </p>
               </div>
 
-              <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
-                {[
-                  "LE RECHO",
-                  "necense",
-                  "Les Marmites Volantes",
-                  "Bimbamboum Traiteur",
-                  "Meet My Mama",
-                  "La Balle PERDUE",
-                  "APPIE",
-                  "müre",
-                  "CAUSSES"
-                ].map((partner, index) => (
-                  <div
-                    key={partner}
-                    className="text-base font-semibold text-muted-foreground/70 hover:text-accent transition-colors animate-fade-in"
-                    style={{ animationDelay: `${index * 30}ms` }}
-                  >
-                    {partner}
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                {/* Liste des partenaires */}
+                <div className="flex flex-wrap gap-x-8 gap-y-4 justify-center md:justify-start">
+                  {[
+                    "LE RECHO",
+                    "necense",
+                    "Les Marmites Volantes",
+                    "Bimbamboum Traiteur",
+                    "Meet My Mama",
+                    "La Balle PERDUE",
+                    "APPIE",
+                    "müre",
+                    "CAUSSES"
+                  ].map((partner, index) => (
+                    <div
+                      key={partner}
+                      className="text-base font-semibold text-muted-foreground/70 hover:text-accent transition-colors animate-fade-in"
+                      style={{ animationDelay: `${index * 30}ms` }}
+                    >
+                      {partner}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Image */}
+                <div className="animate-fade-in" style={{ animationDelay: '300ms' }}>
+                  <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-strong">
+                    <img 
+                      src={traiteurFoodImage} 
+                      alt="Cuisine responsable de nos partenaires traiteurs" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
