@@ -2,7 +2,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles, Coffee } from "lucide-react";
+import { Calendar, Presentation, Users, Building2, Quote, CheckCircle2, Sparkles, Coffee, Plus, Minus } from "lucide-react";
+import { useState } from "react";
 import eventAteliersImage from "@/assets/event-ateliers-conferences.jpg";
 import eventSeminairesImage from "@/assets/space-plantation.jpg";
 import eventProgrammationImage from "@/assets/event-programmation-sur-mesure-new.jpg";
@@ -93,6 +94,44 @@ const spaces = [
 ];
 
 const EvenementPage = () => {
+  const [showAllPartners, setShowAllPartners] = useState(false);
+  
+  const partners = [
+    "MEANWHILE BOUTIQUE",
+    "LA CAVE DES 7 ÎLES",
+    "LA BALLE",
+    "JNPR",
+    "NECENSE",
+    "BAPBAP",
+    "OÉ",
+    "SENSATERRA",
+    "YELLOW TUCAN",
+    "FOODLES",
+    "FRIGO NU",
+    "POP CHEF",
+    "MAMOSSA",
+    "LE RECHO",
+    "LES CUISTOTS MIGRATEURS",
+    "MEET MY MAMA",
+    "CAUSSES",
+    "LES MARMITES VOLANTES",
+    "MÛRE",
+    "ELIOTE",
+    "OPLATO",
+    "SOA",
+    "SOSA PARIS",
+    "BISCORNU",
+    "ON MANGE QUOI ?",
+    "PERDUE",
+    "BOULANGERIE DU SENTIER",
+    "PARENTHÈSE MAKIS",
+    "CAFÉ JOYEUX",
+    "LUCIE IS THE NEW VEGGIE",
+    "ODETTE, MA FILLE"
+  ];
+
+  const displayedPartners = showAllPartners ? partners : partners.slice(0, 9);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -279,50 +318,37 @@ const EvenementPage = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start max-w-5xl mx-auto">
                 {/* Liste des partenaires */}
-                <div className="columns-2 md:columns-3 gap-x-6 gap-y-2">
-                  {[
-                    "MEANWHILE BOUTIQUE",
-                    "LA CAVE DES 7 ÎLES",
-                    "LA BALLE",
-                    "JNPR",
-                    "NECENSE",
-                    "BAPBAP",
-                    "OÉ",
-                    "SENSATERRA",
-                    "YELLOW TUCAN",
-                    "FOODLES",
-                    "FRIGO NU",
-                    "POP CHEF",
-                    "MAMOSSA",
-                    "LE RECHO",
-                    "LES CUISTOTS MIGRATEURS",
-                    "MEET MY MAMA",
-                    "CAUSSES",
-                    "LES MARMITES VOLANTES",
-                    "MÛRE",
-                    "ELIOTE",
-                    "OPLATO",
-                    "SOA",
-                    "SOSA PARIS",
-                    "BISCORNU",
-                    "ON MANGE QUOI ?",
-                    "PERDUE",
-                    "BOULANGERIE DU SENTIER",
-                    "PARENTHÈSE MAKIS",
-                    "CAFÉ JOYEUX",
-                    "LUCIE IS THE NEW VEGGIE",
-                    "ODETTE, MA FILLE"
-                  ].map((partner, index) => (
-                    <div
-                      key={partner}
-                      className="text-sm font-semibold text-muted-foreground/70 hover:text-accent transition-colors animate-fade-in uppercase mb-3 break-inside-avoid"
-                      style={{ animationDelay: `${index * 20}ms` }}
-                    >
-                      {partner}
-                    </div>
-                  ))}
+                <div>
+                  <div className="columns-2 md:columns-3 gap-x-6">
+                    {displayedPartners.map((partner, index) => (
+                      <div
+                        key={partner}
+                        className="text-sm font-semibold text-muted-foreground/70 hover:text-accent transition-colors animate-fade-in uppercase mb-3 break-inside-avoid"
+                        style={{ animationDelay: `${index * 20}ms` }}
+                      >
+                        {partner}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <button
+                    onClick={() => setShowAllPartners(!showAllPartners)}
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+                  >
+                    {showAllPartners ? (
+                      <>
+                        <Minus className="h-4 w-4" />
+                        Voir moins
+                      </>
+                    ) : (
+                      <>
+                        <Plus className="h-4 w-4" />
+                        Voir tous les partenaires
+                      </>
+                    )}
+                  </button>
                 </div>
 
                 {/* Image */}
