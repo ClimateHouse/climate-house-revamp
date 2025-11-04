@@ -188,9 +188,16 @@ const CofondateursPage = () => {
                 {filteredCofondateurs.map((cofo, index) => (
                   <Card
                     key={`${cofo.name}-${index}`}
-                    className="p-4 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in group"
+                    className="p-4 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in group relative"
                     style={{ animationDelay: `${(index % 24) * 30}ms` }}
                   >
+                    {cofo.batch === "COFO #1" && (
+                      <div className="absolute top-2 right-2">
+                        <Badge variant="outline" className="text-[10px] px-1.5 py-0 h-5 bg-background/80 backdrop-blur-sm">
+                          #1
+                        </Badge>
+                      </div>
+                    )}
                     <div className="flex flex-col items-center text-center">
                       <div className="relative mb-4">
                         <Avatar className="h-20 w-20 border-2 border-border group-hover:border-primary transition-colors duration-300">
