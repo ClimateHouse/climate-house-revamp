@@ -360,47 +360,47 @@ const EvenementPage = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in">
-                  <Quote className="h-10 w-10 text-accent mb-6" />
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+              <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in">
+                  <Quote className="h-8 w-8 text-accent mb-3" />
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic">
                     "Tout était très doux, efficace et fluide, je n'attends qu'une chose : recommencer une collaboration avec vous !"
                   </p>
                   <div>
-                    <div className="font-bold text-lg">Fleur DOUET</div>
+                    <div className="font-bold">Fleur DOUET</div>
                     <div className="text-sm text-muted-foreground">Field Marketing Manager SWEEP</div>
                   </div>
                 </Card>
 
-                <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
-                  <Quote className="h-10 w-10 text-accent mb-6" />
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
+                  <Quote className="h-8 w-8 text-accent mb-3" />
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic">
                     "Merci pour votre dispo : Manon était top dans l'accompagnement, Anthony hyper pro et efficace le jour J et le traiteur très bon. Hâte de revenir :)"
                   </p>
                   <div>
-                    <div className="font-bold text-lg">Ingrid Vanhée</div>
+                    <div className="font-bold">Ingrid Vanhée</div>
                     <div className="text-sm text-muted-foreground">Fondatrice Envolées Sauvages</div>
                   </div>
                 </Card>
 
-                <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '200ms' }}>
-                  <Quote className="h-10 w-10 text-accent mb-6" />
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '200ms' }}>
+                  <Quote className="h-8 w-8 text-accent mb-3" />
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic">
                     "Un grand MERCI pour votre accueil. On a beaucoup aimé organiser notre événement dans votre Maison, et les participants aussi !"
                   </p>
                   <div>
-                    <div className="font-bold text-lg">Nadège MOÏSE</div>
+                    <div className="font-bold">Nadège MOÏSE</div>
                     <div className="text-sm text-muted-foreground">Resp Communication - Réseau Entreprendre</div>
                   </div>
                 </Card>
 
-                <Card className="p-8 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '300ms' }}>
-                  <Quote className="h-10 w-10 text-accent mb-6" />
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '300ms' }}>
+                  <Quote className="h-8 w-8 text-accent mb-3" />
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic">
                     "Suite à la journée découverte d'hier, j'ai senti une âme forte, un chemin qui se construit, des valeurs profondes partagées, un esprit positif, de la simplicité dans la relation entre Colibricornes."
                   </p>
                   <div>
-                    <div className="font-bold text-lg">Frédéric FABIANI</div>
+                    <div className="font-bold">Frédéric FABIANI</div>
                     <div className="text-sm text-muted-foreground">Dir. commercial WALA France</div>
                   </div>
                 </Card>
