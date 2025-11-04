@@ -90,21 +90,11 @@ const EvenementPage = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6 animate-fade-in">
                   <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                    Des événements qui accélèrent la transition
+                    Votre événement au cœur d'un lieu engagé
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed">
                     Organisez vos événements au cœur d'une communauté engagée d'entrepreneurs, scientifiques, ONG et acteurs du changement. Un lieu d'exception pour fédérer, inspirer et agir ensemble pour le climat.
                   </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-lg">Un écosystème unique d'acteurs engagés pour la transition écologique</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-lg">Des espaces pensés pour l'intelligence collective et l'innovation durable</span>
-                    </li>
-                  </ul>
                   <Button size="lg" className="mt-6 shadow-strong" asChild>
                     <a href="#contact">Contactez-nous</a>
                   </Button>
