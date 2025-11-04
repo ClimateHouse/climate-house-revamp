@@ -90,19 +90,19 @@ const EvenementPage = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6 animate-fade-in">
                   <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                    Organiser votre événement à la Climate House
+                    Des événements qui accélèrent la transition
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    Notre équipe dédiée vous accompagne dans l'organisation de vos événements professionnels et vous propose des lieux d'exception au cœur de Paris.
+                    Organisez vos événements au cœur d'une communauté engagée d'entrepreneurs, scientifiques, ONG et acteurs du changement. Un lieu d'exception pour fédérer, inspirer et agir ensemble pour le climat.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-lg">Un grand choix d'espaces pour tous types d'événements</span>
+                      <span className="text-lg">Un écosystème unique d'acteurs engagés pour la transition écologique</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-lg">Des lieux inspirants et équipements adaptés à l'émulation collective</span>
+                      <span className="text-lg">Des espaces pensés pour l'intelligence collective et l'innovation durable</span>
                     </li>
                   </ul>
                   <Button size="lg" className="mt-6 shadow-strong" asChild>
