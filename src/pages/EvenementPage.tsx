@@ -97,18 +97,8 @@ const EvenementPage = () => {
   const [showAllPartners, setShowAllPartners] = useState(false);
   
   const partners = [
-    "MEANWHILE BOUTIQUE",
-    "LA CAVE DES 7 ÎLES",
-    "LA BALLE",
-    "JNPR",
-    "NECENSE",
     "BAPBAP",
     "OÉ",
-    "SENSATERRA",
-    "YELLOW TUCAN",
-    "FOODLES",
-    "FRIGO NU",
-    "POP CHEF",
     "MAMOSSA",
     "LE RECHO",
     "LES CUISTOTS MIGRATEURS",
@@ -116,16 +106,9 @@ const EvenementPage = () => {
     "CAUSSES",
     "LES MARMITES VOLANTES",
     "MÛRE",
-    "ELIOTE",
-    "OPLATO",
-    "SOA",
     "SOSA PARIS",
-    "BISCORNU",
     "ON MANGE QUOI ?",
-    "PERDUE",
     "BOULANGERIE DU SENTIER",
-    "PARENTHÈSE MAKIS",
-    "CAFÉ JOYEUX",
     "LUCIE IS THE NEW VEGGIE",
     "ODETTE, MA FILLE"
   ];
