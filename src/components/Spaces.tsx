@@ -307,21 +307,6 @@ export const Spaces = () => {
             </Button>
           </Card>
 
-          <div className="text-center mt-8 p-6 bg-secondary/20 rounded-xl">
-            <p className="text-sm text-muted-foreground mb-6">
-              💡 <span className="font-semibold">Besoin d'aide pour choisir ?</span> Nos équipes sont là pour vous conseiller et trouver la formule qui correspond le mieux à vos besoins.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-hero hover:opacity-90" asChild>
-                <a href="#contact">Nous contacter</a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="/colocataires">
-                  Découvrir les Colocataires
-                </a>
-              </Button>
-            </div>
-          </div>
 
           {/* TÉMOIGNAGES COLOCATAIRES - Remontés plus près des CTA */}
           <div className="mt-16">
