@@ -361,9 +361,9 @@ const EvenementPage = () => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in">
+                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in flex flex-col h-full">
                   <Quote className="h-8 w-8 text-accent mb-3" />
-                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic">
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic flex-1">
                     "Tout était très doux, efficace et fluide, je n'attends qu'une chose : recommencer une collaboration avec vous !"
                   </p>
                   <div>
@@ -372,9 +372,9 @@ const EvenementPage = () => {
                   </div>
                 </Card>
 
-                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '100ms' }}>
+                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in flex flex-col h-full" style={{ animationDelay: '100ms' }}>
                   <Quote className="h-8 w-8 text-accent mb-3" />
-                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic">
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic flex-1">
                     "Merci pour votre dispo : Manon était top dans l'accompagnement, Anthony hyper pro et efficace le jour J et le traiteur très bon. Hâte de revenir :)"
                   </p>
                   <div>
@@ -383,9 +383,9 @@ const EvenementPage = () => {
                   </div>
                 </Card>
 
-                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '200ms' }}>
+                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in flex flex-col h-full" style={{ animationDelay: '200ms' }}>
                   <Quote className="h-8 w-8 text-accent mb-3" />
-                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic">
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic flex-1">
                     "Un grand MERCI pour votre accueil. On a beaucoup aimé organiser notre événement dans votre Maison, et les participants aussi !"
                   </p>
                   <div>
@@ -394,9 +394,9 @@ const EvenementPage = () => {
                   </div>
                 </Card>
 
-                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in" style={{ animationDelay: '300ms' }}>
+                <Card className="p-5 hover:shadow-strong transition-all duration-300 animate-fade-in flex flex-col h-full" style={{ animationDelay: '300ms' }}>
                   <Quote className="h-8 w-8 text-accent mb-3" />
-                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic">
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic flex-1">
                     "Suite à la journée découverte d'hier, j'ai senti une âme forte, un chemin qui se construit, des valeurs profondes partagées, un esprit positif, de la simplicité dans la relation entre Colibricornes."
                   </p>
                   <div>
