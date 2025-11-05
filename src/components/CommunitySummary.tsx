@@ -34,11 +34,9 @@ export const CommunitySummary = () => {
     <section id="communaute" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-0">La Communauté</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 py-0">La Mission</h2>
           <p className="text-lg text-muted-foreground">
-            Une communauté de plus de 800 entrepreneurs passionnés, unis par la volonté de
-            construire une économie durable. 170 cofondateurs à parité femmes-hommes ont
-            mis leurs ressources au service de cette vision collective.
+            Être un carrefour d'échange et de collaboration pour les acteurs de la lutte contre le changement climatique — de l'expert scientifique aux grandes entreprises, en passant par les entrepreneurs innovants et les organisations associatives.
           </p>
         </div>
 
