@@ -5,12 +5,12 @@ import { Check, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const parcours = [{
-  name: "Individuel",
+  name: "A la carte",
   target: "Individuel",
   type: "particulier",
   description: "Accès illimité à la programmation",
-  included: ["Accès communauté, programmation et GT", "Participation aux événements"],
-  excluded: ["Temps forts collectifs", "Référent Climate House dédié", "Pack Communication", "Mobilisation ressources communauté"],
+  included: ["Accès illimité à la programmation", "Accès communauté et Groupe de Travail"],
+  excluded: ["Référent Climate House dédié", "2 temps forts collectifs sur mesure"],
   example: "Groupe de Travail \"Finance durable\"",
   link: "/communaute#adhesion-individuelle"
 }, {
