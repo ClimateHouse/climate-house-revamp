@@ -241,13 +241,13 @@ export const Community = () => {
             {/* Première ligne : Mission et Engagements des Cofondateurs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
               {/* Mission */}
-              <Card className="p-8 hover:shadow-strong transition-all duration-300 group flex flex-col">
+              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
-                    <Zap className="h-8 w-8 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
+                    <Zap className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 min-h-[64px] flex items-center justify-center">Mission</h3>
-                  <p className="text-sm text-muted-foreground mb-6 flex-grow min-h-[80px] flex items-center justify-center">
+                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Mission</h3>
+                  <p className="text-xs text-muted-foreground mb-3 flex-grow min-h-[40px] flex items-center justify-center">
                     Être un carrefour d'échange et de collaboration pour les acteurs de la lutte contre le changement climatique
                   </p>
                   
@@ -279,13 +279,13 @@ export const Community = () => {
               </Card>
 
               {/* Engagements des Cofondateurs */}
-              <Card className="p-8 hover:shadow-strong transition-all duration-300 group flex flex-col">
+              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
-                    <UsersIcon className="h-8 w-8 text-accent-foreground" />
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
+                    <UsersIcon className="h-6 w-6 text-accent-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 min-h-[64px] flex items-center justify-center">Les engagements des Cofondateurs</h3>
-                  <p className="text-sm text-muted-foreground mb-6 min-h-[80px] flex items-center justify-center">
+                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Les engagements des Cofondateurs</h3>
+                  <p className="text-xs text-muted-foreground mb-3 min-h-[40px] flex items-center justify-center">
                     Un investissement financier, temporel et humain pour l'écosystème climatique
                   </p>
                   
@@ -341,13 +341,13 @@ export const Community = () => {
 
             {/* Deuxième ligne : ESUS et Charte éthique */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
-              <Card className="p-8 hover:shadow-strong transition-all duration-300 group flex flex-col">
+              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
-                    <CheckCircle className="h-8 w-8 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
+                    <CheckCircle className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 min-h-[64px] flex items-center justify-center">Entreprise Solidaire d'Utilité Sociale</h3>
-                  <p className="text-sm text-muted-foreground mb-6 flex-grow min-h-[80px] flex items-center justify-center">
+                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Entreprise Solidaire d'Utilité Sociale</h3>
+                  <p className="text-xs text-muted-foreground mb-3 flex-grow min-h-[40px] flex items-center justify-center">
                     Un modèle entrepreneurial qui vise la rentabilité tout en étant concentré sur ses impacts écologiques et sociaux
                   </p>
                   
@@ -392,13 +392,13 @@ export const Community = () => {
               </Card>
 
               {/* Charte éthique */}
-              <Card className="p-8 hover:shadow-strong transition-all duration-300 group flex flex-col">
+              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
-                    <BookOpen className="h-8 w-8 text-accent-foreground" />
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
+                    <BookOpen className="h-6 w-6 text-accent-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 min-h-[64px] flex items-center justify-center">Charte éthique</h3>
-                  <p className="text-sm text-muted-foreground mb-6 flex-grow min-h-[80px] flex items-center justify-center">
+                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Charte éthique</h3>
+                  <p className="text-xs text-muted-foreground mb-3 flex-grow min-h-[40px] flex items-center justify-center">
                     20 principes fondateurs qui guident notre action collective pour le climat
                   </p>
                   
@@ -508,13 +508,13 @@ export const Community = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
               
               {/* Comité Éthique et Stratégique */}
-              <Card className="p-8 hover:shadow-strong transition-all duration-300 group flex flex-col">
+              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
-                    <UsersIcon className="h-8 w-8 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
+                    <UsersIcon className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 min-h-[64px] flex items-center justify-center">Comité Éthique et Stratégique</h3>
-                  <p className="text-sm text-muted-foreground mb-6 min-h-[80px] flex items-center justify-center">
+                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Comité Éthique et Stratégique</h3>
+                  <p className="text-xs text-muted-foreground mb-3 min-h-[40px] flex items-center justify-center">
                     4 représentants des cofondateurs pour guider les orientations du projet
                   </p>
                   
@@ -639,13 +639,13 @@ export const Community = () => {
               </Card>
 
               {/* L'équipe */}
-              <Card className="p-8 hover:shadow-strong transition-all duration-300 group flex flex-col">
+              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
-                    <UsersIcon className="h-8 w-8 text-accent-foreground" />
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
+                    <UsersIcon className="h-6 w-6 text-accent-foreground" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 min-h-[64px] flex items-center justify-center">L'équipe</h3>
-                  <p className="text-sm text-muted-foreground mb-6 min-h-[80px] flex items-center justify-center">
+                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">L'équipe</h3>
+                  <p className="text-xs text-muted-foreground mb-3 min-h-[40px] flex items-center justify-center">
                     13 personnes Climate House qui mettent quotidiennement leur énergie au service du projet
                   </p>
                   
