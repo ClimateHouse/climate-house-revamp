@@ -14,14 +14,13 @@ const parcours = [{
   example: "Groupe de Travail \"Finance durable\"",
   link: "/communaute#adhesion-individuelle"
 }, {
-  name: "À la Carte",
+  name: "À la carte",
   target: "En équipe (≥ 5 personnes)",
   type: "entreprise",
   description: "Programmation illimitée & temps forts",
-  included: ["Accès communauté, programmation et GT", "2 temps forts collectifs à la CH", "Référent Climate House dédié", "Mobilisation ressources clés communauté"],
-  excluded: ["Pack Communication"],
-  example: "Mastermind \"Femmes & Argent\"",
-  highlight: true
+  included: ["Accès illimité à la programmation", "Accès communauté et Groupe de Travail", "Référent Climate House dédié", "2 temps forts collectifs"],
+  excluded: ["4 ateliers sur mesure (½ journée)", "Pack Communication: NL, LinkedIn, site"],
+  example: "Mastermind \"Femmes & Argent\""
 }, {
   name: "Accélération",
   target: "En équipe (≥ 10 personnes)",
@@ -54,7 +53,6 @@ export const Parcours = () => {
             animationDelay: `${index * 100}ms`
           }}>
                 <div className="min-h-[32px] mb-4 flex gap-2 flex-wrap">
-                  {p.highlight && <Badge className="bg-gradient-hero">Recommandé</Badge>}
                   <Badge variant={p.type === "particulier" ? "default" : "secondary"}>
                     {p.type === "particulier" ? "Particulier" : "Entreprise"}
                   </Badge>
@@ -81,11 +79,11 @@ export const Parcours = () => {
                 </div>
                 
                 {p.link ? (
-                  <Button asChild className={`w-full mt-auto ${p.highlight ? 'bg-gradient-hero hover:bg-accent' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
+                  <Button asChild className="w-full mt-auto" variant="outline">
                     <Link to={p.link}>En savoir plus</Link>
                   </Button>
                 ) : (
-                  <Button className={`w-full mt-auto ${p.highlight ? 'bg-gradient-hero hover:bg-accent' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
+                  <Button className="w-full mt-auto" variant="outline">
                     En savoir plus
                   </Button>
                 )}
