@@ -15,7 +15,6 @@ const Index = () => {
         <Stats />
         <Mission className="mx-0 px-0 py-[40px]" />
         <CommunitySummary />
-        <TrustedBy />
         <CTA />
       </main>
       <Footer />
