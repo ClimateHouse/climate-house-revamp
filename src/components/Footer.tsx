@@ -2,10 +2,10 @@ import { Leaf, Linkedin, Instagram, Mail, MapPin } from "lucide-react";
 const footerLinks = {
   "La maison": [{
     label: "Devenir résident",
-    href: "#"
+    href: "/climate-house"
   }, {
     label: "Organiser un événement",
-    href: "#"
+    href: "/evenement"
   }, {
     label: "Visite virtuelle",
     href: "https://discover.matterport.com/space/UxagxBR7SZk"
@@ -18,7 +18,7 @@ const footerLinks = {
     href: "/bibliotheque"
   }, {
     label: "Prochains événements",
-    href: "/atelier#calendrier"
+    href: "/calendrier"
   }, {
     label: "Devenez adhérents",
     href: "#"
