@@ -20,7 +20,7 @@ const parcours = [{
   description: "Programmation illimitée & temps forts",
   included: ["Accès illimité à la programmation", "Accès communauté et Groupe de Travail", "Référent Climate House dédié", "2 temps forts collectifs"],
   excluded: ["4 ateliers sur mesure (½ journée)", "Pack Communication: NL, LinkedIn, site"],
-  example: "Mastermind \"Femmes & Argent\""
+  example: "Master Mind L'appel au vivant"
 }, {
   name: "Accélération",
   target: "En équipe (≥ 10 personnes)",
@@ -34,9 +34,9 @@ const parcours = [{
   target: "Multi-structures (≥ 5 structures)",
   type: "entreprise",
   description: "1 thématique, multi-acteurs",
-  included: ["Accès communauté, programmation et GT", "2 temps forts collectifs", "Référent Climate House dédié", "Pack Communication complet", "Mobilisation ressources clés", "Format groupe de travail collaboratif"],
+  included: ["Accès illimité à la programmation", "Accès communauté et Groupe de Travail", "Référent Climate House dédié", "2 temps forts collectifs", "4 ateliers (½ journée)", "Mobilisation des membres de la communauté", "Pack Communication: NL, LinkedIn, site"],
   excluded: [],
-  example: "Alliance sur la mobilité de demain"
+  example: "Alliance sur les politiques d'achat responsable"
 }];
 export const Parcours = () => {
   return <section className="py-20 bg-background">
