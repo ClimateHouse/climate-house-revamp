@@ -9,7 +9,7 @@ export const CommunityClosing = () => {
             {/* Texte à gauche */}
             <div className="space-y-8 animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                Un modèle entrepreneurial guidé par l'impact, porté par 80 cofondateurs engagés
+                Un modèle entrepreneurial guidé par l'impact, porté par 170 cofondateurs engagés
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Le cœur vibrant du projet : ils mettent leur temps, leur argent et leur réseau au service du Climat

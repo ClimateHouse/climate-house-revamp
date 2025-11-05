@@ -229,10 +229,10 @@ const CofondateursPage = () => {
             <div className="max-w-4xl mx-auto text-center animate-fade-in mb-12">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
                 <Users className="h-5 w-5 text-primary" />
-                <span className="text-sm font-semibold text-primary">172 Cofondateurs</span>
+                <span className="text-sm font-semibold text-primary">170 Cofondateurs</span>
               </div>
               <p className="text-xl text-muted-foreground">
-                172 entrepreneurs visionnaires à parité femmes-hommes, qui ont uni leurs forces
+                170 entrepreneurs visionnaires à parité femmes-hommes, qui ont uni leurs forces
                 pour créer le premier lieu dédié à l'action climatique en France
               </p>
             </div>

@@ -18,7 +18,7 @@ import communitySpeaker from "@/assets/community-speaker.jpg";
 import Autoplay from "embla-carousel-autoplay";
 
 const communityImages = [
-  { src: communityImage, alt: "Mur des cofondateurs Climate House - 80 portraits" },
+  { src: communityImage, alt: "Mur des cofondateurs Climate House - 170 portraits" },
   { src: communityEvent1, alt: "Événement Climate House - Conférence communauté" },
   { src: communityEvent2, alt: "Programme Climate House - Festival Atmosphères" },
   { src: communityEvent3, alt: "Intervention Climate House - Jean-Marc Jancovici et Henri Pellion" },
@@ -37,7 +37,7 @@ export const CommunitySummary = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 py-0">La Communauté</h2>
           <p className="text-lg text-muted-foreground">
             Une communauté de plus de 800 entrepreneurs passionnés, unis par la volonté de
-            construire une économie durable. 80 cofondateurs à parité femmes-hommes ont
+            construire une économie durable. 170 cofondateurs à parité femmes-hommes ont
             mis leurs ressources au service de cette vision collective.
           </p>
         </div>
@@ -78,7 +78,7 @@ export const CommunitySummary = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
           <div className="text-center p-6 rounded-2xl bg-card border border-border">
             <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              80
+              170
             </div>
             <div className="text-lg font-semibold mb-1">Cofondateurs</div>
             <p className="text-sm text-muted-foreground">

@@ -3,7 +3,7 @@ import { Users, Building2, UsersRound, Calendar, TrendingUp } from "lucide-react
 const stats = [
   {
     icon: Users,
-    value: "80",
+    value: "170",
     label: "Cofondateurs",
   },
   {

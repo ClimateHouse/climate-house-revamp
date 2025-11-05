@@ -130,7 +130,7 @@ const teamMembers = [
 ];
 
 const communityImages = [
-  { src: communityImage, alt: "Mur des cofondateurs Climate House - 80 portraits" },
+  { src: communityImage, alt: "Mur des cofondateurs Climate House - 170 portraits" },
   { src: communityEvent1, alt: "Événement Climate House - Conférence communauté" },
   { src: communityEvent2, alt: "Programme Climate House - Festival Atmosphères" },
   { src: communityEvent3, alt: "Intervention Climate House - Jean-Marc Jancovici et Henri Pellion" },

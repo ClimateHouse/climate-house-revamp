@@ -11,7 +11,7 @@ const pillars = [{
 }, {
   icon: Handshake,
   title: "La Communauté",
-  description: "430 colocataires de 70 structures, 80 cofondateurs entrepreneurs et 200 organisations adhérentes. Un réseau unique d'expertise et d'engagement au service de la transition.",
+  description: "430 colocataires de 70 structures, 170 cofondateurs entrepreneurs et 200 organisations adhérentes. Un réseau unique d'expertise et d'engagement au service de la transition.",
   ctaText: "Rejoindre la communauté",
   ctaLink: "#communaute"
 }, {
