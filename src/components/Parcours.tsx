@@ -1,16 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Check, X } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const parcours = [{
   name: "Individuel",
   target: "Individuel",
+  type: "particulier",
   description: "Accès illimité à la programmation",
   included: ["Accès communauté, programmation et GT", "Participation aux événements"],
   excluded: ["Temps forts collectifs", "Référent Climate House dédié", "Pack Communication", "Mobilisation ressources communauté"],
-  example: "Groupe de Travail \"Finance durable\""
+  example: "Groupe de Travail \"Finance durable\"",
+  link: "/communaute#adhesion-individuelle"
 }, {
   name: "À la Carte",
   target: "En équipe (≥ 5 personnes)",
+  type: "entreprise",
   description: "Programmation illimitée & temps forts",
   included: ["Accès communauté, programmation et GT", "2 temps forts collectifs à la CH", "Référent Climate House dédié", "Mobilisation ressources clés communauté"],
   excluded: ["Pack Communication"],
@@ -19,6 +25,7 @@ const parcours = [{
 }, {
   name: "Accélération",
   target: "En équipe (≥ 10 personnes)",
+  type: "entreprise",
   description: "1 structure, 1 projet, 6 rencontres",
   included: ["Accès communauté, programmation et GT", "2 temps forts collectifs", "Référent Climate House dédié", "Pack Communication complet", "Mobilisation ressources clés", "6 rencontres transformantes (½ journée)"],
   excluded: [],
@@ -26,6 +33,7 @@ const parcours = [{
 }, {
   name: "Alliance",
   target: "Multi-structures (≥ 5 structures)",
+  type: "entreprise",
   description: "1 thématique, multi-acteurs",
   included: ["Accès communauté, programmation et GT", "2 temps forts collectifs", "Référent Climate House dédié", "Pack Communication complet", "Mobilisation ressources clés", "Format groupe de travail collaboratif"],
   excluded: [],
@@ -45,8 +53,11 @@ export const Parcours = () => {
             {parcours.map((p, index) => <Card key={p.name} className="p-6 flex flex-col border-2 border-border hover:border-primary hover:shadow-strong transition-all duration-300 hover:-translate-y-2 animate-fade-in" style={{
             animationDelay: `${index * 100}ms`
           }}>
-                <div className="min-h-[32px] mb-4">
+                <div className="min-h-[32px] mb-4 flex gap-2 flex-wrap">
                   {p.highlight && <Badge className="bg-gradient-hero">Recommandé</Badge>}
+                  <Badge variant={p.type === "particulier" ? "default" : "secondary"}>
+                    {p.type === "particulier" ? "Particulier" : "Entreprise"}
+                  </Badge>
                 </div>
                 
                 <h3 className="text-2xl font-bold mb-2 min-h-[32px]">{p.name}</h3>
@@ -69,9 +80,15 @@ export const Parcours = () => {
                   <p className="text-xs font-medium">{p.example}</p>
                 </div>
                 
-                <Button className={`w-full mt-auto ${p.highlight ? 'bg-gradient-hero hover:bg-accent' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
-                  En savoir plus
-                </Button>
+                {p.link ? (
+                  <Button asChild className={`w-full mt-auto ${p.highlight ? 'bg-gradient-hero hover:bg-accent' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
+                    <Link to={p.link}>En savoir plus</Link>
+                  </Button>
+                ) : (
+                  <Button className={`w-full mt-auto ${p.highlight ? 'bg-gradient-hero hover:bg-accent' : ''}`} variant={p.highlight ? 'default' : 'outline'}>
+                    En savoir plus
+                  </Button>
+                )}
               </Card>)}
           </div>
 
@@ -92,4 +109,3 @@ export const Parcours = () => {
       </div>
     </section>;
 };
-import { Badge } from "@/components/ui/badge";
