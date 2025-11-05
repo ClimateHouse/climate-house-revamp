@@ -234,55 +234,113 @@ export const Community = () => {
           </Carousel>
         </div>
 
-        {/* Les engagements des Cofondateurs */}
-        <div className="max-w-6xl mx-auto mb-16 animate-fade-in">
-          <div className="text-center mb-10">
-            <h4 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-hero bg-clip-text text-transparent">
-              Les engagements de nos Cofondateurs
-            </h4>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-              <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent h-14 flex items-center justify-center">
-                20 000 €
-              </div>
-              <p className="text-sm font-semibold mb-1 h-5">Investissement</p>
-              <p className="text-xs text-muted-foreground h-8 flex items-center justify-center">Pour 2% du capital</p>
-            </Card>
-
-            <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-              <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent h-14 flex items-center justify-center">
-                20h / an
-              </div>
-              <p className="text-sm font-semibold mb-1 h-5">Engagement temps</p>
-              <p className="text-xs text-muted-foreground h-8 flex items-center justify-center">Pour développer l'écosystème</p>
-            </Card>
-
-            <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-              <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent h-14 flex items-center justify-center">
-                20 Intro
-              </div>
-              <p className="text-sm font-semibold mb-1 h-5">Réseau partagé</p>
-              <p className="text-xs text-muted-foreground h-8 flex items-center justify-center">Pour accélérer les projets</p>
-            </Card>
-
-            <Card className="p-6 text-center bg-gradient-to-br from-card to-card/50 border-primary/20 hover:shadow-strong hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-              <div className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent h-14 flex items-center justify-center">
-                50%
-              </div>
-              <p className="text-sm font-semibold mb-1 h-5">Plus-value reversée</p>
-              <p className="text-xs text-muted-foreground h-8 flex items-center justify-center">À une association climat</p>
-            </Card>
-          </div>
-        </div>
-
         {/* Section Gouvernance - Structure réorganisée */}
         <div className="max-w-6xl mx-auto mt-24 mb-24">
           {/* Flow continu avec espacement progressif */}
           <div className="space-y-8">
-            {/* Première ligne : ESUS et Charte éthique */}
+            {/* Première ligne : Mission et Engagements des Cofondateurs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+              {/* Mission */}
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
+                    <Zap className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Mission</h3>
+                  <p className="text-sm text-muted-foreground mb-6 flex-grow text-left">
+                    Être un carrefour d'échange et de collaboration pour les acteurs de la lutte contre le changement climatique — de l'expert scientifique aux grandes entreprises, en passant par les entrepreneurs innovants et les organisations associatives.
+                  </p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
+                        <Info className="h-5 w-5" />
+                        En savoir plus sur notre mission
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-2xl">
+                      <DialogHeader>
+                        <DialogTitle>Notre Mission</DialogTitle>
+                        <DialogDescription className="text-left space-y-4 pt-4">
+                          <p className="text-foreground">
+                            Être un <strong>carrefour d'échange et de collaboration</strong> pour les acteurs de la lutte contre le changement climatique — de l'expert scientifique aux grandes entreprises, en passant par les entrepreneurs innovants et les organisations associatives.
+                          </p>
+                          <p>
+                            Notre mission est de <strong>catalyser les initiatives à fort impact</strong> et de permettre une meilleure synergie au sein de notre écosystème. Cette concentration de compétences et de visions diverses amplifie le potentiel de chaque projet, facilitant l'émergence de solutions durables, le transfert de connaissances spécialisées et l'innovation continue.
+                          </p>
+                          <p>
+                            Nous voulons faire de ce <strong>'toit commun'</strong> un épicentre d'actions concrètes et de réflexions, propulsant ainsi les avancées nécessaires pour un avenir durable.
+                          </p>
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+              </Card>
+
+              {/* Engagements des Cofondateurs */}
+              <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
+                <div className="text-center">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
+                    <UsersIcon className="h-8 w-8 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Les engagements de nos Cofondateurs</h3>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    Un investissement financier, temporel et humain pour l'écosystème climatique
+                  </p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
+                        <Info className="h-5 w-5" />
+                        Voir les engagements détaillés
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-3xl">
+                      <DialogHeader>
+                        <DialogTitle>Les engagements de nos Cofondateurs</DialogTitle>
+                        <DialogDescription>
+                          Un engagement sur 4 piliers pour développer l'écosystème climatique
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                        <div className="bg-accent/10 p-6 rounded-lg text-center">
+                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                            20 000 €
+                          </div>
+                          <p className="font-semibold mb-1">Investissement</p>
+                          <p className="text-sm text-muted-foreground">Pour 2% du capital</p>
+                        </div>
+                        <div className="bg-accent/10 p-6 rounded-lg text-center">
+                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                            20h / an
+                          </div>
+                          <p className="font-semibold mb-1">Engagement temps</p>
+                          <p className="text-sm text-muted-foreground">Pour développer l'écosystème</p>
+                        </div>
+                        <div className="bg-accent/10 p-6 rounded-lg text-center">
+                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                            20 Intro
+                          </div>
+                          <p className="font-semibold mb-1">Réseau partagé</p>
+                          <p className="text-sm text-muted-foreground">Pour accélérer les projets</p>
+                        </div>
+                        <div className="bg-accent/10 p-6 rounded-lg text-center">
+                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                            50%
+                          </div>
+                          <p className="font-semibold mb-1">Plus-value reversée</p>
+                          <p className="text-sm text-muted-foreground">À une association climat</p>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+              </Card>
+            </div>
+
+            {/* Deuxième ligne : ESUS et Charte éthique */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
               <Card className="p-8 hover:shadow-strong transition-all duration-300 group">
                 <div className="text-center">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 shadow-soft">
@@ -446,7 +504,7 @@ export const Community = () => {
               </Card>
             </div>
 
-            {/* Comité et Équipe côte à côte avec Modales */}
+            {/* Troisième ligne : Comité et Équipe côte à côte avec Modales */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
               
               {/* Comité Éthique et Stratégique */}
