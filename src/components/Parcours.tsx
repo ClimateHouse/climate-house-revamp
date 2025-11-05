@@ -26,7 +26,7 @@ const parcours = [{
   target: "En équipe (≥ 10 personnes)",
   type: "entreprise",
   description: "1 structure, 1 projet, 6 rencontres",
-  included: ["Accès communauté, programmation et GT", "2 temps forts collectifs", "Référent Climate House dédié", "Pack Communication complet", "Mobilisation ressources clés", "6 rencontres transformantes (½ journée)"],
+  included: ["Accès illimité à la programmation", "Accès communauté et Groupe de Travail", "Référent Climate House dédié", "2 temps forts collectifs", "4 ateliers (½ journée)", "Mobilisation des membres de la communauté", "Pack Communication: NL, LinkedIn, site"],
   excluded: [],
   example: "Élaboration feuille de route Économie Circulaire"
 }, {
