@@ -72,35 +72,14 @@ export const CommunitySummary = () => {
           </Carousel>
         </div>
 
-        {/* Chiffres clés */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-          <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              170
-            </div>
-            <div className="text-lg font-semibold mb-1">Cofondateurs</div>
-            <p className="text-sm text-muted-foreground">
-              À parité femmes-hommes, issus de secteurs variés
-            </p>
-          </div>
-          <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              70+
-            </div>
-            <div className="text-lg font-semibold mb-1">Structures</div>
-            <p className="text-sm text-muted-foreground">
-              Entreprises, ONG, startups et collectifs
-            </p>
-          </div>
-          <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <div className="text-5xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-              430
-            </div>
-            <div className="text-lg font-semibold mb-1">Colocataires</div>
-            <p className="text-sm text-muted-foreground">
-              Entrepreneurs engagés pour le climat
-            </p>
-          </div>
+        {/* Texte descriptif */}
+        <div className="max-w-4xl mx-auto mb-16 text-center">
+          <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+            Cette concentration de compétences et de visions diverses amplifie le potentiel de chaque projet, facilitant l'émergence de solutions durables, le transfert de connaissances spécialisées et l'innovation continue.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Nous voulons faire de ce 'toit commun' un épicentre d'actions concrètes et de réflexions, propulsant ainsi les avancées nécessaires pour un avenir durable.
+          </p>
         </div>
 
         <div className="text-center mt-12 animate-fade-in flex flex-col sm:flex-row gap-4 justify-center">
