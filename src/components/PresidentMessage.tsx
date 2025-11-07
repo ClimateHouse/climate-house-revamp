@@ -15,7 +15,9 @@ export const PresidentMessage = () => {
 
   const previewText = `Contribuer à la transformation de l'économie française au service de la transition écologique, environnementale et sociale : voilà la mission qui nous anime à La Climate House.
 
-Moins d'un an après la naissance de La Climate House, il nous a semblé essentiel de réaliser notre première mesure d'impact. Pas simplement pour dresser un bilan, mais parce que l'impact est, depuis le premier jour, notre étoile polaire...`;
+Moins d'un an après la naissance de La Climate House, il nous a semblé essentiel de réaliser notre première mesure d'impact. Pas simplement pour dresser un bilan, mais parce que l'impact est, depuis le premier jour, notre étoile polaire. C'est ce qui guide nos choix, nos projets, nos partenariats. Dans une gouvernance innovante de 80 entrepreneurs actionnaires, et propulsé par un lancement génial, les possibilités sont nombreuses. Nous voulons rester alignés sur notre raison d'être, et rester focus sur notre objectif.
+
+Si je ne devais retenir qu'une seule chose de ce rapport : notre plus grand impact réside dans notre capacité à faire naître des rencontres qui mènent à l'action...`;
 
   const fullText = `Contribuer à la transformation de l'économie française au service de la transition écologique, environnementale et sociale : voilà la mission qui nous anime à La Climate House.
 
