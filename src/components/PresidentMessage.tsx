@@ -43,23 +43,8 @@ Grâce à vous, nous embarquons l'économie dans une transformation profonde, as
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8 items-start">
-              {/* Image de la présidente */}
-              <div className="relative">
-                <div className="overflow-hidden rounded-2xl shadow-strong">
-                  <img
-                    src={presidentImage}
-                    alt="Lucie Basch, Présidente de la Climate House"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <div className="mt-4 text-center">
-                  <p className="text-xl font-semibold">Lucie Basch</p>
-                  <p className="text-muted-foreground">Présidente de la Climate House</p>
-                </div>
-              </div>
-
               {/* Aperçu du texte */}
-              <div className="space-y-6">
+              <div className="space-y-6 order-2 md:order-1">
                 <p className="text-lg leading-relaxed text-foreground whitespace-pre-line">
                   {previewText}
                 </p>
@@ -72,6 +57,21 @@ Grâce à vous, nous embarquons l'économie dans une transformation profonde, as
                   Lire le message complet
                   <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
+              </div>
+
+              {/* Image de la présidente */}
+              <div className="relative order-1 md:order-2">
+                <div className="overflow-hidden rounded-2xl shadow-strong h-full max-h-[500px]">
+                  <img
+                    src={presidentImage}
+                    alt="Lucie Basch, Présidente de la Climate House"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="mt-4 text-center">
+                  <p className="text-xl font-semibold">Lucie Basch</p>
+                  <p className="text-muted-foreground">Présidente de la Climate House</p>
+                </div>
               </div>
             </div>
           </div>
