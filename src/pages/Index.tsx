@@ -15,8 +15,8 @@ const Index = () => {
         <Hero />
         <Stats />
         <Mission className="mx-0 px-0 py-[40px]" />
-        <PresidentMessage />
         <CommunitySummary />
+        <PresidentMessage />
         <CTA />
       </main>
       <Footer />
