@@ -7,7 +7,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Download } from "lucide-react";
 import presidentImage from "@/assets/lucie-basch-president.jpg";
 
 export const PresidentMessage = () => {
@@ -51,14 +51,28 @@ Grâce à vous, nous embarquons l'économie dans une transformation profonde, as
                   {previewText}
                 </p>
                 
-                <Button
-                  onClick={() => setIsOpen(true)}
-                  size="lg"
-                  className="group"
-                >
-                  Lire le message complet
-                  <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    onClick={() => setIsOpen(true)}
+                    size="lg"
+                    className="group"
+                  >
+                    Lire le message complet
+                    <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                  
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="group"
+                  >
+                    <a href="/documents/climate-house-mesure-impact-2025.pdf" download>
+                      Télécharger le rapport d'impact
+                      <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+                    </a>
+                  </Button>
+                </div>
               </div>
 
               {/* Image de la présidente */}
