@@ -37,7 +37,7 @@ export const Header = () => {
                         >
                           <div className="text-sm font-medium leading-none mb-1">Paris</div>
                           <p className="text-xs leading-snug text-muted-foreground">
-                            10 rue de Cléry, 75002
+                            39 rue du caire, 75002
                           </p>
                         </a>
                       </li>
