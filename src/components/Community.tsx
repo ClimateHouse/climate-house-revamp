@@ -238,8 +238,8 @@ export const Community = () => {
         <div className="max-w-6xl mx-auto mt-24 mb-24">
           {/* Flow continu avec espacement progressif */}
           <div className="space-y-8">
-            {/* Première ligne : Mission et Engagements des Cofondateurs */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+            {/* Première ligne : Mission, ESUS, Comité Éthique et Stratégique */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
               {/* Mission */}
               <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
@@ -278,69 +278,7 @@ export const Community = () => {
                 </div>
               </Card>
 
-              {/* Engagements des Cofondateurs */}
-              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
-                <div className="text-center flex flex-col flex-grow">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
-                    <UsersIcon className="h-6 w-6 text-accent-foreground" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Les engagements des Cofondateurs</h3>
-                  <p className="text-xs text-muted-foreground mb-3 min-h-[40px] flex items-center justify-center">
-                    Un investissement financier, temporel et humain pour l'écosystème climatique
-                  </p>
-                  
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
-                        <Info className="h-5 w-5" />
-                        Voir les engagements détaillés
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-3xl">
-                      <DialogHeader>
-                        <DialogTitle>Les engagements de nos Cofondateurs</DialogTitle>
-                        <DialogDescription>
-                          Un engagement sur 4 piliers pour développer l'écosystème climatique
-                        </DialogDescription>
-                      </DialogHeader>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-                        <div className="bg-accent/10 p-6 rounded-lg text-center">
-                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-                            20 000 €
-                          </div>
-                          <p className="font-semibold mb-1">Investissement</p>
-                          <p className="text-sm text-muted-foreground">Pour 2% du capital</p>
-                        </div>
-                        <div className="bg-accent/10 p-6 rounded-lg text-center">
-                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-                            20h / an
-                          </div>
-                          <p className="font-semibold mb-1">Engagement temps</p>
-                          <p className="text-sm text-muted-foreground">Pour développer l'écosystème</p>
-                        </div>
-                        <div className="bg-accent/10 p-6 rounded-lg text-center">
-                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-                            20 Intro
-                          </div>
-                          <p className="font-semibold mb-1">Réseau partagé</p>
-                          <p className="text-sm text-muted-foreground">Pour accélérer les projets</p>
-                        </div>
-                        <div className="bg-accent/10 p-6 rounded-lg text-center">
-                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-                            50%
-                          </div>
-                          <p className="font-semibold mb-1">Plus-value reversée</p>
-                          <p className="text-sm text-muted-foreground">À une association climat</p>
-                        </div>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
-                </div>
-              </Card>
-            </div>
-
-            {/* Deuxième ligne : ESUS et Charte éthique */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
+              {/* ESUS */}
               <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
@@ -391,122 +329,6 @@ export const Community = () => {
                 </div>
               </Card>
 
-              {/* Charte éthique */}
-              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
-                <div className="text-center flex flex-col flex-grow">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
-                    <BookOpen className="h-6 w-6 text-accent-foreground" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Charte éthique</h3>
-                  <p className="text-xs text-muted-foreground mb-3 flex-grow min-h-[40px] flex items-center justify-center">
-                    20 principes fondateurs qui guident notre action collective pour le climat
-                  </p>
-                  
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
-                        <BookOpen className="h-5 w-5" />
-                        Consulter la charte éthique
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-                      <DialogHeader>
-                        <DialogTitle className="text-2xl">Charte éthique Climate House</DialogTitle>
-                        <DialogDescription>
-                          Les principes fondateurs qui guident notre action collective
-                        </DialogDescription>
-                      </DialogHeader>
-                      <div className="space-y-4 mt-6">
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Reconnaissance scientifique</h4>
-                          <p className="text-sm">Reconnaître les limites planétaires et l'urgence climatique basées sur des preuves scientifiques solides.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Engagement vers la post-croissance</h4>
-                          <p className="text-sm">S'engager à remettre en question et dépasser le modèle de croissance économique, même "verte", au profit d'un modèle soutenable et équitable.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Impact vérifiable</h4>
-                          <p className="text-sm">S'assurer que toutes les activités menées sous l'égide de la Climate House ont un impact positif vérifiable sur l'environnement.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Responsabilité médiatique</h4>
-                          <p className="text-sm">S'engager à créer de nouveaux récits de société pour promouvoir une consommation responsable et éclairée.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Éducation et formation</h4>
-                          <p className="text-sm">S'engager à éduquer et former les membres et le public sur les enjeux écologiques et sociaux de manière approfondie et scientifiquement valide.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Indépendance des médias</h4>
-                          <p className="text-sm">Soutenir et promouvoir l'indépendance des médias pour assurer une information objective et non influencée par des intérêts économiques majeurs.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Transparence publicitaire</h4>
-                          <p className="text-sm">Refuser les pratiques publicitaires qui encouragent une consommation excessive et non durable.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Démocratie distribuée</h4>
-                          <p className="text-sm">Encourager une démocratie plus participative et distribuée pour limiter l'influence des lobbys.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Fiscalité équitable</h4>
-                          <p className="text-sm">Promouvoir une redistribution équitable des richesses pour soutenir les transitions écologiques nécessaires.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Coopération économique</h4>
-                          <p className="text-sm">Privilégier la coopération sur la compétition, essentielle à la résilience et à l'adaptation des systèmes économiques.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Modèles de réussite alternatifs</h4>
-                          <p className="text-sm">Redéfinir les critères de réussite professionnelle et personnelle au-delà de l'argent et du pouvoir.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Innovation pour l'intérêt général</h4>
-                          <p className="text-sm">Innover au service de l'intérêt général, en particulier pour protéger la planète et le vivant.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Intégrité et congruence</h4>
-                          <p className="text-sm">Agir avec intégrité et congruence, en alignant constamment les actions avec les valeurs prônées.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Gouvernance inclusive</h4>
-                          <p className="text-sm">Adopter une gouvernance qui transcende les ego et les intérêts particuliers, ouverte et évolutive pour s'adapter aux besoins du projet.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Optimisme pragmatique</h4>
-                          <p className="text-sm">Cultiver un optimisme pragmatique, en se focalisant sur les solutions plutôt que sur les problèmes.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Humilité</h4>
-                          <p className="text-sm">Reconnaître notre rôle modeste dans le grand système et s'efforcer de contribuer positivement à notre échelle.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Collaboration sans naïveté</h4>
-                          <p className="text-sm">Collaborer avec tous les acteurs de l'écosystème, y compris les grands groupes et les lobbys, tout en restant vigilants et critiques.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Critique constructive</h4>
-                          <p className="text-sm">Encourager la critique constructive et le débat ouvert pour améliorer continuellement nos pratiques et approches.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Résilience communautaire</h4>
-                          <p className="text-sm">Œuvrer à renforcer la résilience des communautés locales et globales face aux changements climatiques.</p>
-                        </div>
-                        <div className="bg-accent/10 p-4 rounded-lg">
-                          <h4 className="font-bold mb-2 text-foreground">Partage de valeurs</h4>
-                          <p className="text-sm">S'engager à un partage équitable et solidaire des valeurs créées, en reconnaissant la contribution de chaque membre à la mission collective.</p>
-                        </div>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
-                </div>
-              </Card>
-            </div>
-
-            {/* Troisième ligne : Comité et Équipe côte à côte avec Modales */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              
               {/* Comité Éthique et Stratégique */}
               <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
                 <div className="text-center flex flex-col flex-grow">
@@ -632,6 +454,181 @@ export const Community = () => {
                             <Badge variant="secondary" className="text-xs">Entrepreneuriat</Badge>
                           </div>
                         </Card>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+              </Card>
+            </div>
+
+            {/* Deuxième ligne : Engagements des Cofondateurs, Charte éthique, L'équipe */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
+              {/* Engagements des Cofondateurs */}
+              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
+                <div className="text-center flex flex-col flex-grow">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
+                    <UsersIcon className="h-6 w-6 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Les engagements des Cofondateurs</h3>
+                  <p className="text-xs text-muted-foreground mb-3 min-h-[40px] flex items-center justify-center">
+                    Un investissement financier, temporel et humain pour l'écosystème climatique
+                  </p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
+                        <Info className="h-5 w-5" />
+                        Voir les engagements détaillés
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-3xl">
+                      <DialogHeader>
+                        <DialogTitle>Les engagements de nos Cofondateurs</DialogTitle>
+                        <DialogDescription>
+                          Un engagement sur 4 piliers pour développer l'écosystème climatique
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                        <div className="bg-accent/10 p-6 rounded-lg text-center">
+                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                            20 000 €
+                          </div>
+                          <p className="font-semibold mb-1">Investissement</p>
+                          <p className="text-sm text-muted-foreground">Pour 2% du capital</p>
+                        </div>
+                        <div className="bg-accent/10 p-6 rounded-lg text-center">
+                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                            20h / an
+                          </div>
+                          <p className="font-semibold mb-1">Engagement temps</p>
+                          <p className="text-sm text-muted-foreground">Pour développer l'écosystème</p>
+                        </div>
+                        <div className="bg-accent/10 p-6 rounded-lg text-center">
+                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                            20 Intro
+                          </div>
+                          <p className="font-semibold mb-1">Réseau partagé</p>
+                          <p className="text-sm text-muted-foreground">Pour accélérer les projets</p>
+                        </div>
+                        <div className="bg-accent/10 p-6 rounded-lg text-center">
+                          <div className="text-4xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
+                            50%
+                          </div>
+                          <p className="font-semibold mb-1">Plus-value reversée</p>
+                          <p className="text-sm text-muted-foreground">À une association climat</p>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+              </Card>
+
+              {/* Charte éthique */}
+              <Card className="p-4 hover:shadow-strong transition-all duration-300 group flex flex-col">
+                <div className="text-center flex flex-col flex-grow">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-2 shadow-soft">
+                    <BookOpen className="h-6 w-6 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Charte éthique</h3>
+                  <p className="text-xs text-muted-foreground mb-3 flex-grow min-h-[40px] flex items-center justify-center">
+                    20 principes fondateurs qui guident notre action collective pour le climat
+                  </p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="lg" className="gap-2 w-full group-hover:border-primary/50">
+                        <BookOpen className="h-5 w-5" />
+                        Consulter la charte éthique
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl">Charte éthique Climate House</DialogTitle>
+                        <DialogDescription>
+                          Les principes fondateurs qui guident notre action collective
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="space-y-4 mt-6">
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Reconnaissance scientifique</h4>
+                          <p className="text-sm">Reconnaître les limites planétaires et l'urgence climatique basées sur des preuves scientifiques solides.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Engagement vers la post-croissance</h4>
+                          <p className="text-sm">S'engager à remettre en question et dépasser le modèle de croissance économique, même "verte", au profit d'un modèle soutenable et équitable.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Impact vérifiable</h4>
+                          <p className="text-sm">S'assurer que toutes les activités menées sous l'égide de la Climate House ont un impact positif vérifiable sur l'environnement.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Responsabilité médiatique</h4>
+                          <p className="text-sm">S'engager à créer de nouveaux récits de société pour promouvoir une consommation responsable et éclairée.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Éducation et formation</h4>
+                          <p className="text-sm">S'engager à éduquer et former les membres et le public sur les enjeux écologiques et sociaux de manière approfondie et scientifiquement valide.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Indépendance des médias</h4>
+                          <p className="text-sm">Soutenir et promouvoir l'indépendance des médias pour assurer une information objective et non influencée par des intérêts économiques majeurs.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Transparence publicitaire</h4>
+                          <p className="text-sm">Refuser les pratiques publicitaires qui encouragent une consommation excessive et non durable.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Démocratie distribuée</h4>
+                          <p className="text-sm">Encourager une démocratie plus participative et distribuée pour limiter l'influence des lobbys.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Fiscalité équitable</h4>
+                          <p className="text-sm">Promouvoir une redistribution équitable des richesses pour soutenir les transitions écologiques nécessaires.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Coopération économique</h4>
+                          <p className="text-sm">Privilégier la coopération sur la compétition, essentielle à la résilience et à l'adaptation des systèmes économiques.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Modèles de réussite alternatifs</h4>
+                          <p className="text-sm">Redéfinir les critères de réussite professionnelle et personnelle au-delà de l'argent et du pouvoir.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Innovation pour l'intérêt général</h4>
+                          <p className="text-sm">Innover au service de l'intérêt général, en particulier pour protéger la planète et le vivant.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Intégrité et congruence</h4>
+                          <p className="text-sm">Agir avec intégrité et congruence, en alignant constamment les actions avec les valeurs prônées.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Gouvernance inclusive</h4>
+                          <p className="text-sm">Adopter une gouvernance qui transcende les ego et les intérêts particuliers, ouverte et évolutive pour s'adapter aux besoins du projet.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Optimisme pragmatique</h4>
+                          <p className="text-sm">Cultiver un optimisme pragmatique, en se focalisant sur les solutions plutôt que sur les problèmes.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Humilité</h4>
+                          <p className="text-sm">Reconnaître notre rôle modeste dans le grand système et s'efforcer de contribuer positivement à notre échelle.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Collaboration sans naïveté</h4>
+                          <p className="text-sm">Collaborer avec tous les acteurs de l'écosystème, y compris les grands groupes et les lobbys, tout en restant vigilants et critiques.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Critique constructive</h4>
+                          <p className="text-sm">Encourager la critique constructive et le débat ouvert pour améliorer continuellement nos pratiques et approches.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Résilience communautaire</h4>
+                          <p className="text-sm">Œuvrer à renforcer la résilience des communautés locales et globales face aux changements climatiques.</p>
+                        </div>
+                        <div className="bg-accent/10 p-4 rounded-lg">
+                          <h4 className="font-bold mb-2 text-foreground">Partage de valeurs</h4>
+                          <p className="text-sm">S'engager à un partage équitable et solidaire des valeurs créées, en reconnaissant la contribution de chaque membre à la mission collective.</p>
+                        </div>
                       </div>
                     </DialogContent>
                   </Dialog>
@@ -768,9 +765,9 @@ export const Community = () => {
             <div className="flex flex-col justify-center p-8 lg:p-12 rounded-3xl bg-card border-2 border-primary/20 shadow-soft h-full">
               <div className="mb-8 text-center lg:text-left">
                 <div className="text-5xl lg:text-6xl font-bold mb-3 bg-gradient-hero bg-clip-text text-transparent">
-                  192 €
+                  300 €
                 </div>
-                <div className="text-lg text-muted-foreground">HT / an (soit 16 € / mois)</div>
+                <div className="text-lg text-muted-foreground">HT / an (soit 25 € / mois)</div>
               </div>
               
               <ul className="space-y-4 mb-8">
