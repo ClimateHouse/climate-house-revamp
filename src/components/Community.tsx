@@ -336,7 +336,7 @@ export const Community = () => {
                     <UsersIcon className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">Comité Éthique et Stratégique</h3>
-                  <p className="text-xs text-muted-foreground mb-3 min-h-[40px] flex items-center justify-center">
+                  <p className="text-xs text-muted-foreground mb-3 flex-grow min-h-[40px] flex items-center justify-center">
                     4 représentants des cofondateurs pour guider les orientations du projet
                   </p>
                   
@@ -642,7 +642,7 @@ export const Community = () => {
                     <UsersIcon className="h-6 w-6 text-accent-foreground" />
                   </div>
                   <h3 className="text-xl font-bold mb-2 min-h-[32px] flex items-center justify-center">L'équipe</h3>
-                  <p className="text-xs text-muted-foreground mb-3 min-h-[40px] flex items-center justify-center">
+                  <p className="text-xs text-muted-foreground mb-3 flex-grow min-h-[40px] flex items-center justify-center">
                     13 personnes Climate House qui mettent quotidiennement leur énergie au service du projet
                   </p>
                   
