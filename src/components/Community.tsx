@@ -856,10 +856,6 @@ export const Community = () => {
                       <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-xs leading-relaxed">Learning expeditions et explorations hors les murs</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-xs leading-relaxed">Voix consultative dans les orientations stratégiques</span>
-                    </li>
                   </ul>
                 </div>
               </div>
