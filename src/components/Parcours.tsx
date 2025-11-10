@@ -34,7 +34,7 @@ const parcours = [{
   target: "Multi-structures (≥ 5 structures)",
   type: "entreprise",
   description: "1 thématique, multi-acteurs",
-  included: ["Accès illimité à la programmation", "Accès communauté et Groupe de Travail", "Référent Climate House dédié", "2 temps forts collectifs", "4 ateliers (½ journée)", "Mobilisation des membres de la communauté", "Pack Communication: NL, LinkedIn, site"],
+  included: ["Calibrage thématique avec nos Cofondateurs", "Mobilisation chaine de valeur (concurrents, clients, fournisseurs,...)", "Mobilisation des membres de la communauté", "Ingénierie pédagogique", "Tiers de confiance et affaires publique", "Temps forts collectifs et ateliers (½ journée)", "Diffusion des livrables (Site, NL, Linkedin,...)"],
   excluded: [],
   example: "Alliance sur les politiques d'achat responsable"
 }];
