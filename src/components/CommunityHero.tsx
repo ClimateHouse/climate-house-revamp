@@ -38,7 +38,11 @@ export const CommunityHero = () => {
             </div>
             <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border shadow-soft">
               <Users className="h-4 w-4 text-primary" />
-              <span className="text-sm font-semibold">70+ structures</span>
+              <span className="text-sm font-semibold">200 adhérents</span>
+            </div>
+            <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border shadow-soft">
+              <Users className="h-4 w-4 text-primary" />
+              <span className="text-sm font-semibold">15 staff</span>
             </div>
           </div>
 
