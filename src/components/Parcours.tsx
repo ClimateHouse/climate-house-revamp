@@ -5,7 +5,7 @@ import { Check, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const parcours = [{
-  name: "A la carte",
+  name: "À la carte",
   target: "Individuel",
   type: "particulier",
   description: "Accès illimité à la programmation",
