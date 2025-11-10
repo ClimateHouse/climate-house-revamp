@@ -19,7 +19,7 @@ const parcours = [{
   type: "entreprise",
   description: "Programmation illimitée & temps forts",
   included: ["Accès illimité à la programmation", "Accès communauté et Groupe de Travail", "Référent Climate House dédié", "2 temps forts collectifs"],
-  excluded: ["4 ateliers sur mesure (½ journée)", "Pack Communication: NL, LinkedIn, site"],
+  excluded: ["4 ateliers sur mesure (½ journée)", "Mobilisation des membres de la communauté", "Pack Communication: NL, LinkedIn, site"],
   example: "Master Mind L'appel au vivant"
 }, {
   name: "Accélération",
