@@ -786,7 +786,7 @@ export const Community = () => {
               </ul>
               
               <Button size="lg" className="bg-gradient-hero w-full lg:w-auto">
-                Devenir Membre
+                Devenir adhérent
               </Button>
             </div>
           </div>
