@@ -1,5 +1,6 @@
 import { Users, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export const CommunityHero = () => {
   return (
@@ -52,6 +53,10 @@ export const CommunityHero = () => {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a href="/colocataires">Découvrir les Colocataires</a>
+            </Button>
+            <Button size="lg" variant="outline" disabled className="relative opacity-60 cursor-not-allowed">
+              Découvrir toute la communauté
+              <Badge variant="secondary" className="ml-2 text-xs">En cours</Badge>
             </Button>
           </div>
         </div>
