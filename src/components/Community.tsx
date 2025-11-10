@@ -744,50 +744,135 @@ export const Community = () => {
           </div>
 
           {/* Pricing and CTA with Image */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto animate-fade-in">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto animate-fade-in">
             {/* Image Section */}
-            <div className="relative rounded-3xl overflow-hidden shadow-strong h-full min-h-[400px] lg:min-h-[500px]">
+            <div className="relative rounded-3xl overflow-hidden shadow-strong h-full min-h-[400px] lg:min-h-[600px]">
               <img
                 src={communityOutdoor}
                 alt="Communauté Climate House - Entrepreneurs engagés"
                 className="w-full h-full object-cover object-[85%_center] hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-foreground">
-                <h4 className="text-2xl font-bold mb-2">Rejoignez la communauté</h4>
-                <p className="text-sm text-foreground/80">
-                  800+ entrepreneurs engagés qui construisent ensemble une économie durable
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8 text-foreground">
+                <Badge className="mb-4 bg-primary/20 text-primary border-primary/30 backdrop-blur-sm">
+                  Adhésion Individuelle
+                </Badge>
+                <h4 className="text-3xl font-bold mb-3">Rejoignez la communauté</h4>
+                <p className="text-base text-foreground/90 mb-4">
+                  800+ entrepreneurs, dirigeants et experts qui construisent ensemble une économie durable
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary" className="backdrop-blur-sm bg-background/60">
+                    170 Cofondateurs
+                  </Badge>
+                  <Badge variant="secondary" className="backdrop-blur-sm bg-background/60">
+                    430 Colocataires
+                  </Badge>
+                  <Badge variant="secondary" className="backdrop-blur-sm bg-background/60">
+                    200 Adhérents
+                  </Badge>
+                </div>
               </div>
             </div>
 
             {/* Pricing Section */}
-            <div className="flex flex-col justify-center p-8 lg:p-12 rounded-3xl bg-card border-2 border-primary/20 shadow-soft h-full">
-              <div className="mb-8 text-center lg:text-left">
-                <div className="text-5xl lg:text-6xl font-bold mb-3 bg-gradient-hero bg-clip-text text-transparent">
-                  300 €
+            <div className="flex flex-col justify-between p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-card via-card to-primary/5 border-2 border-primary/20 shadow-strong h-full">
+              {/* Header with Price */}
+              <div>
+                <div className="mb-6">
+                  <div className="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                    <span className="text-sm font-semibold text-primary">Offre Individuelle</span>
+                  </div>
+                  <div className="flex items-baseline gap-3 mb-2">
+                    <span className="text-6xl lg:text-7xl font-bold bg-gradient-hero bg-clip-text text-transparent">
+                      300€
+                    </span>
+                    <span className="text-xl text-muted-foreground">HT</span>
+                  </div>
+                  <p className="text-base text-muted-foreground mb-1">par an · soit 25€ / mois</p>
+                  <p className="text-sm text-primary font-medium">Sans engagement · Résiliable à tout moment</p>
                 </div>
-                <div className="text-lg text-muted-foreground">HT / an (soit 25 € / mois)</div>
+
+                {/* Key Benefits */}
+                <div className="space-y-4 mb-6">
+                  <div className="p-4 rounded-xl bg-accent/10 border border-accent/20">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <h5 className="font-semibold mb-1 text-sm">+700 événements par an</h5>
+                        <p className="text-xs text-muted-foreground">Conférences, débats, masterclasses sur 6 thématiques clés</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 rounded-xl bg-accent/10 border border-accent/20">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <UsersIcon className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <h5 className="font-semibold mb-1 text-sm">Communauté active</h5>
+                        <p className="text-xs text-muted-foreground">Accès au Slack, événements de networking et groupes de travail</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 rounded-xl bg-accent/10 border border-accent/20">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Zap className="h-4 w-4 text-primary" />
+                      </div>
+                      <div>
+                        <h5 className="font-semibold mb-1 text-sm">Espaces Climate House</h5>
+                        <p className="text-xs text-muted-foreground">Accès privilégié aux 4 espaces dédiés à la collaboration</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Complete Features List */}
+                <div className="space-y-3 mb-6 p-4 rounded-xl bg-background/50">
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">Inclus dans votre adhésion</p>
+                  <ul className="space-y-2.5">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs leading-relaxed">Accès illimité aux conférences et ateliers</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs leading-relaxed">Participation aux groupes de travail thématiques</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs leading-relaxed">Événements exclusifs membres (apéros, petits déj, tables d'hôtes)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs leading-relaxed">Accès à la plateforme Slack et annuaire des membres</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs leading-relaxed">Learning expeditions et explorations hors les murs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs leading-relaxed">Voix consultative dans les orientations stratégiques</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">Accès à toute la programmation de l'ATE.LIER</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">Accès à la plateforme et à la communauté Climate House</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">Participation aux événements membres</span>
-                </li>
-              </ul>
-              
-              <Button size="lg" className="bg-gradient-hero w-full lg:w-auto">
-                Devenir adhérent
-              </Button>
+
+              {/* CTA Button */}
+              <div className="space-y-3">
+                <Button size="lg" className="bg-gradient-hero w-full text-base font-semibold h-12 shadow-soft hover:shadow-strong transition-all">
+                  Devenir adhérent
+                </Button>
+                <p className="text-center text-xs text-muted-foreground">
+                  Rejoignez-nous dès maintenant et participez à la prochaine session
+                </p>
+              </div>
             </div>
           </div>
 
