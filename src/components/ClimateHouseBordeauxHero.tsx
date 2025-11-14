@@ -37,7 +37,7 @@ export const ClimateHouseBordeauxHero = () => {
                 <a href="#contact">Devenir colocataire</a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="/evenement">
+                <a href="/evenement-bordeaux">
                   Organiser un événement
                 </a>
               </Button>
