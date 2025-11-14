@@ -9,6 +9,7 @@ import ClimateHouseBordeaux from "./pages/ClimateHouseBordeaux";
 import AtelierPage from "./pages/AtelierPage";
 import BibliothequePage from "./pages/BibliothequePage";
 import EvenementPage from "./pages/EvenementPage";
+import EvenementBordeauxPage from "./pages/EvenementBordeauxPage";
 import CofondateursPage from "./pages/CofondateursPage";
 import ColocatairesPage from "./pages/ColocatairesPage";
 import CommunautePage from "./pages/CommunautePage";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/atelier" element={<AtelierPage />} />
           <Route path="/bibliotheque" element={<BibliothequePage />} />
           <Route path="/evenement" element={<EvenementPage />} />
+          <Route path="/evenement-bordeaux" element={<EvenementBordeauxPage />} />
           <Route path="/cofondateurs" element={<CofondateursPage />} />
           <Route path="/colocataires" element={<ColocatairesPage />} />
           <Route path="/communaute" element={<CommunautePage />} />
