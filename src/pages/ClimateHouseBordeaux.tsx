@@ -1,7 +1,6 @@
 import { Header } from "@/components/Header";
 import { ClimateHouseBordeauxHero } from "@/components/ClimateHouseBordeauxHero";
 import { OcubeSpaces } from "@/components/OcubeSpaces";
-import { OcubeAdvantages } from "@/components/OcubeAdvantages";
 import { OcubeServices } from "@/components/OcubeServices";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
@@ -13,7 +12,6 @@ const ClimateHouseBordeaux = () => {
       <main>
         <ClimateHouseBordeauxHero />
         <OcubeSpaces />
-        <OcubeAdvantages />
         <OcubeServices />
         <CTA />
       </main>

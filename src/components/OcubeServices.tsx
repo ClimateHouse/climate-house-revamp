@@ -52,11 +52,8 @@ export const OcubeServices = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Nos services inclus
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
-            Ocube Coworking : bien plus qu'un espace de travail, une expérience
-          </p>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-            Imaginez un environnement où chaque détail est pensé pour optimiser votre quotidien et booster votre productivité. Découvrez notre gamme complète de services, conçus pour faciliter votre travail et favoriser votre bien-être. <strong>Travaillez l'esprit tranquille et laissez-nous nous occuper du reste !</strong>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Un environnement complet pensé pour votre productivité et votre bien-être
           </p>
         </div>
 
