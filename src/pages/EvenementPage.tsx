@@ -42,7 +42,7 @@ const eventTypes = [
   },
   {
     icon: Sparkles,
-    title: "Programmation sur Mesure",
+    title: "Programmation sur mesure",
     description: "Créons ensemble l'événement qui vous ressemble, en parfaite cohérence avec vos valeurs.",
     features: [
       "Co-construction de votre événement avec nos experts",
@@ -184,7 +184,7 @@ const EvenementPage = () => {
                         ) : index === 2 ? (
                           <img 
                             src={eventProgrammationImage} 
-                            alt="Programmation sur Mesure à la Climate House" 
+                            alt="Programmation sur mesure à la Climate House" 
                             className="w-full h-full object-cover"
                           />
                         ) : (

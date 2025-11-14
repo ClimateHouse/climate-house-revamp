@@ -68,9 +68,6 @@ export const Header = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
-              Ate.lier
-            </a>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -106,6 +103,9 @@ export const Header = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+            <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+              Ate.lier
+            </a>
             <a href="/communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Communauté
             </a>
@@ -157,9 +157,6 @@ export const Header = () => {
                 </div>
               </div>
             </div>
-            <a href="/atelier" className="text-foreground hover:text-primary transition-colors py-2">
-              Ate.lier
-            </a>
             <div>
               <div className="text-foreground font-medium py-2 text-sm">Votre événement</div>
               <div className="pl-4 flex flex-col gap-2">
@@ -171,6 +168,9 @@ export const Header = () => {
                 </a>
               </div>
             </div>
+            <a href="/atelier" className="text-foreground hover:text-primary transition-colors py-2">
+              Ate.lier
+            </a>
             <a href="/communaute" className="text-foreground hover:text-primary transition-colors py-2">
               Communauté
             </a>
