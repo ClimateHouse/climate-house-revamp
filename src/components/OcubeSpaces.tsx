@@ -1,8 +1,7 @@
 import { Card } from "@/components/ui/card";
-import { Users, Briefcase, Lock, Building2 } from "lucide-react";
+import { Users, Briefcase, Building2 } from "lucide-react";
 import ocubeWorkspace from "@/assets/ocube-workspace.jpg";
 import ocubeOpenspace from "@/assets/ocube-openspace.jpg";
-import ocubePrivateOffice from "@/assets/ocube-private-office.jpg";
 import ocubeLounge from "@/assets/ocube-lounge.jpg";
 
 const spaces = [
@@ -23,15 +22,6 @@ const spaces = [
     description: "Installez votre ordinateur et profitez d'un espace baigné par un puit de lumière, avec un éclairage raffiné et une décoration au design soigné.",
     colorScheme: 'accent-light' as const,
     image: ocubeOpenspace,
-  },
-  {
-    icon: Lock,
-    title: "Poste fixe",
-    subtitle: "ESPACES PRIVÉS PARTAGÉS",
-    tags: ["Calmes", "Collaboratifs", "Inspirants"],
-    description: "Nos espaces privés partagés offrent le parfait équilibre entre confidentialité et convivialité. Installez-vous sur un poste fixe dans un bureau fermé, à partager avec quelques coworkers. Un cadre plus calme qu'un open space, propice à la concentration, tout en gardant l'énergie et la convivialité du coworking.",
-    colorScheme: 'accent' as const,
-    image: ocubePrivateOffice,
   },
   {
     icon: Building2,
