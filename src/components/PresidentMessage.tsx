@@ -40,14 +40,14 @@ Grâce à vous, nous embarquons l'économie dans une transformation profonde, as
       <section className="py-20 bg-accent/5">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               Le mot de la Présidente
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8 items-start">
               {/* Aperçu du texte */}
-              <div className="space-y-6 order-2 md:order-1">
-                <p className="text-lg leading-relaxed text-foreground whitespace-pre-line">
+              <div className="flex flex-col justify-between h-full max-h-[500px] order-2 md:order-1">
+                <p className="text-base leading-relaxed text-foreground whitespace-pre-line mb-5">
                   {previewText}
                 </p>
                 
