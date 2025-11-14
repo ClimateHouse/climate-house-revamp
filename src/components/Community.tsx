@@ -907,10 +907,10 @@ export const Community = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start bg-card/50 rounded-2xl p-6 lg:p-8 border border-border shadow-soft">
               {/* Texte à gauche */}
               <div className="space-y-4 flex flex-col justify-center h-full">
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-base text-foreground/90 leading-relaxed">
                   La Climate House se veut inclusive et accessible à toutes et tous, c'est pourquoi nous pratiquons le prix en conscience. Dans ce sens, si ce prix est un VÉRITABLE frein à votre adhésion nous serions ravi d'échanger avec vous.
                 </p>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-base text-foreground/90 leading-relaxed">
                   Nous vous invitons à contacter{" "}
                   <a 
                     href="mailto:valere@climate.house" 
