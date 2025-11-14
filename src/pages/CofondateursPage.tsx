@@ -184,7 +184,7 @@ const cofondateurs = [
   { name: "Yannick RABA", company: "Ocube Coworking", sector: "BORDEAUX", batch: "COFO #2", image: "", linkedin: "https://www.linkedin.com/in/yannick-raba-7575183", initials: "YR" }
 ];
 
-const sectors = ["Tous", "Impact", "Finance", "Tech", "Food", "Conseil", "Événementiel", "Hospitality"];
+const sectors = ["Tous", "Impact", "Finance", "Tech", "Food", "Conseil", "Événementiel", "Hospitality", "BORDEAUX"];
 const batches = ["Tous", "COFO #1", "COFO #2"];
 
 const CofondateursPage = () => {
