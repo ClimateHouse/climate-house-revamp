@@ -21,107 +21,111 @@ export const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2.5 flex-1">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors text-sm font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
-                    La Maison
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-background border border-border shadow-lg">
-                    <ul className="grid w-48 gap-1 p-2">
-                      <li>
-                        <a
-                          href="/climate-house"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none">Paris</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/climate-house-bordeaux"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none">Bordeaux</div>
-                        </a>
-                      </li>
-                      <li className="opacity-60 cursor-not-allowed">
-                        <div className="block select-none rounded-md p-3 leading-none">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-sm font-medium leading-none">Marseille</span>
-                            <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
+          <div className="hidden md:flex items-center flex-1">
+            <div className="flex items-center gap-1">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors text-sm font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                      La Maison
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="bg-background border border-border shadow-lg">
+                      <ul className="grid w-48 gap-1 p-2">
+                        <li>
+                          <a
+                            href="/climate-house"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Paris</div>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/climate-house-bordeaux"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Bordeaux</div>
+                          </a>
+                        </li>
+                        <li className="opacity-60 cursor-not-allowed">
+                          <div className="block select-none rounded-md p-3 leading-none">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="text-sm font-medium leading-none">Marseille</span>
+                              <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
+                            </div>
+                            <p className="text-xs leading-snug text-muted-foreground">
+                              Prochainement
+                            </p>
                           </div>
-                          <p className="text-xs leading-snug text-muted-foreground">
-                            Prochainement
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors text-sm font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
-                    Votre événement
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-background border border-border shadow-lg">
-                    <ul className="grid w-48 gap-1 p-2">
-                      <li>
-                        <a
-                          href="/evenement"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none">Paris</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/evenement-bordeaux"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none">Bordeaux</div>
-                        </a>
-                      </li>
-                      <li className="opacity-60 cursor-not-allowed">
-                        <div className="block select-none rounded-md p-3 leading-none">
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm font-medium leading-none">Marseille</span>
-                            <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors text-sm font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                      Votre événement
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent className="bg-background border border-border shadow-lg">
+                      <ul className="grid w-48 gap-1 p-2">
+                        <li>
+                          <a
+                            href="/evenement"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Paris</div>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/evenement-bordeaux"
+                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Bordeaux</div>
+                          </a>
+                        </li>
+                        <li className="opacity-60 cursor-not-allowed">
+                          <div className="block select-none rounded-md p-3 leading-none">
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm font-medium leading-none">Marseille</span>
+                              <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
-              Ate.lier
-            </a>
-            <a href="/communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
-              Communauté
-            </a>
-            <a href="/bibliotheque" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
-              Bibliothèque
-            </a>
-            <a 
-              href="/atelier#calendrier"
-              className="text-foreground hover:text-primary transition-colors text-sm font-medium"
-              onClick={(e) => {
-                const path = window.location.pathname;
-                if (path === '/atelier') {
-                  e.preventDefault();
-                  const element = document.getElementById('calendrier');
-                  element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              }}
-            >
-              Calendrier
-            </a>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+            <div className="flex items-center gap-4 ml-6">
+              <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+                Ate.lier
+              </a>
+              <a href="/communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+                Communauté
+              </a>
+              <a href="/bibliotheque" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
+                Bibliothèque
+              </a>
+              <a 
+                href="/atelier#calendrier"
+                className="text-foreground hover:text-primary transition-colors text-sm font-medium"
+                onClick={(e) => {
+                  const path = window.location.pathname;
+                  if (path === '/atelier') {
+                    e.preventDefault();
+                    const element = document.getElementById('calendrier');
+                    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+              >
+                Calendrier
+              </a>
+            </div>
           </div>
 
           <div className="hidden md:flex items-center flex-shrink-0 ml-8">
