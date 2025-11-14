@@ -4,7 +4,7 @@ import ocubeMezzanine from "@/assets/ocube-mezzanine.jpg";
 
 export const ClimateHouseBordeauxHero = () => {
   return (
-    <section className="relative py-24 bg-gradient-soft border-b border-border overflow-hidden">
+    <section className="relative py-16 bg-gradient-soft border-b border-border overflow-hidden">
       {/* Subtle decorative element */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 rounded-bl-[100px] -z-0" />
 
@@ -28,7 +28,7 @@ export const ClimateHouseBordeauxHero = () => {
               Plus qu'un espace de travail, <strong>Ocube Coworking</strong> est un lieu de rencontres et de synergies, au service des projets et des talents qui font battre le cœur de Bordeaux.
             </p>
 
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '250ms' }}>
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: '250ms' }}>
               Implanté dans un ancien garage réinventé de <strong>600 m²</strong>, Ocube rassemble une communauté d'entrepreneurs, de créatifs et d'équipes engagées, animée par une même envie : entreprendre autrement.
             </p>
 
