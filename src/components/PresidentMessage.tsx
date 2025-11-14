@@ -7,11 +7,6 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
 import { ChevronRight, Download } from "lucide-react";
 import presidentImage from "@/assets/lucie-basch-president.jpg";
 
@@ -82,23 +77,17 @@ Grâce à vous, nous embarquons l'économie dans une transformation profonde, as
 
               {/* Image de la présidente */}
               <div className="relative order-1 md:order-2">
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <div className="overflow-hidden rounded-2xl shadow-strong h-full max-h-[500px] cursor-pointer">
-                      <img
-                        src={presidentImage}
-                        alt="Lucie Basch, Présidente de la Climate House"
-                        className="w-full h-full object-cover object-top"
-                      />
-                    </div>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-auto">
-                    <div className="space-y-1">
-                      <p className="text-base font-semibold">Lucie Basch</p>
-                      <p className="text-sm text-muted-foreground">Présidente de la Climate House</p>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
+                <div className="relative overflow-hidden rounded-2xl shadow-strong h-full max-h-[500px]">
+                  <img
+                    src={presidentImage}
+                    alt="Lucie Basch, Présidente de la Climate House"
+                    className="w-full h-full object-cover object-top"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
+                    <p className="text-xl font-semibold text-white">Lucie Basch</p>
+                    <p className="text-white/90">Présidente de la Climate House</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
