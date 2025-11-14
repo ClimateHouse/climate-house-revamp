@@ -41,16 +41,16 @@ export const Header = () => {
                           </p>
                         </a>
                       </li>
-                      <li className="opacity-60 cursor-not-allowed">
-                        <div className="block select-none rounded-md p-3 leading-none">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-sm font-medium leading-none">Bordeaux</span>
-                            <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
-                          </div>
+                      <li>
+                        <a
+                          href="/climate-house-bordeaux"
+                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none mb-1">Bordeaux</div>
                           <p className="text-xs leading-snug text-muted-foreground">
-                            Prochainement
+                            55 rue Saint Joseph, 33000
                           </p>
-                        </div>
+                        </a>
                       </li>
                       <li className="opacity-60 cursor-not-allowed">
                         <div className="block select-none rounded-md p-3 leading-none">
