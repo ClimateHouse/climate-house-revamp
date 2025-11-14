@@ -825,8 +825,8 @@ export const Community = () => {
                         <Zap className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <h5 className="font-semibold mb-1 text-sm">Espaces Climate House</h5>
-                        <p className="text-xs text-muted-foreground">Accès privilégié aux 4 espaces dédiés à la collaboration</p>
+                        <h5 className="font-semibold mb-1 text-sm">Co design de la programmation</h5>
+                        <p className="text-xs text-muted-foreground">Soyez partie prenante dans la programmation annuelle de la Climate House.</p>
                       </div>
                     </div>
                   </div>
