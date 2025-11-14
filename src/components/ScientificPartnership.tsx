@@ -7,7 +7,7 @@ export const ScientificPartnership = () => {
     <section className="py-20 bg-accent/5">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
             Ancrer la science au cœur de l'action
           </h2>
           
@@ -24,25 +24,27 @@ export const ScientificPartnership = () => {
             </div>
 
             {/* Contenu textuel à droite */}
-            <div className="space-y-6 order-2">
-              <p className="text-lg leading-relaxed text-foreground">
-                Parce qu'aucune transformation durable ne peut se construire sans la rigueur du savoir, 
-                la Climate House travaille en lien étroit avec le monde scientifique pour éclairer les décisions 
-                et nourrir les stratégies de transition.
-              </p>
+            <div className="flex flex-col justify-between h-full max-h-[500px] order-2 space-y-5">
+              <div className="space-y-5">
+                <p className="text-base leading-relaxed text-foreground">
+                  Parce qu'aucune transformation durable ne peut se construire sans la rigueur du savoir, 
+                  la Climate House travaille en lien étroit avec le monde scientifique pour éclairer les décisions 
+                  et nourrir les stratégies de transition.
+                </p>
 
-              <p className="text-lg leading-relaxed text-foreground">
-                Aux côtés de partenaires comme la <span className="font-semibold">Quadrature Climate Foundation</span>, 
-                nous faisons le pont entre recherche, économie et action collective, afin de transformer 
-                la connaissance climatique en leviers concrets de changement.
-              </p>
+                <p className="text-base leading-relaxed text-foreground">
+                  Aux côtés de partenaires comme la <span className="font-semibold">Quadrature Climate Foundation</span>, 
+                  nous faisons le pont entre recherche, économie et action collective, afin de transformer 
+                  la connaissance climatique en leviers concrets de changement.
+                </p>
+              </div>
 
               {/* Citation */}
-              <Card className="bg-card border-primary/20 shadow-soft p-6 mt-6">
+              <Card className="bg-card border-primary/20 shadow-soft p-5">
                 <div className="flex gap-3">
-                  <Quote className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                  <Quote className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <blockquote className="text-base italic text-foreground leading-relaxed mb-3">
+                    <blockquote className="text-sm italic text-foreground leading-relaxed mb-3">
                       « La Climate House offre le cadre idéal pour que ces alliances inédites entre scientifiques, 
                       entreprises et acteurs de terrain se créent et prospèrent. »
                     </blockquote>
