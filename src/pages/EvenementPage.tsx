@@ -290,7 +290,7 @@ const EvenementPage = () => {
         {/* Section Traiteurs */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12 animate-fade-in">
                 <div className="inline-flex items-center gap-2 mb-3">
                   <Coffee className="h-5 w-5 text-accent" />
@@ -301,10 +301,21 @@ const EvenementPage = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Image */}
+                <div className="animate-fade-in order-2 md:order-1">
+                  <div className="relative rounded-2xl overflow-hidden shadow-strong h-[400px]">
+                    <img 
+                      src={traiteurFoodImage} 
+                      alt="Cuisine responsable de nos partenaires traiteurs" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
                 {/* Liste des partenaires */}
-                <div>
-                  <div className="columns-2 md:columns-3 gap-x-6">
+                <div className="order-1 md:order-2">
+                  <div className="columns-2 gap-x-6">
                     {displayedPartners.map((partner, index) => (
                       <div
                         key={partner}
@@ -318,7 +329,7 @@ const EvenementPage = () => {
                   
                   <button
                     onClick={() => setShowAllPartners(!showAllPartners)}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
                   >
                     {showAllPartners ? (
                       <>
@@ -332,17 +343,6 @@ const EvenementPage = () => {
                       </>
                     )}
                   </button>
-                </div>
-
-                {/* Image */}
-                <div className="animate-fade-in flex justify-center md:justify-end" style={{ animationDelay: '300ms' }}>
-                  <div className="relative h-[250px] w-[350px] rounded-xl overflow-hidden shadow-lg">
-                    <img 
-                      src={traiteurFoodImage} 
-                      alt="Cuisine responsable de nos partenaires traiteurs" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
                 </div>
               </div>
             </div>

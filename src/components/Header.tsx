@@ -21,7 +21,7 @@ export const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
+          <div className="hidden md:flex items-center gap-4 flex-1 justify-center">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -35,10 +35,7 @@ export const Header = () => {
                           href="/climate-house"
                           className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <div className="text-sm font-medium leading-none mb-1">Paris</div>
-                          <p className="text-xs leading-snug text-muted-foreground">
-                            39 rue du caire, 75002
-                          </p>
+                          <div className="text-sm font-medium leading-none">Paris</div>
                         </a>
                       </li>
                       <li>
@@ -46,10 +43,7 @@ export const Header = () => {
                           href="/climate-house-bordeaux"
                           className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <div className="text-sm font-medium leading-none mb-1">Bordeaux</div>
-                          <p className="text-xs leading-snug text-muted-foreground">
-                            55 rue Saint Joseph, 33000
-                          </p>
+                          <div className="text-sm font-medium leading-none">Bordeaux</div>
                         </a>
                       </li>
                       <li className="opacity-60 cursor-not-allowed">
@@ -81,10 +75,7 @@ export const Header = () => {
                           href="/evenement"
                           className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <div className="text-sm font-medium leading-none mb-1">Paris</div>
-                          <p className="text-xs leading-snug text-muted-foreground">
-                            39 rue du caire, 75002
-                          </p>
+                          <div className="text-sm font-medium leading-none">Paris</div>
                         </a>
                       </li>
                       <li>
@@ -92,11 +83,16 @@ export const Header = () => {
                           href="/evenement-bordeaux"
                           className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
-                          <div className="text-sm font-medium leading-none mb-1">Bordeaux</div>
-                          <p className="text-xs leading-snug text-muted-foreground">
-                            55 rue Saint Joseph, 33000
-                          </p>
+                          <div className="text-sm font-medium leading-none">Bordeaux</div>
                         </a>
+                      </li>
+                      <li className="opacity-60 cursor-not-allowed">
+                        <div className="block select-none rounded-md p-3 leading-none">
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm font-medium leading-none">Marseille</span>
+                            <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
+                          </div>
+                        </div>
                       </li>
                     </ul>
                   </NavigationMenuContent>
@@ -166,6 +162,10 @@ export const Header = () => {
                 <a href="/evenement-bordeaux" className="text-foreground hover:text-primary transition-colors py-1.5 text-sm">
                   Bordeaux
                 </a>
+                <div className="flex items-center gap-2 py-1.5 opacity-60">
+                  <span className="text-sm">Marseille</span>
+                  <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
+                </div>
               </div>
             </div>
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors py-2">
