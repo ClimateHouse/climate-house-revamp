@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Sparkles, Building2, Coffee, Plus, Minus, Users } from "lucide-react";
 import { useState } from "react";
 import ocubeMeetingSpace from "@/assets/ocube-meeting-space.jpg";
-import ocubePrivateRoom from "@/assets/ocube-private-room.jpg";
+import ocubeInteriorMezzanine from "@/assets/ocube-interior-mezzanine.jpg";
 import bordeauxChartrons from "@/assets/bordeaux-chartrons.jpg";
 import bordeauxRueNotreDame from "@/assets/bordeaux-rue-notre-dame.jpg";
 import traiteurFoodImage from "@/assets/traiteur-food-2.jpg";
@@ -46,7 +46,7 @@ const eventTypes = [
       "Alliant intimité, flexibilité et caractère",
       "Accompagné par une équipe attentive et passionnée"
     ],
-    image: ocubePrivateRoom
+    image: ocubeInteriorMezzanine
   }
 ];
 
@@ -96,7 +96,7 @@ const EvenementBordeauxPage = () => {
                   </div>
                   
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    Des événements qui créent du lien
+                    Des événements <span className="text-primary">qui créent du lien</span>
                   </h1>
                   
                   <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed">
@@ -104,7 +104,7 @@ const EvenementBordeauxPage = () => {
                     afterworks, formations ou moments de célébration.
                   </p>
 
-                  <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
+                  <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
                     Chaque événement est pensé comme une parenthèse collective, propice à la rencontre, à la créativité 
                     et à la convivialité.
                   </p>
@@ -113,11 +113,6 @@ const EvenementBordeauxPage = () => {
                     <Button size="lg" asChild>
                       <a href="mailto:bordeaux@ocube.co?subject=Demande d'information - Événement">
                         Organiser mon événement
-                      </a>
-                    </Button>
-                    <Button size="lg" variant="outline" asChild>
-                      <a href="/climate-house-bordeaux">
-                        Découvrir le lieu
                       </a>
                     </Button>
                   </div>
