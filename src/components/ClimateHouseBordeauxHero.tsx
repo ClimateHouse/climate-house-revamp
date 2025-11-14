@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ocubeMezzanine from "@/assets/ocube-mezzanine.jpg";
+import bordeauxRueNotreDameChartrons from "@/assets/bordeaux-rue-notre-dame-chartrons.jpg";
 
 export const ClimateHouseBordeauxHero = () => {
   return (
@@ -42,11 +42,6 @@ export const ClimateHouseBordeauxHero = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="/atelier">
-                  Découvrir l'Ate.lier
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
                 <a href="/cofondateurs?sector=BORDEAUX">
                   Découvrir les COFO Bordelais
                 </a>
@@ -58,8 +53,8 @@ export const ClimateHouseBordeauxHero = () => {
           <div className="relative animate-fade-in" style={{ animationDelay: '500ms' }}>
             <div className="rounded-2xl overflow-hidden shadow-strong">
               <img 
-                src={ocubeMezzanine} 
-                alt="Espace Ocube Coworking Bordeaux avec mezzanine" 
+                src={bordeauxRueNotreDameChartrons} 
+                alt="Quartier des Chartrons à Bordeaux - Rue Notre Dame" 
                 className="w-full h-full object-cover"
               />
             </div>

@@ -25,7 +25,7 @@ const spaces = [
   },
   {
     icon: Building2,
-    title: "BUREAUX PRIVÉS",
+    title: "Bureaux privés",
     subtitle: "De 4 à 12 postes",
     tags: ["Modulables", "Évolutifs", "Équipés"],
     description: "Nos bureaux privés de 4 à 12 postes permettent à vos équipes de grandir sans changer d'espace tous les 6 mois ! Ils sont modulables et s'adaptent à vos besoins. Vous aurez la sensation d'être dans vos propres locaux ! Les petits + : une télévision et un paperboard dédiés pour travailler dans les meilleures conditions.",
