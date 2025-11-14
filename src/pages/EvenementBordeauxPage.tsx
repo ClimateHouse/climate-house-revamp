@@ -250,38 +250,6 @@ const EvenementBordeauxPage = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA Final */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <Card className="p-12 text-center bg-gradient-soft border-none shadow-strong animate-fade-in">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/10 mb-6">
-                  <Calendar className="h-8 w-8 text-accent" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Prêt à créer votre événement ?
-                </h2>
-                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Faites de votre événement un moment à votre image, accompagné par une équipe 
-                  attentive et passionnée au cœur des Chartrons.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" asChild>
-                    <a href="mailto:bordeaux@ocube.co?subject=Demande d'information - Événement">
-                      Contactez-nous
-                    </a>
-                  </Button>
-                  <Button size="lg" variant="outline" asChild>
-                    <a href="tel:+33556792020">
-                      05 56 79 20 20
-                    </a>
-                  </Button>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
