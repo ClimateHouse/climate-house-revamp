@@ -61,6 +61,11 @@ export const ClimateHouseBordeauxHero = () => {
                   Découvrir l'Ate.lier
                 </a>
               </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="/cofondateurs?sector=BORDEAUX">
+                  Découvrir les COFO Bordelais
+                </a>
+              </Button>
             </div>
           </div>
 

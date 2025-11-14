@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -8,7 +9,6 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Linkedin, Search, Users, ArrowUp } from "lucide-react";
 import wallImage from "@/assets/cofondateurs-wall.jpg";
-import { useEffect } from "react";
 
 // Liste des cofondateurs
 const cofondateurs = [
@@ -188,10 +188,20 @@ const sectors = ["Tous", "Impact", "Finance", "Tech", "Food", "Conseil", "Évén
 const batches = ["Tous", "COFO #1", "COFO #2"];
 
 const CofondateursPage = () => {
+  const [searchParams] = useSearchParams();
+  const sectorParam = searchParams.get("sector");
+  
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSector, setSelectedSector] = useState("Tous");
+  const [selectedSector, setSelectedSector] = useState(sectorParam || "Tous");
   const [selectedBatch, setSelectedBatch] = useState("Tous");
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Mettre à jour le filtre si le paramètre URL change
+  useEffect(() => {
+    if (sectorParam && sectors.includes(sectorParam)) {
+      setSelectedSector(sectorParam);
+    }
+  }, [sectorParam]);
 
   // Gérer l'affichage du bouton scroll to top
   useEffect(() => {
