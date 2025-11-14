@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Users, Briefcase, Building2, MapPin, TrendingUp, Lightbulb, Heart, Settings } from "lucide-react";
-import ocubeWorkspace from "@/assets/ocube-workspace.jpg";
+import ocubeTerraceNomad from "@/assets/ocube-terrace-nomad.jpg";
 import ocubeOpenspace from "@/assets/ocube-openspace.jpg";
 import ocubeLounge from "@/assets/ocube-lounge.jpg";
 
@@ -12,7 +12,7 @@ const spaces = [
     tags: ["Ultra-flexibles", "Accessibles", "Accueillants"],
     description: "Bénéficiez d'un poste à la demande à moindre frais. Sur une grande table, dans un phonebooth ou encore dans un canapé, installez-vous où vous voulez suivant vos envies !",
     colorScheme: 'accent' as const,
-    image: ocubeWorkspace,
+    image: ocubeTerraceNomad,
   },
   {
     icon: Briefcase,
