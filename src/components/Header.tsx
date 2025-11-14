@@ -14,14 +14,14 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <header className="fixed top-0 left-0 right-0 z-50 bg-secondary backdrop-blur-sm border-b border-border shadow-sm">
       <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16 gap-8">
           {/* Brand Logo */}
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center flex-shrink-0">
             <img src={logo} alt="Climate House - Accélérons la transition" className="h-6 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-4 flex-1 justify-center">
+          <div className="hidden md:flex items-center gap-2.5 flex-1">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -124,7 +124,7 @@ export const Header = () => {
             </a>
           </div>
 
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center flex-shrink-0 ml-8">
             <Button size="default" className="shadow-md">
               Nous contacter
             </Button>
