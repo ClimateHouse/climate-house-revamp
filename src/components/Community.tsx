@@ -826,7 +826,7 @@ export const Community = () => {
                       </div>
                       <div>
                         <h5 className="font-semibold mb-1 text-sm">Co design de la programmation</h5>
-                        <p className="text-xs text-muted-foreground">Soyez partie prenante dans la programmation annuelle de la Climate House.</p>
+                        <p className="text-xs text-muted-foreground">Soyez partie prenante dans la programmation de la Climate House.</p>
                       </div>
                     </div>
                   </div>
