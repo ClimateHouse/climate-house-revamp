@@ -34,6 +34,10 @@ export const ClimateHouseHero = () => {
               <Users className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold">130+ organisations</span>
             </div>
+            <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border shadow-soft">
+              <MapPin className="h-4 w-4 text-primary" />
+              <span className="text-sm font-semibold">39 rue du caire, 75002</span>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '400ms' }}>
