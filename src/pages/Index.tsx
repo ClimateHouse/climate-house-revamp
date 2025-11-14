@@ -5,6 +5,7 @@ import { Mission } from "@/components/Mission";
 import { PresidentMessage } from "@/components/PresidentMessage";
 import { TrustedBy } from "@/components/TrustedBy";
 import { CommunitySummary } from "@/components/CommunitySummary";
+import { ScientificPartnership } from "@/components/ScientificPartnership";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
         <Stats />
         <Mission className="mx-0 px-0 py-[40px]" />
         <CommunitySummary />
+        <ScientificPartnership />
         <PresidentMessage />
         <CTA />
       </main>
