@@ -13,6 +13,7 @@ import communityEvent3 from "@/assets/community-event-3.jpg";
 import communityEvent4 from "@/assets/community-event-4.jpg";
 import communityEvent5 from "@/assets/community-event-5.jpg";
 import communityEvent6 from "@/assets/community-event-6.jpg";
+import communityEvent7 from "@/assets/community-event-7.jpg";
 import climateHouseSignage from "@/assets/climate-house-signage.jpg";
 import communitySpeaker from "@/assets/community-speaker.jpg";
 import Autoplay from "embla-carousel-autoplay";
@@ -25,6 +26,7 @@ const communityImages = [
   { src: communityEvent4, alt: "Présentation Climate House - Atelier collaboratif" },
   { src: communityEvent5, alt: "Équipe Climate House - Rencontre cofondateurs" },
   { src: communityEvent6, alt: "Événement Climate House - Conférence innovation" },
+  { src: communityEvent7, alt: "Conférence Climate House - Intervention devant la communauté" },
   { src: climateHouseSignage, alt: "Signalétique Climate House - Entrée de la maison" },
   { src: communitySpeaker, alt: "Conférence Climate House - Intervenant lors d'un événement" },
 ];
