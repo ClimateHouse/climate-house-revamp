@@ -6,27 +6,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import communityImage from "@/assets/cofondateurs-wall.jpg";
-import communityEvent1 from "@/assets/community-event-1.jpg";
-import communityEvent2 from "@/assets/community-event-2.jpg";
-import communityEvent3 from "@/assets/community-event-3.jpg";
-import communityEvent4 from "@/assets/community-event-4.jpg";
-import communityEvent5 from "@/assets/community-event-5.jpg";
-import communityEvent6 from "@/assets/community-event-6.jpg";
-import communityEvent7 from "@/assets/community-event-7.jpg";
-import climateHouseSignage from "@/assets/climate-house-signage.jpg";
 import Autoplay from "embla-carousel-autoplay";
 
-const communityImages = [
-  { src: communityImage, alt: "Mur des cofondateurs Climate House - 170 portraits" },
-  { src: communityEvent1, alt: "Événement Climate House - Conférence communauté" },
-  { src: communityEvent2, alt: "Programme Climate House - Festival Atmosphères" },
-  { src: communityEvent3, alt: "Intervention Climate House - Jean-Marc Jancovici et Henri Pellion" },
-  { src: communityEvent4, alt: "Présentation Climate House - Atelier collaboratif" },
-  { src: communityEvent5, alt: "Équipe Climate House - Rencontre cofondateurs" },
-  { src: communityEvent6, alt: "Événement Climate House - Conférence innovation" },
-  { src: communityEvent7, alt: "Conférence Climate House - Intervention devant la communauté" },
-  { src: climateHouseSignage, alt: "Signalétique Climate House - Entrée de la maison" },
+const communityImages: { src: string; alt: string }[] = [
+  // Images à ajouter
 ];
 
 export const CommunitySummary = () => {
