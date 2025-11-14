@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Users, Briefcase, Building2 } from "lucide-react";
+import { Users, Briefcase, Building2, MapPin, TrendingUp, Lightbulb, Heart, Settings } from "lucide-react";
 import ocubeWorkspace from "@/assets/ocube-workspace.jpg";
 import ocubeOpenspace from "@/assets/ocube-openspace.jpg";
 import ocubeLounge from "@/assets/ocube-lounge.jpg";
@@ -34,6 +34,34 @@ const spaces = [
   },
 ];
 
+const advantages = [
+  {
+    icon: MapPin,
+    title: "Emplacement idéal",
+    description: "Ocube est situé dans le quartier prisé des Chartrons, à proximité des transports en commun, des commerces et des restaurants.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Productivité",
+    description: "Profitez d'un environnement de travail stimulant et de tous les services nécessaires.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Inspiration",
+    description: "Travaillez dans un lieu atypique et chaleureux, où l'ancien se mêle au moderne.",
+  },
+  {
+    icon: Heart,
+    title: "Convivialité",
+    description: "Intégrez une communauté de professionnels dynamiques et bienveillants.",
+  },
+  {
+    icon: Settings,
+    title: "Flexibilité",
+    description: "Choisissez la formule qui vous convient le mieux, du poste de travail en open space au bureau privatif.",
+  },
+];
+
 export const OcubeSpaces = () => {
   return (
     <section className="py-20 bg-background">
@@ -47,8 +75,9 @@ export const OcubeSpaces = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {spaces.map((space, index) => {
+        {/* First two spaces in 2-column grid */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-8">
+          {spaces.slice(0, 2).map((space, index) => {
             const bgColorClass = space.colorScheme === 'accent' ? 'bg-accent/10' : 'bg-accent-light/10';
             const textColorClass = space.colorScheme === 'accent' ? 'text-accent' : 'text-accent-light';
 
@@ -94,13 +123,77 @@ export const OcubeSpaces = () => {
           })}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="inline-block bg-card border border-border rounded-2xl p-8 shadow-soft">
-            <h3 className="text-2xl font-bold mb-4">Un accompagnement personnalisé et accueil chaleureux</h3>
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              <strong>Charlotte</strong>, notre Office Manager, est présente au quotidien et toujours avec le sourire, pour vous faciliter la vie et répondre à vos besoins.
-            </p>
-          </div>
+        {/* Last space (Bureaux privés) and Advantages side by side */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Bureaux privés card */}
+          {spaces.slice(2).map((space, index) => {
+            const bgColorClass = space.colorScheme === 'accent' ? 'bg-accent/10' : 'bg-accent-light/10';
+            const textColorClass = space.colorScheme === 'accent' ? 'text-accent' : 'text-accent-light';
+
+            return (
+              <Card
+                key={index}
+                className="overflow-hidden hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+                style={{ animationDelay: `${(index + 2) * 100}ms` }}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={space.image} 
+                    alt={`${space.title} - ${space.subtitle}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className={`flex-shrink-0 w-14 h-14 rounded-2xl ${bgColorClass} flex items-center justify-center`}>
+                      <space.icon className={`h-7 w-7 ${textColorClass}`} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold mb-1">{space.title}</h3>
+                      <p className={`text-sm font-semibold ${textColorClass} mb-3`}>{space.subtitle}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {space.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className={`text-xs px-3 py-1 rounded-full ${bgColorClass} ${textColorClass} font-medium`}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {space.description}
+                  </p>
+                </div>
+              </Card>
+            );
+          })}
+
+          {/* Advantages card */}
+          <Card className="overflow-hidden hover:shadow-strong transition-all duration-300 hover:-translate-y-1 animate-fade-in bg-gradient-soft" style={{ animationDelay: '300ms' }}>
+            <div className="p-8">
+              <h3 className="text-2xl font-bold mb-2">Les avantages du coworking chez Ocube</h3>
+              <p className="text-muted-foreground mb-6">Bien plus qu'un espace de travail, une expérience</p>
+              
+              <div className="space-y-6">
+                {advantages.map((advantage, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <advantage.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold mb-1">{advantage.title}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {advantage.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
