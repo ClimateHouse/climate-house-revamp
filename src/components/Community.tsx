@@ -900,6 +900,37 @@ export const Community = () => {
               </a>
             </Button>
           </div>
+
+          {/* Section Prix en conscience */}
+          <div className="max-w-6xl mx-auto mt-16 animate-fade-in">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center bg-card/50 rounded-3xl p-8 lg:p-12 border border-border shadow-soft">
+              {/* Texte à gauche */}
+              <div className="space-y-4">
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  La Climate House se veut inclusive et accessible à toutes et tous, c'est pourquoi nous pratiquons le prix en conscience. Dans ce sens, si ce prix est un VÉRITABLE frein à votre adhésion nous serions ravi d'échanger avec vous.
+                </p>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Nous vous invitons à contacter{" "}
+                  <a 
+                    href="mailto:valere@climate.house" 
+                    className="text-primary hover:underline font-medium"
+                  >
+                    valere@climate.house
+                  </a>
+                </p>
+              </div>
+
+              {/* Espace visuel à droite */}
+              <div className="relative aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-dashed border-primary/20">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <UsersIcon className="h-16 w-16 text-primary/30 mx-auto mb-4" />
+                    <p className="text-sm text-muted-foreground">Espace réservé pour la photo de Valère</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>;
