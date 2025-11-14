@@ -12,7 +12,7 @@ export const ClimateHouseBordeauxHero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Left column - Text content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-8 animate-fade-in">
               <MapPin className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold text-primary">Bordeaux - Quartier des Chartrons</span>
             </div>
