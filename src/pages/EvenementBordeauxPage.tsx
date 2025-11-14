@@ -96,19 +96,17 @@ const EvenementBordeauxPage = () => {
                   </div>
                   
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    Des événements qui créent du <span className="text-primary">lien</span>
+                    Des événements qui créent du lien
                   </h1>
                   
-                  <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                    Plus qu'une prestation, Ocube propose des expériences sur mesure qui rassemblent et inspirent. 
+                  <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed">
                     Au cœur des Chartrons, notre lieu devient le théâtre de vos temps forts : séminaires, ateliers, 
                     afterworks, formations ou moments de célébration.
                   </p>
 
                   <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
                     Chaque événement est pensé comme une parenthèse collective, propice à la rencontre, à la créativité 
-                    et à la convivialité. Notre équipe vous accompagne de la conception à la réalisation, avec une approche 
-                    clé en main : aménagement des espaces, restauration, matériel technique, scénographie et coordination.
+                    et à la convivialité.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
