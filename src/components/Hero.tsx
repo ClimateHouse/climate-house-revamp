@@ -22,11 +22,15 @@ export const Hero = () => {
             </div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full">
               <MapPin className="h-3.5 w-3.5 text-white" />
+              <span className="text-xs font-medium text-white">Rue Saint Joseph, Bordeaux</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full">
+              <MapPin className="h-3.5 w-3.5 text-white" />
               <span className="text-xs font-medium text-white">The Conduit, Londres</span>
             </div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/30">
               <RefreshCw className="h-3.5 w-3.5 text-white/70" />
-              <span className="text-xs font-medium text-white/70">Bordeaux, Lyon, Marseille</span>
+              <span className="text-xs font-medium text-white/70">Annecy, Lyon, Marseille</span>
             </div>
           </div>
 
