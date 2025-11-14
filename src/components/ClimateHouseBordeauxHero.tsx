@@ -32,21 +32,6 @@ export const ClimateHouseBordeauxHero = () => {
               Implanté dans un ancien garage réinventé de <strong>600 m²</strong>, Ocube rassemble une communauté d'entrepreneurs, de créatifs et d'équipes engagées, animée par une même envie : entreprendre autrement.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: '300ms' }}>
-              <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border shadow-soft">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-sm font-semibold">55 Rue Saint Joseph, 33000 Bordeaux</span>
-              </div>
-              <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border shadow-soft">
-                <Phone className="h-4 w-4 text-primary" />
-                <a href="tel:0785855390" className="text-sm font-semibold hover:text-primary transition-colors">07 85 85 53 90</a>
-              </div>
-              <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border shadow-soft">
-                <Mail className="h-4 w-4 text-primary" />
-                <a href="mailto:contact@ocube-coworking.fr" className="text-sm font-semibold hover:text-primary transition-colors">contact@ocube-coworking.fr</a>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '400ms' }}>
               <Button size="lg" asChild>
                 <a href="#contact">Devenir colocataire</a>
