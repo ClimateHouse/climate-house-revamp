@@ -31,7 +31,7 @@ import communityEvent5 from "@/assets/community-event-5.jpg";
 import communityEvent6 from "@/assets/community-event-6.jpg";
 import communityOutdoor from "@/assets/community-outdoor.jpg";
 import henriFrancoisAvatar from "@/assets/henri-francois-martin-avatar.jpg";
-import valereBrunet from "@/assets/valere-brunet.jpg";
+import valereBrunet from "@/assets/valere-brunet-portrait.jpg";
 import { Linkedin, BookOpen, Users as UsersIcon, Zap, CheckCircle, Plus, Minus, Info, ChevronDown } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useState } from "react";
@@ -904,7 +904,7 @@ export const Community = () => {
 
           {/* Section Prix en conscience */}
           <div className="max-w-6xl mx-auto mt-12 animate-fade-in">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start bg-card/50 rounded-2xl p-6 lg:p-8 border border-border shadow-soft">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start bg-card/50 rounded-2xl p-6 lg:p-8 border border-border shadow-soft">
               {/* Texte à gauche */}
               <div className="space-y-4 flex flex-col justify-center h-full">
                 <p className="text-base text-foreground/90 leading-relaxed">
