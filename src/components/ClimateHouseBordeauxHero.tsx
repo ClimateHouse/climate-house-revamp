@@ -12,27 +12,29 @@ export const ClimateHouseBordeauxHero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Left column - Text content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6 animate-fade-in">
-              <MapPin className="h-4 w-4 text-primary" />
-              <span className="text-sm font-semibold text-primary">Bordeaux - Quartier des Chartrons</span>
-            </div>
-
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight animate-fade-in">
               Travailler autrement,<br />
               <span className="text-primary">
                 au cœur des Chartrons
               </span>
             </h1>
 
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '100ms' }}>
               Plus qu'un espace de travail, <strong>Ocube Coworking</strong> est un lieu de rencontres et de synergies, au service des projets et des talents qui font battre le cœur de Bordeaux.
             </p>
 
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: '250ms' }}>
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: '150ms' }}>
               Implanté dans un ancien garage réinventé de <strong>600 m²</strong>, Ocube rassemble une communauté d'entrepreneurs, de créatifs et d'équipes engagées, animée par une même envie : entreprendre autrement.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '400ms' }}>
+            <div className="flex flex-wrap items-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-full border border-border shadow-soft">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="text-sm font-semibold">Bordeaux - Quartier des Chartrons</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '300ms' }}>
               <Button size="lg" asChild>
                 <a href="#contact">Devenir colocataire</a>
               </Button>
