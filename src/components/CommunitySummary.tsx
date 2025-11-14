@@ -75,12 +75,9 @@ export const CommunitySummary = () => {
         </div>
 
         {/* Texte descriptif */}
-        <div className="max-w-4xl mx-auto mb-16 text-center">
-          <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            Cette concentration de compétences et de visions diverses amplifie le potentiel de chaque projet, facilitant l'émergence de solutions durables, le transfert de connaissances spécialisées et l'innovation continue.
-          </p>
+        <div className="max-w-4xl mx-auto mb-8 text-center">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Nous voulons faire de ce 'toit commun' un épicentre d'actions concrètes et de réflexions, propulsant ainsi les avancées nécessaires pour un avenir durable.
+            Cette concentration de compétences et de visions diverses amplifie le potentiel de chaque projet, facilitant l'émergence de solutions durables, le transfert de connaissances spécialisées et l'innovation continue.
           </p>
         </div>
 
