@@ -71,9 +71,41 @@ export const Header = () => {
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Ate.lier
             </a>
-            <a href="/evenement" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
-              Votre événement
-            </a>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-foreground hover:text-primary transition-colors text-sm font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                    Votre événement
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-background border border-border shadow-lg">
+                    <ul className="grid w-48 gap-1 p-2">
+                      <li>
+                        <a
+                          href="/evenement"
+                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none mb-1">Paris</div>
+                          <p className="text-xs leading-snug text-muted-foreground">
+                            39 rue du caire, 75002
+                          </p>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/evenement-bordeaux"
+                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none mb-1">Bordeaux</div>
+                          <p className="text-xs leading-snug text-muted-foreground">
+                            55 rue Saint Joseph, 33000
+                          </p>
+                        </a>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             <a href="/communaute" className="text-foreground hover:text-primary transition-colors text-sm font-medium">
               Communauté
             </a>
@@ -116,10 +148,9 @@ export const Header = () => {
                 <a href="/climate-house" className="text-foreground hover:text-primary transition-colors py-1.5 text-sm">
                   Paris
                 </a>
-                <div className="flex items-center gap-2 py-1.5 opacity-60">
-                  <span className="text-sm">Bordeaux</span>
-                  <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
-                </div>
+                <a href="/climate-house-bordeaux" className="text-foreground hover:text-primary transition-colors py-1.5 text-sm">
+                  Bordeaux
+                </a>
                 <div className="flex items-center gap-2 py-1.5 opacity-60">
                   <span className="text-sm">Marseille</span>
                   <Badge variant="secondary" className="text-[10px] px-1.5 py-0">Bientôt</Badge>
@@ -129,9 +160,17 @@ export const Header = () => {
             <a href="/atelier" className="text-foreground hover:text-primary transition-colors py-2">
               Ate.lier
             </a>
-            <a href="/evenement" className="text-foreground hover:text-primary transition-colors py-2">
-              Votre événement
-            </a>
+            <div>
+              <div className="text-foreground font-medium py-2 text-sm">Votre événement</div>
+              <div className="pl-4 flex flex-col gap-2">
+                <a href="/evenement" className="text-foreground hover:text-primary transition-colors py-1.5 text-sm">
+                  Paris
+                </a>
+                <a href="/evenement-bordeaux" className="text-foreground hover:text-primary transition-colors py-1.5 text-sm">
+                  Bordeaux
+                </a>
+              </div>
+            </div>
             <a href="/communaute" className="text-foreground hover:text-primary transition-colors py-2">
               Communauté
             </a>
